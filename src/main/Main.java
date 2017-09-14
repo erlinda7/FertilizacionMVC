@@ -5,14 +5,6 @@
  */
 package main;
 
-import view.InterpretacionEPanel;
-
-import view.DocumentacionPanel;
-import view.InterpretacionPanel;
-
-import controller.DocumentacionPanelController;
-import controller.InterpretacionPanelController;
-
 import java.util.Properties;
 
 import javax.swing.UIManager;
