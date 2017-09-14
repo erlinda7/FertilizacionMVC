@@ -19,20 +19,20 @@ import view.FertilizacionConLabFrame;
  */
 public class FertilizacionConLabFrameController {
 
-    FertilizacionConLabFrame vistaPrincipal;
+    FertilizacionConLabFrame fertilizacionConLabFrame;
 
-    public FertilizacionConLabFrameController(FertilizacionConLabFrame vistaPrincipal) {
-        this.vistaPrincipal = vistaPrincipal;
+    public FertilizacionConLabFrameController(FertilizacionConLabFrame fertilizacionConLabFrame) {
+        this.fertilizacionConLabFrame = fertilizacionConLabFrame;
         confFramePrincipal();
-        this.vistaPrincipal.setVisible(true);
-        this.vistaPrincipal.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        this.vistaPrincipal.setLocationRelativeTo(null);
+        this.fertilizacionConLabFrame.setVisible(true);
+        this.fertilizacionConLabFrame.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        this.fertilizacionConLabFrame.setLocationRelativeTo(null);
     }
 
     public void confFramePrincipal() {
-        vistaPrincipal.setTitle("Recomendación de Fertilización de Hortalizas");
-        vistaPrincipal.setLocationRelativeTo(null);
+        fertilizacionConLabFrame.setTitle("Recomendación de Fertilización de Hortalizas");
+        fertilizacionConLabFrame.setLocationRelativeTo(null);
         Image icon = new ImageIcon(getClass().getResource("/img/icon1.png")).getImage();
-        vistaPrincipal.setIconImage(icon);
+        fertilizacionConLabFrame.setIconImage(icon);
     }
 }
