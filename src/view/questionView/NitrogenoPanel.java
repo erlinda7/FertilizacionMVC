@@ -46,7 +46,14 @@ public class NitrogenoPanel extends javax.swing.JPanel {
         jRadioButtonTraceLow = new javax.swing.JRadioButton();
         jRadioButtonLowMedium = new javax.swing.JRadioButton();
         jRadioButtonMediumHigh = new javax.swing.JRadioButton();
-        jLabelNitrogeno = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        nitrogenoInformacionPanel1 = new view.questionView.NitrogenoInformacionPanel();
 
         setOpaque(false);
 
@@ -56,6 +63,7 @@ public class NitrogenoPanel extends javax.swing.JPanel {
         buttonGroupNitrogeno.add(jRadioButtonHigh);
         jRadioButtonHigh.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jRadioButtonHigh.setText("High");
+        jRadioButtonHigh.setOpaque(false);
         jRadioButtonHigh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButtonHighActionPerformed(evt);
@@ -65,53 +73,89 @@ public class NitrogenoPanel extends javax.swing.JPanel {
         buttonGroupNitrogeno.add(jRadioButtonMedium);
         jRadioButtonMedium.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jRadioButtonMedium.setText("Medium");
+        jRadioButtonMedium.setOpaque(false);
 
         buttonGroupNitrogeno.add(jRadioButtonLow);
         jRadioButtonLow.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jRadioButtonLow.setText("Low");
+        jRadioButtonLow.setOpaque(false);
 
         buttonGroupNitrogeno.add(jRadioButtonTrace);
         jRadioButtonTrace.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jRadioButtonTrace.setText("Trace");
+        jRadioButtonTrace.setOpaque(false);
 
         buttonGroupNitrogeno.add(jRadioButtonTraceLow);
         jRadioButtonTraceLow.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jRadioButtonTraceLow.setText("Entre Low - Trace ");
+        jRadioButtonTraceLow.setOpaque(false);
 
         buttonGroupNitrogeno.add(jRadioButtonLowMedium);
         jRadioButtonLowMedium.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jRadioButtonLowMedium.setText("Entre Medium - Low");
+        jRadioButtonLowMedium.setOpaque(false);
 
         buttonGroupNitrogeno.add(jRadioButtonMediumHigh);
         jRadioButtonMediumHigh.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jRadioButtonMediumHigh.setText("Entre High - Medium");
+        jRadioButtonMediumHigh.setOpaque(false);
         jRadioButtonMediumHigh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButtonMediumHighActionPerformed(evt);
             }
         });
 
-        jLabelNitrogeno.setBackground(new java.awt.Color(204, 255, 204));
-        jLabelNitrogeno.setText("jLabel3");
-        jLabelNitrogeno.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabelNitrogeno.setOpaque(true);
+        jLabel2.setText("jLabel2");
+
+        jLabel3.setText("jLabel2");
+
+        jLabel4.setText("jLabel2");
+
+        jLabel5.setText("jLabel2");
+
+        jLabel6.setText("jLabel2");
+
+        jLabel7.setText("jLabel2");
+
+        jLabel8.setText("jLabel2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButtonLow)
-                    .addComponent(jRadioButtonTrace)
-                    .addComponent(jRadioButtonMedium)
-                    .addComponent(jRadioButtonHigh)
-                    .addComponent(jRadioButtonTraceLow)
-                    .addComponent(jRadioButtonLowMedium, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRadioButtonMediumHigh, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jRadioButtonMedium)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jRadioButtonHigh)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jRadioButtonLowMedium)
+                        .addGap(12, 12, 12)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jRadioButtonTraceLow)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButtonTrace)
+                            .addComponent(jRadioButtonLow))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jRadioButtonMediumHigh)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabelNitrogeno, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(nitrogenoInformacionPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 432, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -123,23 +167,37 @@ public class NitrogenoPanel extends javax.swing.JPanel {
                 .addComponent(jLabel1)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addComponent(jRadioButtonTrace)
+                        .addGap(31, 31, 31)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jRadioButtonTrace)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jRadioButtonLow)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jRadioButtonMedium)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jRadioButtonHigh)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addComponent(jRadioButtonLow)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jRadioButtonTraceLow)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jRadioButtonLowMedium)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addComponent(jRadioButtonMedium)
-                        .addGap(18, 18, 18)
-                        .addComponent(jRadioButtonHigh)
-                        .addGap(48, 48, 48)
-                        .addComponent(jRadioButtonTraceLow)
-                        .addGap(18, 18, 18)
-                        .addComponent(jRadioButtonLowMedium)
-                        .addGap(18, 18, 18)
-                        .addComponent(jRadioButtonMediumHigh))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jRadioButtonMediumHigh)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabelNitrogeno, javax.swing.GroupLayout.PREFERRED_SIZE, 404, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(nitrogenoInformacionPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -160,7 +218,13 @@ public class NitrogenoPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroupNitrogeno;
     private javax.swing.JLabel jLabel1;
-    public javax.swing.JLabel jLabelNitrogeno;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     public javax.swing.JRadioButton jRadioButtonHigh;
     public javax.swing.JRadioButton jRadioButtonLow;
     public javax.swing.JRadioButton jRadioButtonLowMedium;
@@ -168,5 +232,6 @@ public class NitrogenoPanel extends javax.swing.JPanel {
     public javax.swing.JRadioButton jRadioButtonMediumHigh;
     public javax.swing.JRadioButton jRadioButtonTrace;
     public javax.swing.JRadioButton jRadioButtonTraceLow;
+    private view.questionView.NitrogenoInformacionPanel nitrogenoInformacionPanel1;
     // End of variables declaration//GEN-END:variables
 }

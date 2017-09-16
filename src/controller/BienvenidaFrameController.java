@@ -13,6 +13,7 @@ import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
+import javax.swing.JPanel;
 import view.BienvenidaFrame;
 import view.ConceptosBasicosFrame;
 import view.ConceptosBasicosFrame;
@@ -40,6 +41,9 @@ public class BienvenidaFrameController {
         confButtonFertilizacionSinLaboratorio();
         confButtonConceptosBasicos();
         confButtonSalir();
+        conflabelMensaje();
+        confPanelFertiConLab();
+        confPanelFertiSinLab();
     }
 
     public void confFrameBienvenida() {
@@ -123,9 +127,16 @@ public class BienvenidaFrameController {
         System.exit(0);
     }
 
-    /*  public static void main(String[] args) {
-        JFBienvenida jFBienvenida = new JFBienvenida();
-        BienvenidaController controladorBienvenida = new BienvenidaController(jFBienvenida);
-
-    }*/
+     ////configurar panel bienvenida
+    public void conflabelMensaje(){
+        vistaBienvenida.bienvenidaPanel1.jLabelMensaje.setText("<html><body><center>El manejo de los fertilizantes corrige deficiencias de nitrógeno, fósforo y potasio de manera eficaz, contribuyendo \t  para una adecuada producción, calidad y rentabilidad del cultivo.</center></html></body>");
+    }
+    public void confPanelFertiConLab(){
+        vistaBienvenida.bienvenidaPanel1.getjLabelfertiConLabImg().setIcon(new ImageIcon(getClass().getResource("/img/muestrasuelo.jpg")));
+        vistaBienvenida.bienvenidaPanel1.getjLabelfertiConLabDescripcion().setText("<html><body><b>Fertilizacion con Analisis de Suelo</b><br> <b>*</b> Debe extraer muestras de suelo de varias partes del terreno a 20 cm profundidad. <br><b>*</b> Mezclar de manera homogenea la muestra. <br><b> *</b> Envie 1 hilo de muestra de suelo al laboratorio de suelos. <br><b>*</> Con los resultados del laboratorio de suelos<b> inicie con la fertilizacion en el Boton Izquierdo.</b> </body></html>");
+    }
+    public void confPanelFertiSinLab(){
+        vistaBienvenida.bienvenidaPanel1.getjLabelfertiSinLabImg().setIcon(new ImageIcon(getClass().getResource("/img/kitsanalisis.jpg")));
+         vistaBienvenida.bienvenidaPanel1.getjLabelfertiSinLabDescripcion().setText("<html><body><b>Fertilizacion sin Analisis de Suelo</b> <br><b>*</b>Tome varias muestras de suelo del terreno y mezclar de manera homogenea. <br><b>*</b> Compre los <b>kits de analisis de suelo</b> <br><b>* </b> Con la muestra de suelo y los kits de analisis <b>inicie con la fertilizacion en el Boton Izquierdo.</b></body></html>");
+    }
 }

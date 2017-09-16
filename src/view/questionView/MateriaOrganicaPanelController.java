@@ -20,13 +20,11 @@ public class MateriaOrganicaPanelController {
     public MateriaOrganicaPanelController(MateriaOrganicaPanel materiaOrganicaPanel, Cultivo cultivo) {
         this.materiaOrganicaPanel = materiaOrganicaPanel;
         this.cultivo = cultivo;
-        confMOPanel();
+        
         confRadiobutonMO() ;
     }
 
-    public void confMOPanel() {
-        confMOLabel();
-    }
+    
 
     public void confRadiobutonMO() {
         materiaOrganicaPanel.jRadioButtonMOMedio.setSelected(true);
@@ -42,8 +40,6 @@ public class MateriaOrganicaPanelController {
         //System.out.println(ValorNitrogeno);
     }
 
-    public void confMOLabel() {
-        materiaOrganicaPanel.jLabelMO.setIcon(new ImageIcon(getClass().getResource("/img/fondoLabelMO.jpg")));
-    }
+   
 
 }

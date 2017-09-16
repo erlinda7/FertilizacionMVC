@@ -24,13 +24,11 @@ public class PotasioPanelController {
     }
 
     public void confPotasioPanel() {
-        confPotasioLabel();
+       
         confRadiobutonPotasio();
     }
 
-    public void confPotasioLabel() {
-        potasioPanel.jLabelPotasio.setIcon(new ImageIcon(getClass().getResource("/img/fondoLabelPotasio.jpg")));
-    }
+    
     
     public void confRadiobutonPotasio() {
         potasioPanel.jRadioButtonPotMedium.setSelected(true);

@@ -24,13 +24,11 @@ public class NitrogenoPanelController {
     }
 
     public void confNitrogenoPanel() {
-        confNitrogenoLabel();
+      
         confRadiobutonNitrogeno();
     }
 
-    public void confNitrogenoLabel() {
-        nitrogenoPanel.jLabelNitrogeno.setIcon(new ImageIcon(getClass().getResource("/img/fondoLabelNitrogeno.jpg")));
-    }
+    
 
     public void confRadiobutonNitrogeno() {
         nitrogenoPanel.jRadioButtonMedium.setSelected(true);

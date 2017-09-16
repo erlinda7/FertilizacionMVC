@@ -39,15 +39,12 @@ public class TexturaPanelController {
     }
 
     public void confTexturaPanel() {
-        confTexturaLabel();
+       
         confSpinnerArena();
         confSpinnerLimo();
         confSpinnerArcilla();
         confSpinnerTotalTextura();
-    }
-
-    public void confTexturaLabel() {
-        texturaPanel.jLabelTextura.setIcon(new ImageIcon(getClass().getResource("/img/fondoLabelTextura.jpg")));
+        
     }
 
     public void confSpinnerArena() {

@@ -24,14 +24,12 @@ public class FosforoPanelController {
     }
 
     public void confFosforoPanel() {
-        confFosforoLabel();
+       
         confRadiobutonFosforo();
 
     }
 
-    public void confFosforoLabel() {
-        fosforoPanel.jLabelFosforo.setIcon(new ImageIcon(getClass().getResource("/img/fondoLabelFosforo.jpg")));
-    }
+    
 
     public void confRadiobutonFosforo() {
         fosforoPanel.jRadioButtonFosfoMedium.setSelected(true);

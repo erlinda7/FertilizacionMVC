@@ -42,7 +42,7 @@ public class MateriaOrganicaPanel extends javax.swing.JPanel {
         jRadioButtonMOAlto = new javax.swing.JRadioButton();
         jRadioButtonMOMedio = new javax.swing.JRadioButton();
         jRadioButtonMOBajo = new javax.swing.JRadioButton();
-        jLabelMO = new javax.swing.JLabel();
+        mOInformacionPanel2 = new view.questionView.MOInformacionPanel();
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("Elija el nivel de materia organica del suelo");
@@ -50,17 +50,17 @@ public class MateriaOrganicaPanel extends javax.swing.JPanel {
         buttonGroupMO.add(jRadioButtonMOAlto);
         jRadioButtonMOAlto.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jRadioButtonMOAlto.setText("Alto");
+        jRadioButtonMOAlto.setOpaque(false);
 
         buttonGroupMO.add(jRadioButtonMOMedio);
         jRadioButtonMOMedio.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jRadioButtonMOMedio.setText("Medio");
+        jRadioButtonMOMedio.setOpaque(false);
 
         buttonGroupMO.add(jRadioButtonMOBajo);
         jRadioButtonMOBajo.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jRadioButtonMOBajo.setText("Bajo");
-
-        jLabelMO.setText("jLabel2");
-        jLabelMO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jRadioButtonMOBajo.setOpaque(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -72,31 +72,30 @@ public class MateriaOrganicaPanel extends javax.swing.JPanel {
                     .addComponent(jRadioButtonMOAlto)
                     .addComponent(jRadioButtonMOMedio)
                     .addComponent(jRadioButtonMOBajo))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
-                .addComponent(jLabelMO, javax.swing.GroupLayout.PREFERRED_SIZE, 699, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(mOInformacionPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(464, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel1)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabelMO, javax.swing.GroupLayout.PREFERRED_SIZE, 404, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(61, 61, 61)
                         .addComponent(jRadioButtonMOAlto)
                         .addGap(26, 26, 26)
                         .addComponent(jRadioButtonMOMedio)
                         .addGap(30, 30, 30)
-                        .addComponent(jRadioButtonMOBajo)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addComponent(jRadioButtonMOBajo))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(mOInformacionPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -107,9 +106,9 @@ public class MateriaOrganicaPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroupMO;
     private javax.swing.JLabel jLabel1;
-    public javax.swing.JLabel jLabelMO;
     public javax.swing.JRadioButton jRadioButtonMOAlto;
     public javax.swing.JRadioButton jRadioButtonMOBajo;
     public javax.swing.JRadioButton jRadioButtonMOMedio;
+    private view.questionView.MOInformacionPanel mOInformacionPanel2;
     // End of variables declaration//GEN-END:variables
 }

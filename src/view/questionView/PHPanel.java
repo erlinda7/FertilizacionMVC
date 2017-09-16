@@ -45,7 +45,13 @@ public class PHPanel extends javax.swing.JPanel {
         jRadioButtonpH9 = new javax.swing.JRadioButton();
         jRadioButtonpH8 = new javax.swing.JRadioButton();
         jRadioButtonPh7 = new javax.swing.JRadioButton();
-        jLabelPh = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        phInformacionPanel1 = new view.questionView.PhInformacionPanel();
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("Elija el color de pH encontrado en la prueba");
@@ -53,53 +59,72 @@ public class PHPanel extends javax.swing.JPanel {
         buttonGroupPh.add(jRadioButtonPh4);
         jRadioButtonPh4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jRadioButtonPh4.setText("  pH 4");
+        jRadioButtonPh4.setOpaque(false);
 
         buttonGroupPh.add(jRadioButtonPh5);
         jRadioButtonPh5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jRadioButtonPh5.setText("  pH 5");
+        jRadioButtonPh5.setOpaque(false);
 
         buttonGroupPh.add(jRadioButtonPh6);
         jRadioButtonPh6.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jRadioButtonPh6.setText("  pH 6");
+        jRadioButtonPh6.setOpaque(false);
 
         buttonGroupPh.add(jRadioButtonpH9);
         jRadioButtonpH9.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jRadioButtonpH9.setText("  pH 9");
+        jRadioButtonpH9.setOpaque(false);
 
         buttonGroupPh.add(jRadioButtonpH8);
         jRadioButtonpH8.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jRadioButtonpH8.setText("  pH 8");
+        jRadioButtonpH8.setOpaque(false);
 
         buttonGroupPh.add(jRadioButtonPh7);
         jRadioButtonPh7.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jRadioButtonPh7.setText("  pH 7");
+        jRadioButtonPh7.setOpaque(false);
 
-        jLabelPh.setText("jLabel2");
-        jLabelPh.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel2.setText("jLabel2");
+
+        jLabel3.setText("jLabel2");
+
+        jLabel4.setText("jLabel2");
+
+        jLabel5.setText("jLabel2");
+
+        jLabel6.setText("jLabel2");
+
+        jLabel7.setText("jLabel2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jRadioButtonPh5)
+                    .addComponent(jRadioButtonPh4)
+                    .addComponent(jRadioButtonPh6)
+                    .addComponent(jRadioButtonPh7)
+                    .addComponent(jRadioButtonpH8)
+                    .addComponent(jRadioButtonpH9))
+                .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(59, 59, 59)
-                        .addComponent(jRadioButtonpH9))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButtonPh4, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jRadioButtonPh5, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jRadioButtonPh6, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jRadioButtonPh7, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jRadioButtonpH8, javax.swing.GroupLayout.Alignment.TRAILING))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 124, Short.MAX_VALUE)
-                .addComponent(jLabelPh, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(phInformacionPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 608, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -107,22 +132,35 @@ public class PHPanel extends javax.swing.JPanel {
                 .addComponent(jLabel1)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabelPh, javax.swing.GroupLayout.PREFERRED_SIZE, 404, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(39, 39, 39)
-                        .addComponent(jRadioButtonPh4)
-                        .addGap(32, 32, 32)
-                        .addComponent(jRadioButtonPh5)
-                        .addGap(29, 29, 29)
-                        .addComponent(jRadioButtonPh6)
-                        .addGap(31, 31, 31)
-                        .addComponent(jRadioButtonPh7)
-                        .addGap(27, 27, 27)
-                        .addComponent(jRadioButtonpH8)
-                        .addGap(26, 26, 26)
-                        .addComponent(jRadioButtonpH9)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jRadioButtonPh4)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jRadioButtonPh5))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jRadioButtonPh6))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jRadioButtonPh7))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jRadioButtonpH8))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jRadioButtonpH9))
+                        .addContainerGap(91, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(phInformacionPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addContainerGap())))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -133,12 +171,18 @@ public class PHPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroupPh;
     private javax.swing.JLabel jLabel1;
-    public javax.swing.JLabel jLabelPh;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     public javax.swing.JRadioButton jRadioButtonPh4;
     public javax.swing.JRadioButton jRadioButtonPh5;
     public javax.swing.JRadioButton jRadioButtonPh6;
     public javax.swing.JRadioButton jRadioButtonPh7;
     public javax.swing.JRadioButton jRadioButtonpH8;
     public javax.swing.JRadioButton jRadioButtonpH9;
+    private view.questionView.PhInformacionPanel phInformacionPanel1;
     // End of variables declaration//GEN-END:variables
 }

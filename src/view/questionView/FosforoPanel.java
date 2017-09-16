@@ -46,7 +46,14 @@ public class FosforoPanel extends javax.swing.JPanel {
         jRadioButtonFosfoTraceLow = new javax.swing.JRadioButton();
         jRadioButtonFosfoLowMedium = new javax.swing.JRadioButton();
         jRadioButtonFosfoMediumHigh = new javax.swing.JRadioButton();
-        jLabelFosforo = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        fosforoInformacionPanel1 = new view.questionView.FosforoInformacionPanel();
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("Elija el color de fosforo encontrado en el Suelo");
@@ -54,6 +61,7 @@ public class FosforoPanel extends javax.swing.JPanel {
         buttonGroupFosforo.add(jRadioButtonFosfoHigh);
         jRadioButtonFosfoHigh.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jRadioButtonFosfoHigh.setText("High");
+        jRadioButtonFosfoHigh.setOpaque(false);
         jRadioButtonFosfoHigh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButtonFosfoHighActionPerformed(evt);
@@ -63,14 +71,17 @@ public class FosforoPanel extends javax.swing.JPanel {
         buttonGroupFosforo.add(jRadioButtonFosfoMedium);
         jRadioButtonFosfoMedium.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jRadioButtonFosfoMedium.setText("Medium");
+        jRadioButtonFosfoMedium.setOpaque(false);
 
         buttonGroupFosforo.add(jRadioButtonFosfoLow);
         jRadioButtonFosfoLow.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jRadioButtonFosfoLow.setText("Low");
+        jRadioButtonFosfoLow.setOpaque(false);
 
         buttonGroupFosforo.add(jRadioButtonFosfoTrace);
         jRadioButtonFosfoTrace.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jRadioButtonFosfoTrace.setText("Trace");
+        jRadioButtonFosfoTrace.setOpaque(false);
         jRadioButtonFosfoTrace.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButtonFosfoTraceActionPerformed(evt);
@@ -80,69 +91,106 @@ public class FosforoPanel extends javax.swing.JPanel {
         buttonGroupFosforo.add(jRadioButtonFosfoTraceLow);
         jRadioButtonFosfoTraceLow.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jRadioButtonFosfoTraceLow.setText("Entre Low - Trace");
+        jRadioButtonFosfoTraceLow.setOpaque(false);
 
         buttonGroupFosforo.add(jRadioButtonFosfoLowMedium);
         jRadioButtonFosfoLowMedium.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jRadioButtonFosfoLowMedium.setText("Entre Medium - Low");
+        jRadioButtonFosfoLowMedium.setOpaque(false);
 
         buttonGroupFosforo.add(jRadioButtonFosfoMediumHigh);
         jRadioButtonFosfoMediumHigh.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jRadioButtonFosfoMediumHigh.setText("Entre High - Medium");
+        jRadioButtonFosfoMediumHigh.setOpaque(false);
 
-        jLabelFosforo.setText("jLabel12");
-        jLabelFosforo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel2.setText("jLabel2");
+
+        jLabel3.setText("jLabel2");
+
+        jLabel4.setText("jLabel2");
+
+        jLabel5.setText("jLabel2");
+
+        jLabel6.setText("jLabel2");
+
+        jLabel7.setText("jLabel2");
+
+        jLabel8.setText("jLabel2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButtonFosfoMedium)
-                            .addComponent(jRadioButtonFosfoHigh)
-                            .addComponent(jRadioButtonFosfoLow)
-                            .addComponent(jRadioButtonFosfoTrace)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButtonFosfoLowMedium)
-                            .addComponent(jRadioButtonFosfoTraceLow)
-                            .addComponent(jRadioButtonFosfoMediumHigh))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
-                .addComponent(jLabelFosforo, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jRadioButtonFosfoHigh)
+                                    .addComponent(jRadioButtonFosfoMedium)
+                                    .addComponent(jRadioButtonFosfoLow)
+                                    .addComponent(jRadioButtonFosfoTrace))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(2, 2, 2)
+                                        .addComponent(jRadioButtonFosfoMediumHigh, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jRadioButtonFosfoLowMedium)
+                                    .addComponent(jRadioButtonFosfoTraceLow))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(fosforoInformacionPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 711, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(2, 2, 2)
                 .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(jRadioButtonFosfoTrace)
-                        .addGap(12, 12, 12)
-                        .addComponent(jRadioButtonFosfoLow)
-                        .addGap(18, 18, 18)
-                        .addComponent(jRadioButtonFosfoMedium)
-                        .addGap(17, 17, 17)
-                        .addComponent(jRadioButtonFosfoHigh)
-                        .addGap(56, 56, 56)
-                        .addComponent(jRadioButtonFosfoTraceLow)
-                        .addGap(18, 18, 18)
-                        .addComponent(jRadioButtonFosfoLowMedium)
-                        .addGap(18, 18, 18)
-                        .addComponent(jRadioButtonFosfoMediumHigh))
-                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jRadioButtonFosfoTrace)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabelFosforo, javax.swing.GroupLayout.PREFERRED_SIZE, 404, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jRadioButtonFosfoLow)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(1, 1, 1)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jRadioButtonFosfoMedium)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jRadioButtonFosfoHigh)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(32, 32, 32)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jRadioButtonFosfoTraceLow)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jRadioButtonFosfoLowMedium))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jRadioButtonFosfoMediumHigh)))
+                    .addComponent(fosforoInformacionPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 435, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -162,8 +210,15 @@ public class FosforoPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroupFosforo;
+    private view.questionView.FosforoInformacionPanel fosforoInformacionPanel1;
     private javax.swing.JLabel jLabel1;
-    public javax.swing.JLabel jLabelFosforo;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     public javax.swing.JRadioButton jRadioButtonFosfoHigh;
     public javax.swing.JRadioButton jRadioButtonFosfoLow;
     public javax.swing.JRadioButton jRadioButtonFosfoLowMedium;

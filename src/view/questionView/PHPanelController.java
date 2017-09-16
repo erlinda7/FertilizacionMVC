@@ -22,13 +22,10 @@ public class PHPanelController {
     }
 
     public void confPhPanel() {
-        confpHLabel();
         confRadiobutonPh();
     }
 
-    public void confpHLabel() {
-        pHPanel.jLabelPh.setIcon(new ImageIcon(getClass().getResource("/img/fondoLabelPh.jpg")));
-    }
+   
     public void confRadiobutonPh() {
         pHPanel.jRadioButtonPh7.setSelected(true);
         pHPanel.jRadioButtonPh4.setActionCommand("4.01");
