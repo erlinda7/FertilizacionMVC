@@ -27,12 +27,11 @@ public class InterpretacionPanelController {
     public void contenidoEPInterpretacion() {
         jEPInterpretacion.setEditable(false);
         jEPInterpretacion.setContentType("text/html");
-        // jEPInterpretacion.set
         ImageIcon pigIcon = createImageIcon("/img/TexturaTransparente.gif");
         jEPInterpretacion.setText(" <DIV ALIGN=center><h1><b> Interpretación de Datos </h1></b></DIV>"
                 + "<blockquote><b><h2><i>Textura: </i></h2></b></blockquote>"
                 + "<blockquote><blockquote><p align='justify'>El triangulo textural muestra los porcentajes relativos de arena, limo y arcilla en los lados del triangulo"
-                + "y las 12 clases texturales en su Interior. "
+                + " y las 12 clases texturales en su Interior. "
                 + "Cualquier punto dentro del triangulo determina el porcentaje proporción de arena, limo y arcilla cuya sumatoria"
                 + "es el 100%.</p></blockquote></blockquote>"
                 + "<html><div align=center><img src='" + pigIcon + "' width=529 height=475></img></div>"

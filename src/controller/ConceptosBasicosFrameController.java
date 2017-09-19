@@ -9,6 +9,8 @@ package controller;
  *
  * @author Erlinda
  */
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import view.ConceptosBasicosFrame;
 import view.DocumentacionPanel;
 import view.InterpretacionPanel;
@@ -26,7 +28,14 @@ public class ConceptosBasicosFrameController {
         DocumentacionPanelController controladorDocumentacion = new DocumentacionPanelController(jPDocumentacion);
         this.jFConceptosBasicos.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         this.jFConceptosBasicos.setLocationRelativeTo(null);
+        confFrameConceptosB();
+    }
 
+    public void confFrameConceptosB() {
+        jFConceptosBasicos.setTitle("Recomendación de Fertilización de Hortalizas");
+        jFConceptosBasicos.setLocationRelativeTo(null);
+        Image icon = new ImageIcon(getClass().getResource("/img/icon1.png")).getImage();
+        jFConceptosBasicos.setIconImage(icon);
     }
 
     public void ocultarVista() {

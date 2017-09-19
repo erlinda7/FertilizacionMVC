@@ -21,12 +21,14 @@ public class DocumentacionPanel extends javax.swing.JPanel {
     public DocumentacionPanel() {
         initComponents();
     }
+
     public void paint(Graphics g) {
         Image imagen = new ImageIcon(getClass().getResource("/img/fondo2.jpg")).getImage();
-	        g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
-	        setOpaque(false);
-	        super.paint(g);
-	}
+        g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
+        setOpaque(false);
+        super.paint(g);
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -49,8 +51,8 @@ public class DocumentacionPanel extends javax.swing.JPanel {
         jButtonMO = new javax.swing.JButton();
         jButtonPH = new javax.swing.JButton();
         jButtonFetilizante = new javax.swing.JButton();
-        jLabelImagen = new javax.swing.JLabel();
         jLabelDescripcion = new javax.swing.JLabel();
+        jLabelImagen = new javax.swing.JLabel();
 
         jButtonHortaliza.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jButtonHortaliza.setText("Hortaliza");
@@ -112,21 +114,25 @@ public class DocumentacionPanel extends javax.swing.JPanel {
         jButtonFetilizante.setText("Fertilizantes");
         jButtonFetilizante.setContentAreaFilled(false);
 
-        jLabelImagen.setText("jLabel3");
+        jLabelDescripcion.setText("jLabel3");
 
-        jLabelDescripcion.setText("sdszz");
+        jLabelImagen.setText("jLabel4");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(85, 85, 85)
+                .addComponent(jLabel2)
+                .addGap(134, 674, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(38, 38, 38)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButtonFetilizante)
                             .addComponent(jButtonHortaliza)
+                            .addComponent(jButtonFetilizante)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(10, 10, 10)
                                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -136,17 +142,6 @@ public class DocumentacionPanel extends javax.swing.JPanel {
                             .addComponent(jButtonPH)
                             .addComponent(jButtonMO)
                             .addComponent(jButton2)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButtonFosforo, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
-                            .addComponent(jButtonPotasio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(85, 85, 85)
-                        .addComponent(jLabel2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(109, 109, 109)
-                        .addComponent(jButtonNitrogeno))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(layout.createSequentialGroup()
                             .addContainerGap()
@@ -157,12 +152,23 @@ public class DocumentacionPanel extends javax.swing.JPanel {
                                 .addComponent(jButtonArena, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(layout.createSequentialGroup()
                                     .addGap(10, 10, 10)
-                                    .addComponent(jButtonLimo))))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
+                                    .addComponent(jButtonLimo)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButtonFosforo, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
+                            .addComponent(jButtonPotasio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(109, 109, 109)
+                        .addComponent(jButtonNitrogeno)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 444, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(209, 209, 209))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabelDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 451, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(111, 111, 111))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabelImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(103, 103, 103))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -187,7 +193,7 @@ public class DocumentacionPanel extends javax.swing.JPanel {
                         .addComponent(jButtonLimo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonArcilla)
-                        .addGap(18, 18, 18)
+                        .addGap(27, 27, 27)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonNitrogeno)
@@ -196,10 +202,10 @@ public class DocumentacionPanel extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonPotasio))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabelImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                        .addComponent(jLabelDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(37, 37, 37))
+                        .addComponent(jLabelImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38)
+                        .addComponent(jLabelDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

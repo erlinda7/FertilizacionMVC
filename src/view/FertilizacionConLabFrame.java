@@ -59,7 +59,6 @@ public class FertilizacionConLabFrame extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-
     public FertilizacionConLabPanel getFertilizacionConLabPanel1() {
         return fertilizacionConLabPanel1;
     }
@@ -67,7 +66,6 @@ public class FertilizacionConLabFrame extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    
     public ResultadosConLabPanel getResultadosConLabPanel1() {
         return resultadosConLabPanel1;
     }
@@ -75,8 +73,8 @@ public class FertilizacionConLabFrame extends javax.swing.JFrame {
     public JTabbedPane getjTabbedPaneNavegacion() {
         return jTabbedPaneNavegacion;
     }
-    
-    
+
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private view.FertilizacionConLabPanel fertilizacionConLabPanel1;
     private javax.swing.JScrollPane jScrollPane1;

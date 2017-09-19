@@ -21,12 +21,14 @@ public class InterpretacionEPanel extends javax.swing.JEditorPane {
     public InterpretacionEPanel() {
         initComponents();
     }
-public void paint(Graphics g) {
+
+    public void paint(Graphics g) {
         Image imagen = new ImageIcon(getClass().getResource("/img/fondo3.jpg")).getImage();
-	        g.drawImage(imagen, 0, 0, getWidth(), getHeight(),this); 
-	        setOpaque(false);
-	        super.paint(g);
-	}
+        g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
+        setOpaque(false);
+        super.paint(g);
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

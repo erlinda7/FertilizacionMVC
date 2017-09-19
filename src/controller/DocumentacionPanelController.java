@@ -27,8 +27,6 @@ public class DocumentacionPanelController {
     }
 
     public void confInicial() {
-        // jPDocumentacion.jButtonHortaliza.setContentAreaFilled(true);
-
         confHortaliza();
         confFertilizante();
         confPrincipio();
@@ -148,7 +146,6 @@ public class DocumentacionPanelController {
                 + "<br><br>Para el cultivo de hortalizas es importante conocer las condiciones ambientales, clima, suelo, manejo de fertilizantes y la tolerancia del pH del suelo para obtener mejores rendimientos."
                 + "</p></body></html>";
         this.jPDocumentacion.jLabelDescripcion.setText(descripcion_t_hor);
-        // this.jPDocumentacion.jButtonHortaliza.setForeground(Color.blue);
     }
 
     private void buttonFertilizantesActionPerformed(java.awt.event.ActionEvent evt) {
@@ -160,7 +157,6 @@ public class DocumentacionPanelController {
                 + "<br><br><br><br>"
                 + "</p></body></html>";
         this.jPDocumentacion.jLabelDescripcion.setText(descripcion_t_Fer);
-
     }
 
     private void buttonMateriaOrganicaActionPerformed(java.awt.event.ActionEvent evt) {
@@ -170,7 +166,6 @@ public class DocumentacionPanelController {
                 + "<br><br><br><br><br><br><br><br>"
                 + "</p></body></html>";
         this.jPDocumentacion.jLabelDescripcion.setText(descripcion_t_MO);
-
     }
 
     private void buttonPHActionPerformed(java.awt.event.ActionEvent evt) {
@@ -181,29 +176,26 @@ public class DocumentacionPanelController {
                 + "<br><br>Las plantas tienen necesidades específicas del pH del suelo, en algunos casos es necesario alterar el pH del suelo para poder cultivar con éxito. "
                 + "</p></body></html>";
         this.jPDocumentacion.jLabelDescripcion.setText(descripcion_t_ph);
-
     }
 
     private void buttonTArenosoActionPerformed(java.awt.event.ActionEvent evt) {
         this.jPDocumentacion.jLabelImagen.setIcon(new ImageIcon(getClass().getResource("/img/arenosa.jpg")));
-        String descripcion_t_arenoso = "<html><body><p align='justify'>Los suelos arenosos tienen un tamaño de partícula entre los 0,05 y 2,00 mm, contienen las partículas más grandes que el resto de los suelos. "
+        String descripcion_t_arenoso = "<html><body><p align='justify'><br><br>Los suelos arenosos tienen un tamaño de partícula entre los 0,05 y 2,00 mm, contienen las partículas más grandes que el resto de los suelos. "
                 + "<br><br>Estos suelos  no son los de mejor calidad para agricultura ya que no son ricos en nutrientes y no retienen el agua por mucho tiempo."
                 + "<br><br><br>"
                 + "<br><br><br>"
                 + "<br><br><br>"
                 + "</p></body></html>";
         this.jPDocumentacion.jLabelDescripcion.setText(descripcion_t_arenoso);
-
     }
 
     private void buttonTLimosoActionPerformed(java.awt.event.ActionEvent evt) {
         this.jPDocumentacion.jLabelImagen.setIcon(new ImageIcon(getClass().getResource("/img/limoso.jpg")));
-        String descripcion_t_limoso = "<html><body><p align='justify'>Los suelos limosos están compuestas de partículas más pequeñas que varían entre los 0,002 y 0,05 mm."
+        String descripcion_t_limoso = "<html><body><p align='justify'><br><br>Los suelos limosos están compuestas de partículas más pequeñas que varían entre los 0,002 y 0,05 mm."
                 + "<br><br>Son terrenos muy fértiles donde se puede se cultivar la mayoría de las plantas ya que retienen por más tiempo el agua y los nutrientes."
                 + "<br><br><br><br><br><br><br><br><br>"
                 + "</p></body></html>";
         this.jPDocumentacion.jLabelDescripcion.setText(descripcion_t_limoso);
-
     }
 
     private void buttonTArcillosoActionPerformed(java.awt.event.ActionEvent evt) {
@@ -214,7 +206,6 @@ public class DocumentacionPanelController {
                 + "<br><br><br>"
                 + "</p></body></html>";
         this.jPDocumentacion.jLabelDescripcion.setText(descripcion_t_arcilloso);
-
     }
 
     private void buttonNNitrogenoActionPerformed(java.awt.event.ActionEvent evt) {
@@ -224,7 +215,6 @@ public class DocumentacionPanelController {
                 + "<br><br><br><br><br><br><br>"
                 + "</p></body></html>";
         this.jPDocumentacion.jLabelDescripcion.setText(descripcion_t_N);
-
     }
 
     private void buttonNFosforoActionPerformed(java.awt.event.ActionEvent evt) {
@@ -235,7 +225,6 @@ public class DocumentacionPanelController {
                 + "<br><br><br><br><br><br><br><br><br>"
                 + "</p></body></html>";
         this.jPDocumentacion.jLabelDescripcion.setText(descripcion_t_P);
-
     }
 
     private void buttonNPotasioActionPerformed(java.awt.event.ActionEvent evt) {
@@ -245,7 +234,6 @@ public class DocumentacionPanelController {
                 + "<br><br><br><br><br><br><br><br>"
                 + "</p></body></html>";
         this.jPDocumentacion.jLabelDescripcion.setText(descripcion_t_K);
-
     }
 
     public void link(JButton jButtonlink) {

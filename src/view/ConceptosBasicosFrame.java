@@ -53,7 +53,6 @@ public class ConceptosBasicosFrame extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-
     public DocumentacionPanel getDocumentacionPanel1() {
         return documentacionPanel1;
     }
@@ -65,7 +64,6 @@ public class ConceptosBasicosFrame extends javax.swing.JFrame {
         return interpretacionPanel1;
     }
 
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private view.DocumentacionPanel documentacionPanel1;

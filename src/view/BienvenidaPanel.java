@@ -9,7 +9,6 @@ import java.awt.Graphics;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
 
 /**
  *
@@ -23,13 +22,14 @@ public class BienvenidaPanel extends javax.swing.JPanel {
     public BienvenidaPanel() {
         initComponents();
     }
-public void paint(Graphics g) {
+
+    public void paint(Graphics g) {
         Image imagen = new ImageIcon(getClass().getResource("/img/fondoPB23.jpg")).getImage();
-	        g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
-	        setOpaque(false);
-	        super.paint(g);
-	}
-    
+        g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
+        setOpaque(false);
+        super.paint(g);
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -306,8 +306,6 @@ public void paint(Graphics g) {
     public JLabel getjLabelfertiSinLabImg() {
         return jLabelfertiSinLabImg;
     }
-
-   
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

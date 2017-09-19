@@ -21,12 +21,14 @@ public class FertilizacionConLabPanel extends javax.swing.JPanel {
     public FertilizacionConLabPanel() {
         initComponents();
     }
+
     public void paint(Graphics g) {
         Image imagen = new ImageIcon(getClass().getResource("/img/fondo1.jpg")).getImage();
-	        g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
-	        setOpaque(false);
-	        super.paint(g);
-	}
+        g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
+        setOpaque(false);
+        super.paint(g);
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -48,21 +50,21 @@ public class FertilizacionConLabPanel extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         sliderArena = new javax.swing.JSlider();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        jLabelNitrogeno = new javax.swing.JLabel();
+        jLabelfosforo = new javax.swing.JLabel();
+        jLabelPotasio = new javax.swing.JLabel();
         spinnerNitrogeno = new javax.swing.JSpinner();
         spinnerFosforo = new javax.swing.JSpinner();
         spinnerPotasio = new javax.swing.JSpinner();
-        jLabel9 = new javax.swing.JLabel();
+        jLabelPH = new javax.swing.JLabel();
         spinnerpH = new javax.swing.JSpinner();
-        jLabel10 = new javax.swing.JLabel();
+        jLabelMO = new javax.swing.JLabel();
         spinnerMO = new javax.swing.JSpinner();
         buttonGenerarResultados = new javax.swing.JButton();
         jLabelPorcentaje = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        jLabelArena = new javax.swing.JLabel();
+        jLabelLimo = new javax.swing.JLabel();
+        jLabelArcilla = new javax.swing.JLabel();
 
         jLabel1.setFont(new java.awt.Font("Wide Latin", 1, 18)); // NOI18N
         jLabel1.setText("Fertilizacion de hortalizas");
@@ -88,20 +90,20 @@ public class FertilizacionConLabPanel extends javax.swing.JPanel {
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel5.setText("Nutrientes del suelo : ");
 
-        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel6.setText("Nitrogeno :");
+        jLabelNitrogeno.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabelNitrogeno.setText("Nitrogeno :");
 
-        jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel7.setText("Fosforo : ");
+        jLabelfosforo.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabelfosforo.setText("Fosforo : ");
 
-        jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel8.setText("Potasio :");
+        jLabelPotasio.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabelPotasio.setText("Potasio :");
 
-        jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel9.setText("Nivel de pH en el Suelo : ");
+        jLabelPH.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabelPH.setText("Nivel de pH en el Suelo : ");
 
-        jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel10.setText("Nivel de Materia Organica en el Suelo : ");
+        jLabelMO.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabelMO.setText("Nivel de Materia Organica en el Suelo : ");
 
         buttonGenerarResultados.setText("Generar resultados");
         buttonGenerarResultados.addActionListener(new java.awt.event.ActionListener() {
@@ -110,14 +112,14 @@ public class FertilizacionConLabPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel12.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel12.setText("Arena :");
+        jLabelArena.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabelArena.setText("Arena :");
 
-        jLabel13.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel13.setText("Limo :");
+        jLabelLimo.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabelLimo.setText("Limo :");
 
-        jLabel14.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel14.setText("Arcilla :");
+        jLabelArcilla.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabelArcilla.setText("Arcilla :");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -130,10 +132,10 @@ public class FertilizacionConLabPanel extends javax.swing.JPanel {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(29, 29, 29)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel13)
+                                    .addComponent(jLabelLimo)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel14)))
+                                        .addComponent(jLabelArena, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabelArcilla)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(sliderLimo, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
@@ -167,26 +169,26 @@ public class FertilizacionConLabPanel extends javax.swing.JPanel {
                                 .addGap(24, 24, 24)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel6)
+                                        .addComponent(jLabelNitrogeno)
                                         .addGap(18, 18, 18)
                                         .addComponent(spinnerNitrogeno, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(103, 103, 103)
-                                        .addComponent(jLabel7)
+                                        .addComponent(jLabelfosforo)
                                         .addGap(18, 18, 18)
                                         .addComponent(spinnerFosforo, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(105, 105, 105)
-                                        .addComponent(jLabel8)
+                                        .addComponent(jLabelPotasio)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(spinnerPotasio, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel9)
+                                        .addComponent(jLabelPH)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(spinnerpH, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(49, 49, 49)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(buttonGenerarResultados, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jLabel10)
+                                                .addComponent(jLabelMO)
                                                 .addGap(18, 18, 18)
                                                 .addComponent(spinnerMO, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)))
@@ -214,32 +216,32 @@ public class FertilizacionConLabPanel extends javax.swing.JPanel {
                             .addComponent(jLabelPorcentaje, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel12)
+                            .addComponent(jLabelArena)
                             .addComponent(sliderArena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(27, 27, 27)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelLimo, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(sliderLimo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel14)
+                            .addComponent(jLabelArcilla)
                             .addComponent(sliderArcilla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(27, 27, 27)
                         .addComponent(jLabel5)
                         .addGap(34, 34, 34)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
+                            .addComponent(jLabelNitrogeno)
                             .addComponent(spinnerNitrogeno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7)
+                            .addComponent(jLabelfosforo)
                             .addComponent(spinnerFosforo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel8)
+                            .addComponent(jLabelPotasio)
                             .addComponent(spinnerPotasio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(31, 31, 31)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel10)
+                            .addComponent(jLabelMO)
                             .addComponent(spinnerMO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(spinnerpH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel9)))
+                            .addComponent(jLabelPH)))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(71, 71, 71)
                         .addComponent(labelImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -261,19 +263,19 @@ public class FertilizacionConLabPanel extends javax.swing.JPanel {
     public javax.swing.JComboBox<String> comboBoxHortaliza;
     public javax.swing.JComboBox<String> comboBoxRendimiento;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    public javax.swing.JLabel jLabelArcilla;
+    public javax.swing.JLabel jLabelArena;
+    public javax.swing.JLabel jLabelLimo;
+    public javax.swing.JLabel jLabelMO;
+    public javax.swing.JLabel jLabelNitrogeno;
+    public javax.swing.JLabel jLabelPH;
     public javax.swing.JLabel jLabelPorcentaje;
+    public javax.swing.JLabel jLabelPotasio;
+    public javax.swing.JLabel jLabelfosforo;
     public javax.swing.JLabel labelImagen;
     public javax.swing.JLabel labelInformacion;
     public javax.swing.JSlider sliderArcilla;

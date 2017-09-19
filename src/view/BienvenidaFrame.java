@@ -45,8 +45,6 @@ public class BienvenidaFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
- 
-
     public BienvenidaPanel getBienvenidaPanel1() {
         return bienvenidaPanel1;
     }

@@ -71,7 +71,7 @@ public class PdfCultivo {
         Paragraph parrafoNNitrogeno = new Paragraph("Nitrogeno :     " + cultivo.getNivelNitrogeno() + "     ppm", myfuenteContenido);
         parrafoNNitrogeno.setIndentationLeft(40f);
         documento.add(parrafoNNitrogeno);
-        Paragraph parrafoNFosforo = new Paragraph("F�sforo    :     " + cultivo.getNivelFosforo() + "     ppm", myfuenteContenido);
+        Paragraph parrafoNFosforo = new Paragraph("Fósforo    :     " + cultivo.getNivelFosforo() + "     ppm", myfuenteContenido);
         parrafoNFosforo.setIndentationLeft(40f);
         documento.add(parrafoNFosforo);
         Paragraph parrafoNPotasio = new Paragraph("Potasio    :     " + cultivo.getNivelPotasio() + "   ppm", myfuenteContenido);
@@ -83,10 +83,10 @@ public class PdfCultivo {
         parrafoPH.setSpacingAfter(5f);
         documento.add(parrafoPH);
 
-        Paragraph parrafoMO = new Paragraph("Nivel de materia org�nica en el suelo  :     " + cultivo.getNivelMO(), myfuenteSubtitulos);
+        Paragraph parrafoMO = new Paragraph("Nivel de materia orgánica en el suelo  :     " + cultivo.getNivelMO(), myfuenteSubtitulos);
         documento.add(parrafoMO);
 
-        Paragraph parrafoTituloRec = new Paragraph("Recomendacion de Fertilizaci�n :     " + cultivo.getHortaliza() + "  ( " + cultivo.getRendimiento() + "  Ton/ha )", myfuenteTitulo);
+        Paragraph parrafoTituloRec = new Paragraph("Recomendacion de Fertilización :     " + cultivo.getHortaliza() + "  ( " + cultivo.getRendimiento() + "  Ton/ha )", myfuenteTitulo);
         parrafoTituloRec.setAlignment(Paragraph.ALIGN_CENTER);
         parrafoTituloRec.setSpacingBefore(30f);
         parrafoTituloRec.setSpacingAfter(10f);
@@ -103,18 +103,18 @@ public class PdfCultivo {
         Paragraph parrafoPNitrogeno = new Paragraph("Nitrogeno              :    " + cultivo.getRangoNivelNitrogeno(), myfuenteContenido);
         parrafoPNitrogeno.setIndentationLeft(40f);
         documento.add(parrafoPNitrogeno);
-        Paragraph parrafoPFosforo = new Paragraph("F�sforo                 :    " + cultivo.getRangoNivelFosforo(), myfuenteContenido);
+        Paragraph parrafoPFosforo = new Paragraph("Fósforo                 :    " + cultivo.getRangoNivelFosforo(), myfuenteContenido);
         parrafoPFosforo.setIndentationLeft(40f);
         documento.add(parrafoPFosforo);
         Paragraph parrafoPPotasio = new Paragraph("Potasio                 :    " + cultivo.getRangoNivelPotasio(), myfuenteContenido);
         parrafoPPotasio.setIndentationLeft(40f);
         documento.add(parrafoPPotasio);
-        Paragraph parrafoPMO = new Paragraph("Materia Org�nica :    " + cultivo.getRangoNivelMO(), myfuenteContenido);
+        Paragraph parrafoPMO = new Paragraph("Materia Orgánica :    " + cultivo.getRangoNivelMO(), myfuenteContenido);
         parrafoPMO.setIndentationLeft(40f);
         parrafoPMO.setSpacingAfter(5f);
         documento.add(parrafoPMO);
 
-        Paragraph parrafoTituloAplicacionFertlizantes = new Paragraph("Aplicaci�n de los Fertilizantes :", myfuenteSubtitulos2);
+        Paragraph parrafoTituloAplicacionFertlizantes = new Paragraph("Aplicación de los Fertilizantes :", myfuenteSubtitulos2);
         documento.add(parrafoTituloAplicacionFertlizantes);
         Paragraph parrafoAplicacionFertilizantes = new Paragraph(cultivo.getFormaAplicar(), myfuenteContenido);
         parrafoAplicacionFertilizantes.setAlignment(Paragraph.ALIGN_JUSTIFIED);

@@ -6,11 +6,7 @@
 package controller;
 
 import java.awt.Image;
-import java.util.ArrayList;
-import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
-import model.Hortaliza;
-//import model.InformacionProyecto;
 import view.FertilizacionConLabFrame;
 
 /**
