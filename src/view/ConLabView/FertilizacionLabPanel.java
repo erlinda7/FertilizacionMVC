@@ -8,6 +8,7 @@ package view.ConLabView;
 import java.awt.Graphics;
 import java.awt.Image;
 import javax.swing.ImageIcon;
+import javax.swing.JTabbedPane;
 
 /**
  *
@@ -38,19 +39,47 @@ public class FertilizacionLabPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        cultivoLabPanel1 = new view.ConLabView.HortalizaLabPanel();
+        jTabbedNavegacion = new javax.swing.JTabbedPane();
+        jButtonAtrasLab = new javax.swing.JButton();
+        jButtonSiguienteLAb = new javax.swing.JButton();
+
+        jButtonAtrasLab.setText("Atras");
+
+        jButtonSiguienteLAb.setText("Siguiente");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jTabbedNavegacion, javax.swing.GroupLayout.DEFAULT_SIZE, 954, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(289, 289, 289)
+                .addComponent(jButtonAtrasLab, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(65, 65, 65)
+                .addComponent(jButtonSiguienteLAb, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jTabbedNavegacion, javax.swing.GroupLayout.PREFERRED_SIZE, 541, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButtonSiguienteLAb, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonAtrasLab, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    public JTabbedPane getjTabbedNavegacion() {
+        return jTabbedNavegacion;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private view.ConLabView.HortalizaLabPanel cultivoLabPanel1;
+    public javax.swing.JButton jButtonAtrasLab;
+    public javax.swing.JButton jButtonSiguienteLAb;
+    public javax.swing.JTabbedPane jTabbedNavegacion;
     // End of variables declaration//GEN-END:variables
 }

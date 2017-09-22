@@ -32,8 +32,8 @@ public class MateriaOrganicaPanelController {
     }
 
     public void llenarDatosModelo() {
-        Double ValorMO = Double.parseDouble(materiaOrganicaPanel.getButtonGroupMO().getSelection().getActionCommand());
-        cultivo.setNivelMO(ValorMO);
+        Double valorMO = Double.parseDouble(materiaOrganicaPanel.getButtonGroupMO().getSelection().getActionCommand());
+        cultivo.setNivelMO(valorMO);
     }
 
 }

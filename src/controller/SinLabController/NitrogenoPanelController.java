@@ -35,7 +35,7 @@ public class NitrogenoPanelController {
     }
 
     public void llenarDatosModelo() {
-        Integer ValorNitrogeno = Integer.parseInt(nitrogenoPanel.getButtonGroupNitrogeno().getSelection().getActionCommand());
-        cultivo.setNivelNitrogeno(ValorNitrogeno);
+        Integer valorNitrogeno = Integer.parseInt(nitrogenoPanel.getButtonGroupNitrogeno().getSelection().getActionCommand());
+        cultivo.setNivelNitrogeno(valorNitrogeno);
     }
 }

@@ -5,28 +5,19 @@
  */
 package view.ConLabView;
 
-import java.awt.Graphics;
-import java.awt.Image;
-import javax.swing.ImageIcon;
+import javax.swing.ButtonGroup;
 
 /**
  *
  * @author Erlinda
  */
-public class RecomendacionFertilizantes extends javax.swing.JPanel {
+public class ValoresRendHortalizaPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form RecomendacionFertilizantes
+     * Creates new form ValoresRendHortalizasPanel
      */
-    public RecomendacionFertilizantes() {
+    public ValoresRendHortalizaPanel() {
         initComponents();
-    }
-
-    public void paint(Graphics g) {
-        Image imagen = new ImageIcon(getClass().getResource("/img/fondo1.jpg")).getImage();
-        g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
-        setOpaque(false);
-        super.paint(g);
     }
 
     /**
@@ -38,19 +29,26 @@ public class RecomendacionFertilizantes extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroupRendimiento = new javax.swing.ButtonGroup();
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 460, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 120, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    public ButtonGroup getButtonGroupRendimiento() {
+        return buttonGroupRendimiento;
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroupRendimiento;
     // End of variables declaration//GEN-END:variables
 }

@@ -34,7 +34,7 @@ public class PHPanelController {
     }
 
     public void llenarDatosModelo() {
-        Double ValorPh = Double.parseDouble(pHPanel.getButtonGroupPh().getSelection().getActionCommand());
-        cultivo.setNivelpH(ValorPh);
+        Double valorPh = Double.parseDouble(pHPanel.getButtonGroupPh().getSelection().getActionCommand());
+        cultivo.setNivelpH(valorPh);
     }
 }

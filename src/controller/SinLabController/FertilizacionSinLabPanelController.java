@@ -55,7 +55,7 @@ public class FertilizacionSinLabPanelController {
         pivote = 1;
         cultivo = new Cultivo();
         textura = new Textura();
-        inicializarPreguntas();
+        inicializarVistasControladores();
         confButtonSiguiente();
         confButtonAtras();
         navegarVista();
@@ -77,7 +77,7 @@ public class FertilizacionSinLabPanelController {
         });
     }
 
-    public void inicializarPreguntas() {
+    public void inicializarVistasControladores() {
         cultivoPanel = new CultivoPanel();
         cultivoPanelController = new CultivoPanelController(cultivoPanel, cultivo);
         texturaPanel = new TexturaPanel();

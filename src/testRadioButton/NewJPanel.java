@@ -3,18 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package view.ConLabView;
+package testRadioButton;
+
+import javax.swing.ButtonGroup;
 
 /**
  *
  * @author Erlinda
  */
-public class RecomendacionPhMo extends javax.swing.JPanel {
+public class NewJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form RecomendacionPhMo
+     * Creates new form NewJPanel
      */
-    public RecomendacionPhMo() {
+    public NewJPanel() {
         initComponents();
     }
 
@@ -27,31 +29,27 @@ public class RecomendacionPhMo extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        buttonGroupNombres = new javax.swing.ButtonGroup();
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel1.setText("Recomendaciones");
+        setBackground(new java.awt.Color(204, 102, 255));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(263, 263, 263)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(492, Short.MAX_VALUE))
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(420, Short.MAX_VALUE))
+            .addGap(0, 300, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    public ButtonGroup getButtonGroupNombres() {
+        return buttonGroupNombres;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.ButtonGroup buttonGroupNombres;
     // End of variables declaration//GEN-END:variables
 }

@@ -5,28 +5,19 @@
  */
 package view.ConLabView;
 
-import java.awt.Graphics;
-import java.awt.Image;
-import javax.swing.ImageIcon;
+import javax.swing.ButtonGroup;
 
 /**
  *
  * @author Erlinda
  */
-public class TexturaCorreccionPanel extends javax.swing.JPanel {
+public class NombresHortalizasPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form TexturaCorreccionPanel
+     * Creates new form NombresHortalizasPanel
      */
-    public TexturaCorreccionPanel() {
+    public NombresHortalizasPanel() {
         initComponents();
-    }
-
-    public void paint(Graphics g) {
-        Image imagen = new ImageIcon(getClass().getResource("/img/fondo1.jpg")).getImage();
-        g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
-        setOpaque(false);
-        super.paint(g);
     }
 
     /**
@@ -38,19 +29,25 @@ public class TexturaCorreccionPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroupNombresHort = new javax.swing.ButtonGroup();
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 585, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 214, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    public ButtonGroup getButtonGroupNombresHort() {
+        return buttonGroupNombresHort;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroupNombresHort;
     // End of variables declaration//GEN-END:variables
 }

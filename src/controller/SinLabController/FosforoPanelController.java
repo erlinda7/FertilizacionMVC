@@ -35,7 +35,7 @@ public class FosforoPanelController {
     }
 
     public void llenarDatosModelo() {
-        Integer ValorFosforo = Integer.parseInt(fosforoPanel.getButtonGroupFosforo().getSelection().getActionCommand());
-        cultivo.setNivelFosforo(ValorFosforo);
+        Integer valorFosforo = Integer.parseInt(fosforoPanel.getButtonGroupFosforo().getSelection().getActionCommand());
+        cultivo.setNivelFosforo(valorFosforo);
     }
 }

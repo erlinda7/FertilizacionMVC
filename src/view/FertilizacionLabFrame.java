@@ -11,12 +11,12 @@ import javax.swing.JTabbedPane;
  *
  * @author Erlinda
  */
-public class FertilizacionConLabFrame extends javax.swing.JFrame {
+public class FertilizacionLabFrame extends javax.swing.JFrame {
 
     /**
      * Creates new form FertilizacionConLabFrame
      */
-    public FertilizacionConLabFrame() {
+    public FertilizacionLabFrame() {
         initComponents();
     }
 
@@ -30,7 +30,7 @@ public class FertilizacionConLabFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jTabbedPaneNavegacion = new javax.swing.JTabbedPane();
-        fertilizacionConLabPanel1 = new view.FertilizacionConLabPanel();
+        fertilizacionConLabPanel1 = new view.CultivoCompletoLabPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         resultadosConLabPanel1 = new view.ResultadosConLabPanel();
 
@@ -50,7 +50,7 @@ public class FertilizacionConLabFrame extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPaneNavegacion, javax.swing.GroupLayout.DEFAULT_SIZE, 593, Short.MAX_VALUE)
+            .addComponent(jTabbedPaneNavegacion, javax.swing.GroupLayout.PREFERRED_SIZE, 593, Short.MAX_VALUE)
         );
 
         pack();
@@ -59,7 +59,7 @@ public class FertilizacionConLabFrame extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public FertilizacionConLabPanel getFertilizacionConLabPanel1() {
+    public CultivoCompletoLabPanel getFertilizacionConLabPanel1() {
         return fertilizacionConLabPanel1;
     }
 
@@ -76,7 +76,7 @@ public class FertilizacionConLabFrame extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private view.FertilizacionConLabPanel fertilizacionConLabPanel1;
+    private view.CultivoCompletoLabPanel fertilizacionConLabPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPaneNavegacion;
     private view.ResultadosConLabPanel resultadosConLabPanel1;

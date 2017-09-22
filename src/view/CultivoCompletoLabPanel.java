@@ -13,12 +13,12 @@ import javax.swing.ImageIcon;
  *
  * @author Erlinda
  */
-public class FertilizacionConLabPanel extends javax.swing.JPanel {
+public class CultivoCompletoLabPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form JPFertilizacion
      */
-    public FertilizacionConLabPanel() {
+    public CultivoCompletoLabPanel() {
         initComponents();
     }
 

@@ -15,8 +15,8 @@ import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import view.BienvenidaFrame;
 import view.ConceptosBasicosFrame;
-import view.FertilizacionConLabFrame;
-import view.FertilizacionConLabPanel;
+import view.FertilizacionLabFrame;
+import view.CultivoCompletoLabPanel;
 import view.ResultadosConLabPanel;
 import view.sinLabView.FertilizacionSinLabFrame;
 import controller.SinLabController.FertilizacionSinLabFrameController;
@@ -85,14 +85,14 @@ public class BienvenidaFrameController {
     }
 
     private void ButtonFertilizacionConLabActionPerformed(java.awt.event.ActionEvent evt) {
-        FertilizacionConLabFrame fertilizacionConLabFrame = new FertilizacionConLabFrame();
-        FertilizacionConLabFrameController fertilizacionConLabFrameController = new FertilizacionConLabFrameController(fertilizacionConLabFrame);
+        FertilizacionLabFrame fertilizacionConLabFrame = new FertilizacionLabFrame();
+        FertilizacionLabFrameController fertilizacionConLabFrameController = new FertilizacionLabFrameController(fertilizacionConLabFrame);
 
         ResultadosConLabPanel resultadosConLabPanel = fertilizacionConLabFrame.getResultadosConLabPanel1();
         ResultadosConLabPanelController resultadosConLabPanelController = new ResultadosConLabPanelController(resultadosConLabPanel);
 
-        FertilizacionConLabPanel fertilizacionConLabPanel = fertilizacionConLabFrame.getFertilizacionConLabPanel1();
-        FertilizacionConLabPanelController fertilizacionConLabPanelController = new FertilizacionConLabPanelController(fertilizacionConLabPanel, resultadosConLabPanelController, fertilizacionConLabFrame.getjTabbedPaneNavegacion());
+        CultivoCompletoLabPanel fertilizacionConLabPanel = fertilizacionConLabFrame.getFertilizacionConLabPanel1();
+        CultivoCompletoLabPanelController fertilizacionConLabPanelController = new CultivoCompletoLabPanelController(fertilizacionConLabPanel, resultadosConLabPanelController, fertilizacionConLabFrame.getjTabbedPaneNavegacion());
 
     }
 

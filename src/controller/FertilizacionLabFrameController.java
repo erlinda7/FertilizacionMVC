@@ -7,17 +7,17 @@ package controller;
 
 import java.awt.Image;
 import javax.swing.ImageIcon;
-import view.FertilizacionConLabFrame;
+import view.FertilizacionLabFrame;
 
 /**
  *
  * @author Erlinda
  */
-public class FertilizacionConLabFrameController {
+public class FertilizacionLabFrameController {
 
-    FertilizacionConLabFrame fertilizacionConLabFrame;
+    FertilizacionLabFrame fertilizacionConLabFrame;
 
-    public FertilizacionConLabFrameController(FertilizacionConLabFrame fertilizacionConLabFrame) {
+    public FertilizacionLabFrameController(FertilizacionLabFrame fertilizacionConLabFrame) {
         this.fertilizacionConLabFrame = fertilizacionConLabFrame;
         confFramePrincipal();
         this.fertilizacionConLabFrame.setVisible(true);

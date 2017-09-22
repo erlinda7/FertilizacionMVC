@@ -32,7 +32,7 @@ public class PotasioPanelController {
     }
 
     public void llenarDatosModelo() {
-        Integer Valorpotasio = Integer.parseInt(potasioPanel.getButtonGroupPotasio().getSelection().getActionCommand());
-        cultivo.setNivelPotasio(Valorpotasio);
+        Integer valorpotasio = Integer.parseInt(potasioPanel.getButtonGroupPotasio().getSelection().getActionCommand());
+        cultivo.setNivelPotasio(valorpotasio);
     }
 }
