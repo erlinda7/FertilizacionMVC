@@ -44,10 +44,8 @@ public class HortalizaLabPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabelImgHortaliza = new javax.swing.JLabel();
         jLabelDescripHortaliza = new javax.swing.JLabel();
-        jLabelImgPanelCultivo = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        MemoriaTrabajo = new javax.swing.JTextArea();
         nombresHortalizasPanel = new javax.swing.JPanel();
+        memoriaTrabajoPanel2 = new view.ConLabView.MemoriaTrabajoPanel();
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("Para que hortaliza desea realizar la Fertilización?");
@@ -56,15 +54,8 @@ public class HortalizaLabPanel extends javax.swing.JPanel {
         jLabelImgHortaliza.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/acelga.jpg"))); // NOI18N
 
         jLabelDescripHortaliza.setBackground(new java.awt.Color(255, 153, 153));
-        jLabelDescripHortaliza.setText("<html><body><P ALIGN=\\\"justify\\\">La acelga es hortaliza de climas fríos. Tolera heladas, aunque también responde bien a las temperaturas medias.<br><br> Se desarrolla en cualquier tipo de suelo, aunque se comporta mejor en suelos arcillo arenosos. El pH del suelo favorable para la acelga está entre 6.5 a 7.5.</body></html>");
-
-        jLabelImgPanelCultivo.setBackground(new java.awt.Color(51, 0, 255));
-        jLabelImgPanelCultivo.setText("Imagen");
-        jLabelImgPanelCultivo.setOpaque(true);
-
-        MemoriaTrabajo.setColumns(20);
-        MemoriaTrabajo.setRows(5);
-        jScrollPane1.setViewportView(MemoriaTrabajo);
+        jLabelDescripHortaliza.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        jLabelDescripHortaliza.setText("<html><body><P ALIGN=justify>La acelga es hortaliza de climas fríos. Tolera heladas, aunque también responde bien a las temperaturas medias.<br><br> Se desarrolla en cualquier tipo de suelo, aunque se comporta mejor en suelos arcillo arenosos. El pH del suelo favorable para la acelga está entre 6.5 a 7.5.</body></html>");
 
         nombresHortalizasPanel.setOpaque(false);
 
@@ -72,11 +63,11 @@ public class HortalizaLabPanel extends javax.swing.JPanel {
         nombresHortalizasPanel.setLayout(nombresHortalizasPanelLayout);
         nombresHortalizasPanelLayout.setHorizontalGroup(
             nombresHortalizasPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 559, Short.MAX_VALUE)
         );
         nombresHortalizasPanelLayout.setVerticalGroup(
             nombresHortalizasPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 181, Short.MAX_VALUE)
+            .addGap(0, 163, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -85,38 +76,39 @@ public class HortalizaLabPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabelImgHortaliza, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(55, 55, 55)
-                        .addComponent(jLabelDescripHortaliza, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(nombresHortalizasPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabelImgPanelCultivo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 308, Short.MAX_VALUE))
-                .addGap(32, 32, 32))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(537, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(48, 48, 48)
+                                .addComponent(jLabelImgHortaliza, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabelDescripHortaliza, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(nombresHortalizasPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(memoriaTrabajoPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jLabel1)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
                         .addGap(18, 18, 18)
                         .addComponent(nombresHortalizasPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGap(36, 36, 36)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabelDescripHortaliza, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelImgHortaliza, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabelImgPanelCultivo, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1)))
-                .addContainerGap())
+                        .addGap(10, 10, 10)
+                        .addComponent(memoriaTrabajoPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -127,14 +119,12 @@ public class HortalizaLabPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextArea MemoriaTrabajo;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroupNombresHortalizas;
     private javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabelDescripHortaliza;
     public javax.swing.JLabel jLabelImgHortaliza;
-    private javax.swing.JLabel jLabelImgPanelCultivo;
-    private javax.swing.JScrollPane jScrollPane1;
+    private view.ConLabView.MemoriaTrabajoPanel memoriaTrabajoPanel2;
     public javax.swing.JPanel nombresHortalizasPanel;
     // End of variables declaration//GEN-END:variables
 }

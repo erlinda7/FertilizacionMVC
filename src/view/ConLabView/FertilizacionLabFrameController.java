@@ -5,6 +5,10 @@
  */
 package view.ConLabView;
 
+import com.alee.laf.WebLookAndFeel;
+import com.jtattoo.plaf.mcwin.McWinLookAndFeel;
+import java.util.Properties;
+import javax.swing.UIManager;
 import model.Cultivo;
 
 /**
@@ -17,24 +21,35 @@ public class FertilizacionLabFrameController {
 
     public FertilizacionLabFrameController(FertilizacionLabFrame fertilizacionLabFrame) {
         this.fertilizacionLabFrame = fertilizacionLabFrame;
-        //crear cultivo con datos inicializados
 
-        //para probar buton test
-        // HortalizaLabPanelController cultivoLabPanelController = new HortalizaLabPanelController(fertilizacionLabFrame.fertilizacionLabPanel1.cultivoLabPanel2, null);
-        //RendimientoLabPanelController rendimientoLabPanelController = new RendimientoLabPanelController(fertilizacionLabFrame.fertilizacionLabPanel1.rendimientoLabPanel1, null);
-        //TexturaLabPanelController texturaLabPanelController =new TexturaLabPanelController(fertilizacionLabFrame.fertilizacionLabPanel1.texturaLabPanel1, null);
-        //NutrientesLabPanelController nutrientesLabPanelController =new NutrientesLabPanelController(fertilizacionLabFrame.fertilizacionLabPanel1.nutrientesLabPanel1, null);
-        //PHLabPanelController pHLabPanelController=new PHLabPanelController(fertilizacionLabFrame.fertilizacionLabPanel1.pHLabPanel1, null);
-        //MOLabPanelController mOLabPanelController=new MOLabPanelController(fertilizacionLabFrame.fertilizacionLabPanel1.mOLabPanel1, null);
         fertilizacionLabFrame.setVisible(true);
     }
 
     public static void main(String args[]) {
+       //look and feel
+        try {
+            Properties props = new Properties();
 
+            props.put("selectionBackgroundColor", "184 241 200");
+            props.put("windowTitleForegroundColor", "255 255 255");
+            props.put("windowTitleColorLight", "20 147 101");
+            props.put("windowTitleColorDark", "52 211 154");
+            props.put("windowBorderColor", "20 147 101");
+            props.put("frameColor", "20 147 101");
+            props.put("controlColorLight", "52 211 154");
+            props.put("controlColorDark", "20 147 101");
+
+            McWinLookAndFeel.setCurrentTheme(props);
+            UIManager.setLookAndFeel(new McWinLookAndFeel());
+            WebLookAndFeel.initializeManagers();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
         FertilizacionLabFrame fertilizacionLabFrame = new FertilizacionLabFrame();
         FertilizacionLabFrameController fertilizacionLabFrameController = new FertilizacionLabFrameController(fertilizacionLabFrame);
-        
-        FertilizacionLabPanel fertilizacionLabPanel=fertilizacionLabFrame.fertilizacionLabPanel1;
-        FertilizacionLabPanelController fertilizacionLabPanelController1= new FertilizacionLabPanelController(fertilizacionLabPanel);
+
+        FertilizacionLabPanel fertilizacionLabPanel = fertilizacionLabFrame.fertilizacionLabPanel1;
+        FertilizacionLabPanelController fertilizacionLabPanelController1 = new FertilizacionLabPanelController(fertilizacionLabPanel);
     }
 }

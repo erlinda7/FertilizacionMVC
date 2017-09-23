@@ -42,9 +42,9 @@ public class HortalizaLabPanelController {
             WebRadioButton radioButonNombresHort = new WebRadioButton(nombresHort);
             radioButonNombresHort.setFont(new java.awt.Font("Times New Roman", 1, 14));
             radioButonNombresHort.setActionCommand(nombresHort);
-            if(nombresHortalizas.get(i).equals("Acelga")){
-            radioButonNombresHort.setSelected(true);
-            }
+//            if(nombresHortalizas.get(i).equals("Acelga")){
+//            radioButonNombresHort.setSelected(true);
+//            }
             hortalizaLabPanel.getButtonGroupNombresHortalizas().add(radioButonNombresHort);
             radioButonNombresHort.addActionListener(new ActionListener() {
                 @Override

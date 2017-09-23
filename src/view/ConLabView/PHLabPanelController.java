@@ -26,13 +26,6 @@ public class PHLabPanelController {
         this.cultivo = cultivo;
         confSpinnerpHLab();
         
-        ///buton test
-        pHLabPanel.jButtonTestPH.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                llenarDatosModelo();
-            }
-        });
-        ///
     }
 
     public void confSpinnerpHLab() {

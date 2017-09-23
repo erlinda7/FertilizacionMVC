@@ -26,13 +26,6 @@ public class MOLabPanelController {
         this.cultivo = cultivo;
         confSpinnerMOLab();
         
-        ///buton test
-        mopLabPanel.jButtonTestMO.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                llenarDatosModelo();
-            }
-        });
-        ///
     }
 
     public void confSpinnerMOLab() {

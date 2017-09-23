@@ -5,12 +5,13 @@
  */
 package view.ConLabView;
 
-import controller.CultivoCompletoLabPanelController;
+import controller.CultivoConfiguradoLabPanelController;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JTabbedPane;
 import model.Cultivo;
 import model.Textura;
-import view.CultivoCompletoLabPanel;
+import view.CultivoConfiguradoLabPanel;
 import view.sinLabView.TexturaPanel;
 
 /**
@@ -38,8 +39,8 @@ public class FertilizacionLabPanelController {
     MOLabPanel mOLabPanel;
     MOLabPanelController mOLabPanelController;
 
-    CultivoCompletoLabPanel CultivoCompletoLabPanel;
-    CultivoCompletoLabPanelController cultivoCompletoLabPanelController;
+    CultivoConfiguradoLabPanel cultivoConfiguradoLabPanel;
+    CultivoConfiguradoLabPanelController cultivoConfiguradoLabPanelController;
 
     RecomendacionesCultivoPanel recomendacionesCultivoPanel;
     RecomendacionesCultivoPanelController recomendacionesCultivoPanelController;
@@ -93,7 +94,8 @@ public class FertilizacionLabPanelController {
         mOLabPanel = new MOLabPanel();
         mOLabPanelController = new MOLabPanelController(mOLabPanel, cultivo);
 
-        CultivoCompletoLabPanel = new CultivoCompletoLabPanel();
+        cultivoConfiguradoLabPanel = new CultivoConfiguradoLabPanel();
+        cultivoConfiguradoLabPanelController= new CultivoConfiguradoLabPanelController(cultivoConfiguradoLabPanel);
         recomendacionesCultivoPanel =new RecomendacionesCultivoPanel();
     }
 
@@ -162,7 +164,7 @@ public class FertilizacionLabPanelController {
                 break;
             case 7:
                 NavegacionTabbe.remove(0);
-                NavegacionTabbe.addTab("Fertilización de Hortalizas", CultivoCompletoLabPanel);
+                NavegacionTabbe.addTab("Fertilización de Hortalizas", cultivoConfiguradoLabPanel);
                 break;
             case 8:
                 NavegacionTabbe.addTab("Recomendaciones", recomendacionesCultivoPanel);
@@ -178,7 +180,7 @@ public class FertilizacionLabPanelController {
 
             case 2:
                 hortalizaLabPanelController.llenarDatosModelo();
-                actualizarVistaRendimiento();
+                rendimientoLabPanelController.actualizarVistaRendimiento();
                 System.out.println(cultivo.getHortaliza());
                 rendimientoLabPanelController.actualizaValorRadioButtonRendimiento(hortalizaLabPanelController.getRendimientoActual());
                 
@@ -215,10 +217,9 @@ public class FertilizacionLabPanelController {
                 break;
         }
     }
-    public void actualizarVistaRendimiento(){
-    rendimientoLabPanel.jLabelNombreHortaliza.setText(cultivo.getHortaliza());
-    
-    }
+//    public void actualizarVistaRendimiento(){
+//    rendimientoLabPanel.jLabelNombreHortaliza.setText(cultivo.getHortaliza()+"  (ton/ha): ");
+//    }
     
     
 }

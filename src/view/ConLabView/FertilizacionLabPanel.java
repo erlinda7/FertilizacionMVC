@@ -10,6 +10,8 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JTabbedPane;
 
+import com.alee.laf.tabbedpane.WebTabbedPane;
+
 /**
  *
  * @author Erlinda
@@ -23,12 +25,12 @@ public class FertilizacionLabPanel extends javax.swing.JPanel {
         initComponents();
     }
 
-    public void paint(Graphics g) {
-        Image imagen = new ImageIcon(getClass().getResource("/img/fondo1.jpg")).getImage();
-        g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
-        setOpaque(false);
-        super.paint(g);
-    }
+//    public void paint(Graphics g) {
+//        Image imagen = new ImageIcon(getClass().getResource("/img/fondo1.jpg")).getImage();
+//        g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
+//        setOpaque(false);
+//        super.paint(g);
+//    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -44,6 +46,8 @@ public class FertilizacionLabPanel extends javax.swing.JPanel {
         jButtonAtrasLab = new javax.swing.JButton();
         jButtonSiguienteLAb = new javax.swing.JButton();
 
+        jTabbedNavegacion.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 153, 51)));
+
         jButtonAtrasLab.setText("Atras");
 
         jButtonSiguienteLAb.setText("Siguiente");
@@ -52,23 +56,23 @@ public class FertilizacionLabPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedNavegacion, javax.swing.GroupLayout.DEFAULT_SIZE, 954, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(289, 289, 289)
                 .addComponent(jButtonAtrasLab, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(65, 65, 65)
+                .addGap(64, 64, 64)
                 .addComponent(jButtonSiguienteLAb, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(423, Short.MAX_VALUE))
+            .addComponent(jTabbedNavegacion)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedNavegacion, javax.swing.GroupLayout.PREFERRED_SIZE, 541, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTabbedNavegacion, javax.swing.GroupLayout.PREFERRED_SIZE, 551, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonSiguienteLAb, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonAtrasLab, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
-                .addContainerGap())
+                    .addComponent(jButtonAtrasLab, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
+                    .addComponent(jButtonSiguienteLAb, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(3, 3, 3))
         );
     }// </editor-fold>//GEN-END:initComponents
 
