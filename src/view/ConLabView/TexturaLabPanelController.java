@@ -9,6 +9,7 @@ import com.alee.extended.layout.VerticalFlowLayout;
 import com.alee.extended.window.WebPopOver;
 import com.alee.laf.label.WebLabel;
 import java.awt.Color;
+import java.awt.FlowLayout;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.ImageIcon;
@@ -255,4 +256,5 @@ public class TexturaLabPanelController {
         popOverArcilla.add(jlabelImgArena);
     }
     //
+    
 }

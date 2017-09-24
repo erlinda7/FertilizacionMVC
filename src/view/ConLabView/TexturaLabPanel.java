@@ -43,10 +43,6 @@ public class TexturaLabPanel extends javax.swing.JPanel {
         jSliderLimoLab = new javax.swing.JSlider();
         jSliderArcillaLab = new javax.swing.JSlider();
         jLabelPorctTextura = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jLabelImgPanelCultivo = new javax.swing.JLabel();
         jLabelPorcArena = new javax.swing.JLabel();
         jLabelPorcLimo = new javax.swing.JLabel();
         jLabelPorcArcilla = new javax.swing.JLabel();
@@ -54,6 +50,8 @@ public class TexturaLabPanel extends javax.swing.JPanel {
         jLabelImgTexturaLab2 = new javax.swing.JLabel();
         jLabelImgTexturaLab1 = new javax.swing.JLabel();
         jLabelImgTexturaLab3 = new javax.swing.JLabel();
+        contenedorMemoriaTrabajo = new javax.swing.JPanel();
+        memoriaTrabajoPanel1 = new view.ConLabView.MemoriaTrabajoPanel();
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("Cual es el Porcentaje de Arena en el Suelo ?");
@@ -62,28 +60,6 @@ public class TexturaLabPanel extends javax.swing.JPanel {
         jLabelPorctTextura.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelPorctTextura.setText("100 %");
         jLabelPorctTextura.setOpaque(true);
-
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Memoria de Trabajo", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
-        jPanel1.setOpaque(false);
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane2.setViewportView(jTextArea1);
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 296, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 308, Short.MAX_VALUE)
-        );
-
-        jLabelImgPanelCultivo.setBackground(new java.awt.Color(51, 0, 255));
-        jLabelImgPanelCultivo.setText("Imagen");
-        jLabelImgPanelCultivo.setOpaque(true);
 
         jLabelPorcArena.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelPorcArena.setText("Porcentaje de Arena:");
@@ -128,6 +104,24 @@ public class TexturaLabPanel extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
+        contenedorMemoriaTrabajo.setOpaque(false);
+
+        javax.swing.GroupLayout contenedorMemoriaTrabajoLayout = new javax.swing.GroupLayout(contenedorMemoriaTrabajo);
+        contenedorMemoriaTrabajo.setLayout(contenedorMemoriaTrabajoLayout);
+        contenedorMemoriaTrabajoLayout.setHorizontalGroup(
+            contenedorMemoriaTrabajoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenedorMemoriaTrabajoLayout.createSequentialGroup()
+                .addContainerGap(15, Short.MAX_VALUE)
+                .addComponent(memoriaTrabajoPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        contenedorMemoriaTrabajoLayout.setVerticalGroup(
+            contenedorMemoriaTrabajoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenedorMemoriaTrabajoLayout.createSequentialGroup()
+                .addGap(0, 43, Short.MAX_VALUE)
+                .addComponent(memoriaTrabajoPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -151,12 +145,7 @@ public class TexturaLabPanel extends javax.swing.JPanel {
                             .addComponent(jPanelTexturaImg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabelImgPanelCultivo, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)))
+                .addComponent(contenedorMemoriaTrabajo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -165,9 +154,8 @@ public class TexturaLabPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabelImgPanelCultivo, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(contenedorMemoriaTrabajo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -184,7 +172,7 @@ public class TexturaLabPanel extends javax.swing.JPanel {
                         .addComponent(jLabelPorcArcilla)
                         .addGap(18, 18, 18)
                         .addComponent(jSliderArcillaLab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
                         .addComponent(jPanelTexturaImg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
@@ -192,8 +180,8 @@ public class TexturaLabPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JPanel contenedorMemoriaTrabajo;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabelImgPanelCultivo;
     public javax.swing.JLabel jLabelImgTexturaLab1;
     public javax.swing.JLabel jLabelImgTexturaLab2;
     public javax.swing.JLabel jLabelImgTexturaLab3;
@@ -201,12 +189,10 @@ public class TexturaLabPanel extends javax.swing.JPanel {
     public javax.swing.JLabel jLabelPorcArena;
     public javax.swing.JLabel jLabelPorcLimo;
     public javax.swing.JLabel jLabelPorctTextura;
-    private javax.swing.JPanel jPanel1;
     public javax.swing.JPanel jPanelTexturaImg;
-    private javax.swing.JScrollPane jScrollPane2;
     public javax.swing.JSlider jSliderArcillaLab;
     public javax.swing.JSlider jSliderArenaLab;
     public javax.swing.JSlider jSliderLimoLab;
-    private javax.swing.JTextArea jTextArea1;
+    public view.ConLabView.MemoriaTrabajoPanel memoriaTrabajoPanel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -19,11 +19,11 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <Component id="jLabel1" pref="293" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+          <Component id="jLabel1" alignment="1" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
-          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -57,42 +57,37 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="phLabel" min="-2" max="-2" attributes="0"/>
-                              <Component id="potasioLabel" min="-2" max="-2" attributes="0"/>
-                              <Component id="fosforoLabel" min="-2" max="-2" attributes="0"/>
-                              <Component id="nitrogenoLabel" min="-2" max="-2" attributes="0"/>
-                              <Component id="arcillaLabel" min="-2" max="-2" attributes="0"/>
-                              <Component id="limoLabel" min="-2" max="-2" attributes="0"/>
-                              <Component id="arenaLabel" min="-2" max="-2" attributes="0"/>
-                              <Component id="materiaOrganicaLabel" min="-2" max="-2" attributes="0"/>
-                              <Component id="rendimientoLabel" min="-2" max="-2" attributes="0"/>
-                              <Component id="hortalizaLabel" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="hortalizaValor" alignment="0" pref="77" max="32767" attributes="0"/>
-                              <Component id="rendimientoValor" alignment="0" max="32767" attributes="0"/>
-                              <Component id="arenaValor" alignment="0" max="32767" attributes="0"/>
-                              <Component id="limoValor" alignment="0" max="32767" attributes="0"/>
-                              <Component id="arcillaValor" alignment="0" max="32767" attributes="0"/>
-                              <Component id="nitrogenoValor" alignment="0" max="32767" attributes="0"/>
-                              <Component id="fosforoValor" alignment="0" max="32767" attributes="0"/>
-                              <Component id="potasioValor" alignment="0" max="32767" attributes="0"/>
-                              <Component id="phValor" alignment="0" max="32767" attributes="0"/>
-                              <Component id="materiaOrganicaValor" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="hechosInicialesLabel" min="-2" pref="116" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="phLabel" min="-2" max="-2" attributes="0"/>
+                      <Component id="potasioLabel" min="-2" max="-2" attributes="0"/>
+                      <Component id="fosforoLabel" min="-2" max="-2" attributes="0"/>
+                      <Component id="nitrogenoLabel" min="-2" max="-2" attributes="0"/>
+                      <Component id="arcillaLabel" min="-2" max="-2" attributes="0"/>
+                      <Component id="limoLabel" min="-2" max="-2" attributes="0"/>
+                      <Component id="arenaLabel" min="-2" max="-2" attributes="0"/>
+                      <Component id="materiaOrganicaLabel" min="-2" max="-2" attributes="0"/>
+                      <Component id="rendimientoLabel" min="-2" max="-2" attributes="0"/>
+                      <Component id="hortalizaLabel" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="hortalizaValor" alignment="0" pref="77" max="32767" attributes="0"/>
+                      <Component id="rendimientoValor" alignment="0" max="32767" attributes="0"/>
+                      <Component id="arenaValor" alignment="0" max="32767" attributes="0"/>
+                      <Component id="limoValor" alignment="0" max="32767" attributes="0"/>
+                      <Component id="arcillaValor" alignment="0" max="32767" attributes="0"/>
+                      <Component id="nitrogenoValor" alignment="0" max="32767" attributes="0"/>
+                      <Component id="fosforoValor" alignment="0" max="32767" attributes="0"/>
+                      <Component id="potasioValor" alignment="0" max="32767" attributes="0"/>
+                      <Component id="phValor" alignment="0" max="32767" attributes="0"/>
+                      <Component id="materiaOrganicaValor" alignment="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="hechosInicialesLabel" min="-2" pref="116" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -391,9 +386,6 @@
       </SubComponents>
     </Container>
     <Component class="javax.swing.JLabel" name="jLabel1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel1"/>
-      </Properties>
     </Component>
   </SubComponents>
 </Form>

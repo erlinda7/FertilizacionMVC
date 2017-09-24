@@ -6,11 +6,14 @@
 package view.ConLabView;
 
 import com.alee.laf.radiobutton.WebRadioButton;
+import java.awt.Color;
+import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import model.Cultivo;
 import model.Hortaliza;
 import service.HortalizaService;
@@ -20,18 +23,18 @@ import service.HortalizaService;
  * @author Erlinda
  */
 public class HortalizaLabPanelController {
-    
+
     HortalizaLabPanel hortalizaLabPanel;
     private ArrayList<Hortaliza> arrayListHortalizas;
     private Cultivo cultivo;
     private HortalizaService hortalizaService = new HortalizaService();
     private String[] rendimientoActual;
-    
+
     public HortalizaLabPanelController(HortalizaLabPanel hortalizaLabPanel, Cultivo cultivo) {
         this.hortalizaLabPanel = hortalizaLabPanel;
         this.cultivo = cultivo;
         confNombresHortalizasPanel(hortalizaService.listarNombresHortaliza());
-        
+
     }
 
     public void confNombresHortalizasPanel(ArrayList<String> nombresHortalizas) {
@@ -52,9 +55,9 @@ public class HortalizaLabPanelController {
                     Hortaliza hortalizaRecuperada = hortalizaService.buscarHortalizaNombre(e.getActionCommand());
                     String descripcionHortaliza = hortalizaRecuperada.getDescripcionHortaliza();
                     hortalizaLabPanel.jLabelDescripHortaliza.setText("<html><body><P ALIGN=\"justify\">" + descripcionHortaliza + "</html></body>");
-                    String imgHortaliza= hortalizaRecuperada.getRutaImgHortaliza();
+                    String imgHortaliza = hortalizaRecuperada.getRutaImgHortaliza();
                     hortalizaLabPanel.jLabelImgHortaliza.setIcon(new ImageIcon(getClass().getResource(imgHortaliza)));
-                    rendimientoActual=hortalizaRecuperada.getRendimientoHortaliza();
+                    rendimientoActual = hortalizaRecuperada.getRendimientoHortaliza();
                 }
             });
             hortalizaLabPanel.nombresHortalizasPanel.add(radioButonNombresHort);
@@ -64,11 +67,12 @@ public class HortalizaLabPanelController {
     public String[] getRendimientoActual() {
         return rendimientoActual;
     }
-    
+
     public void llenarDatosModelo() {
-      String valorHortalizaLab = hortalizaLabPanel.getButtonGroupNombresHortalizas().getSelection().getActionCommand();
+        String valorHortalizaLab = hortalizaLabPanel.getButtonGroupNombresHortalizas().getSelection().getActionCommand();
         //System.out.println(ValorHortalizaLab);
-           cultivo.setHortaliza(valorHortalizaLab);
-        
+        cultivo.setHortaliza(valorHortalizaLab);
+
     }
+
 }

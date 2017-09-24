@@ -5,6 +5,7 @@
  */
 package view.ConLabView;
 
+import java.awt.FlowLayout;
 import java.text.DecimalFormat;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;

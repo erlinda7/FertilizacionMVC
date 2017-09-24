@@ -5,6 +5,7 @@
  */
 package view.ConLabView;
 
+import java.awt.FlowLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;

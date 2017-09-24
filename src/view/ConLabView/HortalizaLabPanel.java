@@ -45,7 +45,7 @@ public class HortalizaLabPanel extends javax.swing.JPanel {
         jLabelImgHortaliza = new javax.swing.JLabel();
         jLabelDescripHortaliza = new javax.swing.JLabel();
         nombresHortalizasPanel = new javax.swing.JPanel();
-        memoriaTrabajoPanel2 = new view.ConLabView.MemoriaTrabajoPanel();
+        memoriaTrabajoPanel1 = new view.ConLabView.MemoriaTrabajoPanel();
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("Para que hortaliza desea realizar la Fertilización?");
@@ -89,26 +89,24 @@ public class HortalizaLabPanel extends javax.swing.JPanel {
                                 .addComponent(jLabelDescripHortaliza, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(nombresHortalizasPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(memoriaTrabajoPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(35, 35, 35))))
+                        .addComponent(memoriaTrabajoPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(21, 21, 21))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
                         .addComponent(nombresHortalizasPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(36, 36, 36)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabelDescripHortaliza, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelImgHortaliza, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(memoriaTrabajoPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(58, Short.MAX_VALUE))
+                    .addComponent(memoriaTrabajoPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -124,7 +122,7 @@ public class HortalizaLabPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabelDescripHortaliza;
     public javax.swing.JLabel jLabelImgHortaliza;
-    private view.ConLabView.MemoriaTrabajoPanel memoriaTrabajoPanel2;
+    public view.ConLabView.MemoriaTrabajoPanel memoriaTrabajoPanel1;
     public javax.swing.JPanel nombresHortalizasPanel;
     // End of variables declaration//GEN-END:variables
 }

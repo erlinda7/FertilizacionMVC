@@ -7,6 +7,7 @@ package view.ConLabView;
 
 import com.alee.laf.button.WebButton;
 import com.alee.laf.radiobutton.WebRadioButton;
+import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -79,4 +80,5 @@ public class RendimientoLabPanelController {
         cultivo.setRendimiento(valorRendLab);
         //System.out.println(valorRendLab);
     }
+
 }
