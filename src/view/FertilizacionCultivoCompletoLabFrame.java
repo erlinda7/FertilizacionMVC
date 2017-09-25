@@ -11,12 +11,12 @@ import javax.swing.JTabbedPane;
  *
  * @author Erlinda
  */
-public class FertilizacionLabFrame extends javax.swing.JFrame {
+public class FertilizacionCultivoCompletoLabFrame extends javax.swing.JFrame {
 
     /**
      * Creates new form FertilizacionConLabFrame
      */
-    public FertilizacionLabFrame() {
+    public FertilizacionCultivoCompletoLabFrame() {
         initComponents();
     }
 

@@ -25,31 +25,31 @@ public class FertilizacionLabFrameController {
         fertilizacionLabFrame.setVisible(true);
     }
 
-    public static void main(String args[]) {
-       //look and feel
-        try {
-            Properties props = new Properties();
-
-            props.put("selectionBackgroundColor", "184 241 200");
-            props.put("windowTitleForegroundColor", "255 255 255");
-            props.put("windowTitleColorLight", "20 147 101");
-            props.put("windowTitleColorDark", "52 211 154");
-            props.put("windowBorderColor", "20 147 101");
-            props.put("frameColor", "20 147 101");
-            props.put("controlColorLight", "52 211 154");
-            props.put("controlColorDark", "20 147 101");
-
-            McWinLookAndFeel.setCurrentTheme(props);
-            UIManager.setLookAndFeel(new McWinLookAndFeel());
-            WebLookAndFeel.initializeManagers();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        
-        FertilizacionLabFrame fertilizacionLabFrame = new FertilizacionLabFrame();
-        FertilizacionLabFrameController fertilizacionLabFrameController = new FertilizacionLabFrameController(fertilizacionLabFrame);
-
-        FertilizacionLabPanel fertilizacionLabPanel = fertilizacionLabFrame.fertilizacionLabPanel1;
-        FertilizacionLabPanelController fertilizacionLabPanelController1 = new FertilizacionLabPanelController(fertilizacionLabPanel);
-    }
+//    public static void main(String args[]) {
+//       //look and feel
+//        try {
+//            Properties props = new Properties();
+//
+//            props.put("selectionBackgroundColor", "184 241 200");
+//            props.put("windowTitleForegroundColor", "255 255 255");
+//            props.put("windowTitleColorLight", "20 147 101");
+//            props.put("windowTitleColorDark", "52 211 154");
+//            props.put("windowBorderColor", "20 147 101");
+//            props.put("frameColor", "20 147 101");
+//            props.put("controlColorLight", "52 211 154");
+//            props.put("controlColorDark", "20 147 101");
+//
+//            McWinLookAndFeel.setCurrentTheme(props);
+//            UIManager.setLookAndFeel(new McWinLookAndFeel());
+//            WebLookAndFeel.initializeManagers();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        
+//        FertilizacionLabFrame fertilizacionLabFrame = new FertilizacionLabFrame();
+//        FertilizacionLabFrameController fertilizacionLabFrameController = new FertilizacionLabFrameController(fertilizacionLabFrame);
+//
+//        FertilizacionLabPanel fertilizacionLabPanel = fertilizacionLabFrame.fertilizacionLabPanel1;
+//        FertilizacionLabPanelController fertilizacionLabPanelController1 = new FertilizacionLabPanelController(fertilizacionLabPanel);
+//    }
 }

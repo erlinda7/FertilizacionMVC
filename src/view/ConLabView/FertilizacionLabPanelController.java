@@ -6,6 +6,7 @@
 package view.ConLabView;
 
 import controller.CultivoConfiguradoLabPanelController;
+import controller.ResultadosConLabPanelController;
 import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
@@ -13,6 +14,7 @@ import javax.swing.JTabbedPane;
 import model.Cultivo;
 import model.Textura;
 import view.CultivoConfiguradoLabPanel;
+import view.ResultadosConLabPanel;
 import view.sinLabView.TexturaPanel;
 
 /**
@@ -53,8 +55,14 @@ public class FertilizacionLabPanelController {
     MemoriaTrabajoPanelController mtpcHortaliza;
     MemoriaTrabajoPanelController mtpcRendimiento;
     MemoriaTrabajoPanelController mtpcTextura;
+    MemoriaTrabajoPanelController mtpcNutrientes;
+    MemoriaTrabajoPanelController mtpcPh;
+    MemoriaTrabajoPanelController mtpcMo;
     //falta 3 mas
     /*Fin Memorias de trabajo para panelLab*/
+
+    ResultadosConLabPanel resultadosConLabPanel;
+    ResultadosConLabPanelController resultadosConLabPanelController;
     int pivote;
     JTabbedPane NavegacionTabbe;
     Cultivo cultivo;
@@ -110,7 +118,13 @@ public class FertilizacionLabPanelController {
         mtpcHortaliza = new MemoriaTrabajoPanelController(hortalizaLabPanel.memoriaTrabajoPanel1);
         mtpcRendimiento = new MemoriaTrabajoPanelController(rendimientoLabPanel.memoriaTrabajoPanel1);
         mtpcTextura = new MemoriaTrabajoPanelController(texturaLabPanel.memoriaTrabajoPanel1);
+        mtpcNutrientes = new MemoriaTrabajoPanelController(nutrientesLabPanel.memoriaTrabajoPanel1);
+        mtpcPh = new MemoriaTrabajoPanelController(pHLabPanel.memoriaTrabajoPanel1);
+        mtpcMo = new MemoriaTrabajoPanelController(mOLabPanel.memoriaTrabajoPanel1);
         //falta 3 mas 
+
+        resultadosConLabPanel = new ResultadosConLabPanel();
+        resultadosConLabPanelController = new ResultadosConLabPanelController(resultadosConLabPanel);
 
         cultivoConfiguradoLabPanel = new CultivoConfiguradoLabPanel();
         cultivoConfiguradoLabPanelController = new CultivoConfiguradoLabPanelController(cultivoConfiguradoLabPanel);
@@ -119,13 +133,13 @@ public class FertilizacionLabPanelController {
 
     private void buttonSiguienteLabActionPerformed(java.awt.event.ActionEvent evt) {
 
-        if (pivote != 8) {
+        if (pivote != 7) {
             pivote = pivote + 1;
         }
 
         navegarVista();
         llenarDatosVista();
-        if (pivote == 8) {
+        if (pivote == 7) {
             NavegacionTabbe.setSelectedIndex(1);
         }
         // System.out.println("pivote siguiente"+pivote);
@@ -133,7 +147,7 @@ public class FertilizacionLabPanelController {
     }
 
     private void buttonAtrasLabActionPerformed(java.awt.event.ActionEvent evt) {
-        if (pivote == 8) {
+        if (pivote == 7) {
             NavegacionTabbe.remove(1);
         }
         if (pivote != 1) {
@@ -180,12 +194,9 @@ public class FertilizacionLabPanelController {
                 NavegacionTabbe.remove(0);
                 NavegacionTabbe.addTab("Materia Orgánica", mOLabPanel);
                 break;
+
             case 7:
-                NavegacionTabbe.remove(0);
-                NavegacionTabbe.addTab("Fertilización de Hortalizas", cultivoConfiguradoLabPanel);
-                break;
-            case 8:
-                NavegacionTabbe.addTab("Recomendaciones", recomendacionesCultivoPanel);
+                NavegacionTabbe.addTab("Resultados", resultadosConLabPanel);
                 //crear variable global para la vista y el controlador del recomendacionesCultivo panel;
                 break;
             default:
@@ -204,37 +215,55 @@ public class FertilizacionLabPanelController {
                 rendimientoLabPanelController.actualizaValorRadioButtonRendimiento(hortalizaLabPanelController.getRendimientoActual());
 
                 mtpcRendimiento.mostrarHortaliza(cultivo.getHortaliza());
-                
+
                 break;
             case 3:
                 rendimientoLabPanelController.llenarDatosModelo();
                 System.out.println(cultivo.getRendimiento());
                 mtpcTextura.mostrarHortaliza(cultivo.getHortaliza());
-                mtpcTextura.mostrarRendimiento(cultivo.getRendimiento()+"");
+                mtpcTextura.mostrarRendimiento(cultivo.getRendimiento() + "");
                 break;
             case 4:
                 texturaLabPanelController.llenarDatosModelo();
                 System.out.println(textura.getTexturaArena());
                 System.out.println(textura.getTexturaLimo());
                 System.out.println(textura.getTexturaArcilla());
+                mtpcNutrientes.mostrarHortaliza(cultivo.getHortaliza());
+                mtpcNutrientes.mostrarRendimiento(cultivo.getRendimiento() + "");
+                mtpcNutrientes.mostrarTextura(textura.getTexturaArena() + "", textura.getTexturaLimo() + "", textura.getTexturaArcilla() + "");
                 break;
             case 5:
                 nutrientesLabPanelController.llenarDatosModelo();
                 System.out.println(cultivo.getNivelNitrogeno());
                 System.out.println(cultivo.getNivelFosforo());
                 System.out.println(cultivo.getNivelPotasio());
+                mtpcPh.mostrarHortaliza(cultivo.getHortaliza());
+                mtpcPh.mostrarRendimiento(cultivo.getRendimiento() + "");
+                mtpcPh.mostrarTextura(textura.getTexturaArena() + "", textura.getTexturaLimo() + "", textura.getTexturaArcilla() + "");
+                mtpcPh.mostrarNutrientes(cultivo.getNivelNitrogeno() + "", cultivo.getNivelFosforo() + "", cultivo.getNivelPotasio() + "");
                 break;
             case 6:
                 pHLabPanelController.llenarDatosModelo();
                 System.out.println(cultivo.getNivelpH());
+                mtpcMo.mostrarHortaliza(cultivo.getHortaliza());
+                mtpcMo.mostrarRendimiento(cultivo.getRendimiento() + "");
+                mtpcMo.mostrarTextura(textura.getTexturaArena() + "", textura.getTexturaLimo() + "", textura.getTexturaArcilla() + "");
+                mtpcMo.mostrarNutrientes(cultivo.getNivelNitrogeno() + "", cultivo.getNivelFosforo() + "", cultivo.getNivelPotasio() + "");
+                mtpcMo.mostrarPh(cultivo.getNivelpH()+"");
                 break;
             case 7:
                 mOLabPanelController.llenarDatosModelo();
+                resultadosConLabPanelController.llenarPanelInformacion(cultivo, textura);
                 System.out.print(cultivo.getNivelMO());
+                pHLabPanelController.llenarDatosModelo();
+                System.out.println(cultivo.getNivelpH());
+//                mtpcMo.mostrarHortaliza(cultivo.getHortaliza());
+//                mtpcMo.mostrarRendimiento(cultivo.getRendimiento() + "");
+//                mtpcMo.mostrarTextura(textura.getTexturaArena() + "", textura.getTexturaLimo() + "", textura.getTexturaArcilla() + "");
+//                mtpcMo.mostrarNutrientes(cultivo.getNivelNitrogeno() + "", cultivo.getNivelFosforo() + "", cultivo.getNivelPotasio() + "");
+//                mtpcMo.mostrarPh(cultivo.getNivelpH()+"");
                 break;
-            case 8:
-                recomendacionesCultivoPanelController.llenarDatosModelo();
-                break;
+
             default:
                 System.out.println("No hay Valores");
                 break;

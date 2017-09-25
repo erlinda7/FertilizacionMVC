@@ -149,6 +149,6 @@ public class MOLabPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     public javax.swing.JSpinner jSpinnerMOlab;
-    private view.ConLabView.MemoriaTrabajoPanel memoriaTrabajoPanel1;
+    public view.ConLabView.MemoriaTrabajoPanel memoriaTrabajoPanel1;
     // End of variables declaration//GEN-END:variables
 }

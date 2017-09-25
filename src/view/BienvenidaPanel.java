@@ -57,6 +57,7 @@ public class BienvenidaPanel extends javax.swing.JPanel {
         jPanelFertiSinLab = new javax.swing.JPanel();
         jLabelfertiSinLabImg = new javax.swing.JLabel();
         jLabelfertiSinLabDescripcion = new javax.swing.JLabel();
+        jButtonIniciarFertilizacionConLab = new javax.swing.JButton();
 
         jButtonFertilizacionConLaboratorio.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         jButtonFertilizacionConLaboratorio.setText("Iniciar Fertilizacion ");
@@ -186,6 +187,8 @@ public class BienvenidaPanel extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
+        jButtonIniciarFertilizacionConLab.setText("Iniciar Fertilizacion");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -230,9 +233,10 @@ public class BienvenidaPanel extends javax.swing.JPanel {
                                     .addComponent(jPanelFertiSinLab, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jPanelFertiConLAb, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButtonFertilizacionConLaboratorio)
-                                    .addComponent(jButtonFertilizacionSinLaboratorio))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jButtonFertilizacionConLaboratorio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jButtonFertilizacionSinLaboratorio)
+                                    .addComponent(jButtonIniciarFertilizacionConLab, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addContainerGap())))
         );
@@ -247,13 +251,15 @@ public class BienvenidaPanel extends javax.swing.JPanel {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
                 .addComponent(jLabelMensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(jPanelFertiConLAb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(92, 92, 92)
-                        .addComponent(jButtonFertilizacionConLaboratorio, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButtonFertilizacionConLaboratorio, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonIniciarFertilizacionConLab, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -312,6 +318,7 @@ public class BienvenidaPanel extends javax.swing.JPanel {
     public javax.swing.JButton jButtonConceptosBasicos;
     public javax.swing.JButton jButtonFertilizacionConLaboratorio;
     public javax.swing.JButton jButtonFertilizacionSinLaboratorio;
+    public javax.swing.JButton jButtonIniciarFertilizacionConLab;
     public javax.swing.JButton jButtonSalir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

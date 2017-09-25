@@ -67,29 +67,29 @@ public class MemoriaTrabajoPanelController {
     public void mostrarTextura(String arena, String limo, String arcilla) {
         memoriaTrabajoPanel.arenaLabel.setForeground(Color.BLACK);
         memoriaTrabajoPanel.arenaValor.setForeground(Color.BLACK);
-        memoriaTrabajoPanel.arenaLabel.setText(arena);
+        memoriaTrabajoPanel.arenaValor.setText(arena);
 
         memoriaTrabajoPanel.limoLabel.setForeground(Color.BLACK);
         memoriaTrabajoPanel.limoValor.setForeground(Color.BLACK);
-        memoriaTrabajoPanel.limoLabel.setText(limo);
+        memoriaTrabajoPanel.limoValor.setText(limo);
 
         memoriaTrabajoPanel.arcillaLabel.setForeground(Color.BLACK);
         memoriaTrabajoPanel.arcillaValor.setForeground(Color.BLACK);
-        memoriaTrabajoPanel.arcillaLabel.setText(arcilla);
+        memoriaTrabajoPanel.arcillaValor.setText(arcilla);
     }
 
     public void mostrarNutrientes(String nitrogeno, String fosforo, String potasio) {
         memoriaTrabajoPanel.nitrogenoLabel.setForeground(Color.BLACK);
         memoriaTrabajoPanel.nitrogenoValor.setForeground(Color.BLACK);
-        memoriaTrabajoPanel.nitrogenoLabel.setText(nitrogeno);
+        memoriaTrabajoPanel.nitrogenoValor.setText(nitrogeno);
 
         memoriaTrabajoPanel.fosforoLabel.setForeground(Color.BLACK);
         memoriaTrabajoPanel.fosforoValor.setForeground(Color.BLACK);
-        memoriaTrabajoPanel.nitrogenoLabel.setText(fosforo);
+        memoriaTrabajoPanel.fosforoValor.setText(fosforo);
 
         memoriaTrabajoPanel.potasioLabel.setForeground(Color.BLACK);
         memoriaTrabajoPanel.potasioValor.setForeground(Color.BLACK);
-        memoriaTrabajoPanel.nitrogenoLabel.setText(potasio);
+        memoriaTrabajoPanel.potasioValor.setText(potasio);
     }
 
     public void mostrarPh(String ph) {
@@ -101,7 +101,7 @@ public class MemoriaTrabajoPanelController {
     public void mostrarMateriaOrganica(String materiaOrganica) {
         memoriaTrabajoPanel.materiaOrganicaLabel.setForeground(Color.BLACK);
         memoriaTrabajoPanel.materiaOrganicaValor.setForeground(Color.BLACK);
-        memoriaTrabajoPanel.materiaOrganicaLabel.setText(materiaOrganica);
+        memoriaTrabajoPanel.materiaOrganicaValor.setText(materiaOrganica);
     }
 
 }

@@ -15,13 +15,17 @@ import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import view.BienvenidaFrame;
 import view.ConceptosBasicosFrame;
-import view.FertilizacionLabFrame;
+import view.FertilizacionCultivoCompletoLabFrame;
 import view.CultivoCompletoLabPanel;
 import view.ResultadosConLabPanel;
 import view.sinLabView.FertilizacionSinLabFrame;
 import controller.SinLabController.FertilizacionSinLabFrameController;
 import view.sinLabView.FertilizacionSinLabPanel;
 import controller.SinLabController.FertilizacionSinLabPanelController;
+import view.ConLabView.FertilizacionLabFrameController;
+import view.ConLabView.FertilizacionLabFrame;
+import view.ConLabView.FertilizacionLabPanel;
+import view.ConLabView.FertilizacionLabPanelController;
 
 public class BienvenidaFrameController {
 
@@ -39,6 +43,7 @@ public class BienvenidaFrameController {
         conflabelMensaje();
         confPanelFertiConLab();
         confPanelFertiSinLab();
+        confButtonFertilizacionConLab();
     }
 
     public void confFrameBienvenida() {
@@ -52,10 +57,21 @@ public class BienvenidaFrameController {
         vistaBienvenida.bienvenidaPanel1.jButtonFertilizacionConLaboratorio.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) {
+                ButtonFertilizacionConLaboratorioActionPerformed(evt);
+            }
+        });
+    }
+    //
+
+    public void confButtonFertilizacionConLab() {
+        vistaBienvenida.bienvenidaPanel1.jButtonIniciarFertilizacionConLab.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent evt) {
                 ButtonFertilizacionConLabActionPerformed(evt);
             }
         });
     }
+    ///
 
     public void confButtonFertilizacionSinLaboratorio() {
         vistaBienvenida.bienvenidaPanel1.jButtonFertilizacionSinLaboratorio.addActionListener(new ActionListener() {
@@ -84,9 +100,9 @@ public class BienvenidaFrameController {
         });
     }
 
-    private void ButtonFertilizacionConLabActionPerformed(java.awt.event.ActionEvent evt) {
-        FertilizacionLabFrame fertilizacionConLabFrame = new FertilizacionLabFrame();
-        FertilizacionLabFrameController fertilizacionConLabFrameController = new FertilizacionLabFrameController(fertilizacionConLabFrame);
+    private void ButtonFertilizacionConLaboratorioActionPerformed(java.awt.event.ActionEvent evt) {
+        FertilizacionCultivoCompletoLabFrame fertilizacionConLabFrame = new FertilizacionCultivoCompletoLabFrame();
+        FertilizacionCultivoCompletoLabFrameController fertilizacionConLabFrameController = new FertilizacionCultivoCompletoLabFrameController(fertilizacionConLabFrame);
 
         ResultadosConLabPanel resultadosConLabPanel = fertilizacionConLabFrame.getResultadosConLabPanel1();
         ResultadosConLabPanelController resultadosConLabPanelController = new ResultadosConLabPanelController(resultadosConLabPanel);
@@ -95,6 +111,17 @@ public class BienvenidaFrameController {
         CultivoCompletoLabPanelController fertilizacionConLabPanelController = new CultivoCompletoLabPanelController(fertilizacionConLabPanel, resultadosConLabPanelController, fertilizacionConLabFrame.getjTabbedPaneNavegacion());
 
     }
+    ////
+
+    private void ButtonFertilizacionConLabActionPerformed(java.awt.event.ActionEvent evt) {
+        FertilizacionLabFrame fertilizacionLabFrame = new FertilizacionLabFrame();
+        FertilizacionLabFrameController fertilizacionLabFrameController = new FertilizacionLabFrameController(fertilizacionLabFrame);
+        
+        //fertilizacionLabFrame.getFertilizacionLabPanel1();
+        FertilizacionLabPanel fertilizacionLabPanel = fertilizacionLabFrame.getFertilizacionLabPanel1();
+        FertilizacionLabPanelController fertilizacionLabPanelController = new FertilizacionLabPanelController(fertilizacionLabPanel);
+    }
+    ///
 
     private void ButtonFertilizacionSinLabActionPerformed(java.awt.event.ActionEvent evt) {
         FertilizacionSinLabFrame fertilizacionSinLabFrame = new FertilizacionSinLabFrame();
