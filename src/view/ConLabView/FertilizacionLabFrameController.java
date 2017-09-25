@@ -21,7 +21,7 @@ public class FertilizacionLabFrameController {
 
     public FertilizacionLabFrameController(FertilizacionLabFrame fertilizacionLabFrame) {
         this.fertilizacionLabFrame = fertilizacionLabFrame;
-
+        this.fertilizacionLabFrame.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         fertilizacionLabFrame.setVisible(true);
     }
 

@@ -10,6 +10,7 @@ import controller.ResultadosConLabPanelController;
 import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
 import model.Cultivo;
 import model.Textura;
@@ -64,7 +65,7 @@ public class FertilizacionLabPanelController {
     ResultadosConLabPanel resultadosConLabPanel;
     ResultadosConLabPanelController resultadosConLabPanelController;
     int pivote;
-    JTabbedPane NavegacionTabbe;
+    JTabbedPane navegacionTabbe;
     Cultivo cultivo;
     Textura textura;
 
@@ -72,7 +73,7 @@ public class FertilizacionLabPanelController {
         this.fertilizacionLabPanel = fertilizacionLabPanel;
         cultivo = new Cultivo();
         textura = new Textura();
-        NavegacionTabbe = fertilizacionLabPanel.getjTabbedNavegacion();
+        navegacionTabbe = fertilizacionLabPanel.getjTabbedNavegacion();
         pivote = 1;
         inicializarVistasControladoresLab();
         confButtonAtrasLab();
@@ -140,7 +141,8 @@ public class FertilizacionLabPanelController {
         navegarVista();
         llenarDatosVista();
         if (pivote == 7) {
-            NavegacionTabbe.setSelectedIndex(1);
+            navegacionTabbe.setSelectedIndex(1);
+           // resultadosConLabPanelController.llenarPanelInformacion(cultivo, textura);
         }
         // System.out.println("pivote siguiente"+pivote);
 
@@ -148,7 +150,8 @@ public class FertilizacionLabPanelController {
 
     private void buttonAtrasLabActionPerformed(java.awt.event.ActionEvent evt) {
         if (pivote == 7) {
-            NavegacionTabbe.remove(1);
+            navegacionTabbe.remove(1);
+            cultivo.getRecomendaciones().removeAll(cultivo.getRecomendaciones());
         }
         if (pivote != 1) {
             pivote = pivote - 1;
@@ -160,43 +163,45 @@ public class FertilizacionLabPanelController {
     public void navegarVista() {
         switch (pivote) {
             case 1:
-                int numTab = NavegacionTabbe.getTabCount();
+                int numTab = navegacionTabbe.getTabCount();
                 if (numTab != 0) {
-                    NavegacionTabbe.remove(0);
+                    navegacionTabbe.remove(0);
                 }
-                NavegacionTabbe.addTab("Hortaliza", hortalizaLabPanel);
+                navegacionTabbe.addTab("Hortaliza", hortalizaLabPanel);
                 break;
             case 2:
 
-                NavegacionTabbe.remove(0);
-                NavegacionTabbe.addTab("Rendimiento Esperado", rendimientoLabPanel);
+                navegacionTabbe.remove(0);
+                navegacionTabbe.addTab("Rendimiento Esperado", rendimientoLabPanel);
                 break;
             case 3:
-                NavegacionTabbe.remove(0);
-                NavegacionTabbe.addTab("Textura del Suelo", texturaLabPanel);
+                navegacionTabbe.remove(0);
+                navegacionTabbe.addTab("Textura del Suelo", texturaLabPanel);
 
                 break;
             case 4:
                 double sumaSlider = texturaLabPanel.jSliderArenaLab.getValue() + texturaLabPanel.jSliderLimoLab.getValue() + texturaLabPanel.jSliderArcillaLab.getValue();
                 if (sumaSlider == 100) {
-                    NavegacionTabbe.remove(0);
-                    NavegacionTabbe.addTab("Nutrientes del Suelo", nutrientesLabPanel);
+                    navegacionTabbe.remove(0);
+                    navegacionTabbe.addTab("Nutrientes del Suelo", nutrientesLabPanel);
                 } else {
                     JOptionPane.showMessageDialog(null, "La sumatoria del porcentaje de Arena, Limo y Arcilla debe ser igual a 100", "Valores incorrectos de textura", JOptionPane.ERROR_MESSAGE);
                     pivote = 3;
                 }
                 break;
             case 5:
-                NavegacionTabbe.remove(0);
-                NavegacionTabbe.addTab("Reaccion del Suelo(pH))", pHLabPanel);
+                navegacionTabbe.remove(0);
+                navegacionTabbe.addTab("Reaccion del Suelo(pH))", pHLabPanel);
                 break;
             case 6:
-                NavegacionTabbe.remove(0);
-                NavegacionTabbe.addTab("Materia Orgánica", mOLabPanel);
+                navegacionTabbe.remove(0);
+                navegacionTabbe.addTab("Materia Orgánica", mOLabPanel);
                 break;
 
             case 7:
-                NavegacionTabbe.addTab("Resultados", resultadosConLabPanel);
+                
+                JScrollPane jScrollPane = new JScrollPane(resultadosConLabPanel);
+                navegacionTabbe.addTab("Resultados", jScrollPane);
                 //crear variable global para la vista y el controlador del recomendacionesCultivo panel;
                 break;
             default:

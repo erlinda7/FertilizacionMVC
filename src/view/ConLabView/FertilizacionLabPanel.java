@@ -11,6 +11,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JTabbedPane;
 
 import com.alee.laf.tabbedpane.WebTabbedPane;
+import javax.swing.JScrollPane;
 
 /**
  *
@@ -79,6 +80,8 @@ public class FertilizacionLabPanel extends javax.swing.JPanel {
     public JTabbedPane getjTabbedNavegacion() {
         return jTabbedNavegacion;
     }
+
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private view.ConLabView.HortalizaLabPanel cultivoLabPanel1;
