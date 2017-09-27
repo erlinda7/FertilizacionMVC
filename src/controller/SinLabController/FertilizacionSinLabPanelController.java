@@ -10,6 +10,10 @@ import javax.swing.JOptionPane;
 import javax.swing.JTabbedPane;
 import model.Cultivo;
 import model.Textura;
+import view.OtrasRecomendaciones.MateriaOrganicaRecomendacionPanel;
+import view.OtrasRecomendaciones.MateriaOrganicaRecomendacionPanelController;
+import view.OtrasRecomendaciones.PhRecomendacionPanel;
+import view.OtrasRecomendaciones.PhRecomendacionPanelController;
 import view.ResultadosConLabPanel;
 import view.sinLabView.CultivoPanel;
 import view.sinLabView.FertilizacionSinLabPanel;
@@ -41,17 +45,22 @@ public class FertilizacionSinLabPanelController {
     PHPanelController pHPanelController;
     MateriaOrganicaPanel materiaOrganicaPanel;
     MateriaOrganicaPanelController materiaOrganicaPanelController;
+    MateriaOrganicaRecomendacionPanel materiaOrganicaRecomendacionPanel;
+    MateriaOrganicaRecomendacionPanelController materiaOrganicaRecomendacionPanelController;
+
+    PhRecomendacionPanel phRecomendacionPanel;
+    PhRecomendacionPanelController phRecomendacionPanelController;
 
     ResultadosConLabPanel resultadosConLabPanel;
     ResultadosConLabPanelController resultadosConLabPanelController;
     int pivote;
-    JTabbedPane NavegacionTabbe;
+    JTabbedPane navegacionTabbe;
     Cultivo cultivo;
     Textura textura;
 
     public FertilizacionSinLabPanelController(FertilizacionSinLabPanel fertilizacionSinLabPanel) {
         this.fertilizacionSinLabPanel = fertilizacionSinLabPanel;
-        NavegacionTabbe = fertilizacionSinLabPanel.getjTabbedPaneNavegacion();
+        navegacionTabbe = fertilizacionSinLabPanel.getjTabbedPaneNavegacion();
         pivote = 1;
         cultivo = new Cultivo();
         textura = new Textura();
@@ -92,8 +101,14 @@ public class FertilizacionSinLabPanelController {
         pHPanelController = new PHPanelController(pHPanel, cultivo);
         materiaOrganicaPanel = new MateriaOrganicaPanel();
         materiaOrganicaPanelController = new MateriaOrganicaPanelController(materiaOrganicaPanel, cultivo);
-        resultadosConLabPanel = fertilizacionSinLabPanel.getResultadosConLabPanel1();
+        materiaOrganicaRecomendacionPanel = new MateriaOrganicaRecomendacionPanel();
+        materiaOrganicaRecomendacionPanelController = new MateriaOrganicaRecomendacionPanelController(materiaOrganicaRecomendacionPanel);
+        phRecomendacionPanel = new PhRecomendacionPanel();
+        phRecomendacionPanelController = new PhRecomendacionPanelController(phRecomendacionPanel);
+
+        resultadosConLabPanel = new ResultadosConLabPanel();
         resultadosConLabPanelController = new ResultadosConLabPanelController(resultadosConLabPanel);
+
     }
 
     private void buttonSiguienteActionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,14 +119,16 @@ public class FertilizacionSinLabPanelController {
         navegarVista();
         llenarDatosVista();
         if (pivote == 8) {
-            NavegacionTabbe.setSelectedIndex(1);
+            navegacionTabbe.setSelectedIndex(1);
             resultadosConLabPanelController.llenarPanelInformacion(cultivo, textura);
         }
     }
 
     private void buttonAtrasActionPerformed(java.awt.event.ActionEvent evt) {
         if (pivote == 8) {
-            NavegacionTabbe.remove(1);
+            navegacionTabbe.remove(1);
+            navegacionTabbe.remove(1);
+            navegacionTabbe.remove(1);
             cultivo.getRecomendaciones().removeAll(cultivo.getRecomendaciones());
         }
         if (pivote != 1) {
@@ -123,22 +140,22 @@ public class FertilizacionSinLabPanelController {
     public void navegarVista() {
         switch (pivote) {
             case 1:
-                int numTab = NavegacionTabbe.getTabCount();
+                int numTab = navegacionTabbe.getTabCount();
                 if (numTab != 0) {
-                    NavegacionTabbe.remove(0);
+                    navegacionTabbe.remove(0);
                 }
-                NavegacionTabbe.addTab("Cultivo", cultivoPanel);
+                navegacionTabbe.addTab("Cultivo", cultivoPanel);
                 break;
             case 2:
-                NavegacionTabbe.remove(0);
-                NavegacionTabbe.addTab("Textura", texturaPanel);
+                navegacionTabbe.remove(0);
+                navegacionTabbe.addTab("Textura", texturaPanel);
                 break;
             case 3:
                 double sumatextura = Double.parseDouble(texturaPanel.jSpinnerArena.getValue().toString()) + Double.parseDouble(texturaPanel.jSpinnerLimo.getValue().toString()) + Double.parseDouble(texturaPanel.jSpinnerArcilla.getValue().toString());
                 double totalTextura = Double.parseDouble(texturaPanel.jSpinnerTexturaTotal.getValue().toString());
                 if (sumatextura == totalTextura) {
-                    NavegacionTabbe.remove(0);
-                    NavegacionTabbe.addTab("Nitrogeno", nitrogenoPanel);
+                    navegacionTabbe.remove(0);
+                    navegacionTabbe.addTab("Nitrogeno", nitrogenoPanel);
                 } else {
                     JOptionPane.showMessageDialog(null, "Ingrese los valores correctos de la medicion realizada en la botella: \n*Profundidad de Arena\n*Profundidad de Limo\n*Profundidad de Arcilla\n*Profundidad Total del suelo en la botella", "Valores incorrectos de textura", JOptionPane.ERROR_MESSAGE);
                     pivote = 2;
@@ -146,23 +163,26 @@ public class FertilizacionSinLabPanelController {
                 break;
             case 4:
 
-                NavegacionTabbe.remove(0);
-                NavegacionTabbe.addTab("Fosforo", fosforoPanel);
+                navegacionTabbe.remove(0);
+                navegacionTabbe.addTab("Fosforo", fosforoPanel);
                 break;
             case 5:
-                NavegacionTabbe.remove(0);
-                NavegacionTabbe.addTab("Potasio", potasioPanel);
+                navegacionTabbe.remove(0);
+                navegacionTabbe.addTab("Potasio", potasioPanel);
                 break;
             case 6:
-                NavegacionTabbe.remove(0);
-                NavegacionTabbe.addTab("Reaccion del suelo (pH)", pHPanel);
+                navegacionTabbe.remove(0);
+                navegacionTabbe.addTab("Reaccion del suelo (pH)", pHPanel);
                 break;
             case 7:
-                NavegacionTabbe.remove(0);
-                NavegacionTabbe.addTab("Materia Organica", materiaOrganicaPanel);
+                navegacionTabbe.remove(0);
+                navegacionTabbe.addTab("Materia Organica", materiaOrganicaPanel);
                 break;
             case 8:
-                NavegacionTabbe.addTab("Resultados", fertilizacionSinLabPanel.getjScrollPane1());
+                navegacionTabbe.addTab("Resultados", resultadosConLabPanel);
+                navegacionTabbe.addTab("Recomendacion de pH", phRecomendacionPanel);
+                navegacionTabbe.addTab("Recomendacion de Materia Organica", materiaOrganicaRecomendacionPanel);
+
                 break;
             default:
                 System.out.println("No hay Valores");
@@ -193,6 +213,11 @@ public class FertilizacionSinLabPanelController {
                 break;
             case 8:
                 materiaOrganicaPanelController.llenarDatosModelo();
+                 //primero
+                resultadosConLabPanelController.llenarPanelInformacion(cultivo, textura);
+               //segundo
+                materiaOrganicaRecomendacionPanelController.mostrarExplicacionMO(cultivo);
+                phRecomendacionPanelController.mostrarRecomendacionPh(cultivo);
                 break;
             default:
                 System.out.println("No hay Valores");

@@ -3,30 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package view;
-
-import java.awt.Graphics;
-import java.awt.Image;
-import javax.swing.ImageIcon;
+package view.OtrasRecomendaciones;
 
 /**
  *
  * @author Erlinda
  */
-public class ResultadosConLabPanel extends javax.swing.JPanel {
+public class OtrasRecomendacionesPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form JPResultados
+     * Creates new form OtrasRecomendacionesPanel
      */
-    public ResultadosConLabPanel() {
+    public OtrasRecomendacionesPanel() {
         initComponents();
-    }
-
-    public void paint(Graphics g) {
-        Image imagen = new ImageIcon(getClass().getResource("/img/fondo1.jpg")).getImage();
-        g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
-        setOpaque(false);
-        super.paint(g);
     }
 
     /**
@@ -38,30 +27,29 @@ public class ResultadosConLabPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        resultadosContenidoPanel1 = new view.ResultadosContenidoPanel();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        materiaOrganicaRecPanel1 = new view.OtrasRecomendaciones.MateriaOrganicaRecomendacionPanel();
+        PhRecomendacionPanel = new view.OtrasRecomendaciones.PhRecomendacionPanel();
 
-        setBackground(new java.awt.Color(235, 251, 235));
-
-        jScrollPane1.setViewportView(resultadosContenidoPanel1);
+        jTabbedPane1.addTab("tab1", materiaOrganicaRecPanel1);
+        jTabbedPane1.addTab("tab2", PhRecomendacionPanel);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 954, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jTabbedPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 531, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 531, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JScrollPane jScrollPane1;
-    public view.ResultadosContenidoPanel resultadosContenidoPanel1;
+    public view.OtrasRecomendaciones.PhRecomendacionPanel PhRecomendacionPanel;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    public view.OtrasRecomendaciones.MateriaOrganicaRecomendacionPanel materiaOrganicaRecPanel1;
     // End of variables declaration//GEN-END:variables
 }

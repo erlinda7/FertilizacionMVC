@@ -30,11 +30,13 @@ public class ConceptosBasicosFrame extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         documentacionPanel1 = new view.DocumentacionPanel();
         interpretacionPanel1 = new view.InterpretacionPanel();
+        muestreoSuelosPanel1 = new view.MuestreoSuelosPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTabbedPane1.addTab("Documentacion", documentacionPanel1);
         jTabbedPane1.addTab("Interpretacion de Datos", interpretacionPanel1);
+        jTabbedPane1.addTab("Muestreo de suelo", muestreoSuelosPanel1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -69,5 +71,6 @@ public class ConceptosBasicosFrame extends javax.swing.JFrame {
     private view.DocumentacionPanel documentacionPanel1;
     private view.InterpretacionPanel interpretacionPanel1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    public view.MuestreoSuelosPanel muestreoSuelosPanel1;
     // End of variables declaration//GEN-END:variables
 }

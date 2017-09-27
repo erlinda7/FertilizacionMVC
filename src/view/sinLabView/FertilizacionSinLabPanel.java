@@ -44,8 +44,6 @@ public class FertilizacionSinLabPanel extends javax.swing.JPanel {
         jButtonSiguiente = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jTabbedPaneNavegacion = new javax.swing.JTabbedPane();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        resultadosConLabPanel2 = new view.ResultadosConLabPanel();
         jButtonAtras = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(153, 255, 153));
@@ -54,10 +52,6 @@ public class FertilizacionSinLabPanel extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Wide Latin", 0, 18)); // NOI18N
         jLabel1.setText("Fertilización de Hortalizas");
-
-        jScrollPane1.setViewportView(resultadosConLabPanel2);
-
-        jTabbedPaneNavegacion.addTab("tab1", jScrollPane1);
 
         jButtonAtras.setText("Atras");
 
@@ -97,20 +91,12 @@ public class FertilizacionSinLabPanel extends javax.swing.JPanel {
         return jTabbedPaneNavegacion;
     }
 
-    public ResultadosConLabPanel getResultadosConLabPanel1() {
-        return resultadosConLabPanel2;
-    }
-
-    public JScrollPane getjScrollPane1() {
-        return jScrollPane1;
-    }
+  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton jButtonAtras;
     public javax.swing.JButton jButtonSiguiente;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JTabbedPane jTabbedPaneNavegacion;
-    private view.ResultadosConLabPanel resultadosConLabPanel2;
     // End of variables declaration//GEN-END:variables
 }

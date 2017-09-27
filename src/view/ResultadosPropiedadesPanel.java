@@ -117,7 +117,7 @@ public class ResultadosPropiedadesPanel extends javax.swing.JPanel {
                                 .addComponent(jLabel23)
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabelPropiedadMO, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

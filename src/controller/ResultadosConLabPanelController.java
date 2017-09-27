@@ -28,39 +28,39 @@ import view.ResultadosConLabPanel;
  */
 public class ResultadosConLabPanelController {
 
-    ResultadosConLabPanel jPResultados;
+    ResultadosConLabPanel resultadosConLabPanel;
     String rutaDocumentoPdf;
 
-    public ResultadosConLabPanelController(ResultadosConLabPanel jPResultados) {
-        this.jPResultados = jPResultados;
-
+    public ResultadosConLabPanelController(ResultadosConLabPanel resultadosConLabPanel) {
+        this.resultadosConLabPanel = resultadosConLabPanel;
+        
     }
 
     public void llenarPanelInformacion(Cultivo cultivo, Textura textura) {
         //comentar para netbenas
 //         DroolsMain.calcularResultados(cultivo, textura);
 
-        jPResultados.resultadosDatosCultivoPanel1.jLabelTituloDatos.setText(cultivo.getHortaliza());
-        jPResultados.resultadosDatosCultivoPanel1.jLabelRendimiento.setText(cultivo.getRendimiento() + "  Ton/ha");
-        jPResultados.resultadosDatosCultivoPanel1.jLabelArena.setText(textura.getTexturaArena() + "  %");
-        jPResultados.resultadosDatosCultivoPanel1.jLabelLimo.setText(textura.getTexturaLimo() + "  %");
-        jPResultados.resultadosDatosCultivoPanel1.jLabelArcilla.setText(textura.getTexturaArcilla() + "  %");
-        jPResultados.resultadosDatosCultivoPanel1.jLabelNitrogeno.setText(cultivo.getNivelNitrogeno() + "  ppm");
-        jPResultados.resultadosDatosCultivoPanel1.jLabelFosforo.setText(cultivo.getNivelFosforo() + "  ppm");
-        jPResultados.resultadosDatosCultivoPanel1.jLabelPotasio.setText(cultivo.getNivelPotasio() + "  ppm");
-        jPResultados.resultadosDatosCultivoPanel1.jLabelpH.setText(cultivo.getNivelpH() + "  ppm");
-        jPResultados.resultadosDatosCultivoPanel1.jLabelMO.setText(cultivo.getNivelMO() + "  ppm");
+        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelTituloDatos.setText(cultivo.getHortaliza());
+        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelRendimiento.setText(cultivo.getRendimiento() + "  Ton/ha");
+        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelArena.setText(textura.getTexturaArena() + "  %");
+        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelLimo.setText(textura.getTexturaLimo() + "  %");
+        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelArcilla.setText(textura.getTexturaArcilla() + "  %");
+        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelNitrogeno.setText(cultivo.getNivelNitrogeno() + "  ppm");
+        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelFosforo.setText(cultivo.getNivelFosforo() + "  ppm");
+        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelPotasio.setText(cultivo.getNivelPotasio() + "  ppm");
+        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelpH.setText(cultivo.getNivelpH() + "  ppm");
+        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelMO.setText(cultivo.getNivelMO() + "  ppm");
 //
-        jPResultados.resultadosRecFertilizacionPanel1.jLabelTituloRecomendacion.setText(cultivo.getHortaliza() + "  (" + cultivo.getRendimiento() + "  Ton/ha )");
-        jPResultados.resultadosExplicacionPanel1.jLabelPropiedadTextura.setText(textura.getTipoTextura() + " ");
-        jPResultados.resultadosExplicacionPanel1.jLabelPropiedadpH.setText(cultivo.getTipoSuelo() + "");
-        jPResultados.resultadosExplicacionPanel1.jLabelPropiedadNitrogeno.setText(cultivo.getRangoNivelNitrogeno() + "");
-        jPResultados.resultadosExplicacionPanel1.jLabelPropiedadFosforo.setText(cultivo.getRangoNivelFosforo() + "");
-        jPResultados.resultadosExplicacionPanel1.jLabelPropiedadPotasio.setText(cultivo.getRangoNivelPotasio() + "");
-        jPResultados.resultadosExplicacionPanel1.jLabelPropiedadMO.setText(cultivo.getRangoNivelMO() + "");
-        jPResultados.resultadosRecFertilizacionPanel1.jLabelAplicacionFerti.setText("<html><body><p align='justify'>" + cultivo.getFormaAplicar() + "</p></body></html>");
-        jPResultados.resultadosRecFertilizacionPanel1.jLabelCantidadNPK.setText("[ " + cultivo.getCantKgN() + " ]" + "  -  " + "[ " + cultivo.getCantKgP() + " ]" + "  -  " + "[ " + cultivo.getCantKgK() + " ]");
-        jPResultados.resultadosRecFertilizacionPanel1.jTextPaneRecomendacion.setText(cultivo.getRecomendacionesString());
+        resultadosConLabPanel.resultadosContenidoPanel1.resultadosRecFertilizacionPanel1.jLabelTituloRecomendacion.setText(cultivo.getHortaliza() + "  (" + cultivo.getRendimiento() + "  Ton/ha )");
+        resultadosConLabPanel.resultadosContenidoPanel1.resultadosExplicacionPanel1.jLabelPropiedadTextura.setText(textura.getTipoTextura() + " ");
+        resultadosConLabPanel.resultadosContenidoPanel1.resultadosExplicacionPanel1.jLabelPropiedadpH.setText(cultivo.getTipoSuelo() + "");
+        resultadosConLabPanel.resultadosContenidoPanel1.resultadosExplicacionPanel1.jLabelPropiedadNitrogeno.setText(cultivo.getRangoNivelNitrogeno() + "");
+        resultadosConLabPanel.resultadosContenidoPanel1.resultadosExplicacionPanel1.jLabelPropiedadFosforo.setText(cultivo.getRangoNivelFosforo() + "");
+        resultadosConLabPanel.resultadosContenidoPanel1.resultadosExplicacionPanel1.jLabelPropiedadPotasio.setText(cultivo.getRangoNivelPotasio() + "");
+        resultadosConLabPanel.resultadosContenidoPanel1.resultadosExplicacionPanel1.jLabelPropiedadMO.setText(cultivo.getRangoNivelMO() + "");
+        resultadosConLabPanel.resultadosContenidoPanel1.resultadosRecFertilizacionPanel1.jLabelAplicacionFerti.setText("<html><body><p align='justify'>" + cultivo.getFormaAplicar() + "</p></body></html>");
+        resultadosConLabPanel.resultadosContenidoPanel1.resultadosRecFertilizacionPanel1.jLabelCantidadNPK.setText("[ " + cultivo.getCantKgN() + " ]" + "  -  " + "[ " + cultivo.getCantKgP() + " ]" + "  -  " + "[ " + cultivo.getCantKgK() + " ]");
+        resultadosConLabPanel.resultadosContenidoPanel1.resultadosRecFertilizacionPanel1.jTextPaneRecomendacion.setText(cultivo.getRecomendacionesString());
 
         generarResultadoPdf(cultivo, textura);
         confButtonAbrirPdf();
@@ -89,7 +89,7 @@ public class ResultadosConLabPanelController {
     }
 
     public void confButtonAbrirPdf() {
-        jPResultados.buttonAbrirPdf.addActionListener(new ActionListener() {
+        resultadosConLabPanel.resultadosContenidoPanel1.buttonAbrirPdf.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) {
                 buttonAbrirPdfActionPerformed(evt);
@@ -98,7 +98,7 @@ public class ResultadosConLabPanelController {
     }
 
     public void confButtonImprimir() {
-        jPResultados.buttonImprimir.addActionListener(new ActionListener() {
+        resultadosConLabPanel.resultadosContenidoPanel1.buttonImprimir.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) {
                 buttonImprimirActionPerformed(evt);

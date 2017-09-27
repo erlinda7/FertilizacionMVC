@@ -7,15 +7,24 @@ package view.ConLabView;
 
 import controller.CultivoConfiguradoLabPanelController;
 import controller.ResultadosConLabPanelController;
+import controller.SinLabController.MateriaOrganicaPanelController;
 import java.awt.Color;
+import java.awt.FlowLayout;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
 import model.Cultivo;
 import model.Textura;
 import view.CultivoConfiguradoLabPanel;
+import view.OtrasRecomendaciones.MateriaOrganicaRecomendacionPanel;
+import view.OtrasRecomendaciones.MateriaOrganicaRecomendacionPanelController;
+import view.OtrasRecomendaciones.PhRecomendacionPanel;
+import view.OtrasRecomendaciones.PhRecomendacionPanelController;
 import view.ResultadosConLabPanel;
+import view.sinLabView.MateriaOrganicaPanel;
 import view.sinLabView.TexturaPanel;
 
 /**
@@ -51,6 +60,13 @@ public class FertilizacionLabPanelController {
 
     RecomendacionesCultivoPanel recomendacionesCultivoPanel;
     RecomendacionesCultivoPanelController recomendacionesCultivoPanelController;
+
+    MateriaOrganicaRecomendacionPanel materiaOrganicaRecomendacionPanel;
+    MateriaOrganicaRecomendacionPanelController materiaOrganicaRecomendacionPanelController;
+
+    PhRecomendacionPanel phRecomendacionPanel;
+    PhRecomendacionPanelController phRecomendacionPanelController;
+
 
     /*Iinicio Memorias de trabajo para panelLab*/
     MemoriaTrabajoPanelController mtpcHortaliza;
@@ -115,6 +131,10 @@ public class FertilizacionLabPanelController {
         pHLabPanelController = new PHLabPanelController(pHLabPanel, cultivo);
         mOLabPanel = new MOLabPanel();
         mOLabPanelController = new MOLabPanelController(mOLabPanel, cultivo);
+        materiaOrganicaRecomendacionPanel = new MateriaOrganicaRecomendacionPanel();
+        materiaOrganicaRecomendacionPanelController = new MateriaOrganicaRecomendacionPanelController(materiaOrganicaRecomendacionPanel);
+        phRecomendacionPanel = new PhRecomendacionPanel();
+        phRecomendacionPanelController = new PhRecomendacionPanelController(phRecomendacionPanel);
 
         mtpcHortaliza = new MemoriaTrabajoPanelController(hortalizaLabPanel.memoriaTrabajoPanel1);
         mtpcRendimiento = new MemoriaTrabajoPanelController(rendimientoLabPanel.memoriaTrabajoPanel1);
@@ -125,11 +145,14 @@ public class FertilizacionLabPanelController {
         //falta 3 mas 
 
         resultadosConLabPanel = new ResultadosConLabPanel();
+      // resultadosConLabPanel = fertilizacionLabPanel.resultadosConLabPanel1X;
         resultadosConLabPanelController = new ResultadosConLabPanelController(resultadosConLabPanel);
 
         cultivoConfiguradoLabPanel = new CultivoConfiguradoLabPanel();
         cultivoConfiguradoLabPanelController = new CultivoConfiguradoLabPanelController(cultivoConfiguradoLabPanel);
         recomendacionesCultivoPanel = new RecomendacionesCultivoPanel();
+        
+         //fertilizacionLabPanel.getjScrollPane1().add(resultadosConLabPanel);
     }
 
     private void buttonSiguienteLabActionPerformed(java.awt.event.ActionEvent evt) {
@@ -142,7 +165,7 @@ public class FertilizacionLabPanelController {
         llenarDatosVista();
         if (pivote == 7) {
             navegacionTabbe.setSelectedIndex(1);
-           // resultadosConLabPanelController.llenarPanelInformacion(cultivo, textura);
+            // resultadosConLabPanelController.llenarPanelInformacion(cultivo, textura);
         }
         // System.out.println("pivote siguiente"+pivote);
 
@@ -150,6 +173,8 @@ public class FertilizacionLabPanelController {
 
     private void buttonAtrasLabActionPerformed(java.awt.event.ActionEvent evt) {
         if (pivote == 7) {
+            navegacionTabbe.remove(1);
+            navegacionTabbe.remove(1);
             navegacionTabbe.remove(1);
             cultivo.getRecomendaciones().removeAll(cultivo.getRecomendaciones());
         }
@@ -199,9 +224,12 @@ public class FertilizacionLabPanelController {
                 break;
 
             case 7:
-                
-                JScrollPane jScrollPane = new JScrollPane(resultadosConLabPanel);
-                navegacionTabbe.addTab("Resultados", jScrollPane);
+
+                     
+                navegacionTabbe.addTab("Resultados", resultadosConLabPanel);
+                navegacionTabbe.addTab("Recomendacion de pH", phRecomendacionPanel);
+                navegacionTabbe.addTab("Recomendacion de Materia Organica", materiaOrganicaRecomendacionPanel);
+
                 //crear variable global para la vista y el controlador del recomendacionesCultivo panel;
                 break;
             default:
@@ -254,11 +282,15 @@ public class FertilizacionLabPanelController {
                 mtpcMo.mostrarRendimiento(cultivo.getRendimiento() + "");
                 mtpcMo.mostrarTextura(textura.getTexturaArena() + "", textura.getTexturaLimo() + "", textura.getTexturaArcilla() + "");
                 mtpcMo.mostrarNutrientes(cultivo.getNivelNitrogeno() + "", cultivo.getNivelFosforo() + "", cultivo.getNivelPotasio() + "");
-                mtpcMo.mostrarPh(cultivo.getNivelpH()+"");
+                mtpcMo.mostrarPh(cultivo.getNivelpH() + "");
                 break;
             case 7:
                 mOLabPanelController.llenarDatosModelo();
+                //primero
                 resultadosConLabPanelController.llenarPanelInformacion(cultivo, textura);
+               //segundo
+                materiaOrganicaRecomendacionPanelController.mostrarExplicacionMO(cultivo);
+                phRecomendacionPanelController.mostrarRecomendacionPh(cultivo);
                 System.out.print(cultivo.getNivelMO());
                 pHLabPanelController.llenarDatosModelo();
                 System.out.println(cultivo.getNivelpH());

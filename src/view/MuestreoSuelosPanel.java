@@ -5,28 +5,17 @@
  */
 package view;
 
-import java.awt.Graphics;
-import java.awt.Image;
-import javax.swing.ImageIcon;
-
 /**
  *
  * @author Erlinda
  */
-public class ResultadosConLabPanel extends javax.swing.JPanel {
+public class MuestreoSuelosPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form JPResultados
+     * Creates new form MuestreoSuelos
      */
-    public ResultadosConLabPanel() {
+    public MuestreoSuelosPanel() {
         initComponents();
-    }
-
-    public void paint(Graphics g) {
-        Image imagen = new ImageIcon(getClass().getResource("/img/fondo1.jpg")).getImage();
-        g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
-        setOpaque(false);
-        super.paint(g);
     }
 
     /**
@@ -38,30 +27,30 @@ public class ResultadosConLabPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        resultadosContenidoPanel1 = new view.ResultadosContenidoPanel();
+        jLabelMuestreo = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(235, 251, 235));
-
-        jScrollPane1.setViewportView(resultadosContenidoPanel1);
+        jLabelMuestreo.setText("Proceso de muestreo de suelo");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 954, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(319, 319, 319)
+                .addComponent(jLabelMuestreo, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(153, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 531, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(148, 148, 148)
+                .addComponent(jLabelMuestreo, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(172, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JScrollPane jScrollPane1;
-    public view.ResultadosContenidoPanel resultadosContenidoPanel1;
+    public javax.swing.JLabel jLabelMuestreo;
     // End of variables declaration//GEN-END:variables
 }

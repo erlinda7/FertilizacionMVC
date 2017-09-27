@@ -14,6 +14,7 @@ import javax.swing.ImageIcon;
 import view.ConceptosBasicosFrame;
 import view.DocumentacionPanel;
 import view.InterpretacionPanel;
+import view.MuestreoSuelosPanel;
 
 public class ConceptosBasicosFrameController {
 
@@ -26,6 +27,10 @@ public class ConceptosBasicosFrameController {
 
         DocumentacionPanel jPDocumentacion = jFConceptosBasicos.getDocumentacionPanel1();
         DocumentacionPanelController controladorDocumentacion = new DocumentacionPanelController(jPDocumentacion);
+       
+        MuestreoSuelosPanel muestreoSuelosPanel =jFConceptosBasicos.muestreoSuelosPanel1;
+        MuestreosuelosPanelController muestreosuelosPanelController = new MuestreosuelosPanelController(muestreoSuelosPanel);
+        
         this.jFConceptosBasicos.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         this.jFConceptosBasicos.setLocationRelativeTo(null);
         confFrameConceptosB();
