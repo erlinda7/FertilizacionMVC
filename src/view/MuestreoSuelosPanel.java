@@ -5,6 +5,10 @@
  */
 package view;
 
+import java.awt.Graphics;
+import java.awt.Image;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Erlinda
@@ -18,6 +22,13 @@ public class MuestreoSuelosPanel extends javax.swing.JPanel {
         initComponents();
     }
 
+    public void paint(Graphics g) {
+        Image imagen = new ImageIcon(getClass().getResource("/img/fondo2.jpg")).getImage();
+        g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
+        setOpaque(false);
+        super.paint(g);
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,30 +38,104 @@ public class MuestreoSuelosPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabelMuestreo = new javax.swing.JLabel();
+        jButtonMuestreoSuelo = new javax.swing.JButton();
+        jButtonComoMuestrear = new javax.swing.JButton();
+        jButtonNoMuestrear = new javax.swing.JButton();
+        jButtonMateriales = new javax.swing.JButton();
+        jButtonMuestrearBarreno = new javax.swing.JButton();
+        jButtonMuestreoPala = new javax.swing.JButton();
+        jButtonCuarteoMuestreo = new javax.swing.JButton();
+        jLabelImagen = new javax.swing.JLabel();
+        jLabelDescripcion = new javax.swing.JLabel();
 
-        jLabelMuestreo.setText("Proceso de muestreo de suelo");
+        jButtonMuestreoSuelo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jButtonMuestreoSuelo.setText("Muestreo de Suelo");
+        jButtonMuestreoSuelo.setContentAreaFilled(false);
+
+        jButtonComoMuestrear.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jButtonComoMuestrear.setText("¿  Como Muestrear ?");
+        jButtonComoMuestrear.setContentAreaFilled(false);
+
+        jButtonNoMuestrear.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jButtonNoMuestrear.setText("Cuidados al muestrear");
+        jButtonNoMuestrear.setContentAreaFilled(false);
+
+        jButtonMateriales.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jButtonMateriales.setText("Materiales para Muestreo");
+        jButtonMateriales.setContentAreaFilled(false);
+
+        jButtonMuestrearBarreno.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jButtonMuestrearBarreno.setText("Muestrear con barreno");
+        jButtonMuestrearBarreno.setContentAreaFilled(false);
+
+        jButtonMuestreoPala.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jButtonMuestreoPala.setText("Muestrear con pala");
+        jButtonMuestreoPala.setContentAreaFilled(false);
+
+        jButtonCuarteoMuestreo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jButtonCuarteoMuestreo.setText("Cuarteo de la Muestra");
+        jButtonCuarteoMuestreo.setContentAreaFilled(false);
+
+        jLabelDescripcion.setText("jLabel3");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(319, 319, 319)
-                .addComponent(jLabelMuestreo, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(153, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButtonMuestreoSuelo)
+                    .addComponent(jButtonComoMuestrear)
+                    .addComponent(jButtonNoMuestrear)
+                    .addComponent(jButtonMateriales)
+                    .addComponent(jButtonMuestrearBarreno)
+                    .addComponent(jButtonMuestreoPala)
+                    .addComponent(jButtonCuarteoMuestreo))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabelImagen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabelDescripcion, javax.swing.GroupLayout.DEFAULT_SIZE, 470, Short.MAX_VALUE))
+                .addGap(92, 92, 92))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(148, 148, 148)
-                .addComponent(jLabelMuestreo, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(172, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(7, 7, 7)
+                        .addComponent(jLabelImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(51, 51, 51)
+                        .addComponent(jButtonMuestreoSuelo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonComoMuestrear)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonNoMuestrear)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButtonMateriales)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButtonMuestrearBarreno)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButtonMuestreoPala)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButtonCuarteoMuestreo)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabelDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(22, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JLabel jLabelMuestreo;
+    public javax.swing.JButton jButtonComoMuestrear;
+    public javax.swing.JButton jButtonCuarteoMuestreo;
+    public javax.swing.JButton jButtonMateriales;
+    public javax.swing.JButton jButtonMuestrearBarreno;
+    public javax.swing.JButton jButtonMuestreoPala;
+    public javax.swing.JButton jButtonMuestreoSuelo;
+    public javax.swing.JButton jButtonNoMuestrear;
+    public javax.swing.JLabel jLabelDescripcion;
+    public javax.swing.JLabel jLabelImagen;
     // End of variables declaration//GEN-END:variables
 }
