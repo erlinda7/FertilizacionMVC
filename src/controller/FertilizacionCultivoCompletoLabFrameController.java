@@ -23,6 +23,7 @@ public class FertilizacionCultivoCompletoLabFrameController {
         this.fertilizacionConLabFrame.setVisible(true);
         this.fertilizacionConLabFrame.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         this.fertilizacionConLabFrame.setLocationRelativeTo(null);
+        fertilizacionConLabFrame.setResizable(false);
     }
 
     public void confFramePrincipal() {

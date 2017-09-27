@@ -29,9 +29,9 @@ public class NitrogenoPanelController {
         nitrogenoPanel.jRadioButtonLow.setActionCommand("31");
         nitrogenoPanel.jRadioButtonMedium.setActionCommand("43");
         nitrogenoPanel.jRadioButtonHigh.setActionCommand("49");
-        nitrogenoPanel.jRadioButtonTraceLow.setActionCommand("27");
-        nitrogenoPanel.jRadioButtonLowMedium.setActionCommand("37");
-        nitrogenoPanel.jRadioButtonMediumHigh.setActionCommand("46");
+//        nitrogenoPanel.jRadioButtonTraceLow.setActionCommand("27");
+//        nitrogenoPanel.jRadioButtonLowMedium.setActionCommand("37");
+//        nitrogenoPanel.jRadioButtonMediumHigh.setActionCommand("46");
     }
 
     public void llenarDatosModelo() {

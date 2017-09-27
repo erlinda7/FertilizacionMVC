@@ -7,7 +7,9 @@ package view.ConLabView;
 
 import com.alee.laf.WebLookAndFeel;
 import com.jtattoo.plaf.mcwin.McWinLookAndFeel;
+import java.awt.Image;
 import java.util.Properties;
+import javax.swing.ImageIcon;
 import javax.swing.UIManager;
 import model.Cultivo;
 
@@ -21,8 +23,13 @@ public class FertilizacionLabFrameController {
 
     public FertilizacionLabFrameController(FertilizacionLabFrame fertilizacionLabFrame) {
         this.fertilizacionLabFrame = fertilizacionLabFrame;
+        fertilizacionLabFrame.setTitle("Recomendación de Fertilización de Hortalizas");
+        Image icon = new ImageIcon(getClass().getResource("/img/icon1.png")).getImage();
+        fertilizacionLabFrame.setIconImage(icon);
         this.fertilizacionLabFrame.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         fertilizacionLabFrame.setVisible(true);
+        this.fertilizacionLabFrame.setLocationRelativeTo(null);
+        fertilizacionLabFrame.setResizable(false);
     }
 
 //    public static void main(String args[]) {

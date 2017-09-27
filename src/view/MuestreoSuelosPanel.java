@@ -92,7 +92,7 @@ public class MuestreoSuelosPanel extends javax.swing.JPanel {
                     .addComponent(jButtonMuestrearBarreno)
                     .addComponent(jButtonMuestreoPala)
                     .addComponent(jButtonCuarteoMuestreo))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 176, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabelImagen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabelDescripcion, javax.swing.GroupLayout.DEFAULT_SIZE, 470, Short.MAX_VALUE))
@@ -122,7 +122,7 @@ public class MuestreoSuelosPanel extends javax.swing.JPanel {
                         .addComponent(jButtonCuarteoMuestreo)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabelDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(63, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

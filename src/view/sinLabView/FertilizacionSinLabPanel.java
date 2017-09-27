@@ -25,12 +25,12 @@ public class FertilizacionSinLabPanel extends javax.swing.JPanel {
         initComponents();
     }
 
-    public void paint(Graphics g) {
-        Image imagen = new ImageIcon(getClass().getResource("/img/fondo1.jpg")).getImage();
-        g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
-        setOpaque(false);
-        super.paint(g);
-    }
+//    public void paint(Graphics g) {
+//        Image imagen = new ImageIcon(getClass().getResource("/img/fondo1.jpg")).getImage();
+//        g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
+//        setOpaque(false);
+//        super.paint(g);
+//    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -42,16 +42,13 @@ public class FertilizacionSinLabPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jButtonSiguiente = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         jTabbedPaneNavegacion = new javax.swing.JTabbedPane();
         jButtonAtras = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(153, 255, 153));
+        setOpaque(false);
 
         jButtonSiguiente.setText("Siguiente");
-
-        jLabel1.setFont(new java.awt.Font("Wide Latin", 0, 18)); // NOI18N
-        jLabel1.setText("Fertilización de Hortalizas");
 
         jButtonAtras.setText("Atras");
 
@@ -60,30 +57,22 @@ public class FertilizacionSinLabPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(286, 286, 286)
-                        .addComponent(jButtonAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(75, 75, 75)
-                        .addComponent(jButtonSiguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(244, 244, 244)
-                        .addComponent(jLabel1)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(286, 286, 286)
+                .addComponent(jButtonAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(75, 75, 75)
+                .addComponent(jButtonSiguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(343, Short.MAX_VALUE))
             .addComponent(jTabbedPaneNavegacion, javax.swing.GroupLayout.DEFAULT_SIZE, 954, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTabbedPaneNavegacion, javax.swing.GroupLayout.PREFERRED_SIZE, 552, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTabbedPaneNavegacion, javax.swing.GroupLayout.DEFAULT_SIZE, 506, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonSiguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButtonAtras, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
+                    .addComponent(jButtonSiguiente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(3, 3, 3))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -96,7 +85,6 @@ public class FertilizacionSinLabPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton jButtonAtras;
     public javax.swing.JButton jButtonSiguiente;
-    private javax.swing.JLabel jLabel1;
     public javax.swing.JTabbedPane jTabbedPaneNavegacion;
     // End of variables declaration//GEN-END:variables
 }

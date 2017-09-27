@@ -5,6 +5,10 @@
  */
 package view;
 
+import java.awt.Graphics;
+import java.awt.Image;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Erlinda
@@ -16,6 +20,13 @@ public class ResultadosContenidoPanel extends javax.swing.JPanel {
      */
     public ResultadosContenidoPanel() {
         initComponents();
+    }
+
+    public void paint(Graphics g) {
+        Image imagen = new ImageIcon(getClass().getResource("/img/fondo2.jpg")).getImage();
+        g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
+        setOpaque(false);
+        super.paint(g);
     }
 
     /**

@@ -31,26 +31,22 @@ public class FertilizacionCultivoCompletoLabFrame extends javax.swing.JFrame {
 
         jTabbedPaneNavegacion = new javax.swing.JTabbedPane();
         fertilizacionConLabPanel1 = new view.CultivoCompletoLabPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
         resultadosConLabPanel1 = new view.ResultadosConLabPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTabbedPaneNavegacion.addTab("Fertilizacion", fertilizacionConLabPanel1);
-
-        jScrollPane1.setViewportView(resultadosConLabPanel1);
-
-        jTabbedPaneNavegacion.addTab("Resultados", jScrollPane1);
+        jTabbedPaneNavegacion.addTab("Resultados", resultadosConLabPanel1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPaneNavegacion, javax.swing.GroupLayout.DEFAULT_SIZE, 952, Short.MAX_VALUE)
+            .addComponent(jTabbedPaneNavegacion)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPaneNavegacion, javax.swing.GroupLayout.PREFERRED_SIZE, 593, Short.MAX_VALUE)
+            .addComponent(jTabbedPaneNavegacion, javax.swing.GroupLayout.DEFAULT_SIZE, 593, Short.MAX_VALUE)
         );
 
         pack();
@@ -77,7 +73,6 @@ public class FertilizacionCultivoCompletoLabFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private view.CultivoCompletoLabPanel fertilizacionConLabPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPaneNavegacion;
     private view.ResultadosConLabPanel resultadosConLabPanel1;
     // End of variables declaration//GEN-END:variables

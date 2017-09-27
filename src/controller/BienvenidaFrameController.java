@@ -33,9 +33,14 @@ public class BienvenidaFrameController {
 
     public BienvenidaFrameController(BienvenidaFrame vistaBienvenida) {
         this.vistaBienvenida = vistaBienvenida;
-
+        
+        //incluye vista Frame FertilizacionCultivoCompleto, Panel CultivoCompleto y sus 2 controladores 
+        vistaBienvenida.bienvenidaPanel1.jButtonFertiConLaboratorioAnterior.setVisible(false);
+        //
+        
         confFrameBienvenida();
         vistaBienvenida.setVisible(true);
+        vistaBienvenida.setResizable(false);
         confButtonFertilizacionConLaboratorio();
         confButtonFertilizacionSinLaboratorio();
         confButtonConceptosBasicos();
@@ -54,7 +59,7 @@ public class BienvenidaFrameController {
     }
 
     public void confButtonFertilizacionConLaboratorio() {
-        vistaBienvenida.bienvenidaPanel1.jButtonFertilizacionConLaboratorio.addActionListener(new ActionListener() {
+        vistaBienvenida.bienvenidaPanel1.jButtonFertiConLaboratorioAnterior.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) {
                 ButtonFertilizacionConLaboratorioActionPerformed(evt);
@@ -149,11 +154,11 @@ public class BienvenidaFrameController {
 
     public void confPanelFertiConLab() {
         vistaBienvenida.bienvenidaPanel1.getjLabelfertiConLabImg().setIcon(new ImageIcon(getClass().getResource("/img/muestrasuelo.jpg")));
-        vistaBienvenida.bienvenidaPanel1.getjLabelfertiConLabDescripcion().setText("<html><body><b>Fertilizacion con Analisis de Suelo</b><br>  Debe extraer muestras de suelo de varias partes del terreno a 20 cm profundidad. <br> Mezclar de manera homogenea la muestra. <br> Envie 1 hilo de muestra de suelo al laboratorio de suelos. <br> Con los resultados del laboratorio de suelos<b> inicie con la fertilizacion en el Boton Izquierdo.</b> </body></html>");
+        vistaBienvenida.bienvenidaPanel1.getjLabelfertiConLabDescripcion().setText("<html><body><b>Fertilizacion de Hortalizas</b><br> <br><b>SI cuenta</b> con los resultados de laboratorio de suelos del analisis de suelo de su terreno <b> Inicie con la fertilizacion en el Boton Izquierdo.</b> </body></html>");
     }
 
     public void confPanelFertiSinLab() {
         vistaBienvenida.bienvenidaPanel1.getjLabelfertiSinLabImg().setIcon(new ImageIcon(getClass().getResource("/img/kitsanalisis.jpg")));
-        vistaBienvenida.bienvenidaPanel1.getjLabelfertiSinLabDescripcion().setText("<html><body><b>Fertilizacion sin Analisis de Suelo</b> <br>Tome varias muestras de suelo del terreno y mezclar de manera homogenea. <br> Compre los <b>kits de analisis de suelo</b> <br> Con la muestra de suelo y los kits de analisis <b>inicie con la fertilizacion en el Boton Izquierdo.</b></body></html>");
+        vistaBienvenida.bienvenidaPanel1.getjLabelfertiSinLabDescripcion().setText("<html><body><b>Fertilizacion de Hortalizas</b><br> <br>Si<b> NO cuenta </b>con los resultados de laboratorio de suelos del analisis de suelo de su terreno <b> Inicie con la fertilizacion en el Boton Izquierdo.</b> </body></html>");
     }
 }

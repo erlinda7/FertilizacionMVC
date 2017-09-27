@@ -39,7 +39,7 @@ public class BienvenidaPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButtonFertilizacionConLaboratorio = new javax.swing.JButton();
+        jButtonFertiConLaboratorioAnterior = new javax.swing.JButton();
         jButtonConceptosBasicos = new javax.swing.JButton();
         jButtonSalir = new javax.swing.JButton();
         jButtonFertilizacionSinLaboratorio = new javax.swing.JButton();
@@ -53,17 +53,19 @@ public class BienvenidaPanel extends javax.swing.JPanel {
         jLabel8 = new javax.swing.JLabel();
         jPanelFertiConLAb = new javax.swing.JPanel();
         jLabelfertiConLabImg = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         jLabelfertiConLabDescripcion = new javax.swing.JLabel();
         jPanelFertiSinLab = new javax.swing.JPanel();
         jLabelfertiSinLabImg = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
         jLabelfertiSinLabDescripcion = new javax.swing.JLabel();
         jButtonIniciarFertilizacionConLab = new javax.swing.JButton();
 
-        jButtonFertilizacionConLaboratorio.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
-        jButtonFertilizacionConLaboratorio.setText("Iniciar Fertilizacion ");
-        jButtonFertilizacionConLaboratorio.addActionListener(new java.awt.event.ActionListener() {
+        jButtonFertiConLaboratorioAnterior.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
+        jButtonFertiConLaboratorioAnterior.setText("Iniciar Fertilizacion ");
+        jButtonFertiConLaboratorioAnterior.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonFertilizacionConLaboratorioActionPerformed(evt);
+                jButtonFertiConLaboratorioAnteriorActionPerformed(evt);
             }
         });
 
@@ -84,7 +86,7 @@ public class BienvenidaPanel extends javax.swing.JPanel {
         });
 
         jButtonFertilizacionSinLaboratorio.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
-        jButtonFertilizacionSinLaboratorio.setText("Iniciar Fertilizacion");
+        jButtonFertilizacionSinLaboratorio.setText("<html><body><p align='justify'>Fertilizacion sin Datos de Laboratorio</body></html>");
         jButtonFertilizacionSinLaboratorio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonFertilizacionSinLaboratorioActionPerformed(evt);
@@ -125,11 +127,29 @@ public class BienvenidaPanel extends javax.swing.JPanel {
 
         jLabelfertiConLabImg.setText("jLabel5");
 
+        jPanel1.setBackground(new java.awt.Color(230, 245, 230));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+
         jLabelfertiConLabDescripcion.setBackground(new java.awt.Color(230, 245, 230));
         jLabelfertiConLabDescripcion.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabelfertiConLabDescripcion.setText("jLabel10");
-        jLabelfertiConLabDescripcion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabelfertiConLabDescripcion.setOpaque(true);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelfertiConLabDescripcion, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelfertiConLabDescripcion, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout jPanelFertiConLAbLayout = new javax.swing.GroupLayout(jPanelFertiConLAb);
         jPanelFertiConLAb.setLayout(jPanelFertiConLAbLayout);
@@ -139,19 +159,17 @@ public class BienvenidaPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabelfertiConLabImg, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabelfertiConLabDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanelFertiConLAbLayout.setVerticalGroup(
             jPanelFertiConLAbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelFertiConLAbLayout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelFertiConLAbLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanelFertiConLAbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelFertiConLAbLayout.createSequentialGroup()
-                        .addGap(0, 1, Short.MAX_VALUE)
-                        .addComponent(jLabelfertiConLabImg, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabelfertiConLabDescripcion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelfertiConLabImg, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(7, 7, 7))
         );
 
         jPanelFertiSinLab.setBackground(new java.awt.Color(204, 204, 255));
@@ -160,11 +178,29 @@ public class BienvenidaPanel extends javax.swing.JPanel {
 
         jLabelfertiSinLabImg.setText("jLabel9");
 
+        jPanel2.setBackground(new java.awt.Color(230, 245, 230));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+
         jLabelfertiSinLabDescripcion.setBackground(new java.awt.Color(230, 245, 230));
         jLabelfertiSinLabDescripcion.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabelfertiSinLabDescripcion.setText("jLabel11");
-        jLabelfertiSinLabDescripcion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabelfertiSinLabDescripcion.setOpaque(true);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelfertiSinLabDescripcion, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelfertiSinLabDescripcion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout jPanelFertiSinLabLayout = new javax.swing.GroupLayout(jPanelFertiSinLab);
         jPanelFertiSinLab.setLayout(jPanelFertiSinLabLayout);
@@ -174,34 +210,27 @@ public class BienvenidaPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabelfertiSinLabImg, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabelfertiSinLabDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanelFertiSinLabLayout.setVerticalGroup(
             jPanelFertiSinLabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelFertiSinLabLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelFertiSinLabLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanelFertiSinLabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelfertiSinLabDescripcion, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
-                    .addComponent(jLabelfertiSinLabImg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanelFertiSinLabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabelfertiSinLabImg, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
-        jButtonIniciarFertilizacionConLab.setText("Iniciar Fertilizacion");
+        jButtonIniciarFertilizacionConLab.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        jButtonIniciarFertilizacionConLab.setText("<html><body><p align='justify'>Fertilizacion con Datos de Laboratorio</body></html>");
+        jButtonIniciarFertilizacionConLab.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(257, 257, 257)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(155, 155, 155)
-                        .addComponent(jLabelMensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 546, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -216,29 +245,36 @@ public class BienvenidaPanel extends javax.swing.JPanel {
                                 .addGap(226, 226, 226))))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButtonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(312, 312, 312)
-                                .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 152, Short.MAX_VALUE)
-                                .addComponent(jButtonConceptosBasicos))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jPanelFertiSinLab, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jPanelFertiConLAb, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jButtonFertilizacionConLaboratorio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButtonFertilizacionSinLaboratorio)
-                                    .addComponent(jButtonIniciarFertilizacionConLab, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addContainerGap())))
+                            .addComponent(jPanelFertiSinLab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanelFertiConLAb, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(28, 28, 28)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButtonFertiConLaboratorioAnterior)
+                            .addComponent(jButtonIniciarFertilizacionConLab, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE)
+                            .addComponent(jButtonFertilizacionSinLaboratorio, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButtonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(312, 312, 312)
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 139, Short.MAX_VALUE)
+                        .addComponent(jButtonConceptosBasicos)
+                        .addGap(21, 21, 21))))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(257, 257, 257)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(155, 155, 155)
+                        .addComponent(jLabelMensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 546, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -251,24 +287,24 @@ public class BienvenidaPanel extends javax.swing.JPanel {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
                 .addComponent(jLabelMensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanelFertiConLAb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(92, 92, 92)
-                        .addComponent(jButtonFertilizacionConLaboratorio, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonIniciarFertilizacionConLab, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(67, 67, 67)
+                        .addComponent(jButtonIniciarFertilizacionConLab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(29, 29, 29)
+                        .addComponent(jButtonFertiConLaboratorioAnterior, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanelFertiConLAb, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(13, 13, 13)
                         .addComponent(jPanelFertiSinLab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonFertilizacionSinLaboratorio, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(107, 107, 107)))
+                        .addComponent(jButtonFertilizacionSinLaboratorio, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(78, 78, 78)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel6)
@@ -293,9 +329,9 @@ public class BienvenidaPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonFertilizacionSinLaboratorioActionPerformed
 
-    private void jButtonFertilizacionConLaboratorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFertilizacionConLaboratorioActionPerformed
+    private void jButtonFertiConLaboratorioAnteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFertiConLaboratorioAnteriorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonFertilizacionConLaboratorioActionPerformed
+    }//GEN-LAST:event_jButtonFertiConLaboratorioAnteriorActionPerformed
 
     public JLabel getjLabelfertiConLabDescripcion() {
         return jLabelfertiConLabDescripcion;
@@ -316,7 +352,7 @@ public class BienvenidaPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton jButtonConceptosBasicos;
-    public javax.swing.JButton jButtonFertilizacionConLaboratorio;
+    public javax.swing.JButton jButtonFertiConLaboratorioAnterior;
     public javax.swing.JButton jButtonFertilizacionSinLaboratorio;
     public javax.swing.JButton jButtonIniciarFertilizacionConLab;
     public javax.swing.JButton jButtonSalir;
@@ -332,6 +368,8 @@ public class BienvenidaPanel extends javax.swing.JPanel {
     public javax.swing.JLabel jLabelfertiConLabImg;
     public javax.swing.JLabel jLabelfertiSinLabDescripcion;
     public javax.swing.JLabel jLabelfertiSinLabImg;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     public javax.swing.JPanel jPanelFertiConLAb;
     public javax.swing.JPanel jPanelFertiSinLab;
     // End of variables declaration//GEN-END:variables

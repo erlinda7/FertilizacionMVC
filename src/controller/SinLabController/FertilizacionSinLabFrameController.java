@@ -24,6 +24,7 @@ public class FertilizacionSinLabFrameController {
         this.fertilizacionSinLabFrame.setVisible(true);
         this.fertilizacionSinLabFrame.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         this.fertilizacionSinLabFrame.setLocationRelativeTo(null);
+        fertilizacionSinLabFrame.setResizable(false);
         confFrameFertiSinLab();
     }
 

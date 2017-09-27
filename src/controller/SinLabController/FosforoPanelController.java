@@ -29,9 +29,9 @@ public class FosforoPanelController {
         fosforoPanel.jRadioButtonFosfoLow.setActionCommand("14");
         fosforoPanel.jRadioButtonFosfoMedium.setActionCommand("24");
         fosforoPanel.jRadioButtonFosfoHigh.setActionCommand("30");
-        fosforoPanel.jRadioButtonFosfoTraceLow.setActionCommand("12");
-        fosforoPanel.jRadioButtonFosfoLowMedium.setActionCommand("19");
-        fosforoPanel.jRadioButtonFosfoMediumHigh.setActionCommand("27");
+//        fosforoPanel.jRadioButtonFosfoTraceLow.setActionCommand("12");
+//        fosforoPanel.jRadioButtonFosfoLowMedium.setActionCommand("19");
+//        fosforoPanel.jRadioButtonFosfoMediumHigh.setActionCommand("27");
     }
 
     public void llenarDatosModelo() {

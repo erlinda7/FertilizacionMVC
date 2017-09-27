@@ -33,6 +33,7 @@ public class ConceptosBasicosFrameController {
         
         this.jFConceptosBasicos.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         this.jFConceptosBasicos.setLocationRelativeTo(null);
+        jFConceptosBasicos.setResizable(false);
         confFrameConceptosB();
     }
 
