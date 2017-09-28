@@ -38,15 +38,56 @@ public class ResultadosContenidoPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        resultadosDatosCultivoPanel1 = new view.ResultadosDatosCultivoPanel();
-        resultadosRecFertilizacionPanel1 = new view.ResultadosRecFertilizacionPanel();
-        resultadosExplicacionPanel1 = new view.ResultadosPropiedadesPanel();
         buttonAbrirPdf = new javax.swing.JButton();
         buttonImprimir = new javax.swing.JButton();
+        jPanelExplicacionRecomFertilizacion = new javax.swing.JPanel();
+        jLabelExplicacionFertiTextura = new javax.swing.JLabel();
+        jLabelExplicacionFertiNitrogeno = new javax.swing.JLabel();
+        jLabelExplicacionFertiFosforo = new javax.swing.JLabel();
+        jLabelExplicacionFertiPotasio = new javax.swing.JLabel();
+        resultadosRecFertilizacionPanel1 = new view.ResultadosRecFertilizacionPanel();
 
         buttonAbrirPdf.setText("Abrir PDF");
 
         buttonImprimir.setText("Imprimir");
+
+        jPanelExplicacionRecomFertilizacion.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelExplicacionRecomFertilizacion.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+
+        jLabelExplicacionFertiTextura.setText("jLabel1");
+
+        jLabelExplicacionFertiNitrogeno.setText("jLabel1");
+
+        jLabelExplicacionFertiFosforo.setText("jLabel2");
+
+        jLabelExplicacionFertiPotasio.setText("jLabel3");
+
+        javax.swing.GroupLayout jPanelExplicacionRecomFertilizacionLayout = new javax.swing.GroupLayout(jPanelExplicacionRecomFertilizacion);
+        jPanelExplicacionRecomFertilizacion.setLayout(jPanelExplicacionRecomFertilizacionLayout);
+        jPanelExplicacionRecomFertilizacionLayout.setHorizontalGroup(
+            jPanelExplicacionRecomFertilizacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelExplicacionRecomFertilizacionLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(jPanelExplicacionRecomFertilizacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabelExplicacionFertiPotasio, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelExplicacionFertiFosforo, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelExplicacionFertiNitrogeno, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelExplicacionFertiTextura, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(38, Short.MAX_VALUE))
+        );
+        jPanelExplicacionRecomFertilizacionLayout.setVerticalGroup(
+            jPanelExplicacionRecomFertilizacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelExplicacionRecomFertilizacionLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelExplicacionFertiTextura, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addComponent(jLabelExplicacionFertiNitrogeno, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(jLabelExplicacionFertiFosforo, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addComponent(jLabelExplicacionFertiPotasio, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -56,32 +97,29 @@ public class ResultadosContenidoPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(resultadosDatosCultivoPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(resultadosExplicacionPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(resultadosRecFertilizacionPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jPanelExplicacionRecomFertilizacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(278, 278, 278)
+                        .addGap(71, 71, 71)
                         .addComponent(buttonAbrirPdf, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(131, 131, 131)
-                        .addComponent(buttonImprimir, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(21, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(buttonImprimir, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(50, 50, 50)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(resultadosRecFertilizacionPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(resultadosRecFertilizacionPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(resultadosRecFertilizacionPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(resultadosDatosCultivoPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(resultadosExplicacionPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(buttonAbrirPdf, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonImprimir, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jPanelExplicacionRecomFertilizacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(buttonImprimir, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(buttonAbrirPdf, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -90,8 +128,11 @@ public class ResultadosContenidoPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton buttonAbrirPdf;
     public javax.swing.JButton buttonImprimir;
-    public view.ResultadosDatosCultivoPanel resultadosDatosCultivoPanel1;
-    public view.ResultadosPropiedadesPanel resultadosExplicacionPanel1;
+    public javax.swing.JLabel jLabelExplicacionFertiFosforo;
+    public javax.swing.JLabel jLabelExplicacionFertiNitrogeno;
+    public javax.swing.JLabel jLabelExplicacionFertiPotasio;
+    public javax.swing.JLabel jLabelExplicacionFertiTextura;
+    public javax.swing.JPanel jPanelExplicacionRecomFertilizacion;
     public view.ResultadosRecFertilizacionPanel resultadosRecFertilizacionPanel1;
     // End of variables declaration//GEN-END:variables
 }

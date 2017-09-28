@@ -9,6 +9,7 @@ import com.itextpdf.text.DocumentException;
 
 //import drools.DroolsMain;
 import java.awt.Desktop;
+import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -33,31 +34,35 @@ public class ResultadosConLabPanelController {
 
     public ResultadosConLabPanelController(ResultadosConLabPanel resultadosConLabPanel) {
         this.resultadosConLabPanel = resultadosConLabPanel;
-        
+
     }
 
     public void llenarPanelInformacion(Cultivo cultivo, Textura textura) {
         //comentar para netbenas
 //         DroolsMain.calcularResultados(cultivo, textura);
 
-        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelTituloDatos.setText(cultivo.getHortaliza());
-        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelRendimiento.setText(cultivo.getRendimiento() + "  Ton/ha");
-        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelArena.setText(textura.getTexturaArena() + "  %");
-        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelLimo.setText(textura.getTexturaLimo() + "  %");
-        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelArcilla.setText(textura.getTexturaArcilla() + "  %");
-        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelNitrogeno.setText(cultivo.getNivelNitrogeno() + "  ppm");
-        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelFosforo.setText(cultivo.getNivelFosforo() + "  ppm");
-        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelPotasio.setText(cultivo.getNivelPotasio() + "  ppm");
-        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelpH.setText(cultivo.getNivelpH() + "  ppm");
-        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelMO.setText(cultivo.getNivelMO() + "  ppm");
-//
-        resultadosConLabPanel.resultadosContenidoPanel1.resultadosRecFertilizacionPanel1.jLabelTituloRecomendacion.setText(cultivo.getHortaliza() + "  (" + cultivo.getRendimiento() + "  Ton/ha )");
-        resultadosConLabPanel.resultadosContenidoPanel1.resultadosExplicacionPanel1.jLabelPropiedadTextura.setText(textura.getTipoTextura() + " ");
-        resultadosConLabPanel.resultadosContenidoPanel1.resultadosExplicacionPanel1.jLabelPropiedadpH.setText(cultivo.getTipoSuelo() + "");
-        resultadosConLabPanel.resultadosContenidoPanel1.resultadosExplicacionPanel1.jLabelPropiedadNitrogeno.setText(cultivo.getRangoNivelNitrogeno() + "");
-        resultadosConLabPanel.resultadosContenidoPanel1.resultadosExplicacionPanel1.jLabelPropiedadFosforo.setText(cultivo.getRangoNivelFosforo() + "");
-        resultadosConLabPanel.resultadosContenidoPanel1.resultadosExplicacionPanel1.jLabelPropiedadPotasio.setText(cultivo.getRangoNivelPotasio() + "");
-        resultadosConLabPanel.resultadosContenidoPanel1.resultadosExplicacionPanel1.jLabelPropiedadMO.setText(cultivo.getRangoNivelMO() + "");
+        //datos introducidos del cultivo
+//        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelTituloDatos.setText(cultivo.getHortaliza());
+//        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelRendimiento.setText(cultivo.getRendimiento() + "  Ton/ha");
+//        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelArena.setText(textura.getTexturaArena() + "  %");
+//        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelLimo.setText(textura.getTexturaLimo() + "  %");
+//        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelArcilla.setText(textura.getTexturaArcilla() + "  %");
+//        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelNitrogeno.setText(cultivo.getNivelNitrogeno() + "  ppm");
+//        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelFosforo.setText(cultivo.getNivelFosforo() + "  ppm");
+//        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelPotasio.setText(cultivo.getNivelPotasio() + "  ppm");
+//        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelpH.setText(cultivo.getNivelpH() + "  ppm");
+//        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelMO.setText(cultivo.getNivelMO() + "  ppm");
+//Propiedades del suelo
+
+//        resultadosConLabPanel.resultadosContenidoPanel1.resultadosRecFertilizacionPanel1.jLabelTituloRecomendacion.setText(cultivo.getHortaliza() + "  (" + cultivo.getRendimiento() + "  Ton/ha )");
+//        resultadosConLabPanel.resultadosContenidoPanel1.resultadosExplicacionPanel1.jLabelPropiedadTextura.setText(textura.getTipoTextura() + " ");
+//        resultadosConLabPanel.resultadosContenidoPanel1.resultadosExplicacionPanel1.jLabelPropiedadpH.setText(cultivo.getTipoSuelo() + "");
+//        resultadosConLabPanel.resultadosContenidoPanel1.resultadosExplicacionPanel1.jLabelPropiedadNitrogeno.setText(cultivo.getRangoNivelNitrogeno() + "");
+//        resultadosConLabPanel.resultadosContenidoPanel1.resultadosExplicacionPanel1.jLabelPropiedadFosforo.setText(cultivo.getRangoNivelFosforo() + "");
+//        resultadosConLabPanel.resultadosContenidoPanel1.resultadosExplicacionPanel1.jLabelPropiedadPotasio.setText(cultivo.getRangoNivelPotasio() + "");
+//        resultadosConLabPanel.resultadosContenidoPanel1.resultadosExplicacionPanel1.jLabelPropiedadMO.setText(cultivo.getRangoNivelMO() + "");
+        //mostrarExplicacionRecomendacionFertilizacion(cultivo, textura);
+        ///Recomendacion de fertilizacion
         resultadosConLabPanel.resultadosContenidoPanel1.resultadosRecFertilizacionPanel1.jLabelAplicacionFerti.setText("<html><body><p align='justify'>" + cultivo.getFormaAplicar() + "</p></body></html>");
         resultadosConLabPanel.resultadosContenidoPanel1.resultadosRecFertilizacionPanel1.jLabelCantidadNPK.setText("[ " + cultivo.getCantKgN() + " ]" + "  -  " + "[ " + cultivo.getCantKgP() + " ]" + "  -  " + "[ " + cultivo.getCantKgK() + " ]");
         resultadosConLabPanel.resultadosContenidoPanel1.resultadosRecFertilizacionPanel1.jTextPaneRecomendacion.setText(cultivo.getRecomendacionesString());
@@ -118,5 +123,42 @@ public class ResultadosConLabPanelController {
 
     private void buttonImprimirActionPerformed(java.awt.event.ActionEvent evt) {
         ImprimirResultados.imprimir(rutaDocumentoPdf);
+    }
+
+    public void mostrarExplicacionRecomendacionFertilizacion(Cultivo cultivo, String textura) {
+        
+        
+        //  if (textura.getTipoTextura().equals("arenosa") || textura.getTipoTextura().equals("arenoso franca") || textura.getTipoTextura().equals("franco arenosa") || textura.getTipoTextura().equals("franco arcillo arenosa")) {
+        if (textura.equals("arenosa")||textura.equals("arenoso franca")||textura.equals("franco arenosa")||textura.equals("franco arcillo arenosa")) {
+            // resultadosConLabPanel.resultadosContenidoPanel1.jLabelExplicacionFertiTextura.setText("<html><body><p align='justify'>La textura del suelo es ' " + textura.getTipoTextura() + " ' por lo cual se agrega 10% de nutrientes a la cantidad recomendada de Nitrogeno, Fosforo y Potasio.</body></html>");
+            resultadosConLabPanel.resultadosContenidoPanel1.jLabelExplicacionFertiTextura.setText("<html><body><p align='justify'>La textura del suelo es ' " + textura + " ' por lo cual se agrega 10% de nutrientes a la cantidad recomendada de Nitrogeno, Fosforo y Potasio.</body></html>");
+        } else {
+            // resultadosConLabPanel.resultadosContenidoPanel1.jLabelExplicacionFertiTextura.setText("<html><body><p align='justify'>La textura del suelo es '" + textura.getTipoTextura() + " ' por lo cual NO se agrega 10% de nutrientes a la cantidad recomendada de Nitrogeno, Fosforo y Potasio.</body></html>");
+        resultadosConLabPanel.resultadosContenidoPanel1.jLabelExplicacionFertiTextura.setText("<html><body><p align='justify'>La textura del suelo es '" + textura+ " ' por lo cual NO se agrega 10% de nutrientes a la cantidad recomendada de Nitrogeno, Fosforo y Potasio.</body></html>");
+        }
+        
+        Double nivelNitrogeno=34.6;
+        String rangoNitrogeno="Medio";
+        if(nivelNitrogeno>0){
+        resultadosConLabPanel.resultadosContenidoPanel1.jLabelExplicacionFertiNitrogeno.setText("<html><body><p align='justify'>El nivel de Nitrogeno en el suelo es  ' " + nivelNitrogeno + " ' por lo cual se considera que el nivel de nitrogeno en el suelo es ' "+rangoNitrogeno+" ' y es necesario fertilizar con el nutriente Nitrogeno.</body></html>");
+        }else{
+        resultadosConLabPanel.resultadosContenidoPanel1.jLabelExplicacionFertiNitrogeno.setText("<html><body><p align='justify'>El nivel de Nitrogeno en el suelo es  ' " + nivelNitrogeno + " ' por lo cual se considera que el nivel de nitrogeno en el suelo es ' "+rangoNitrogeno+" ' y NO es necesario fertilizar con el nutriente Nitrogeno.</body></html>");
+        }
+        
+         Double nivelFosforo=84.6;
+        String rangoFosforo="Alto";
+        if(nivelFosforo>0){
+        resultadosConLabPanel.resultadosContenidoPanel1.jLabelExplicacionFertiFosforo.setText("<html><body><p align='justify'>El nivel de Fosforo en el suelo es  ' " + nivelFosforo + " ' por lo cual se considera que el nivel de fosforo en el suelo es ' "+rangoFosforo+" ' y es necesario fertilizar con el nutriente Fosforo.</body></html>");
+        }else{
+        resultadosConLabPanel.resultadosContenidoPanel1.jLabelExplicacionFertiFosforo.setText("<html><body><p align='justify'>El nivel de Fosforo en el suelo es  ' " + nivelFosforo + " ' por lo cual se considera que el nivel de fosforo en el suelo es ' "+rangoFosforo+" ' y NO es necesario fertilizar con el nutriente Fosforo.</body></html>");
+        }
+            
+         Double nivelPotasio=4.6;
+        String rangoPotasio="Muy Bajo";
+        if(nivelPotasio>0){
+        resultadosConLabPanel.resultadosContenidoPanel1.jLabelExplicacionFertiPotasio.setText("<html><body><p align='justify'>El nivel de Potasio en el suelo es  ' " + nivelPotasio + " ' por lo cual se considera que el nivel de fosforo en el suelo es ' "+rangoPotasio+" ' y es necesario fertilizar con el nutriente Potasio.</body></html>");
+        }else{
+        resultadosConLabPanel.resultadosContenidoPanel1.jLabelExplicacionFertiPotasio.setText("<html><body><p align='justify'>El nivel de Potasio en el suelo es  ' " + nivelPotasio + " ' por lo cual se considera que el nivel de fosforo en el suelo es ' "+rangoPotasio+" ' y NO es necesario fertilizar con el nutriente Potasio.</body></html>");
+        }
     }
 }

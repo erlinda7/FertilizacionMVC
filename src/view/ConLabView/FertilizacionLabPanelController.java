@@ -226,7 +226,7 @@ public class FertilizacionLabPanelController {
             case 7:
 
                      
-                navegacionTabbe.addTab("Resultados", resultadosConLabPanel);
+                navegacionTabbe.addTab("Recomendacion de Fertilizacion", resultadosConLabPanel);
                 navegacionTabbe.addTab("Recomendacion de pH", phRecomendacionPanel);
                 navegacionTabbe.addTab("Recomendacion de Materia Organica", materiaOrganicaRecomendacionPanel);
 
@@ -289,6 +289,7 @@ public class FertilizacionLabPanelController {
                 //primero
                 resultadosConLabPanelController.llenarPanelInformacion(cultivo, textura);
                //segundo
+                resultadosConLabPanelController.mostrarExplicacionRecomendacionFertilizacion(cultivo, "limosa");
                 materiaOrganicaRecomendacionPanelController.mostrarExplicacionMO(cultivo);
                 phRecomendacionPanelController.mostrarRecomendacionPh(cultivo);
                 System.out.print(cultivo.getNivelMO());
