@@ -7,6 +7,8 @@ package controller.SinLabController;
 
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
@@ -25,12 +27,15 @@ public class CultivoPanelController {
     private ArrayList<Hortaliza> arrayListHortalizas;
     private Cultivo cultivo;
     private HortalizaService hortalizaService = new HortalizaService();
+
     public CultivoPanelController(CultivoPanel cultivoPanel, Cultivo cultivo) {
         this.cultivoPanel = cultivoPanel;
         this.cultivo = cultivo;
         //hortalizas();
-        arrayListHortalizas=hortalizaService.getListaHortalizas();
+        arrayListHortalizas = hortalizaService.getListaHortalizas();
         configCultivo();
+
+        mostrarExplicacionHortaliza();
     }
 
     public void llenarDatosModelo() {
@@ -90,5 +95,16 @@ public class CultivoPanelController {
         this.cultivoPanel.jComboBoxRendimiento.setModel(new DefaultComboBoxModel<>(hortalizaSelecionada.getRendimientoHortaliza()));
     }
 
-    
+    public void mostrarExplicacionHortaliza() {
+        cultivoPanel.jLabelPreguntaCultivo.setToolTipText("<html><body><p align='justify'>Seleccione una hortaliza y el rendimiento en toneladas por hectarea <br>que espera tener al aplicar la fertilizacion para realizar <br>una correcta Recomendación de Fertilización</html></body>");
+        cultivoPanel.jLabelPreguntaCultivo.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
+                jLabelPreguntaCultivoMouseEntered(evt);
+            }
+        });
+    }
+
+    public void jLabelPreguntaCultivoMouseEntered(MouseEvent evt) {
+        cultivoPanel.jLabelPreguntaCultivo.getToolTipText();
+    }
 }

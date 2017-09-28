@@ -5,6 +5,8 @@
  */
 package controller.SinLabController;
 
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import model.Cultivo;
 import view.sinLabView.MateriaOrganicaPanel;
 
@@ -21,6 +23,7 @@ public class MateriaOrganicaPanelController {
         this.materiaOrganicaPanel = materiaOrganicaPanel;
         this.cultivo = cultivo;
         confRadiobutonMO();
+        mostrarExplicacionMO();
     }
 
     public void confRadiobutonMO() {
@@ -34,6 +37,18 @@ public class MateriaOrganicaPanelController {
     public void llenarDatosModelo() {
         Double valorMO = Double.parseDouble(materiaOrganicaPanel.getButtonGroupMO().getSelection().getActionCommand());
         cultivo.setNivelMO(valorMO);
+    }
+      public void mostrarExplicacionMO() {
+        materiaOrganicaPanel.jLabelPreguntaMO.setToolTipText("<html><body><p align='justify'>Elija el nivel de materia organica del suelo <br>para realizar una correcta Recomendación de Fertilización</html></body>");
+        materiaOrganicaPanel.jLabelPreguntaMO.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
+                jLabelPreguntaMOMouseEntered(evt);
+            }
+        });
+    }
+
+    public void jLabelPreguntaMOMouseEntered(MouseEvent evt) {
+       materiaOrganicaPanel.jLabelPreguntaMO.getToolTipText();
     }
 
 }

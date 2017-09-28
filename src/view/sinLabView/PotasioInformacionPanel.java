@@ -36,7 +36,7 @@ public class PotasioInformacionPanel extends javax.swing.JPanel {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        jLabelMedirPotasio = new javax.swing.JLabel();
 
         setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         setOpaque(false);
@@ -50,7 +50,7 @@ public class PotasioInformacionPanel extends javax.swing.JPanel {
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        jLabel3.setText("<html><body><P ALIGN=\"justify\"><b>2. Medicion del Potasio</b><br> En otro tubo de ensayo añada con la pipeta 0.5 ml de <b>\"Extracto claro de suelo general\"</b> (Tenga cuidado de no transferir nada de tierra ) y llene el tubo hasta 2.5 ml con <b>\"Extraccion solution\".</b>Añada el sobre de reactivo de potasio <b>K</b>. Coloque la tapa y agite vigorosamente el tubo durante 30 segundos para disolver el reactivo. Deje que el tubo repose durante 30 segundos. <br><b>*</b> Para finalizar compare el color del tubo con la tarjeta de color del potasio (K) y marque el nivel de potasio encontrado.  </body></html>");
+        jLabel3.setText("<html><body><P ALIGN=\"justify\"><b>2. Medicion del Potasio</b><br> En otro tubo de ensayo añada con la pipeta 0.5 ml de <b>\"Extracto claro de suelo general\"</b> (Tenga cuidado de no transferir nada de tierra ) y llene el tubo hasta 2.5 ml con <b>\"Extraccion solution\".</b>Añada el sobre de reactivo de potasio <b>K</b>. Coloque la tapa y agite vigorosamente el tubo durante 30 segundos para disolver el reactivo. Deje que el tubo repose durante 30 segundos. <br><b>*</b> Para finalizar compare el color del tubo con la tarjeta de turbidez del potasio (K) y marque el nivel de potasio donde se con claridad la linea blanca entre los dos cuadritos.  </body></html>");
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/informacionImg/nitrgeno5.jpg"))); // NOI18N
         jLabel5.setText("jLabel5");
@@ -66,7 +66,7 @@ public class PotasioInformacionPanel extends javax.swing.JPanel {
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/informacionImg/potasio1.jpg"))); // NOI18N
         jLabel6.setText("jLabel6");
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/informacionImg/potasio2.jpg"))); // NOI18N
+        jLabelMedirPotasio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/informacionImg/potasio2.jpg"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -93,7 +93,7 @@ public class PotasioInformacionPanel extends javax.swing.JPanel {
                                 .addGap(33, 33, 33)
                                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel9)
+                        .addComponent(jLabelMedirPotasio)
                         .addGap(25, 25, 25))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -106,25 +106,27 @@ public class PotasioInformacionPanel extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(2, 2, 2)
                 .addComponent(jLabel1)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(13, 13, 13)
                                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jLabel6)
-                                .addGap(32, 32, 32))
-                            .addGroup(layout.createSequentialGroup()
+                                .addGap(39, 39, 39))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel9)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addComponent(jLabelMedirPotasio, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(1, 1, 1))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -150,6 +152,6 @@ public class PotasioInformacionPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    public javax.swing.JLabel jLabelMedirPotasio;
     // End of variables declaration//GEN-END:variables
 }

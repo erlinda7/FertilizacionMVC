@@ -38,8 +38,8 @@ public class PHLabPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabelPreguntaPH = new javax.swing.JLabel();
+        jLabelPh = new javax.swing.JLabel();
         jSpinnerPhLab = new javax.swing.JSpinner();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -47,11 +47,11 @@ public class PHLabPanel extends javax.swing.JPanel {
         contenedorMemoriaTrabajo = new javax.swing.JPanel();
         memoriaTrabajoPanel1 = new view.ConLabView.MemoriaTrabajoPanel();
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel1.setText("Cual es el nivel pH (Reaccion del Suelo) en el suelo ?");
+        jLabelPreguntaPH.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabelPreguntaPH.setText("Cual es el nivel pH (Reaccion del Suelo) en el suelo ?");
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel2.setText("pH");
+        jLabelPh.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabelPh.setText("pH");
 
         jPanel1.setBackground(new java.awt.Color(153, 255, 153));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -114,10 +114,10 @@ public class PHLabPanel extends javax.swing.JPanel {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                             .addContainerGap()
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 533, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabelPreguntaPH, javax.swing.GroupLayout.PREFERRED_SIZE, 533, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
                             .addGap(129, 129, 129)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelPh, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(jSpinnerPhLab, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
@@ -128,13 +128,13 @@ public class PHLabPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabelPreguntaPH, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jSpinnerPhLab, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabelPh, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
@@ -148,10 +148,10 @@ public class PHLabPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JPanel contenedorMemoriaTrabajo;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    public javax.swing.JLabel jLabelPh;
+    public javax.swing.JLabel jLabelPreguntaPH;
     private javax.swing.JPanel jPanel1;
     public javax.swing.JSpinner jSpinnerPhLab;
     public view.ConLabView.MemoriaTrabajoPanel memoriaTrabajoPanel1;

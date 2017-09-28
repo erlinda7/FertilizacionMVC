@@ -5,6 +5,8 @@
  */
 package controller.SinLabController;
 
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import model.Cultivo;
 import view.sinLabView.NitrogenoPanel;
 
@@ -21,6 +23,7 @@ public class NitrogenoPanelController {
         this.nitrogenoPanel = nitrogenoPanel;
         this.cultivo = cultivo;
         confRadiobutonNitrogeno();
+        mostrarExplicacionNitrogeno();
     }
 
     public void confRadiobutonNitrogeno() {
@@ -37,5 +40,17 @@ public class NitrogenoPanelController {
     public void llenarDatosModelo() {
         Integer valorNitrogeno = Integer.parseInt(nitrogenoPanel.getButtonGroupNitrogeno().getSelection().getActionCommand());
         cultivo.setNivelNitrogeno(valorNitrogeno);
+    }
+     public void mostrarExplicacionNitrogeno() {
+        nitrogenoPanel.jLabelPreguntaNitrogeno.setToolTipText("<html><body><p align='justify'>Elija el color que ha obtenido con el kit de analisis de nitrogeno <br>para realizar una correcta Recomendación de Fertilización</html></body>");
+        nitrogenoPanel.jLabelPreguntaNitrogeno.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
+                jLabelPreguntaNitrogenoMouseEntered(evt);
+            }
+        });
+    }
+
+    public void jLabelPreguntaNitrogenoMouseEntered(MouseEvent evt) {
+        nitrogenoPanel.jLabelPreguntaNitrogeno.getToolTipText();
     }
 }

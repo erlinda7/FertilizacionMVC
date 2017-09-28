@@ -21,7 +21,7 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel1" alignment="0" min="-2" pref="275" max="-2" attributes="0"/>
+                          <Component id="jLabelPreguntaCultivo" alignment="0" min="-2" pref="275" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel2" min="-2" pref="69" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -54,7 +54,7 @@
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" pref="40" max="-2" attributes="0"/>
+                      <Component id="jLabelPreguntaCultivo" min="-2" pref="40" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel2" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
@@ -81,13 +81,16 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="jLabelPreguntaCultivo">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Ingrese los Datos del Cultivo:"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>

@@ -11,6 +11,8 @@ import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import model.Cultivo;
@@ -35,6 +37,7 @@ public class RendimientoLabPanelController {
         //ValoresRendHortalizaPanel valoresRendHortalizaPanel=rendimientoLabPanel.valoresRendHortalizaPanel1;
         //ValoresRendHortalizaPanelController valoresRendHortalizaPanelController=new ValoresRendHortalizaPanelController(valoresRendHortalizaPanel);
         crearRadioButtonRendimiento(new String[]{"10", "13", "16", "20", "25", "30"});
+        mostrarExplicacionRendimiento();
     }
 
     public void crearRadioButtonRendimiento(String[] valoresRendHortalizas) {
@@ -69,10 +72,10 @@ public class RendimientoLabPanelController {
 
     public void actualizarVistaRendimiento() {
         rendimientoLabPanel.jLabelNombreHortaliza.setText(cultivo.getHortaliza() + "  (ton/ha): ");
-        Hortaliza hortalizaRecuperada=hortalizaService.buscarHortalizaNombre(cultivo.getHortaliza());
+        Hortaliza hortalizaRecuperada = hortalizaService.buscarHortalizaNombre(cultivo.getHortaliza());
         //System.out.println("ruta img para label"+hortalizaRecuperada.getRutaImgHortaliza());
         rendimientoLabPanel.jLabelImgHortRend.setIcon(new ImageIcon(getClass().getResource(hortalizaRecuperada.getRutaImgHortaliza())));
-        rendimientoLabPanel.jLabelDescripHortRend.setText("<html><body><P ALIGN=\"justify\">" + hortalizaRecuperada.getDescripcionHortaliza()+"</body></html>");
+        rendimientoLabPanel.jLabelDescripHortRend.setText("<html><body><P ALIGN=\"justify\">" + hortalizaRecuperada.getDescripcionHortaliza() + "</body></html>");
     }
 
     public void llenarDatosModelo() {
@@ -81,4 +84,16 @@ public class RendimientoLabPanelController {
         //System.out.println(valorRendLab);
     }
 
+    public void mostrarExplicacionRendimiento() {
+        rendimientoLabPanel.jLabelPreguntaRendimiento.setToolTipText("<html><body><p align='justify'>Seleccione el rendimiento en toneladas por hectarea que espera tener al realizar <br>la fertilización de la hortaliza seleccionada para una correcta<br> Recomendación de Fertilización</html></body>");
+        rendimientoLabPanel.jLabelPreguntaRendimiento.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
+                jLabelPreguntaRendimientoMouseEntered(evt);
+            }
+        });
+    }
+
+    public void jLabelPreguntaRendimientoMouseEntered(MouseEvent evt) {
+        rendimientoLabPanel.jLabelPreguntaRendimiento.getToolTipText();
+    }
 }

@@ -40,7 +40,7 @@ public class NitrogenoPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         buttonGroupNitrogeno = new javax.swing.ButtonGroup();
-        jLabel1 = new javax.swing.JLabel();
+        jLabelPreguntaNitrogeno = new javax.swing.JLabel();
         jRadioButtonHigh = new javax.swing.JRadioButton();
         jRadioButtonMedium = new javax.swing.JRadioButton();
         jRadioButtonLow = new javax.swing.JRadioButton();
@@ -54,8 +54,8 @@ public class NitrogenoPanel extends javax.swing.JPanel {
 
         setOpaque(false);
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel1.setText("Elija el color de nitrogeno encontrado en la prueba");
+        jLabelPreguntaNitrogeno.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabelPreguntaNitrogeno.setText("Elija el color de nitrogeno encontrado en la prueba");
 
         buttonGroupNitrogeno.add(jRadioButtonHigh);
         jRadioButtonHigh.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -126,13 +126,13 @@ public class NitrogenoPanel extends javax.swing.JPanel {
                 .addComponent(nitrogenoInformacionPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 689, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 432, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabelPreguntaNitrogeno, javax.swing.GroupLayout.PREFERRED_SIZE, 432, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1)
+                .addComponent(jLabelPreguntaNitrogeno)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -171,11 +171,11 @@ public class NitrogenoPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroupNitrogeno;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    public javax.swing.JLabel jLabelPreguntaNitrogeno;
     public javax.swing.JRadioButton jRadioButtonHigh;
     public javax.swing.JRadioButton jRadioButtonLow;
     public javax.swing.JRadioButton jRadioButtonMedium;

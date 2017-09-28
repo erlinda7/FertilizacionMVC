@@ -40,7 +40,7 @@ public class PotasioPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         buttonGroupPotasio = new javax.swing.ButtonGroup();
-        jLabel1 = new javax.swing.JLabel();
+        jLabelPreguntaPotasio = new javax.swing.JLabel();
         jRadioButtonPotTrace = new javax.swing.JRadioButton();
         jRadioButtonPotHigh = new javax.swing.JRadioButton();
         jRadioButtonPotMedium = new javax.swing.JRadioButton();
@@ -56,8 +56,8 @@ public class PotasioPanel extends javax.swing.JPanel {
         memoriaTrabajosinLABPanel1 = new view.sinLabView.MemoriaTrabajosinLABPanel();
         potasioInformacionPanel1 = new view.sinLabView.PotasioInformacionPanel();
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel1.setText("Elija el color de potasio encontrado en la prueba");
+        jLabelPreguntaPotasio.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabelPreguntaPotasio.setText("Elija el color de potasio encontrado en la prueba");
 
         buttonGroupPotasio.add(jRadioButtonPotTrace);
         jRadioButtonPotTrace.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -124,7 +124,7 @@ public class PotasioPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabelPreguntaPotasio, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -158,7 +158,7 @@ public class PotasioPanel extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1)
+                .addComponent(jLabelPreguntaPotasio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
@@ -210,7 +210,6 @@ public class PotasioPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroupPotasio;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -219,11 +218,12 @@ public class PotasioPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    public javax.swing.JLabel jLabelPreguntaPotasio;
     public javax.swing.JRadioButton jRadioButtonPotHigh;
     public javax.swing.JRadioButton jRadioButtonPotLow;
     public javax.swing.JRadioButton jRadioButtonPotMedium;
     public javax.swing.JRadioButton jRadioButtonPotTrace;
     public view.sinLabView.MemoriaTrabajosinLABPanel memoriaTrabajosinLABPanel1;
-    private view.sinLabView.PotasioInformacionPanel potasioInformacionPanel1;
+    public view.sinLabView.PotasioInformacionPanel potasioInformacionPanel1;
     // End of variables declaration//GEN-END:variables
 }

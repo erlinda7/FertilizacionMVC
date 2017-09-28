@@ -41,7 +41,7 @@ public class RendimientoLabPanel extends javax.swing.JPanel {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroupValoresRend = new javax.swing.ButtonGroup();
-        jLabel1 = new javax.swing.JLabel();
+        jLabelPreguntaRendimiento = new javax.swing.JLabel();
         jLabelNombreHortaliza = new javax.swing.JLabel();
         jLabelDescripHortRend = new javax.swing.JLabel();
         jLabelImgHortRend = new javax.swing.JLabel();
@@ -51,8 +51,8 @@ public class RendimientoLabPanel extends javax.swing.JPanel {
 
         setOpaque(false);
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel1.setText("Cual es el rendimiento esperado de la hortaliza a fertilizar ?");
+        jLabelPreguntaRendimiento.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabelPreguntaRendimiento.setText("Cual es el rendimiento esperado de la hortaliza a fertilizar ?");
 
         jLabelNombreHortaliza.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
         jLabelNombreHortaliza.setForeground(new java.awt.Color(51, 51, 255));
@@ -86,7 +86,7 @@ public class RendimientoLabPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
+                        .addComponent(jLabelPreguntaRendimiento)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -115,7 +115,7 @@ public class RendimientoLabPanel extends javax.swing.JPanel {
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(memoriaTrabajoPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelPreguntaRendimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabelNombreHortaliza, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -140,11 +140,11 @@ public class RendimientoLabPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroupValoresRend;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     public javax.swing.JLabel jLabelDescripHortRend;
     public javax.swing.JLabel jLabelImgHortRend;
     public javax.swing.JLabel jLabelNombreHortaliza;
+    public javax.swing.JLabel jLabelPreguntaRendimiento;
     public view.ConLabView.MemoriaTrabajoPanel memoriaTrabajoPanel1;
     public javax.swing.JPanel valoresRendimientoPanel;
     // End of variables declaration//GEN-END:variables

@@ -40,15 +40,15 @@ public class MateriaOrganicaPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         buttonGroupMO = new javax.swing.ButtonGroup();
-        jLabel1 = new javax.swing.JLabel();
+        jLabelPreguntaMO = new javax.swing.JLabel();
         jRadioButtonMOAlto = new javax.swing.JRadioButton();
         jRadioButtonMOMedio = new javax.swing.JRadioButton();
         jRadioButtonMOBajo = new javax.swing.JRadioButton();
         memoriaTrabajosinLABPanel1 = new view.sinLabView.MemoriaTrabajosinLABPanel();
         mOInformacionPanel1 = new view.sinLabView.MOInformacionPanel();
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel1.setText("Elija el nivel de materia organica del suelo");
+        jLabelPreguntaMO.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabelPreguntaMO.setText("Elija el nivel de materia organica del suelo");
 
         buttonGroupMO.add(jRadioButtonMOAlto);
         jRadioButtonMOAlto.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -87,13 +87,13 @@ public class MateriaOrganicaPanel extends javax.swing.JPanel {
                         .addComponent(mOInformacionPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabelPreguntaMO, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(18, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1)
+                .addComponent(jLabelPreguntaMO)
                 .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
@@ -115,7 +115,7 @@ public class MateriaOrganicaPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroupMO;
-    private javax.swing.JLabel jLabel1;
+    public javax.swing.JLabel jLabelPreguntaMO;
     public javax.swing.JRadioButton jRadioButtonMOAlto;
     public javax.swing.JRadioButton jRadioButtonMOBajo;
     public javax.swing.JRadioButton jRadioButtonMOMedio;

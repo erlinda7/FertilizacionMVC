@@ -82,9 +82,9 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                  <Component id="nivelMOlabel" min="-2" pref="49" max="-2" attributes="0"/>
+                  <Component id="nivelMOlabel" min="-2" pref="73" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="explicacionMOLabel" min="-2" pref="79" max="-2" attributes="0"/>
+                  <Component id="explicacionMOLabel" min="-2" pref="55" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -132,18 +132,18 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jLabel12" max="32767" attributes="0"/>
-                      <Component id="jLabel9" pref="0" max="32767" attributes="0"/>
+                      <Component id="jLabelRecMO4" max="32767" attributes="0"/>
+                      <Component id="jLabelRecMO1" pref="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jLabel13" min="-2" pref="146" max="-2" attributes="0"/>
-                      <Component id="jLabel11" pref="0" max="32767" attributes="0"/>
+                      <Component id="jLabelRecMO5" min="-2" pref="146" max="-2" attributes="0"/>
+                      <Component id="jLabelRecMO2" pref="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel14" max="32767" attributes="0"/>
-                      <Component id="jLabel10" max="32767" attributes="0"/>
+                      <Component id="jLabelRecMO6" max="32767" attributes="0"/>
+                      <Component id="jLabelRecMO3" max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -153,17 +153,17 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="jLabel11" alignment="0" max="32767" attributes="0"/>
-                      <Component id="jLabel9" alignment="0" max="32767" attributes="0"/>
-                      <Component id="jLabel10" max="32767" attributes="0"/>
+                      <Component id="jLabelRecMO2" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jLabelRecMO1" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jLabelRecMO3" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="103" alignment="1" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="jLabel13" alignment="0" pref="0" max="32767" attributes="0"/>
-                          <Component id="jLabel12" alignment="0" min="-2" pref="155" max="-2" attributes="0"/>
+                          <Component id="jLabelRecMO5" alignment="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="jLabelRecMO4" alignment="0" min="-2" pref="155" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="jLabel14" alignment="0" min="-2" pref="155" max="-2" attributes="0"/>
+                      <Component id="jLabelRecMO6" alignment="0" min="-2" pref="155" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
               </Group>
@@ -171,48 +171,67 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel9">
+        <Component class="javax.swing.JLabel" name="jLabelRecMO1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/img/recomendacionesSecundarias/compost1.jpg"/>
             </Property>
             <Property name="text" type="java.lang.String" value="jLabel9"/>
+            <Property name="toolTipText" type="java.lang.String" value="agregar explicacion Mo"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel10">
+        <Component class="javax.swing.JLabel" name="jLabelRecMO3">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/img/recomendacionesSecundarias/compost3.jpg"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel11">
+        <Component class="javax.swing.JLabel" name="jLabelRecMO2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/img/recomendacionesSecundarias/compost2.jpg"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel12">
+        <Component class="javax.swing.JLabel" name="jLabelRecMO4">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/img/recomendacionesSecundarias/compost4.jpg"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel13">
+        <Component class="javax.swing.JLabel" name="jLabelRecMO5">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/img/recomendacionesSecundarias/compost5.jpg"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel14">
+        <Component class="javax.swing.JLabel" name="jLabelRecMO6">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/img/recomendacionesSecundarias/compost6.jpg"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>
@@ -234,22 +253,22 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="jLabel1EstiercolSeco" min="-2" pref="225" max="-2" attributes="0"/>
+                  <Component id="jLabelRecMO7" min="-2" pref="225" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel8" min="-2" pref="212" max="-2" attributes="0"/>
+                  <Component id="jLabelRecMO8" min="-2" pref="212" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jLabel1EstiercolSeco" alignment="0" max="32767" attributes="0"/>
-              <Component id="jLabel8" alignment="0" max="32767" attributes="0"/>
+              <Component id="jLabelRecMO7" alignment="0" max="32767" attributes="0"/>
+              <Component id="jLabelRecMO8" alignment="0" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel1EstiercolSeco">
+        <Component class="javax.swing.JLabel" name="jLabelRecMO7">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/img/recomendacionesSecundarias/estiercolSeco.jpg"/>
@@ -259,12 +278,15 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel8">
+        <Component class="javax.swing.JLabel" name="jLabelRecMO8">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/img/recomendacionesSecundarias/estiercolTendido.jpg"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>
@@ -286,9 +308,9 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="jLabel1" min="-2" pref="222" max="-2" attributes="0"/>
+                  <Component id="jLabelRecMO9" min="-2" pref="222" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel2" min="-2" pref="212" max="-2" attributes="0"/>
+                  <Component id="jLabelRecMO10" min="-2" pref="212" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -298,29 +320,35 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel1" alignment="3" max="32767" attributes="0"/>
-                      <Component id="jLabel2" alignment="3" max="32767" attributes="0"/>
+                      <Component id="jLabelRecMO9" alignment="3" max="32767" attributes="0"/>
+                      <Component id="jLabelRecMO10" alignment="3" max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="jLabelRecMO9">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/img/recomendacionesSecundarias/abonoverde1.jpg"/>
             </Property>
             <Property name="text" type="java.lang.String" value="jLabel1"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="jLabelRecMO10">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/img/recomendacionesSecundarias/abonoverde2.jpg"/>
             </Property>
             <Property name="text" type="java.lang.String" value="jLabel2"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>

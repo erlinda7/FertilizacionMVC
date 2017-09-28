@@ -38,7 +38,7 @@ public class CultivoPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jLabelPreguntaCultivo = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jComboBoxHortaliza = new javax.swing.JComboBox<>();
@@ -47,8 +47,8 @@ public class CultivoPanel extends javax.swing.JPanel {
         jLabelDescripcion = new javax.swing.JLabel();
         memoriaTrabajosinLABPanel1 = new view.sinLabView.MemoriaTrabajosinLABPanel();
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel1.setText("Ingrese los Datos del Cultivo:");
+        jLabelPreguntaCultivo.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabelPreguntaCultivo.setText("Ingrese los Datos del Cultivo:");
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel2.setText("Hortaliza");
@@ -75,7 +75,7 @@ public class CultivoPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelPreguntaCultivo, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -99,7 +99,7 @@ public class CultivoPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(19, 19, 19)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelPreguntaCultivo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(28, 28, 28)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -123,11 +123,11 @@ public class CultivoPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JComboBox<String> jComboBoxHortaliza;
     public javax.swing.JComboBox<String> jComboBoxRendimiento;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     public javax.swing.JLabel jLabelDescripcion;
     public javax.swing.JLabel jLabelImagen;
+    public javax.swing.JLabel jLabelPreguntaCultivo;
     public view.sinLabView.MemoriaTrabajosinLABPanel memoriaTrabajosinLABPanel1;
     // End of variables declaration//GEN-END:variables
 }

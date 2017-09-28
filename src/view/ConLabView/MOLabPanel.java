@@ -38,8 +38,8 @@ public class MOLabPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabelPreguntaMO = new javax.swing.JLabel();
+        jLabelMO = new javax.swing.JLabel();
         jSpinnerMOlab = new javax.swing.JSpinner();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -48,11 +48,11 @@ public class MOLabPanel extends javax.swing.JPanel {
         jLabel6 = new javax.swing.JLabel();
         memoriaTrabajoPanel1 = new view.ConLabView.MemoriaTrabajoPanel();
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel1.setText("Cual es el nivel de materia organica en el Suelo?");
+        jLabelPreguntaMO.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabelPreguntaMO.setText("Cual es el nivel de materia organica en el Suelo?");
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel2.setText("Materia Organica");
+        jLabelMO.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabelMO.setText("Materia Organica");
 
         jPanel1.setBackground(new java.awt.Color(102, 255, 153));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -110,10 +110,10 @@ public class MOLabPanel extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(72, 72, 72)
-                                .addComponent(jLabel2)
+                                .addComponent(jLabelMO)
                                 .addGap(63, 63, 63)
                                 .addComponent(jSpinnerMOlab, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabelPreguntaMO, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(32, 32, 32)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -128,11 +128,11 @@ public class MOLabPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(memoriaTrabajoPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelPreguntaMO, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(34, 34, 34)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jSpinnerMOlab, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2))
+                            .addComponent(jLabelMO))
                         .addGap(49, 49, 49)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(84, Short.MAX_VALUE))
@@ -141,12 +141,12 @@ public class MOLabPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    public javax.swing.JLabel jLabelMO;
+    public javax.swing.JLabel jLabelPreguntaMO;
     private javax.swing.JPanel jPanel1;
     public javax.swing.JSpinner jSpinnerMOlab;
     public view.ConLabView.MemoriaTrabajoPanel memoriaTrabajoPanel1;

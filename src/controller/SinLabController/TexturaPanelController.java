@@ -5,6 +5,8 @@
  */
 package controller.SinLabController;
 
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.text.DecimalFormat;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
@@ -26,6 +28,11 @@ public class TexturaPanelController {
         this.texturaPanel = texturaPanel;
         this.textura = textura;
         confTexturaPanel();
+        mostrarExplicacionTextura();
+        mostrarExplicacionProfundArena();
+        mostrarExplicacionProfundLimo();
+        mostrarExplicacionProfundArcilla();
+        mostrarExplicacionProfundTotal();
     }
 
     public void confTexturaPanel() {
@@ -114,4 +121,64 @@ public class TexturaPanelController {
 
     }
 
+    public void mostrarExplicacionTextura() {
+        texturaPanel.jLabelPreguntaTextura.setToolTipText("<html><body><p align='justify'>Ingrese los valores calculados con la prueba de la botella  <br>para realizar una correcta Recomendación de Fertilización</html></body>");
+        texturaPanel.jLabelPreguntaTextura.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
+                jLabelPreguntaTexturaMouseEntered(evt);
+            }
+        });
+    }
+
+    public void jLabelPreguntaTexturaMouseEntered(MouseEvent evt) {
+        texturaPanel.jLabelPreguntaTextura.getToolTipText();
+    }
+    public void mostrarExplicacionProfundArena() {
+        texturaPanel.jLabelProfundidadArena.setToolTipText("<html><body><p align='justify'>Ingrese el valor medido de la profundidad de la Arena <br>de las particulas grandes de la parte inferior de la botella</html></body>");
+        texturaPanel.jLabelProfundidadArena.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
+                jLabelProfundidadArenaMouseEntered(evt);
+            }
+        });
+    }
+
+    public void jLabelProfundidadArenaMouseEntered(MouseEvent evt) {
+        texturaPanel.jLabelProfundidadArena.getToolTipText();
+    }
+    public void mostrarExplicacionProfundLimo() {
+        texturaPanel.jLabelProfundidadLimo.setToolTipText("<html><body><p align='justify'>Ingrese el valor medido de la profundidad de Limo <br>de las particulas medianas de la parte central de la botella</html></body>");
+        texturaPanel.jLabelProfundidadLimo.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
+                jLabelProfundidadLimoMouseEntered(evt);
+            }
+        });
+    }
+
+    public void jLabelProfundidadLimoMouseEntered(MouseEvent evt) {
+        texturaPanel.jLabelProfundidadLimo.getToolTipText();
+    }
+    public void mostrarExplicacionProfundArcilla() {
+        texturaPanel.jLabelProfundidadArcilla.setToolTipText("<html><body><p align='justify'>Ingrese el valor medido de la profundidad de la Arcilla <br>de las particulas mas finas de la parte superior de la botella</html></body>");
+        texturaPanel.jLabelProfundidadArcilla.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
+                jLabelProfundidadArcillaMouseEntered(evt);
+            }
+        });
+    }
+
+    public void jLabelProfundidadArcillaMouseEntered(MouseEvent evt) {
+        texturaPanel.jLabelProfundidadArcilla.getToolTipText();
+    }
+    public void mostrarExplicacionProfundTotal() {
+        texturaPanel.jLabelTexturaTotal.setToolTipText("<html><body><p align='justify'>Ingrese el valor medido de la profundidad total de la botella</html></body>");
+        texturaPanel.jLabelTexturaTotal.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
+                jLabelTexturaTotalMouseEntered(evt);
+            }
+        });
+    }
+
+    public void jLabelTexturaTotalMouseEntered(MouseEvent evt) {
+        texturaPanel.jLabelTexturaTotal.getToolTipText();
+    }
 }

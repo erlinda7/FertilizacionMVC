@@ -41,14 +41,14 @@ public class HortalizaLabPanel extends javax.swing.JPanel {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroupNombresHortalizas = new javax.swing.ButtonGroup();
-        jLabel1 = new javax.swing.JLabel();
+        jLabelHotalizaPregunta = new javax.swing.JLabel();
         jLabelImgHortaliza = new javax.swing.JLabel();
         jLabelDescripHortaliza = new javax.swing.JLabel();
         nombresHortalizasPanel = new javax.swing.JPanel();
         memoriaTrabajoPanel1 = new view.ConLabView.MemoriaTrabajoPanel();
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel1.setText("Para que hortaliza desea realizar la Fertilización?");
+        jLabelHotalizaPregunta.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabelHotalizaPregunta.setText("Para que hortaliza desea realizar la Fertilización?");
 
         jLabelImgHortaliza.setBackground(new java.awt.Color(51, 255, 204));
         jLabelImgHortaliza.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/acelga.jpg"))); // NOI18N
@@ -78,7 +78,7 @@ public class HortalizaLabPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelHotalizaPregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(537, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -96,7 +96,7 @@ public class HortalizaLabPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(jLabelHotalizaPregunta)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -119,8 +119,8 @@ public class HortalizaLabPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroupNombresHortalizas;
-    private javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabelDescripHortaliza;
+    public javax.swing.JLabel jLabelHotalizaPregunta;
     public javax.swing.JLabel jLabelImgHortaliza;
     public view.ConLabView.MemoriaTrabajoPanel memoriaTrabajoPanel1;
     public javax.swing.JPanel nombresHortalizasPanel;

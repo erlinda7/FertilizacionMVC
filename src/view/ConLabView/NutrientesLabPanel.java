@@ -38,13 +38,13 @@ public class NutrientesLabPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jLabelPreguntaNutrientes = new javax.swing.JLabel();
+        jLabelfosforo = new javax.swing.JLabel();
+        jLabelPotasio = new javax.swing.JLabel();
         jSpinnerNitrogenoLab = new javax.swing.JSpinner();
         jSpinnerPotasioLab = new javax.swing.JSpinner();
         jSpinnerFosforoLab = new javax.swing.JSpinner();
-        jLabel2 = new javax.swing.JLabel();
+        jLabelNitrogeno = new javax.swing.JLabel();
         jPanelGaleriaNutrientes = new javax.swing.JPanel();
         jPanelImagenesPequenas = new javax.swing.JPanel();
         jPanelImgExNitrogeno = new javax.swing.JPanel();
@@ -65,17 +65,17 @@ public class NutrientesLabPanel extends javax.swing.JPanel {
         contenedorMemoriaTrabajo = new javax.swing.JPanel();
         memoriaTrabajoPanel1 = new view.ConLabView.MemoriaTrabajoPanel();
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel1.setText("Cual son los niveles de nutrientes en el suelo?");
+        jLabelPreguntaNutrientes.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabelPreguntaNutrientes.setText("Cual son los niveles de nutrientes en el suelo?");
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel3.setText("Fosforo");
+        jLabelfosforo.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabelfosforo.setText("Fosforo");
 
-        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel4.setText("Potasio");
+        jLabelPotasio.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabelPotasio.setText("Potasio");
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel2.setText("Nitrogeno");
+        jLabelNitrogeno.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabelNitrogeno.setText("Nitrogeno");
 
         jPanelGaleriaNutrientes.setOpaque(false);
 
@@ -240,7 +240,7 @@ public class NutrientesLabPanel extends javax.swing.JPanel {
                 .addComponent(jPanelExPotasio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanelDefPotasio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
         jPanelImagenesPequenasLayout.setVerticalGroup(
             jPanelImagenesPequenasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -294,16 +294,21 @@ public class NutrientesLabPanel extends javax.swing.JPanel {
         jPanelGaleriaNutrientesLayout.setHorizontalGroup(
             jPanelGaleriaNutrientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelGaleriaNutrientesLayout.createSequentialGroup()
-                .addGroup(jPanelGaleriaNutrientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanelImagenGrande, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanelImagenesPequenas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanelGaleriaNutrientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelGaleriaNutrientesLayout.createSequentialGroup()
+                        .addComponent(jPanelImagenesPequenas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelGaleriaNutrientesLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jPanelImagenGrande, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         jPanelGaleriaNutrientesLayout.setVerticalGroup(
             jPanelGaleriaNutrientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelGaleriaNutrientesLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanelImagenGrande, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanelImagenesPequenas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20))
         );
@@ -330,24 +335,27 @@ public class NutrientesLabPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelPreguntaNutrientes, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanelGaleriaNutrientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(jLabelNitrogeno, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jSpinnerNitrogenoLab, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(50, 50, 50)
-                        .addComponent(jLabel3)
+                        .addComponent(jLabelfosforo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jSpinnerFosforoLab, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(61, 61, 61)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelPotasio, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSpinnerPotasioLab, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanelGaleriaNutrientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jSpinnerPotasioLab, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(contenedorMemoriaTrabajo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -355,20 +363,20 @@ public class NutrientesLabPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(10, 10, 10)
-                .addComponent(jLabel1)
+                .addComponent(jLabelPreguntaNutrientes)
+                .addGap(0, 28, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(jSpinnerNitrogenoLab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3)
-                            .addComponent(jSpinnerFosforoLab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4)
-                            .addComponent(jSpinnerPotasioLab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanelGaleriaNutrientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabelNitrogeno)
+                            .addComponent(jSpinnerNitrogenoLab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelfosforo)
+                            .addComponent(jSpinnerFosforoLab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelPotasio)
+                            .addComponent(jSpinnerPotasioLab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jPanelGaleriaNutrientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(contenedorMemoriaTrabajo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(19, 19, 19))))
         );
@@ -377,10 +385,6 @@ public class NutrientesLabPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JPanel contenedorMemoriaTrabajo;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     public javax.swing.JLabel jLabelDefFosforo;
     public javax.swing.JLabel jLabelDefNitrogeno;
     public javax.swing.JLabel jLabelDefPotasio;
@@ -389,6 +393,10 @@ public class NutrientesLabPanel extends javax.swing.JPanel {
     public javax.swing.JLabel jLabelExPotasio;
     public javax.swing.JLabel jLabelExplicacion;
     public javax.swing.JLabel jLabelImagenGrande;
+    public javax.swing.JLabel jLabelNitrogeno;
+    public javax.swing.JLabel jLabelPotasio;
+    public javax.swing.JLabel jLabelPreguntaNutrientes;
+    public javax.swing.JLabel jLabelfosforo;
     public javax.swing.JPanel jPanelDefFosforo;
     public javax.swing.JPanel jPanelDefNitrogeno;
     public javax.swing.JPanel jPanelDefPotasio;

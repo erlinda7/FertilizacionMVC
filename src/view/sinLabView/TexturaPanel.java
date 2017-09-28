@@ -38,10 +38,10 @@ public class TexturaPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jLabelPreguntaTextura = new javax.swing.JLabel();
+        jLabelProfundidadArena = new javax.swing.JLabel();
+        jLabelProfundidadLimo = new javax.swing.JLabel();
+        jLabelProfundidadArcilla = new javax.swing.JLabel();
         jSpinnerArena = new javax.swing.JSpinner();
         jSpinnerLimo = new javax.swing.JSpinner();
         jSpinnerArcilla = new javax.swing.JSpinner();
@@ -50,17 +50,17 @@ public class TexturaPanel extends javax.swing.JPanel {
         texturaInformacionPanel2 = new view.sinLabView.TexturaInformacionPanel();
         memoriaTrabajosinLABPanel1 = new view.sinLabView.MemoriaTrabajosinLABPanel();
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel1.setText("Ingrese la proporción de arena,Limo y Arcilla determinado:  ");
+        jLabelPreguntaTextura.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabelPreguntaTextura.setText("Ingrese la proporción de arena,Limo y Arcilla determinado:  ");
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel3.setText("Profundidad Arena :");
+        jLabelProfundidadArena.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabelProfundidadArena.setText("Profundidad Arena :");
 
-        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel4.setText("Profundidad Limo   :");
+        jLabelProfundidadLimo.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabelProfundidadLimo.setText("Profundidad Limo   :");
 
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel5.setText("Profundidad Arcilla :");
+        jLabelProfundidadArcilla.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabelProfundidadArcilla.setText("Profundidad Arcilla :");
 
         jSpinnerArcilla.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -85,20 +85,20 @@ public class TexturaPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
+                        .addComponent(jLabelPreguntaTextura)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
+                                .addComponent(jLabelProfundidadArena)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jSpinnerArena, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel4)
+                                .addComponent(jLabelProfundidadLimo)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jSpinnerLimo, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel5)
+                                .addComponent(jLabelProfundidadArcilla)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jSpinnerArcilla, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(memoriaTrabajosinLABPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -113,20 +113,20 @@ public class TexturaPanel extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1)
+                .addComponent(jLabelPreguntaTextura)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(35, 35, 35)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelProfundidadArena, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jSpinnerArena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
+                            .addComponent(jLabelProfundidadLimo)
                             .addComponent(jSpinnerLimo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
+                            .addComponent(jLabelProfundidadArcilla)
                             .addComponent(jSpinnerArcilla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -158,11 +158,11 @@ public class TexturaPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabelTexturaTotal;
+    public javax.swing.JLabel jLabelPreguntaTextura;
+    public javax.swing.JLabel jLabelProfundidadArcilla;
+    public javax.swing.JLabel jLabelProfundidadArena;
+    public javax.swing.JLabel jLabelProfundidadLimo;
+    public javax.swing.JLabel jLabelTexturaTotal;
     public javax.swing.JSpinner jSpinnerArcilla;
     public javax.swing.JSpinner jSpinnerArena;
     public javax.swing.JSpinner jSpinnerLimo;

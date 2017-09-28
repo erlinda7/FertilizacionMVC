@@ -5,7 +5,12 @@
  */
 package view.ConLabView;
 
+import com.alee.extended.layout.VerticalFlowLayout;
+import com.alee.extended.window.WebPopOver;
+import com.alee.laf.label.WebLabel;
 import java.awt.FlowLayout;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
@@ -21,6 +26,10 @@ public class NutrientesLabPanelController {
 
     NutrientesLabPanel nutrientesLabPanel;
     Cultivo cultivo;
+    
+    final WebPopOver popOverNitrogeno = new WebPopOver();
+    final WebPopOver popOverFosforo = new WebPopOver();
+    final WebPopOver popOverPotasio = new WebPopOver();
 
     public NutrientesLabPanelController(NutrientesLabPanel nutrientesLabPanel, Cultivo cultivo) {
         this.nutrientesLabPanel = nutrientesLabPanel;
@@ -29,7 +38,15 @@ public class NutrientesLabPanelController {
         confSpinerFosforoLab();
         confSpinnerPotasioLab();
         confPanelGaleria();
-
+        mostrarExplicacionNutrientes();
+        
+        ///
+        confLabelNitrogeno();
+        confLabelFosforo();
+        confLabelPotasio();
+        confPopOverNitrogeno();
+        confPopOverFosforo();
+        confPopOverPotasio();
     }
 
     public void confSpinnerNitrogenoLab() {
@@ -160,4 +177,79 @@ public class NutrientesLabPanelController {
         nutrientesLabPanel.jPanelImagenGrande.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Deficiencia de Potasio en el Suelo", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
         nutrientesLabPanel.jLabelExplicacion.setText("<html><body><P ALIGN=\"justify\">Los síntomas se muestran en las hojas inferiores, que en sus bordes muestran un amarillamiento  y una posterior desecación conforme avanza la deficiencia </body></html>");
     }
+
+    public void mostrarExplicacionNutrientes() {
+        nutrientesLabPanel.jLabelPreguntaNutrientes.setToolTipText("<html><body><p align='justify'>Ingrese el nivel de Nitrogeno, Fosforo y Potasio <br>de los resultados de laboratorio de suelos  para una correcta<br> Recomendación de Fertilización</html></body>");
+        nutrientesLabPanel.jLabelPreguntaNutrientes.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
+                jLabelPreguntaNutrientesMouseEntered(evt);
+            }
+        });
+    }
+
+    public void jLabelPreguntaNutrientesMouseEntered(MouseEvent evt) {
+        nutrientesLabPanel.jLabelPreguntaNutrientes.getToolTipText();
+    }
+    
+    //Inicio popover
+     public void confLabelNitrogeno() {
+        nutrientesLabPanel.jLabelNitrogeno.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
+                jlabelNitrogenoMouseEntered(evt);
+            }
+        });
+    }
+      public void confLabelFosforo() {
+        nutrientesLabPanel.jLabelfosforo.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
+                jlabelFosforoMouseEntered(evt);
+            }
+        });
+    }
+       public void confLabelPotasio() {
+        nutrientesLabPanel.jLabelPotasio.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
+                jlabelPotasioMouseEntered(evt);
+            }
+        });
+    }
+        public void jlabelNitrogenoMouseEntered(MouseEvent evt) {
+        popOverNitrogeno.show(nutrientesLabPanel.jLabelNitrogeno, 50, nutrientesLabPanel.jLabelNitrogeno.getHeight());
+    }
+
+    public void jlabelFosforoMouseEntered(MouseEvent evt) {
+        popOverFosforo.show(nutrientesLabPanel.jLabelfosforo, 50, nutrientesLabPanel.jLabelfosforo.getHeight());
+    }
+
+    public void jlabelPotasioMouseEntered(MouseEvent evt) {
+        popOverPotasio.show(nutrientesLabPanel.jLabelPotasio, 50, nutrientesLabPanel.jLabelPotasio.getHeight());
+    }
+       
+        public void confPopOverNitrogeno() {
+        popOverNitrogeno.setCloseOnFocusLoss(true);
+        popOverNitrogeno.setMargin(10);
+        popOverNitrogeno.setLayout(new VerticalFlowLayout());
+        popOverNitrogeno.add(new WebLabel("Los valores de Nitrogeno"));
+        popOverNitrogeno.add(new WebLabel("en un suelo agricola varia"));
+        popOverNitrogeno.add(new WebLabel(" entre 0 y 100"));
+    }
+
+    public void confPopOverFosforo() {
+        popOverFosforo.setCloseOnFocusLoss(true);
+        popOverFosforo.setMargin(10);
+        popOverFosforo.setLayout(new VerticalFlowLayout());
+        popOverFosforo.add(new WebLabel("Los valores de Fosforo"));
+        popOverFosforo.add(new WebLabel("en un suelo agricola varia"));
+        popOverFosforo.add(new WebLabel(" entre 0 y 100"));
+    }
+
+    public void confPopOverPotasio() {
+        popOverPotasio.setCloseOnFocusLoss(true);
+        popOverPotasio.setMargin(10);
+        popOverPotasio.setLayout(new VerticalFlowLayout());
+        popOverPotasio.add(new WebLabel("Los valores de Potasio"));
+        popOverPotasio.add(new WebLabel("en un suelo agricola varia"));
+        popOverPotasio.add(new WebLabel(" entre 0 y 250"));
+    }
+    //Fin popover
 }

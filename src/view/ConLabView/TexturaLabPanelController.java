@@ -48,6 +48,8 @@ public class TexturaLabPanelController {
         confPopOverArena();
         confPopOverLimo();
         confPopOverArcilla();
+        
+        mostrarExplicacionTextura();
     }
 
     public void confLabelPorcentaje() {
@@ -145,7 +147,7 @@ public class TexturaLabPanelController {
 
     private void jSliderArenaLabChanged(javax.swing.event.ChangeEvent evt) {
         sumarSlider();
-        texturaLabPanel.jPanelTexturaImg.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Suelos Arenosos", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 3, 11))); 
+        texturaLabPanel.jPanelTexturaImg.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Suelos Arenosos", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 3, 11)));
         texturaLabPanel.jLabelImgTexturaLab1.setIcon(new ImageIcon(getClass().getResource("/img/imgLab/arenaP1.jpg")));
         texturaLabPanel.jLabelImgTexturaLab2.setIcon(new ImageIcon(getClass().getResource("/img/imgLab/arenaP2.jpg")));
         texturaLabPanel.jLabelImgTexturaLab3.setIcon(new ImageIcon(getClass().getResource("/img/imgLab/arenaP3.jpg")));
@@ -255,6 +257,18 @@ public class TexturaLabPanelController {
         jlabelImgArena.setIcon(new ImageIcon(getClass().getResource("/img/arcillosaTex.png")));
         popOverArcilla.add(jlabelImgArena);
     }
+
     //
-    
+    public void mostrarExplicacionTextura() {
+        texturaLabPanel.jLabelPreguntaTextura.setToolTipText("<html><body><p align='justify'>Seleccione el porcentaje de Arena, Limo y Arcilla <br>de los resultados de laboratorio de suelos  para una correcta<br> Recomendación de Fertilización</html></body>");
+        texturaLabPanel.jLabelPreguntaTextura.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
+                jLabelPreguntaTexturaMouseEntered(evt);
+            }
+        });
+    }
+
+    public void jLabelPreguntaTexturaMouseEntered(MouseEvent evt) {
+      texturaLabPanel.jLabelPreguntaTextura.getToolTipText();
+    }
 }

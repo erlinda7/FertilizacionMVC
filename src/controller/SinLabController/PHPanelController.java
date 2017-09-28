@@ -5,6 +5,8 @@
  */
 package controller.SinLabController;
 
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import model.Cultivo;
 import view.sinLabView.PHPanel;
 
@@ -21,6 +23,7 @@ public class PHPanelController {
         this.pHPanel = pHPanel;
         this.cultivo = cultivo;
         confRadiobutonPh();
+        mostrarExplicacionPh();
     }
 
     public void confRadiobutonPh() {
@@ -36,5 +39,17 @@ public class PHPanelController {
     public void llenarDatosModelo() {
         Double valorPh = Double.parseDouble(pHPanel.getButtonGroupPh().getSelection().getActionCommand());
         cultivo.setNivelpH(valorPh);
+    }
+      public void mostrarExplicacionPh() {
+        pHPanel.jLabelPreguntaPh.setToolTipText("<html><body><p align='justify'>Elija el nivel de pH obtenido con el kit de analisis del pH  <br>para realizar una correcta Recomendación de Fertilización</html></body>");
+        pHPanel.jLabelPreguntaPh.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
+                jLabelPreguntaPhMouseEntered(evt);
+            }
+        });
+    }
+
+    public void jLabelPreguntaPhMouseEntered(MouseEvent evt) {
+       pHPanel.jLabelPreguntaPh.getToolTipText();
     }
 }

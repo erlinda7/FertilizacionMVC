@@ -42,18 +42,18 @@ public class MateriaOrganicaRecomendacionPanel extends javax.swing.JPanel {
         nivelMOlabel = new javax.swing.JLabel();
         explicacionMOLabel = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        jLabelRecMO1 = new javax.swing.JLabel();
+        jLabelRecMO3 = new javax.swing.JLabel();
+        jLabelRecMO2 = new javax.swing.JLabel();
+        jLabelRecMO4 = new javax.swing.JLabel();
+        jLabelRecMO5 = new javax.swing.JLabel();
+        jLabelRecMO6 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jLabel1EstiercolSeco = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        jLabelRecMO7 = new javax.swing.JLabel();
+        jLabelRecMO8 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabelRecMO9 = new javax.swing.JLabel();
+        jLabelRecMO10 = new javax.swing.JLabel();
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -77,27 +77,28 @@ public class MateriaOrganicaRecomendacionPanel extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(5, 5, 5)
-                .addComponent(nivelMOlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(nivelMOlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(explicacionMOLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(explicacionMOLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Mejorar la Materia Organica con Compostaje", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/recomendacionesSecundarias/compost1.jpg"))); // NOI18N
-        jLabel9.setText("jLabel9");
+        jLabelRecMO1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/recomendacionesSecundarias/compost1.jpg"))); // NOI18N
+        jLabelRecMO1.setText("jLabel9");
+        jLabelRecMO1.setToolTipText("agregar explicacion Mo");
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/recomendacionesSecundarias/compost3.jpg"))); // NOI18N
+        jLabelRecMO3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/recomendacionesSecundarias/compost3.jpg"))); // NOI18N
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/recomendacionesSecundarias/compost2.jpg"))); // NOI18N
+        jLabelRecMO2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/recomendacionesSecundarias/compost2.jpg"))); // NOI18N
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/recomendacionesSecundarias/compost4.jpg"))); // NOI18N
+        jLabelRecMO4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/recomendacionesSecundarias/compost4.jpg"))); // NOI18N
 
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/recomendacionesSecundarias/compost5.jpg"))); // NOI18N
+        jLabelRecMO5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/recomendacionesSecundarias/compost5.jpg"))); // NOI18N
 
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/recomendacionesSecundarias/compost6.jpg"))); // NOI18N
+        jLabelRecMO6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/recomendacionesSecundarias/compost6.jpg"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -105,74 +106,74 @@ public class MateriaOrganicaRecomendacionPanel extends javax.swing.JPanel {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(jLabelRecMO4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabelRecMO1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(jLabelRecMO5, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelRecMO2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jLabelRecMO6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabelRecMO3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabelRecMO2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabelRecMO1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabelRecMO3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabelRecMO5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addComponent(jLabelRecMO4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelRecMO6, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(70, 70, 70))
         );
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Mejorar la Materia Organica con Estiercol", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
 
-        jLabel1EstiercolSeco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/recomendacionesSecundarias/estiercolSeco.jpg"))); // NOI18N
+        jLabelRecMO7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/recomendacionesSecundarias/estiercolSeco.jpg"))); // NOI18N
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/recomendacionesSecundarias/estiercolTendido.jpg"))); // NOI18N
+        jLabelRecMO8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/recomendacionesSecundarias/estiercolTendido.jpg"))); // NOI18N
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jLabel1EstiercolSeco, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabelRecMO7, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabelRecMO8, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1EstiercolSeco, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabelRecMO7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabelRecMO8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Mejorar la Materia Organica con Abono Verde", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/recomendacionesSecundarias/abonoverde1.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
+        jLabelRecMO9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/recomendacionesSecundarias/abonoverde1.jpg"))); // NOI18N
+        jLabelRecMO9.setText("jLabel1");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/recomendacionesSecundarias/abonoverde2.jpg"))); // NOI18N
-        jLabel2.setText("jLabel2");
+        jLabelRecMO10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/recomendacionesSecundarias/abonoverde2.jpg"))); // NOI18N
+        jLabelRecMO10.setText("jLabel2");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabelRecMO9, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabelRecMO10, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -180,8 +181,8 @@ public class MateriaOrganicaRecomendacionPanel extends javax.swing.JPanel {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jLabelRecMO9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabelRecMO10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -219,16 +220,16 @@ public class MateriaOrganicaRecomendacionPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JLabel explicacionMOLabel;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    public javax.swing.JLabel jLabel1EstiercolSeco;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    public javax.swing.JLabel jLabelRecMO1;
+    public javax.swing.JLabel jLabelRecMO10;
+    public javax.swing.JLabel jLabelRecMO2;
+    public javax.swing.JLabel jLabelRecMO3;
+    public javax.swing.JLabel jLabelRecMO4;
+    public javax.swing.JLabel jLabelRecMO5;
+    public javax.swing.JLabel jLabelRecMO6;
+    public javax.swing.JLabel jLabelRecMO7;
+    public javax.swing.JLabel jLabelRecMO8;
+    public javax.swing.JLabel jLabelRecMO9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

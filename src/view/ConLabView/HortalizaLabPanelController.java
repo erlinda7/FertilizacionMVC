@@ -11,6 +11,8 @@ import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -34,6 +36,7 @@ public class HortalizaLabPanelController {
         this.hortalizaLabPanel = hortalizaLabPanel;
         this.cultivo = cultivo;
         confNombresHortalizasPanel(hortalizaService.listarNombresHortaliza());
+        mostrarExplicacionHortaliza();
 
     }
 
@@ -74,5 +77,18 @@ public class HortalizaLabPanelController {
         cultivo.setHortaliza(valorHortalizaLab);
 
     }
+    public void mostrarExplicacionHortaliza() {
+        hortalizaLabPanel.jLabelHotalizaPregunta.setToolTipText("<html><body><p align='justify'>Seleccione una hortaliza para realizar <br>una correcta Recomendación de Fertilización</html></body>");
+        hortalizaLabPanel.jLabelHotalizaPregunta.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
+                jLabelHotalizaPreguntaMouseEntered(evt);
+            }
+        });
+    }
+
+    public void jLabelHotalizaPreguntaMouseEntered(MouseEvent evt) {
+        hortalizaLabPanel.jLabelHotalizaPregunta.getToolTipText();
+    }
+    
 
 }

@@ -42,7 +42,7 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel1" min="-2" pref="380" max="-2" attributes="0"/>
+                          <Component id="jLabelPreguntaFosforo" min="-2" pref="380" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Component id="memoriaTrabajosinLABPanel1" min="-2" pref="226" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
@@ -59,7 +59,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <Component id="jLabelPreguntaFosforo" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
@@ -97,13 +97,16 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="jLabelPreguntaFosforo">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Elija el color de fosforo encontrado en el Suelo"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JRadioButton" name="jRadioButtonFosfoHigh">
       <Properties>

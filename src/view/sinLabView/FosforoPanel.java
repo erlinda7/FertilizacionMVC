@@ -40,7 +40,7 @@ public class FosforoPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         buttonGroupFosforo = new javax.swing.ButtonGroup();
-        jLabel1 = new javax.swing.JLabel();
+        jLabelPreguntaFosforo = new javax.swing.JLabel();
         jRadioButtonFosfoHigh = new javax.swing.JRadioButton();
         jRadioButtonFosfoMedium = new javax.swing.JRadioButton();
         jRadioButtonFosfoLow = new javax.swing.JRadioButton();
@@ -52,8 +52,8 @@ public class FosforoPanel extends javax.swing.JPanel {
         memoriaTrabajosinLABPanel1 = new view.sinLabView.MemoriaTrabajosinLABPanel();
         fosforoInformacionPanel2 = new view.sinLabView.FosforoInformacionPanel();
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel1.setText("Elija el color de fosforo encontrado en el Suelo");
+        jLabelPreguntaFosforo.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabelPreguntaFosforo.setText("Elija el color de fosforo encontrado en el Suelo");
 
         buttonGroupFosforo.add(jRadioButtonFosfoHigh);
         jRadioButtonFosfoHigh.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -119,7 +119,7 @@ public class FosforoPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelPreguntaFosforo, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(memoriaTrabajosinLABPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -130,7 +130,7 @@ public class FosforoPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(2, 2, 2)
-                .addComponent(jLabel1)
+                .addComponent(jLabelPreguntaFosforo)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -175,11 +175,11 @@ public class FosforoPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroupFosforo;
     private view.sinLabView.FosforoInformacionPanel fosforoInformacionPanel2;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    public javax.swing.JLabel jLabelPreguntaFosforo;
     public javax.swing.JRadioButton jRadioButtonFosfoHigh;
     public javax.swing.JRadioButton jRadioButtonFosfoLow;
     public javax.swing.JRadioButton jRadioButtonFosfoMedium;
