@@ -204,6 +204,9 @@
       </Properties>
     </Component>
     <Component class="view.sinLabView.MemoriaTrabajosinLABPanel" name="memoriaTrabajosinLABPanel1">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="view.sinLabView.FosforoInformacionPanel" name="fosforoInformacionPanel2">
     </Component>

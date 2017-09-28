@@ -180,7 +180,7 @@ public class NitrogenoPanel extends javax.swing.JPanel {
     public javax.swing.JRadioButton jRadioButtonLow;
     public javax.swing.JRadioButton jRadioButtonMedium;
     public javax.swing.JRadioButton jRadioButtonTrace;
-    private view.sinLabView.MemoriaTrabajosinLABPanel memoriaTrabajosinLABPanel1;
+    public view.sinLabView.MemoriaTrabajosinLABPanel memoriaTrabajosinLABPanel1;
     private view.sinLabView.NitrogenoInformacionPanel nitrogenoInformacionPanel2;
     // End of variables declaration//GEN-END:variables
 }

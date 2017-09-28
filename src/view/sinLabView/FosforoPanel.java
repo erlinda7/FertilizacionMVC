@@ -184,6 +184,6 @@ public class FosforoPanel extends javax.swing.JPanel {
     public javax.swing.JRadioButton jRadioButtonFosfoLow;
     public javax.swing.JRadioButton jRadioButtonFosfoMedium;
     public javax.swing.JRadioButton jRadioButtonFosfoTrace;
-    private view.sinLabView.MemoriaTrabajosinLABPanel memoriaTrabajosinLABPanel1;
+    public view.sinLabView.MemoriaTrabajosinLABPanel memoriaTrabajosinLABPanel1;
     // End of variables declaration//GEN-END:variables
 }

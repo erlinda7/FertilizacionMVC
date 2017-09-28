@@ -167,7 +167,7 @@ public class TexturaPanel extends javax.swing.JPanel {
     public javax.swing.JSpinner jSpinnerArena;
     public javax.swing.JSpinner jSpinnerLimo;
     public javax.swing.JSpinner jSpinnerTexturaTotal;
-    private view.sinLabView.MemoriaTrabajosinLABPanel memoriaTrabajosinLABPanel1;
+    public view.sinLabView.MemoriaTrabajosinLABPanel memoriaTrabajosinLABPanel1;
     private view.sinLabView.TexturaInformacionPanel texturaInformacionPanel2;
     // End of variables declaration//GEN-END:variables
 }

@@ -28,7 +28,7 @@ public class PhRecomendacionPanelController {
         if (nivelpH < 6.5) {
             phRecomendacionPanel.nivelPhLabel.setText("<html><body><p align='justify'>" + "El nivel de pH en el suelo es ' " + nivelpH + " ' es considerada  ' " + tipoSuelo + " ' </body></html>");
             phRecomendacionPanel.explicacionPhLabel.setText("<html><body><p align='justify'>Para subir el nivel de pH de su suelo puede aplicar cal al suelo</body></html>");
-            phRecomendacionPanel.correcionPhDescripcionLabel.setText("<html><body><p align='justify'>La cal se aplica esparce sobre el suelo antes de arar.....</body></html>");
+            phRecomendacionPanel.correcionPhDescripcionLabel.setText("Cal");
             phRecomendacionPanel.correcionPhImgLabel.setIcon(new ImageIcon(getClass().getResource("/img/recomendacionesSecundarias/encalado1.jpg")));
             phRecomendacionPanel.ImgProductoLabel.setIcon(new ImageIcon(getClass().getResource("/img/recomendacionesSecundarias/cal2.jpg")));
         }

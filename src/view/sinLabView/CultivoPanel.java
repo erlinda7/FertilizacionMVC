@@ -128,6 +128,6 @@ public class CultivoPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel3;
     public javax.swing.JLabel jLabelDescripcion;
     public javax.swing.JLabel jLabelImagen;
-    private view.sinLabView.MemoriaTrabajosinLABPanel memoriaTrabajosinLABPanel1;
+    public view.sinLabView.MemoriaTrabajosinLABPanel memoriaTrabajosinLABPanel1;
     // End of variables declaration//GEN-END:variables
 }

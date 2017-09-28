@@ -231,7 +231,7 @@ public class PHPanel extends javax.swing.JPanel {
     public javax.swing.JRadioButton jRadioButtonPh7;
     public javax.swing.JRadioButton jRadioButtonpH8;
     public javax.swing.JRadioButton jRadioButtonpH9;
-    private view.sinLabView.MemoriaTrabajosinLABPanel memoriaTrabajosinLABPanel1;
+    public view.sinLabView.MemoriaTrabajosinLABPanel memoriaTrabajosinLABPanel1;
     private view.sinLabView.PhInformacionPanel phInformacionPanel1;
     // End of variables declaration//GEN-END:variables
 }

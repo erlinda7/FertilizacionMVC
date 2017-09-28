@@ -3,21 +3,35 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package view.ConLabView;
+package main;
 
-import view.sinLabView.MemoriaTrabajosinLABPanel;
-import view.sinLabView.MemoriaTrabajosinLABPanelController;
+import controller.ConceptosBasicosFrameController;
+import controller.CultivoCompletoLabPanelController;
+import controller.FertilizacionCultivoCompletoLabFrameController;
+import controller.ResultadosConLabPanelController;
+import controller.SinLabController.FertilizacionSinLabFrameController;
+import controller.SinLabController.FertilizacionSinLabPanelController;
+import view.ConLabView.FertilizacionLabFrame;
+import view.ConLabView.FertilizacionLabFrameController;
+import view.ConLabView.FertilizacionLabPanel;
+import view.ConLabView.FertilizacionLabPanelController;
+import view.ConceptosBasicosFrame;
+import view.CultivoCompletoLabPanel;
+import view.FertilizacionCultivoCompletoLabFrame;
+import view.ResultadosConLabPanel;
+import view.sinLabView.FertilizacionSinLabFrame;
+import view.sinLabView.FertilizacionSinLabPanel;
 
 /**
  *
  * @author Erlinda
  */
-public class JFramePrueba extends javax.swing.JFrame {
+public class NewJFrame extends javax.swing.JFrame {
 
     /**
-     * Creates new form JFramePrueba
+     * Creates new form NewJFrame
      */
-    public JFramePrueba() {
+    public NewJFrame() {
         initComponents();
     }
 
@@ -30,29 +44,42 @@ public class JFramePrueba extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        memoriaTrabajosinLABPanel1 = new view.sinLabView.MemoriaTrabajosinLABPanel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(memoriaTrabajosinLABPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addGap(144, 144, 144)
+                .addComponent(jButton1)
+                .addContainerGap(183, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(memoriaTrabajosinLABPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addGap(120, 120, 120)
+                .addComponent(jButton1)
+                .addContainerGap(157, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+          ConceptosBasicosFrame jFConceptosBasicos = new ConceptosBasicosFrame();
+        ConceptosBasicosFrameController controladorConceptosBasicos = new ConceptosBasicosFrameController(jFConceptosBasicos);
+        controladorConceptosBasicos.mostrarVista();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -71,30 +98,25 @@ public class JFramePrueba extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JFramePrueba.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JFramePrueba.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JFramePrueba.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JFramePrueba.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                JFramePrueba jFramePrueba= new JFramePrueba();
-                jFramePrueba.setVisible(true);
-                MemoriaTrabajosinLABPanel memoriaTrabajoPanel=jFramePrueba.memoriaTrabajosinLABPanel1;
-                MemoriaTrabajosinLABPanelController memoriaTrabajoPanelController= new MemoriaTrabajosinLABPanelController(memoriaTrabajoPanel);
-               
-                
+                new NewJFrame().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public view.sinLabView.MemoriaTrabajosinLABPanel memoriaTrabajosinLABPanel1;
+    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }

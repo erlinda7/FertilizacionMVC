@@ -19,6 +19,7 @@ import view.sinLabView.CultivoPanel;
 import view.sinLabView.FertilizacionSinLabPanel;
 import view.sinLabView.FosforoPanel;
 import view.sinLabView.MateriaOrganicaPanel;
+import view.sinLabView.MemoriaTrabajosinLABPanelController;
 import view.sinLabView.NitrogenoPanel;
 import view.sinLabView.PHPanel;
 import view.sinLabView.PotasioPanel;
@@ -50,6 +51,16 @@ public class FertilizacionSinLabPanelController {
 
     PhRecomendacionPanel phRecomendacionPanel;
     PhRecomendacionPanelController phRecomendacionPanelController;
+    
+    /*Inicio memoria trabajo*/
+    MemoriaTrabajosinLABPanelController mtpcCultivo;
+    MemoriaTrabajosinLABPanelController mtpcTextura;
+    MemoriaTrabajosinLABPanelController mtpcNitrogeno;
+    MemoriaTrabajosinLABPanelController mtpcFosforo;
+    MemoriaTrabajosinLABPanelController mtpcPotasio;
+    MemoriaTrabajosinLABPanelController mtpcPH;
+    MemoriaTrabajosinLABPanelController mtpcMO;
+    /*fin memoria Trabaj*/
 
     ResultadosConLabPanel resultadosConLabPanel;
     ResultadosConLabPanelController resultadosConLabPanelController;
@@ -105,6 +116,16 @@ public class FertilizacionSinLabPanelController {
         materiaOrganicaRecomendacionPanelController = new MateriaOrganicaRecomendacionPanelController(materiaOrganicaRecomendacionPanel);
         phRecomendacionPanel = new PhRecomendacionPanel();
         phRecomendacionPanelController = new PhRecomendacionPanelController(phRecomendacionPanel);
+        
+        /*Inicio memoria trabajo*/
+        mtpcCultivo = new MemoriaTrabajosinLABPanelController(cultivoPanel.memoriaTrabajosinLABPanel1);
+        mtpcTextura = new MemoriaTrabajosinLABPanelController(texturaPanel.memoriaTrabajosinLABPanel1);
+        mtpcNitrogeno = new MemoriaTrabajosinLABPanelController(nitrogenoPanel.memoriaTrabajosinLABPanel1);
+        mtpcFosforo = new MemoriaTrabajosinLABPanelController(fosforoPanel.memoriaTrabajosinLABPanel1);
+        mtpcPotasio = new MemoriaTrabajosinLABPanelController(potasioPanel.memoriaTrabajosinLABPanel1);
+        mtpcPH = new MemoriaTrabajosinLABPanelController(pHPanel.memoriaTrabajosinLABPanel1);
+        mtpcMO = new MemoriaTrabajosinLABPanelController(materiaOrganicaPanel.memoriaTrabajosinLABPanel1);
+        /*fin memeoria trabajo*/
 
         resultadosConLabPanel = new ResultadosConLabPanel();
         resultadosConLabPanelController = new ResultadosConLabPanelController(resultadosConLabPanel);
@@ -195,21 +216,44 @@ public class FertilizacionSinLabPanelController {
 
             case 2:
                 cultivoPanelController.llenarDatosModelo();
+                mtpcTextura.mostrarCultivo(cultivo.getHortaliza(), cultivo.getRendimiento()+"");
                 break;
             case 3:
                 texturaPanelController.llenarDatosModelo();
+                mtpcNitrogeno.mostrarCultivo(cultivo.getHortaliza(), cultivo.getRendimiento()+"");
+                mtpcNitrogeno.mostrarTextura(textura.getTexturaArena()+"", textura.getTexturaLimo()+"", textura.getTexturaArcilla()+"");
                 break;
             case 4:
                 nitrogenoPanelController.llenarDatosModelo();
+                mtpcFosforo.mostrarCultivo(cultivo.getHortaliza(), cultivo.getRendimiento() + "");
+                mtpcFosforo.mostrarTextura(textura.getTexturaArena() + "", textura.getTexturaLimo() + "", textura.getTexturaArcilla() + "");
+                mtpcFosforo.mostrarNitrogeno(nitrogenoPanel.getButtonGroupNitrogeno().getSelection().getActionCommand()+"");
+             //   System.out.println(nitrogenoPanel.getButtonGroupNitrogeno().getSelection().toString());
                 break;
             case 5:
                 fosforoPanelController.llenarDatosModelo();
+               // nitrogenoPanelController.llenarDatosModelo();
+                mtpcPotasio.mostrarCultivo(cultivo.getHortaliza(), cultivo.getRendimiento() + "");
+                mtpcPotasio.mostrarTextura(textura.getTexturaArena() + "", textura.getTexturaLimo() + "", textura.getTexturaArcilla() + "");
+                mtpcPotasio.mostrarNitrogeno(nitrogenoPanel.getButtonGroupNitrogeno().getSelection().getActionCommand()+"");
+                mtpcPotasio.mostrarFosforo(fosforoPanel.getButtonGroupFosforo().getSelection().getActionCommand()+"");
                 break;
             case 6:
                 potasioPanelController.llenarDatosModelo();
+                mtpcPH.mostrarCultivo(cultivo.getHortaliza(), cultivo.getRendimiento() + "");
+                mtpcPH.mostrarTextura(textura.getTexturaArena() + "", textura.getTexturaLimo() + "", textura.getTexturaArcilla() + "");
+                mtpcPH.mostrarNitrogeno(nitrogenoPanel.getButtonGroupNitrogeno().getSelection().getActionCommand()+"");
+                mtpcPH.mostrarFosforo(fosforoPanel.getButtonGroupFosforo().getSelection().getActionCommand()+"");
+                mtpcPH.mostrarPotasio(potasioPanel.getButtonGroupPotasio().getSelection().getActionCommand()+"");
                 break;
             case 7:
                 pHPanelController.llenarDatosModelo();
+                mtpcMO.mostrarCultivo(cultivo.getHortaliza(), cultivo.getRendimiento() + "");
+                mtpcMO.mostrarTextura(textura.getTexturaArena() + "", textura.getTexturaLimo() + "", textura.getTexturaArcilla() + "");
+                mtpcMO.mostrarNitrogeno(nitrogenoPanel.getButtonGroupNitrogeno().getSelection().getActionCommand()+"");
+                mtpcMO.mostrarFosforo(fosforoPanel.getButtonGroupFosforo().getSelection().getActionCommand()+"");
+                mtpcMO.mostrarPotasio(potasioPanel.getButtonGroupPotasio().getSelection().getActionCommand()+"");
+                mtpcMO.mostrarPh(pHPanel.getButtonGroupPh().getSelection().getActionCommand()+"");
                 break;
             case 8:
                 materiaOrganicaPanelController.llenarDatosModelo();

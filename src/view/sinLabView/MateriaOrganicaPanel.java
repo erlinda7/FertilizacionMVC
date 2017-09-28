@@ -120,6 +120,6 @@ public class MateriaOrganicaPanel extends javax.swing.JPanel {
     public javax.swing.JRadioButton jRadioButtonMOBajo;
     public javax.swing.JRadioButton jRadioButtonMOMedio;
     private view.sinLabView.MOInformacionPanel mOInformacionPanel1;
-    private view.sinLabView.MemoriaTrabajosinLABPanel memoriaTrabajosinLABPanel1;
+    public view.sinLabView.MemoriaTrabajosinLABPanel memoriaTrabajosinLABPanel1;
     // End of variables declaration//GEN-END:variables
 }

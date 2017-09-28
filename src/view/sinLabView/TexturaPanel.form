@@ -163,6 +163,9 @@
     <Component class="view.sinLabView.TexturaInformacionPanel" name="texturaInformacionPanel2">
     </Component>
     <Component class="view.sinLabView.MemoriaTrabajosinLABPanel" name="memoriaTrabajosinLABPanel1">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>
