@@ -8,6 +8,8 @@ package view.OtrasRecomendaciones;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import model.Cultivo;
+import model.Textura;
+import view.ResultadosConLabPanel;
 
 /**
  *
@@ -16,6 +18,7 @@ import model.Cultivo;
 public class MateriaOrganicaRecomendacionPanelController {
 
     MateriaOrganicaRecomendacionPanel materiaOrganicaRecPanel;
+    ResultadosConLabPanel resultadosConLabPanel;
 
     public MateriaOrganicaRecomendacionPanelController(MateriaOrganicaRecomendacionPanel aumentarMateriaOrganicaPanel) {
         this.materiaOrganicaRecPanel = aumentarMateriaOrganicaPanel;

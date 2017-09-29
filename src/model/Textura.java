@@ -22,6 +22,16 @@ public class Textura {
         texturaArcilla = 0;
         tipoTextura = "";
     }
+    public void resetTextura(){
+        texturaArena = 0;
+        texturaLimo = 0;
+        texturaArcilla = 0;
+        tipoTextura = "";
+    }
+    @Override
+    public String toString() {
+        return "Textura{" + "texturaArena=" + texturaArena + ", texturaLimo=" + texturaLimo + ", texturaArcilla=" + texturaArcilla + ", tipoTextura=" + tipoTextura + '}';
+    }
 
     public double getTexturaArena() {
         return texturaArena;

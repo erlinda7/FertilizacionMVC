@@ -5,6 +5,10 @@
  */
 package view.ConLabView;
 
+import java.util.Timer;
+import java.util.TimerTask;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Erlinda
@@ -14,8 +18,38 @@ public class MemoriaTrabajoPanel extends javax.swing.JPanel {
     /**
      * Creates new form MemoriaTrabajoPanel
      */
+    Timer timer = new Timer();
+    ImageIcon[] imagenesA;
+
     public MemoriaTrabajoPanel() {
         initComponents();
+        
+        imagenesA= new ImageIcon[5];
+        imagenesA[0] = new ImageIcon(getClass().getResource("/img/imgAnimate/apio.jpg"));
+        imagenesA[1] = new ImageIcon(getClass().getResource("/img/imgAnimate/berenjena.jpg"));
+        imagenesA[2] = new ImageIcon(getClass().getResource("/img/imgAnimate/lechuga2.jpg"));
+        imagenesA[3] = new ImageIcon(getClass().getResource("/img/imgAnimate/pimenton.jpg"));
+        imagenesA[4] = new ImageIcon(getClass().getResource("/img/imgAnimate/repollo2.jpg"));
+        
+        TimerTask myTask = new TimerTask() {
+            int i = 0;
+
+            @Override
+            public void run() {
+                // whatever you need to do every 2 seconds 
+                //new ImageIcon(getClass().getResource("/img/arcilloso.jpg"))
+                jLabelImagenTimer.setIcon(imagenesA[i]);
+                System.out.println("contador: " + i);
+                if (i < 4) {
+                    i++;
+                } else {
+                    i = 0;
+                }
+
+            }
+        };
+
+        timer.schedule(myTask, 2000, 2000);
     }
 
     /**
@@ -49,7 +83,7 @@ public class MemoriaTrabajoPanel extends javax.swing.JPanel {
         potasioValor = new javax.swing.JLabel();
         phValor = new javax.swing.JLabel();
         materiaOrganicaValor = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabelImagenTimer = new javax.swing.JLabel();
 
         setOpaque(false);
 
@@ -205,15 +239,18 @@ public class MemoriaTrabajoPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelImagenTimer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
+                .addComponent(jLabelImagenTimer, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -230,7 +267,7 @@ public class MemoriaTrabajoPanel extends javax.swing.JPanel {
     public javax.swing.JLabel hechosInicialesLabel;
     public javax.swing.JLabel hortalizaLabel;
     public javax.swing.JLabel hortalizaValor;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabelImagenTimer;
     private javax.swing.JPanel jPanel1;
     public javax.swing.JLabel limoLabel;
     public javax.swing.JLabel limoValor;

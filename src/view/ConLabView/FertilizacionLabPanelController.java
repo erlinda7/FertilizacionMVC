@@ -177,6 +177,7 @@ public class FertilizacionLabPanelController {
             navegacionTabbe.remove(1);
             navegacionTabbe.remove(1);
             cultivo.getRecomendaciones().removeAll(cultivo.getRecomendaciones());
+            textura.resetTextura();
         }
         if (pivote != 1) {
             pivote = pivote - 1;
@@ -289,7 +290,7 @@ public class FertilizacionLabPanelController {
                 //primero
                 resultadosConLabPanelController.llenarPanelInformacion(cultivo, textura);
                //segundo
-                resultadosConLabPanelController.mostrarExplicacionRecomendacionFertilizacion(cultivo, "limosa");
+               resultadosConLabPanelController.mostrarExplicacionRecomendacionFertilizacion(cultivo, textura);
                 materiaOrganicaRecomendacionPanelController.mostrarExplicacionMO(cultivo);
                 phRecomendacionPanelController.mostrarRecomendacionPh(cultivo);
                 System.out.print(cultivo.getNivelMO());

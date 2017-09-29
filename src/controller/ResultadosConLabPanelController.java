@@ -38,6 +38,7 @@ public class ResultadosConLabPanelController {
     }
 
     public void llenarPanelInformacion(Cultivo cultivo, Textura textura) {
+        
         //comentar para netbenas
 //         DroolsMain.calcularResultados(cultivo, textura);
 
@@ -53,9 +54,8 @@ public class ResultadosConLabPanelController {
 //        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelpH.setText(cultivo.getNivelpH() + "  ppm");
 //        resultadosConLabPanel.resultadosContenidoPanel1.resultadosDatosCultivoPanel1.jLabelMO.setText(cultivo.getNivelMO() + "  ppm");
 //Propiedades del suelo
-
-//        resultadosConLabPanel.resultadosContenidoPanel1.resultadosRecFertilizacionPanel1.jLabelTituloRecomendacion.setText(cultivo.getHortaliza() + "  (" + cultivo.getRendimiento() + "  Ton/ha )");
-//        resultadosConLabPanel.resultadosContenidoPanel1.resultadosExplicacionPanel1.jLabelPropiedadTextura.setText(textura.getTipoTextura() + " ");
+       resultadosConLabPanel.resultadosContenidoPanel1.resultadosRecFertilizacionPanel1.jLabelTituloRecomendacion.setText(cultivo.getHortaliza() + "  (" + cultivo.getRendimiento() + "  Ton/ha )");
+//       resultadosConLabPanel.resultadosContenidoPanel1.tipotextura.setText(textura.getTipoTextura() + " ");
 //        resultadosConLabPanel.resultadosContenidoPanel1.resultadosExplicacionPanel1.jLabelPropiedadpH.setText(cultivo.getTipoSuelo() + "");
 //        resultadosConLabPanel.resultadosContenidoPanel1.resultadosExplicacionPanel1.jLabelPropiedadNitrogeno.setText(cultivo.getRangoNivelNitrogeno() + "");
 //        resultadosConLabPanel.resultadosContenidoPanel1.resultadosExplicacionPanel1.jLabelPropiedadFosforo.setText(cultivo.getRangoNivelFosforo() + "");
@@ -125,40 +125,30 @@ public class ResultadosConLabPanelController {
         ImprimirResultados.imprimir(rutaDocumentoPdf);
     }
 
-    public void mostrarExplicacionRecomendacionFertilizacion(Cultivo cultivo, String textura) {
-        
-        
-        //  if (textura.getTipoTextura().equals("arenosa") || textura.getTipoTextura().equals("arenoso franca") || textura.getTipoTextura().equals("franco arenosa") || textura.getTipoTextura().equals("franco arcillo arenosa")) {
-        if (textura.equals("arenosa")||textura.equals("arenoso franca")||textura.equals("franco arenosa")||textura.equals("franco arcillo arenosa")) {
-            // resultadosConLabPanel.resultadosContenidoPanel1.jLabelExplicacionFertiTextura.setText("<html><body><p align='justify'>La textura del suelo es ' " + textura.getTipoTextura() + " ' por lo cual se agrega 10% de nutrientes a la cantidad recomendada de Nitrogeno, Fosforo y Potasio.</body></html>");
-            resultadosConLabPanel.resultadosContenidoPanel1.jLabelExplicacionFertiTextura.setText("<html><body><p align='justify'>La textura del suelo es ' " + textura + " ' por lo cual se agrega 10% de nutrientes a la cantidad recomendada de Nitrogeno, Fosforo y Potasio.</body></html>");
+    public void mostrarExplicacionRecomendacionFertilizacion(Cultivo cultivo, Textura textura) {
+
+        if (textura.getTipoTextura().equals("arenosa") || textura.getTipoTextura().equals("arenoso franca") || textura.getTipoTextura().equals("franco arenosa") || textura.getTipoTextura().equals("franco arcillo arenosa")) {
+            resultadosConLabPanel.resultadosContenidoPanel1.jLabelExplicacionFertiTextura.setText("<html><body><p align='justify'>La textura del suelo es ' " + textura.getTipoTextura() + " ' por lo cual se agrega 10% de nutrientes a la cantidad recomendada de Nitrogeno, Fosforo y Potasio.</body></html>");
         } else {
-            // resultadosConLabPanel.resultadosContenidoPanel1.jLabelExplicacionFertiTextura.setText("<html><body><p align='justify'>La textura del suelo es '" + textura.getTipoTextura() + " ' por lo cual NO se agrega 10% de nutrientes a la cantidad recomendada de Nitrogeno, Fosforo y Potasio.</body></html>");
-        resultadosConLabPanel.resultadosContenidoPanel1.jLabelExplicacionFertiTextura.setText("<html><body><p align='justify'>La textura del suelo es '" + textura+ " ' por lo cual NO se agrega 10% de nutrientes a la cantidad recomendada de Nitrogeno, Fosforo y Potasio.</body></html>");
+            resultadosConLabPanel.resultadosContenidoPanel1.jLabelExplicacionFertiTextura.setText("<html><body><p align='justify'>La textura del suelo es ' " + textura.getTipoTextura() + " ' por lo cual NO se agrega 10% de nutrientes a la cantidad recomendada de Nitrogeno, Fosforo y Potasio.</body></html>");
         }
-        
-        Double nivelNitrogeno=34.6;
-        String rangoNitrogeno="Medio";
-        if(nivelNitrogeno>0){
-        resultadosConLabPanel.resultadosContenidoPanel1.jLabelExplicacionFertiNitrogeno.setText("<html><body><p align='justify'>El nivel de Nitrogeno en el suelo es  ' " + nivelNitrogeno + " ' por lo cual se considera que el nivel de nitrogeno en el suelo es ' "+rangoNitrogeno+" ' y es necesario fertilizar con el nutriente Nitrogeno.</body></html>");
-        }else{
-        resultadosConLabPanel.resultadosContenidoPanel1.jLabelExplicacionFertiNitrogeno.setText("<html><body><p align='justify'>El nivel de Nitrogeno en el suelo es  ' " + nivelNitrogeno + " ' por lo cual se considera que el nivel de nitrogeno en el suelo es ' "+rangoNitrogeno+" ' y NO es necesario fertilizar con el nutriente Nitrogeno.</body></html>");
+
+        if (cultivo.getCantKgN() > 0) {
+            resultadosConLabPanel.resultadosContenidoPanel1.jLabelExplicacionFertiNitrogeno.setText("<html><body><p align='justify'>El nivel de Nitrogeno en el suelo es  ' " + cultivo.getNivelNitrogeno() + " ' por lo cual se considera que el nivel de nitrogeno en el suelo es ' " + cultivo.getRangoNivelNitrogeno() + " ' y es necesario fertilizar con el nutriente Nitrogeno.</body></html>");
+        } else {
+            resultadosConLabPanel.resultadosContenidoPanel1.jLabelExplicacionFertiNitrogeno.setText("<html><body><p align='justify'>El nivel de Nitrogeno en el suelo es  ' " + cultivo.getNivelNitrogeno() + " ' por lo cual se considera que el nivel de nitrogeno en el suelo es ' " + cultivo.getRangoNivelNitrogeno() + " ' y NO es necesario fertilizar con el nutriente Nitrogeno.</body></html>");
         }
-        
-         Double nivelFosforo=84.6;
-        String rangoFosforo="Alto";
-        if(nivelFosforo>0){
-        resultadosConLabPanel.resultadosContenidoPanel1.jLabelExplicacionFertiFosforo.setText("<html><body><p align='justify'>El nivel de Fosforo en el suelo es  ' " + nivelFosforo + " ' por lo cual se considera que el nivel de fosforo en el suelo es ' "+rangoFosforo+" ' y es necesario fertilizar con el nutriente Fosforo.</body></html>");
-        }else{
-        resultadosConLabPanel.resultadosContenidoPanel1.jLabelExplicacionFertiFosforo.setText("<html><body><p align='justify'>El nivel de Fosforo en el suelo es  ' " + nivelFosforo + " ' por lo cual se considera que el nivel de fosforo en el suelo es ' "+rangoFosforo+" ' y NO es necesario fertilizar con el nutriente Fosforo.</body></html>");
+
+        if (cultivo.getCantKgP() > 0) {
+            resultadosConLabPanel.resultadosContenidoPanel1.jLabelExplicacionFertiFosforo.setText("<html><body><p align='justify'>El nivel de Fosforo en el suelo es  ' " + cultivo.getNivelFosforo() + " ' por lo cual se considera que el nivel de fosforo en el suelo es ' " + cultivo.getRangoNivelFosforo() + " ' y es necesario fertilizar con el nutriente Fosforo.</body></html>");
+        } else {
+            resultadosConLabPanel.resultadosContenidoPanel1.jLabelExplicacionFertiFosforo.setText("<html><body><p align='justify'>El nivel de Fosforo en el suelo es  ' " + cultivo.getNivelFosforo() + " ' por lo cual se considera que el nivel de fosforo en el suelo es ' " + cultivo.getRangoNivelFosforo() + " ' y NO es necesario fertilizar con el nutriente Fosforo.</body></html>");
         }
-            
-         Double nivelPotasio=4.6;
-        String rangoPotasio="Muy Bajo";
-        if(nivelPotasio>0){
-        resultadosConLabPanel.resultadosContenidoPanel1.jLabelExplicacionFertiPotasio.setText("<html><body><p align='justify'>El nivel de Potasio en el suelo es  ' " + nivelPotasio + " ' por lo cual se considera que el nivel de fosforo en el suelo es ' "+rangoPotasio+" ' y es necesario fertilizar con el nutriente Potasio.</body></html>");
-        }else{
-        resultadosConLabPanel.resultadosContenidoPanel1.jLabelExplicacionFertiPotasio.setText("<html><body><p align='justify'>El nivel de Potasio en el suelo es  ' " + nivelPotasio + " ' por lo cual se considera que el nivel de fosforo en el suelo es ' "+rangoPotasio+" ' y NO es necesario fertilizar con el nutriente Potasio.</body></html>");
+
+        if (cultivo.getCantKgP() > 0) {
+            resultadosConLabPanel.resultadosContenidoPanel1.jLabelExplicacionFertiPotasio.setText("<html><body><p align='justify'>El nivel de Potasio en el suelo es  ' " + cultivo.getNivelPotasio() + " ' por lo cual se considera que el nivel de fosforo en el suelo es ' " + cultivo.getRangoNivelPotasio() + " ' y es necesario fertilizar con el nutriente Potasio.</body></html>");
+        } else {
+            resultadosConLabPanel.resultadosContenidoPanel1.jLabelExplicacionFertiPotasio.setText("<html><body><p align='justify'>El nivel de Potasio en el suelo es  ' " + cultivo.getNivelPotasio() + " ' por lo cual se considera que el nivel de fosforo en el suelo es ' " + cultivo.getRangoNivelPotasio() + " ' y NO es necesario fertilizar con el nutriente Potasio.</body></html>");
         }
     }
 }

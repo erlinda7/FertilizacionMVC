@@ -260,7 +260,7 @@ public class FertilizacionSinLabPanelController {
                  //primero
                 resultadosConLabPanelController.llenarPanelInformacion(cultivo, textura);
                //segundo
-                resultadosConLabPanelController.mostrarExplicacionRecomendacionFertilizacion(cultivo, "limosa");
+               // resultadosConLabPanelController.mostrarExplicacionRecomendacionFertilizacion(cultivo, "limosa");
                 materiaOrganicaRecomendacionPanelController.mostrarExplicacionMO(cultivo);
                 phRecomendacionPanelController.mostrarRecomendacionPh(cultivo);
                 break;

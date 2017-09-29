@@ -22,6 +22,8 @@ import view.sinLabView.FertilizacionSinLabFrame;
 import controller.SinLabController.FertilizacionSinLabFrameController;
 import view.sinLabView.FertilizacionSinLabPanel;
 import controller.SinLabController.FertilizacionSinLabPanelController;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import view.ConLabView.FertilizacionLabFrameController;
 import view.ConLabView.FertilizacionLabFrame;
 import view.ConLabView.FertilizacionLabPanel;
@@ -44,6 +46,9 @@ public class BienvenidaFrameController {
         confPanelFertiConLab();
         confPanelFertiSinLab();
         confButtonFertilizacionConLab();
+
+        vistaBienvenida.bienvenidaPanel1.jButtonFertilizacionConLaboratorio.setVisible(false);
+        vistaBienvenida.setResizable(false);
     }
 
     public void confFrameBienvenida() {
@@ -70,6 +75,17 @@ public class BienvenidaFrameController {
                 ButtonFertilizacionConLabActionPerformed(evt);
             }
         });
+
+        vistaBienvenida.bienvenidaPanel1.jButtonIniciarFertilizacionConLab.setToolTipText("<html><body><p align='justify'>Si cuenta con los resultados del <br>laboratorio del analisis del suelo <br><b>Haga clic Aqui</b></html></body>");
+        vistaBienvenida.bienvenidaPanel1.jButtonIniciarFertilizacionConLab.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
+                jButtonIniciarFertilizacionConLabMouseEntered(evt);
+            }
+        });
+    }
+
+    public void jButtonIniciarFertilizacionConLabMouseEntered(MouseEvent evt) {
+        vistaBienvenida.bienvenidaPanel1.jButtonIniciarFertilizacionConLab.getToolTipText();
     }
     ///
 
@@ -80,6 +96,16 @@ public class BienvenidaFrameController {
                 ButtonFertilizacionSinLabActionPerformed(evt);
             }
         });
+        vistaBienvenida.bienvenidaPanel1.jButtonFertilizacionSinLaboratorio.setToolTipText("<html><body><p align='justify'>Si NO cuenta con los resultados del <br>laboratorio del analisis del suelo <br><b>Haga clic Aqui</b></html></body>");
+        vistaBienvenida.bienvenidaPanel1.jButtonFertilizacionSinLaboratorio.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
+                jButtonFertilizacionSinLaboratorioMouseEntered(evt);
+            }
+        });
+    }
+
+    public void jButtonFertilizacionSinLaboratorioMouseEntered(MouseEvent evt) {
+        vistaBienvenida.bienvenidaPanel1.jButtonFertilizacionSinLaboratorio.getToolTipText();
     }
 
     public void confButtonConceptosBasicos() {
@@ -89,6 +115,16 @@ public class BienvenidaFrameController {
                 ButtonConceptosBasicosActionPerformed(evt);
             }
         });
+        vistaBienvenida.bienvenidaPanel1.jButtonConceptosBasicos.setToolTipText("<html><body><p align='justify'>Conceptos sobre hortalizas, textura, <br>nutrientes y muestreo de suelos </html></body>");
+        vistaBienvenida.bienvenidaPanel1.jButtonConceptosBasicos.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
+                jButtonConceptosBasicosMouseEntered(evt);
+            }
+        });
+    }
+
+    public void jButtonConceptosBasicosMouseEntered(MouseEvent evt) {
+        vistaBienvenida.bienvenidaPanel1.jButtonConceptosBasicos.getToolTipText();
     }
 
     public void confButtonSalir() {
@@ -116,7 +152,7 @@ public class BienvenidaFrameController {
     private void ButtonFertilizacionConLabActionPerformed(java.awt.event.ActionEvent evt) {
         FertilizacionLabFrame fertilizacionLabFrame = new FertilizacionLabFrame();
         FertilizacionLabFrameController fertilizacionLabFrameController = new FertilizacionLabFrameController(fertilizacionLabFrame);
-        
+
         //fertilizacionLabFrame.getFertilizacionLabPanel1();
         FertilizacionLabPanel fertilizacionLabPanel = fertilizacionLabFrame.getFertilizacionLabPanel1();
         FertilizacionLabPanelController fertilizacionLabPanelController = new FertilizacionLabPanelController(fertilizacionLabPanel);
@@ -149,11 +185,33 @@ public class BienvenidaFrameController {
 
     public void confPanelFertiConLab() {
         vistaBienvenida.bienvenidaPanel1.getjLabelfertiConLabImg().setIcon(new ImageIcon(getClass().getResource("/img/muestrasuelo.jpg")));
-        vistaBienvenida.bienvenidaPanel1.getjLabelfertiConLabDescripcion().setText("<html><body><b>Fertilizacion con Analisis de Suelo</b><br>  Debe extraer muestras de suelo de varias partes del terreno a 20 cm profundidad. <br> Mezclar de manera homogenea la muestra. <br> Envie 1 hilo de muestra de suelo al laboratorio de suelos. <br> Con los resultados del laboratorio de suelos<b> inicie con la fertilizacion en el Boton Izquierdo.</b> </body></html>");
+        vistaBienvenida.bienvenidaPanel1.getjLabelfertiConLabDescripcion().setText("<html><body><b>Fertilizacion de Hortalizas</b><br> <br><b>SI cuenta</b> con los resultados de laboratorio de suelos del analisis de suelo de su terreno <b> Inicie con la fertilizacion en el Boton Izquierdo.</b> </body></html>");
+
+        vistaBienvenida.bienvenidaPanel1.getjLabelfertiConLabImg().setToolTipText("<html><body><p align='justify'>Debe mandar su muestra de suelo a un<br> laboratorio de suelos para realizar la <br>fertilizacion con los resultados<br><br>Si no sabe sacar una muestra de suelo<br> vaya al boton <b>Conceptos Basicos y luego a la<br> pestaña Muestreo de Suelo</b></html></body>");
+        vistaBienvenida.bienvenidaPanel1.getjLabelfertiConLabImg().addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
+                jLabelfertiConLabImgMouseEntered(evt);
+            }
+        });
     }
 
     public void confPanelFertiSinLab() {
         vistaBienvenida.bienvenidaPanel1.getjLabelfertiSinLabImg().setIcon(new ImageIcon(getClass().getResource("/img/kitsanalisis.jpg")));
-        vistaBienvenida.bienvenidaPanel1.getjLabelfertiSinLabDescripcion().setText("<html><body><b>Fertilizacion sin Analisis de Suelo</b> <br>Tome varias muestras de suelo del terreno y mezclar de manera homogenea. <br> Compre los <b>kits de analisis de suelo</b> <br> Con la muestra de suelo y los kits de analisis <b>inicie con la fertilizacion en el Boton Izquierdo.</b></body></html>");
+        vistaBienvenida.bienvenidaPanel1.getjLabelfertiSinLabDescripcion().setText("<html><body><b>Fertilizacion de Hortalizas</b><br> <br>Si<b> NO cuenta </b>con los resultados de laboratorio de suelos del analisis de suelo de su terreno <b> Inicie con la fertilizacion en el Boton Izquierdo.</b> </body></html>");
+        
+        vistaBienvenida.bienvenidaPanel1.getjLabelfertiSinLabImg().setToolTipText("<html><body><p align='justify'>Para realizar la fertilizacion sin datos <br>de laboratorio debe contar con la <b>muestra de suelo</b> <br>y los <b> Kits para analisis de suelos</b><br><br>Sino sabe sacar una muestra de suelo <br> vaya al boton <b>Conceptos Basicos y luego a la<br> pestaña Muestreo de Suelo</b></html></body>");
+        vistaBienvenida.bienvenidaPanel1.getjLabelfertiSinLabImg().addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
+                jLabelfertiSinLabImgMouseEntered(evt);
+            }
+        });
+    }
+
+    public void jLabelfertiConLabImgMouseEntered(MouseEvent evt) {
+        vistaBienvenida.bienvenidaPanel1.getjLabelfertiConLabImg().getToolTipText();
+    }
+
+    public void jLabelfertiSinLabImgMouseEntered(MouseEvent evt) {
+        vistaBienvenida.bienvenidaPanel1.getjLabelfertiSinLabImg().getToolTipText();
     }
 }
