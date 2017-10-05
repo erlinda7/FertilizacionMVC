@@ -5,66 +5,63 @@
  */
 package service;
 
+import model.FosforoRegla;
+import model.MateriaOrganicaRegla;
 import model.NitrogenoRegla;
+import model.PhRegla;
+import model.PotasioRegla;
 
 /**
  *
  * @author Erlinda
  */
 public class MainPruebaReglas {
-    
-      public static void main(String[] args) {
-          
-          NitrogenoReglaService nitrogenoReglaService=new NitrogenoReglaService();
-          
-          NitrogenoRegla nitrogenoRegla=new NitrogenoRegla();          
-          nitrogenoRegla.setIdNitrogenoRegla(1);
-          nitrogenoRegla.setNombreRegla("Nivel de Nitrogeno Muy Alto");
-          nitrogenoRegla.setLimiteInferior(110);
-          nitrogenoRegla.setLimiteSuperior(120);
-          nitrogenoRegla.setConclusion("Muy Alto");
-          
-          
-          
-          NitrogenoRegla nitrogenoRegla2=new NitrogenoRegla();          
-          nitrogenoRegla2.setIdNitrogenoRegla(2);
-          nitrogenoRegla2.setNombreRegla("Nivel de Nitrogeno Super bajo");
-          nitrogenoRegla2.setLimiteInferior(0);
-          nitrogenoRegla2.setLimiteSuperior(10);
-          nitrogenoRegla2.setConclusion("Super Bajo");
-          
-          NitrogenoRegla nitrogenoRegla3=new NitrogenoRegla();          
-          nitrogenoRegla3.setIdNitrogenoRegla(3);
-          nitrogenoRegla3.setNombreRegla("Nivel de Nitrogeno Regular");
-          nitrogenoRegla3.setLimiteInferior(30);
-          nitrogenoRegla3.setLimiteSuperior(50);
-          nitrogenoRegla3.setConclusion("Regular");
-          
-          nitrogenoReglaService.createNitrogenoRegla(nitrogenoRegla);
-          nitrogenoReglaService.createNitrogenoRegla(nitrogenoRegla2);
-          nitrogenoReglaService.createNitrogenoRegla(nitrogenoRegla3);
-          ///test para create
-         // nutrienteReglaService.mostrarReglas();
-         //test para read
-//         NutrienteRegla resultadoLeer=nutrienteReglaService.readNutrienteRegla(1);
-//         System.out.println(resultadoLeer.getNombreRegla());
 
-            //test para actualizar
-//            NutrienteRegla nutrienteReglaActualizar=new NutrienteRegla();
-//            nutrienteReglaActualizar.setNombreRegla("XYZ");
-//            nutrienteReglaActualizar.setLimiteInferior(00);
-//            nutrienteReglaActualizar.setLimiteSuperior(1111);
-//            nutrienteReglaActualizar.setConclusion("Actualizando regla XYZ");
-//            
-//            nutrienteReglaService.updateNutrienteRegla(1, nutrienteReglaActualizar);
-//            nutrienteReglaService.mostrarReglas();
+    public static void main(String[] args) {
 
-            //test para eliminar
-//            nutrienteReglaService.deleteNutrienteRegla(2);
-//            nutrienteReglaService.deleteNutrienteRegla(1);
-//            nutrienteReglaService.mostrarReglas();
-      
+        // inicio test para materia organica
+        PhReglaService phReglaService = new PhReglaService();
 
-              nitrogenoReglaService.mostrarReglasDroolsFormat();
-      }
+        PhRegla phRegla = new PhRegla();
+        phRegla.setIdPhRegla(1);
+        phRegla.setNombreRegla("Nivel de ph Muy Alto");
+        phRegla.setLimiteInferior(110);
+        phRegla.setLimiteSuperior(120);
+        phRegla.setConclusion("Muy Alto");
+
+        PhRegla phRegla2 = new PhRegla();
+        phRegla2.setIdPhRegla(2);
+        phRegla2.setNombreRegla("Nivel de ph Super bajo");
+        phRegla2.setLimiteInferior(0);
+        phRegla2.setLimiteSuperior(10);
+        phRegla2.setConclusion("Super Bajo");
+
+        PhRegla phRegla3 = new PhRegla();
+        phRegla3.setIdPhRegla(3);
+        phRegla3.setNombreRegla("Nivel de ph Regular");
+        phRegla3.setLimiteInferior(30);
+        phRegla3.setLimiteSuperior(50);
+        phRegla3.setConclusion("Regular");
+
+        phReglaService.createPhRegla(phRegla);
+        phReglaService.createPhRegla(phRegla2);
+        phReglaService.createPhRegla(phRegla3);
+
+        // update
+        PhRegla phReglaactualizar = new PhRegla();
+        phReglaactualizar.setIdPhRegla(4);
+        phReglaactualizar.setNombreRegla("Nivel de ph xxxxxxxxx");
+        phReglaactualizar.setLimiteInferior(30);
+        phReglaactualizar.setLimiteSuperior(50);
+        phReglaactualizar.setConclusion("xxxxxxxxxxx");
+
+        phReglaService.updatePhRegla(1, phReglaactualizar);
+
+        // delete
+        phReglaService.deletePhRegla(3);
+
+        phReglaService.mostrarReglasDroolsFormat();
+
+        // fin test para MO
+    }
 }

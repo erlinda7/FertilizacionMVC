@@ -9,12 +9,12 @@ package EdicionReglas;
  *
  * @author Erlinda
  */
-public class EdicionReglasNitrogenoPanel extends javax.swing.JPanel {
+public class PotasioEdicionReglasPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form EdicionReglasNutrientesPanel
      */
-    public EdicionReglasNitrogenoPanel() {
+    public PotasioEdicionReglasPanel() {
         initComponents();
     }
 
@@ -45,7 +45,7 @@ public class EdicionReglasNitrogenoPanel extends javax.swing.JPanel {
         jButtonAnadirRegla = new javax.swing.JButton();
         jButtonEliminarRegla = new javax.swing.JButton();
         jScrollTable = new javax.swing.JScrollPane();
-        jTableNitrogeno = new javax.swing.JTable();
+        jTablePotasio = new javax.swing.JTable();
 
         jPanelEdicion.setBackground(new java.awt.Color(255, 255, 255));
         jPanelEdicion.setBorder(javax.swing.BorderFactory.createTitledBorder("Editar"));
@@ -155,7 +155,7 @@ public class EdicionReglasNitrogenoPanel extends javax.swing.JPanel {
         jScrollTable.setBackground(new java.awt.Color(255, 255, 255));
         jScrollTable.setBorder(javax.swing.BorderFactory.createTitledBorder("Lista de Reglas"));
 
-        jTableNitrogeno.setModel(new javax.swing.table.DefaultTableModel(
+        jTablePotasio.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -174,7 +174,7 @@ public class EdicionReglasNitrogenoPanel extends javax.swing.JPanel {
                 "Id ", "Nombre Regla", "Premisa 1", "Premisa 2", "Conclusion"
             }
         ));
-        jScrollTable.setViewportView(jTableNitrogeno);
+        jScrollTable.setViewportView(jTablePotasio);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -228,7 +228,7 @@ public class EdicionReglasNitrogenoPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanelEdicion;
     public javax.swing.JScrollPane jScrollTable;
-    public javax.swing.JTable jTableNitrogeno;
+    public javax.swing.JTable jTablePotasio;
     public javax.swing.JTextField jTextFieldConclusion;
     public javax.swing.JTextField jTextFieldId;
     public javax.swing.JTextField jTextFieldNombreRegla;

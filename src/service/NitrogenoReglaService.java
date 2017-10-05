@@ -61,7 +61,7 @@ public class NitrogenoReglaService {
         }
     }
 
-    public ArrayList<NitrogenoRegla> readAllNutrientes() {
+    public ArrayList<NitrogenoRegla> readAllNitrogeno() {
         return listNitrogenoRegla;
 
     }

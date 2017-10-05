@@ -1,27 +1,35 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package model;
 
-public class MateriaOrganicaRegla {
-
-    int idMateriaOrganicaRegla;
+/**
+ *
+ * @author Erlinda
+ */
+public class PotasioRegla {
+    int idPotasioRegla;
     String nombreRegla;
     int limiteSuperior;
     int limiteInferior;
     String conclusion;
-
-    public MateriaOrganicaRegla() {
-
+    
+    public PotasioRegla(){
+    
     }
 
-    public MateriaOrganicaRegla(int idMateriaOrganicaRegla, String nombreRegla, int limiteSuperior, int limiteInferior, String conclusion) {
-        this.idMateriaOrganicaRegla = idMateriaOrganicaRegla;
+    public PotasioRegla(int idPotasioRegla, String nombreRegla, int limiteSuperior, int limiteInferior, String conclusion) {
+        this.idPotasioRegla = idPotasioRegla;
         this.nombreRegla = nombreRegla;
         this.limiteSuperior = limiteSuperior;
         this.limiteInferior = limiteInferior;
         this.conclusion = conclusion;
     }
 
-    public int getIdMateriaOrganicaRegla() {
-        return idMateriaOrganicaRegla;
+    public int getIdPotasioRegla() {
+        return idPotasioRegla;
     }
 
     public String getNombreRegla() {
@@ -40,8 +48,8 @@ public class MateriaOrganicaRegla {
         return conclusion;
     }
 
-    public void setIdMateriaOrganicaRegla(int idMateriaOrganicaRegla) {
-        this.idMateriaOrganicaRegla = idMateriaOrganicaRegla;
+    public void setIdPotasioRegla(int idPotasioRegla) {
+        this.idPotasioRegla = idPotasioRegla;
     }
 
     public void setNombreRegla(String nombreRegla) {
@@ -59,10 +67,6 @@ public class MateriaOrganicaRegla {
     public void setConclusion(String conclusion) {
         this.conclusion = conclusion;
     }
-
-    @Override
-    public String toString() {
-        return "MateriaOrganicaRegla{" + "idMateriaOrganicaRegla=" + idMateriaOrganicaRegla + ", nombreRegla=" + nombreRegla + ", limiteSuperior=" + limiteSuperior + ", limiteInferior=" + limiteInferior + ", conclusion=" + conclusion + '}';
-    }
-
+    
+    
 }

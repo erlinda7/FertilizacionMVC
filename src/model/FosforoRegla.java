@@ -1,27 +1,36 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package model;
 
-public class MateriaOrganicaRegla {
+/**
+ *
+ * @author Erlinda
+ */
+public class FosforoRegla {
 
-    int idMateriaOrganicaRegla;
+    int idFosforoRegla;
     String nombreRegla;
     int limiteSuperior;
     int limiteInferior;
     String conclusion;
-
-    public MateriaOrganicaRegla() {
-
+    
+    public FosforoRegla(){
+    
     }
 
-    public MateriaOrganicaRegla(int idMateriaOrganicaRegla, String nombreRegla, int limiteSuperior, int limiteInferior, String conclusion) {
-        this.idMateriaOrganicaRegla = idMateriaOrganicaRegla;
+    public FosforoRegla(int idFosforoRegla, String nombreRegla, int limiteSuperior, int limiteInferior, String conclusion) {
+        this.idFosforoRegla = idFosforoRegla;
         this.nombreRegla = nombreRegla;
         this.limiteSuperior = limiteSuperior;
         this.limiteInferior = limiteInferior;
         this.conclusion = conclusion;
     }
 
-    public int getIdMateriaOrganicaRegla() {
-        return idMateriaOrganicaRegla;
+    public int getIdFosforoRegla() {
+        return idFosforoRegla;
     }
 
     public String getNombreRegla() {
@@ -40,8 +49,8 @@ public class MateriaOrganicaRegla {
         return conclusion;
     }
 
-    public void setIdMateriaOrganicaRegla(int idMateriaOrganicaRegla) {
-        this.idMateriaOrganicaRegla = idMateriaOrganicaRegla;
+    public void setIdFosforoRegla(int idFosforoRegla) {
+        this.idFosforoRegla = idFosforoRegla;
     }
 
     public void setNombreRegla(String nombreRegla) {
@@ -62,7 +71,8 @@ public class MateriaOrganicaRegla {
 
     @Override
     public String toString() {
-        return "MateriaOrganicaRegla{" + "idMateriaOrganicaRegla=" + idMateriaOrganicaRegla + ", nombreRegla=" + nombreRegla + ", limiteSuperior=" + limiteSuperior + ", limiteInferior=" + limiteInferior + ", conclusion=" + conclusion + '}';
+        return "FosforoRegla{" + "idFosforoRegla=" + idFosforoRegla + ", nombreRegla=" + nombreRegla + ", limiteSuperior=" + limiteSuperior + ", limiteInferior=" + limiteInferior + ", conclusion=" + conclusion + '}';
     }
-
+    
+    
 }

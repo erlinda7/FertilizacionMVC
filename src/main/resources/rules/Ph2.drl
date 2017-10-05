@@ -1,0 +1,16 @@
+package rules 
+import model.Cultivo;
+rule "Nivel de ph xxxxxxxxx"
+    when
+        $c : Cultivo( nivelpH >= 30 && <=50 )
+    then
+        $c.setTipoSuelo("xxxxxxxxxxx");
+end
+
+rule "Nivel de ph Super bajo"
+    when
+        $c : Cultivo( nivelpH >= 0 && <=10 )
+    then
+        $c.setTipoSuelo("Super Bajo");
+end
+

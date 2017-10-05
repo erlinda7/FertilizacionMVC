@@ -1,0 +1,23 @@
+package rules 
+import model.Cultivo;
+rule "Nivel de potasio Muy Alto"
+    when
+        $c : Cultivo( nivelPotasio >= 110 && <=120 )
+    then
+        $c.setRangoNivelPotasio("Muy Alto");
+end
+
+rule "Nivel de potasio Super bajo"
+    when
+        $c : Cultivo( nivelPotasio >= 0 && <=10 )
+    then
+        $c.setRangoNivelPotasio("Super Bajo");
+end
+
+rule "Nivel de potasio Regular"
+    when
+        $c : Cultivo( nivelPotasio >= 30 && <=50 )
+    then
+        $c.setRangoNivelPotasio("Regular");
+end
+

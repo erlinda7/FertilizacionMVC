@@ -1,0 +1,16 @@
+package rules 
+import model.Cultivo;
+rule "Nivel de MO xxxxxxxxx"
+    when
+        $c : Cultivo( nivelMO >= 30 && <=50 )
+    then
+        $c.setRangoNivelMO("xxxxxxxxxxx");
+end
+
+rule "Nivel de MO Super bajo"
+    when
+        $c : Cultivo( nivelMO >= 0 && <=10 )
+    then
+        $c.setRangoNivelMO("Super Bajo");
+end
+

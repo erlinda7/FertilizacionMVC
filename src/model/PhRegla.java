@@ -1,67 +1,68 @@
 package model;
 
 public class PhRegla {
-	int idPhRegla;
-    String nombreReglaPh;
-    int limiteSuperiorPh;
-    int limiteInferiorPh;
-    String conclusionPh;
 
-    
-    public PhRegla(){
-    	
+    int idPhRegla;
+    String nombreRegla;
+    int limiteSuperior;
+    int limiteInferior;
+    String conclusion;
+
+    public PhRegla() {
+
     }
 
-	public PhRegla(int idNutrienteReglaPh, String nombreReglaPh, int limiteSuperiorPh, int limiteInferiorPh,
-			String conclusionPh) {
-		super();
-		this.idPhRegla = idNutrienteReglaPh;
-		this.nombreReglaPh = nombreReglaPh;
-		this.limiteSuperiorPh = limiteSuperiorPh;
-		this.limiteInferiorPh = limiteInferiorPh;
-		this.conclusionPh = conclusionPh;
-	
-	}
+    public PhRegla(int idPhRegla, String nombreRegla, int limiteSuperior, int limiteInferior, String conclusion) {
+        this.idPhRegla = idPhRegla;
+        this.nombreRegla = nombreRegla;
+        this.limiteSuperior = limiteSuperior;
+        this.limiteInferior = limiteInferior;
+        this.conclusion = conclusion;
+    }
 
-	
+    public int getIdPhRegla() {
+        return idPhRegla;
+    }
 
-	public int getIdPhRegla() {
-		return idPhRegla;
-	}
+    public String getNombreRegla() {
+        return nombreRegla;
+    }
 
-	public void setIdPhRegla(int idPhRegla) {
-		this.idPhRegla = idPhRegla;
-	}
+    public int getLimiteSuperior() {
+        return limiteSuperior;
+    }
 
-	public String getNombreReglaPh() {
-		return nombreReglaPh;
-	}
+    public int getLimiteInferior() {
+        return limiteInferior;
+    }
 
-	public void setNombreReglaPh(String nombreReglaPh) {
-		this.nombreReglaPh = nombreReglaPh;
-	}
+    public String getConclusion() {
+        return conclusion;
+    }
 
-	public int getLimiteSuperiorPh() {
-		return limiteSuperiorPh;
-	}
+    public void setIdPhRegla(int idPhRegla) {
+        this.idPhRegla = idPhRegla;
+    }
 
-	public void setLimiteSuperiorPh(int limiteSuperiorPh) {
-		this.limiteSuperiorPh = limiteSuperiorPh;
-	}
+    public void setNombreRegla(String nombreRegla) {
+        this.nombreRegla = nombreRegla;
+    }
 
-	public int getLimiteInferiorPh() {
-		return limiteInferiorPh;
-	}
+    public void setLimiteSuperior(int limiteSuperior) {
+        this.limiteSuperior = limiteSuperior;
+    }
 
-	public void setLimiteInferiorPh(int limiteInferiorPh) {
-		this.limiteInferiorPh = limiteInferiorPh;
-	}
+    public void setLimiteInferior(int limiteInferior) {
+        this.limiteInferior = limiteInferior;
+    }
 
-	public String getConclusionPh() {
-		return conclusionPh;
-	}
+    public void setConclusion(String conclusion) {
+        this.conclusion = conclusion;
+    }
 
-	public void setConclusionPh(String conclusionPh) {
-		this.conclusionPh = conclusionPh;
-	}    
+    @Override
+    public String toString() {
+        return "PhRegla{" + "idPhRegla=" + idPhRegla + ", nombreRegla=" + nombreRegla + ", limiteSuperior=" + limiteSuperior + ", limiteInferior=" + limiteInferior + ", conclusion=" + conclusion + '}';
+    }
+
 }
