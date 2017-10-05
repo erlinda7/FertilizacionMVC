@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import model.MateriaOrganicaRegla;
-import model.NutrienteRegla;
+import model.NitrogenoRegla;
 
 public class MateriaOrganicaReglaService {
 

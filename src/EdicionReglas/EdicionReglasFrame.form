@@ -40,7 +40,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="EdicionReglas.EdicionReglasNutrientesPanel" name="edicionReglasNutrientesPanel1">
+    <Component class="EdicionReglas.EdicionReglasNitrogenoPanel" name="edicionReglasNutrientesPanel1">
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>

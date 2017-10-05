@@ -27,7 +27,7 @@ public class EdicionReglasFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        edicionReglasNutrientesPanel1 = new EdicionReglas.EdicionReglasNutrientesPanel();
+        edicionReglasNutrientesPanel1 = new EdicionReglas.EdicionReglasNitrogenoPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -84,14 +84,14 @@ public class EdicionReglasFrame extends javax.swing.JFrame {
                EdicionReglasFrame edicionReglasFrame=new EdicionReglasFrame();
                edicionReglasFrame.setVisible(true);
                
-               EdicionReglasNutrientesPanel edicionReglasNutrientesPanel=edicionReglasFrame.edicionReglasNutrientesPanel1;
-               EdicionReglasNutrientesPanelController edicionReglasNutrientesPanelController= new EdicionReglasNutrientesPanelController(edicionReglasNutrientesPanel);
+               EdicionReglasNitrogenoPanel edicionReglasNutrientesPanel=edicionReglasFrame.edicionReglasNutrientesPanel1;
+               EdicionReglaNitrogenoPanelController edicionReglasNutrientesPanelController= new EdicionReglaNitrogenoPanelController(edicionReglasNutrientesPanel);
                
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public EdicionReglas.EdicionReglasNutrientesPanel edicionReglasNutrientesPanel1;
+    public EdicionReglas.EdicionReglasNitrogenoPanel edicionReglasNutrientesPanel1;
     // End of variables declaration//GEN-END:variables
 }

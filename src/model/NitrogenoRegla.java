@@ -9,37 +9,36 @@ package model;
  *
  * @author Erlinda
  */
-public class NutrienteRegla {
-    int idNutrienteRegla;
+public class NitrogenoRegla {
+
+    int idNitrogenoRegla;
     String nombreRegla;
     int limiteSuperior;
     int limiteInferior;
     String conclusion;
-    String nombreNutriente;
-    
+    //String nombreNutriente;
+
     /**///
-    public NutrienteRegla(){
-    
+    public NitrogenoRegla() {
+
     }
-    
-    
-    public NutrienteRegla(int idNutrienteRegla, String nombreRegla, int limiteSuperior, int limiteInferior, String conclusion, String nombreNutriente) {
-        this.idNutrienteRegla = idNutrienteRegla;
+
+    public NitrogenoRegla(int idNitrogenoRegla, String nombreRegla, int limiteSuperior, int limiteInferior, String conclusion) {
+        this.idNitrogenoRegla = idNitrogenoRegla;
         this.nombreRegla = nombreRegla;
         this.limiteSuperior = limiteSuperior;
         this.limiteInferior = limiteInferior;
         this.conclusion = conclusion;
-        this.nombreNutriente = nombreNutriente;
     }
 
-    public int getIdNutrienteRegla() {
-        return idNutrienteRegla;
+    public int getIdNitrogenoRegla() {
+        return idNitrogenoRegla;
     }
 
-    public void setIdNutrienteRegla(int idNutrienteRegla) {
-        this.idNutrienteRegla = idNutrienteRegla;
+    public void setIdNitrogenoRegla(int idNitrogenoRegla) {
+        this.idNitrogenoRegla = idNitrogenoRegla;
     }
-    
+
     public String getNombreRegla() {
         return nombreRegla;
     }
@@ -54,10 +53,6 @@ public class NutrienteRegla {
 
     public String getConclusion() {
         return conclusion;
-    }
-
-    public String getNombreNutriente() {
-        return nombreNutriente;
     }
 
     public void setNombreRegla(String nombreRegla) {
@@ -76,16 +71,9 @@ public class NutrienteRegla {
         this.conclusion = conclusion;
     }
 
-    public void setNombreNutriente(String nombreNutriente) {
-        this.nombreNutriente = nombreNutriente;
-    }
-
     @Override
     public String toString() {
-        return "NutrienteRegla{" + "idNutrienteRegla=" + idNutrienteRegla + ", nombreRegla=" + nombreRegla + ", limiteSuperior=" + limiteSuperior + ", limiteInferior=" + limiteInferior + ", conclusion=" + conclusion + ", nombreNutriente=" + nombreNutriente + '}';
+        return "NitrogenoRegla{" + "idNitrogenoRegla=" + idNitrogenoRegla + ", nombreRegla=" + nombreRegla + ", limiteSuperior=" + limiteSuperior + ", limiteInferior=" + limiteInferior + ", conclusion=" + conclusion + '}';
     }
 
-    
-    
-    
 }

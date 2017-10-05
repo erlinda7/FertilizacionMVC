@@ -5,7 +5,7 @@
  */
 package service;
 
-import model.NutrienteRegla;
+import model.NitrogenoRegla;
 
 /**
  *
@@ -15,37 +15,34 @@ public class MainPruebaReglas {
     
       public static void main(String[] args) {
           
-          NutrienteReglaService nutrienteReglaService=new NutrienteReglaService();
+          NitrogenoReglaService nitrogenoReglaService=new NitrogenoReglaService();
           
-          NutrienteRegla nutrienteRegla=new NutrienteRegla();          
-          nutrienteRegla.setIdNutrienteRegla(1);
-          nutrienteRegla.setNombreRegla("Nivel de Nitrogeno Muy Alto");
-          nutrienteRegla.setLimiteInferior(110);
-          nutrienteRegla.setLimiteSuperior(120);
-          nutrienteRegla.setConclusion("Muy Alto");
-          nutrienteRegla.setNombreNutriente("Nitrogeno");
-          
+          NitrogenoRegla nitrogenoRegla=new NitrogenoRegla();          
+          nitrogenoRegla.setIdNitrogenoRegla(1);
+          nitrogenoRegla.setNombreRegla("Nivel de Nitrogeno Muy Alto");
+          nitrogenoRegla.setLimiteInferior(110);
+          nitrogenoRegla.setLimiteSuperior(120);
+          nitrogenoRegla.setConclusion("Muy Alto");
           
           
-          NutrienteRegla nutrienteRegla2=new NutrienteRegla();          
-          nutrienteRegla2.setIdNutrienteRegla(2);
-          nutrienteRegla2.setNombreRegla("Nivel de Nitrogeno Super bajo");
-          nutrienteRegla2.setLimiteInferior(0);
-          nutrienteRegla2.setLimiteSuperior(10);
-          nutrienteRegla2.setConclusion("Super Bajo");
-          nutrienteRegla2.setNombreNutriente("Nitrogeno");
           
-          NutrienteRegla nutrienteRegla3=new NutrienteRegla();          
-          nutrienteRegla3.setIdNutrienteRegla(3);
-          nutrienteRegla3.setNombreRegla("Nivel de Nitrogeno Regular");
-          nutrienteRegla3.setLimiteInferior(30);
-          nutrienteRegla3.setLimiteSuperior(50);
-          nutrienteRegla3.setConclusion("Regular");
-          nutrienteRegla3.setNombreNutriente("Nitrogeno");
+          NitrogenoRegla nitrogenoRegla2=new NitrogenoRegla();          
+          nitrogenoRegla2.setIdNitrogenoRegla(2);
+          nitrogenoRegla2.setNombreRegla("Nivel de Nitrogeno Super bajo");
+          nitrogenoRegla2.setLimiteInferior(0);
+          nitrogenoRegla2.setLimiteSuperior(10);
+          nitrogenoRegla2.setConclusion("Super Bajo");
           
-          nutrienteReglaService.createNutrienteRegla(nutrienteRegla);
-          nutrienteReglaService.createNutrienteRegla(nutrienteRegla2);
-          nutrienteReglaService.createNutrienteRegla(nutrienteRegla3);
+          NitrogenoRegla nitrogenoRegla3=new NitrogenoRegla();          
+          nitrogenoRegla3.setIdNitrogenoRegla(3);
+          nitrogenoRegla3.setNombreRegla("Nivel de Nitrogeno Regular");
+          nitrogenoRegla3.setLimiteInferior(30);
+          nitrogenoRegla3.setLimiteSuperior(50);
+          nitrogenoRegla3.setConclusion("Regular");
+          
+          nitrogenoReglaService.createNitrogenoRegla(nitrogenoRegla);
+          nitrogenoReglaService.createNitrogenoRegla(nitrogenoRegla2);
+          nitrogenoReglaService.createNitrogenoRegla(nitrogenoRegla3);
           ///test para create
          // nutrienteReglaService.mostrarReglas();
          //test para read
@@ -68,6 +65,6 @@ public class MainPruebaReglas {
 //            nutrienteReglaService.mostrarReglas();
       
 
-              nutrienteReglaService.mostrarReglasDroolsFormat();
+              nitrogenoReglaService.mostrarReglasDroolsFormat();
       }
 }
