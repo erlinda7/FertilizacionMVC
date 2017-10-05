@@ -10,13 +10,12 @@ package model;
  * @author Erlinda
  */
 public class Hortaliza {
-
     private String nombreHortaliza;
     private String[] rendimientoHortaliza;
     private String rutaImgHortaliza;
     private String descripcionHortaliza;
-
-    public Hortaliza(String nombreHortaliza, String[] rendimientoHortaliza, String rutaImgHortaliza, String descripcionHortaliza) {
+    
+    public Hortaliza(String nombreHortaliza, String[] rendimientoHortaliza, String rutaImgHortaliza, String descripcionHortaliza ) {
         this.nombreHortaliza = nombreHortaliza;
         this.rendimientoHortaliza = rendimientoHortaliza;
         this.rutaImgHortaliza = rutaImgHortaliza;
@@ -54,5 +53,6 @@ public class Hortaliza {
     public void setRutaImgHortaliza(String rutaImgHortaliza) {
         this.rutaImgHortaliza = rutaImgHortaliza;
     }
-
+    
+    
 }
