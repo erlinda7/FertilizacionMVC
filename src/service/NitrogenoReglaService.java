@@ -128,16 +128,16 @@ public class NitrogenoReglaService {
 
     }
 
-    public static void main(String[] args) {
-
-        NitrogenoReglaService nitrogenoReglaService = new NitrogenoReglaService();
-        NitrogenoRegla nitrogenoRegla = new NitrogenoRegla();
-
-        nitrogenoRegla.setNombreRegla("regla nitrogeno baaajoo");
-        nitrogenoRegla.setLimiteInferior(12);
-        nitrogenoRegla.setLimiteSuperior(15);
-        nitrogenoRegla.setConclusion("dsgdgdfhfhdhfd");
-
-        nitrogenoReglaService.createNitrogenoRegla(nitrogenoRegla);
-    }
+//    public static void main(String[] args) {
+//
+//        NitrogenoReglaService nitrogenoReglaService = new NitrogenoReglaService();
+//        NitrogenoRegla nitrogenoRegla = new NitrogenoRegla();
+//
+//        nitrogenoRegla.setNombreRegla("regla nitrogeno baaajoo");
+//        nitrogenoRegla.setLimiteInferior(12);
+//        nitrogenoRegla.setLimiteSuperior(15);
+//        nitrogenoRegla.setConclusion("dsgdgdfhfhdhfd");
+//
+//        nitrogenoReglaService.createNitrogenoRegla(nitrogenoRegla);
+//    }
 }

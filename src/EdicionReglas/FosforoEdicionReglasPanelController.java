@@ -21,16 +21,19 @@ public class FosforoEdicionReglasPanelController {
     FosforoReglaService fosforoReglaService;
     ArrayList<FosforoRegla> listaReglaFosforo;
 
+    String actionAceptar;
+
     public FosforoEdicionReglasPanelController(FosforoEdicionReglasPanel fosforoEdicionReglasPanel) {
         this.fosforoEdicionReglasPanel = fosforoEdicionReglasPanel;
         fosforoReglaService = new FosforoReglaService();
         llenarReglasService();
         listaReglaFosforo = fosforoReglaService.readAllFosforo();
-        llenarTabla();
+        llenarJTable();
         confBotonesEdicion();
+        buttonAceptar();
     }
 
-    public void llenarTabla() {
+    public void llenarJTable() {
         DefaultTableModel dtm = (DefaultTableModel) fosforoEdicionReglasPanel.jTableFosforo.getModel();
         dtm.setRowCount(0);
         for (int i = 0; i < listaReglaFosforo.size(); i++) {
@@ -68,15 +71,16 @@ public class FosforoEdicionReglasPanelController {
     private void buttonEditarReglaActionPerformed(java.awt.event.ActionEvent evt) {
         int filaSeleccionada = fosforoEdicionReglasPanel.jTableFosforo.getSelectedRow();
         if (filaSeleccionada >= 0) {
-            FosforoRegla nutrienteReglaEditar = listaReglaFosforo.get(filaSeleccionada);
-            fosforoEdicionReglasPanel.jTextFieldId.setText(nutrienteReglaEditar.getIdFosforoRegla() + "");
-            fosforoEdicionReglasPanel.jTextFieldNombreRegla.setText(nutrienteReglaEditar.getNombreRegla() + "");
-            fosforoEdicionReglasPanel.jTextFieldPremisa1.setText(nutrienteReglaEditar.getLimiteInferior() + "");
-            fosforoEdicionReglasPanel.jTextFieldPremisa2.setText(nutrienteReglaEditar.getLimiteSuperior() + "");
-            fosforoEdicionReglasPanel.jTextFieldConclusion.setText(nutrienteReglaEditar.getConclusion() + "");
+            FosforoRegla fosforoReglaEditar = listaReglaFosforo.get(filaSeleccionada);
+            fosforoEdicionReglasPanel.jTextFieldId.setText(fosforoReglaEditar.getIdFosforoRegla() + "");
+            fosforoEdicionReglasPanel.jTextFieldNombreRegla.setText(fosforoReglaEditar.getNombreRegla() + "");
+            fosforoEdicionReglasPanel.jTextFieldPremisa1.setText(fosforoReglaEditar.getLimiteInferior() + "");
+            fosforoEdicionReglasPanel.jTextFieldPremisa2.setText(fosforoReglaEditar.getLimiteSuperior() + "");
+            fosforoEdicionReglasPanel.jTextFieldConclusion.setText(fosforoReglaEditar.getConclusion() + "");
         } else {
             JOptionPane.showMessageDialog(null, "Seleccione un Regla para la edicion", "Falta seleccionar", JOptionPane.ERROR_MESSAGE);
         }
+        actionAceptar="EDIT";
     }
 
     private void buttonAnadirReglaActionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,20 +89,77 @@ public class FosforoEdicionReglasPanelController {
         fosforoEdicionReglasPanel.jTextFieldPremisa1.setText("");
         fosforoEdicionReglasPanel.jTextFieldPremisa2.setText("");
         fosforoEdicionReglasPanel.jTextFieldConclusion.setText("");
+        
+        actionAceptar="ADD";
     }
 
     private void buttonEliminarReglaActionPerformed(java.awt.event.ActionEvent evt) {
-         int filaSeleccionada = fosforoEdicionReglasPanel.jTableFosforo.getSelectedRow();
+        int filaSeleccionada = fosforoEdicionReglasPanel.jTableFosforo.getSelectedRow();
         if (filaSeleccionada >= 0) {
-            FosforoRegla nutrienteReglaEditar = listaReglaFosforo.get(filaSeleccionada);
-            fosforoEdicionReglasPanel.jTextFieldId.setText(nutrienteReglaEditar.getIdFosforoRegla() + "");
-            fosforoEdicionReglasPanel.jTextFieldNombreRegla.setText(nutrienteReglaEditar.getNombreRegla() + "");
-            fosforoEdicionReglasPanel.jTextFieldPremisa1.setText(nutrienteReglaEditar.getLimiteInferior() + "");
-            fosforoEdicionReglasPanel.jTextFieldPremisa2.setText(nutrienteReglaEditar.getLimiteSuperior() + "");
-            fosforoEdicionReglasPanel.jTextFieldConclusion.setText(nutrienteReglaEditar.getConclusion() + "");
+            FosforoRegla fosforoReglaEditar = listaReglaFosforo.get(filaSeleccionada);
+            fosforoEdicionReglasPanel.jTextFieldId.setText(fosforoReglaEditar.getIdFosforoRegla() + "");
+            fosforoEdicionReglasPanel.jTextFieldNombreRegla.setText(fosforoReglaEditar.getNombreRegla() + "");
+            fosforoEdicionReglasPanel.jTextFieldPremisa1.setText(fosforoReglaEditar.getLimiteInferior() + "");
+            fosforoEdicionReglasPanel.jTextFieldPremisa2.setText(fosforoReglaEditar.getLimiteSuperior() + "");
+            fosforoEdicionReglasPanel.jTextFieldConclusion.setText(fosforoReglaEditar.getConclusion() + "");
         } else {
             JOptionPane.showMessageDialog(null, "Seleccione un Regla para la edicion", "Falta seleccionar", JOptionPane.ERROR_MESSAGE);
         }
+        actionAceptar="DELETE";
+    }
+
+    public void buttonAceptar() {
+        fosforoEdicionReglasPanel.jButtonAceptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAceptarActionPerformed(evt);
+            }
+        });
+    }
+
+    private void buttonAceptarActionPerformed(java.awt.event.ActionEvent evt) {
+        switch (actionAceptar) {
+            case "EDIT":
+                int idReglaEdit = Integer.parseInt(fosforoEdicionReglasPanel.jTextFieldId.getText());
+                FosforoRegla fosforoReglaEditar = new FosforoRegla();
+                fosforoReglaEditar.setNombreRegla(fosforoEdicionReglasPanel.jTextFieldNombreRegla.getText());
+                fosforoReglaEditar.setLimiteInferior(Integer.parseInt(fosforoEdicionReglasPanel.jTextFieldPremisa1.getText()));
+                fosforoReglaEditar.setLimiteSuperior(Integer.parseInt(fosforoEdicionReglasPanel.jTextFieldPremisa2.getText()));
+                fosforoReglaEditar.setConclusion(fosforoEdicionReglasPanel.jTextFieldConclusion.getText());
+
+                fosforoReglaService.updateFosforoRegla(idReglaEdit, fosforoReglaEditar);
+                llenarJTable();
+
+                //para guardar en archivo drl en formato drools
+                fosforoReglaService.actualizarReglasFosforoDrl();
+
+                break;
+            case "ADD":
+                int idReglaAdd = Integer.parseInt(fosforoEdicionReglasPanel.jTextFieldId.getText());
+                FosforoRegla fosforoReglaAnadir = new FosforoRegla();
+                fosforoReglaAnadir.setNombreRegla(fosforoEdicionReglasPanel.jTextFieldNombreRegla.getText());
+                fosforoReglaAnadir.setLimiteInferior(Integer.parseInt(fosforoEdicionReglasPanel.jTextFieldPremisa1.getText()));
+                fosforoReglaAnadir.setLimiteSuperior(Integer.parseInt(fosforoEdicionReglasPanel.jTextFieldPremisa2.getText()));
+                fosforoReglaAnadir.setConclusion(fosforoEdicionReglasPanel.jTextFieldConclusion.getText());
+
+                fosforoReglaService.createFosforoRegla(fosforoReglaAnadir);
+                llenarJTable();
+
+                //para guardar en archivo drl en formato drools descomentar
+                fosforoReglaService.actualizarReglasFosforoDrl();
+                break;
+            case "DELETE":
+                int idReglaDelete = Integer.parseInt(fosforoEdicionReglasPanel.jTextFieldId.getText());
+
+                fosforoReglaService.deleteFosforoRegla(idReglaDelete);
+                llenarJTable();
+                //para guardar en archivo drl en formato drools descomentar
+                fosforoReglaService.actualizarReglasFosforoDrl();
+                break;
+            default:
+                System.out.println("No hay Valores");
+                break;
+        }
+
     }
 
     public void llenarReglasService() {

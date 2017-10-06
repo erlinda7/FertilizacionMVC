@@ -9,7 +9,12 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import model.MateriaOrganicaRegla;
 
 /**
@@ -19,6 +24,7 @@ import model.MateriaOrganicaRegla;
 public class MateriaOrganicaReglaService {
 
     ArrayList<MateriaOrganicaRegla> listMateriaOrganicaRegla;
+    private final String tabla = "materia_organica_regla";
 
     public MateriaOrganicaReglaService() {
 
@@ -27,7 +33,20 @@ public class MateriaOrganicaReglaService {
     }
 
     public void createMateriaOrganicaRegla(MateriaOrganicaRegla newMateriaOrganicaRegla) {
-        listMateriaOrganicaRegla.add(newMateriaOrganicaRegla);
+        try {
+            listMateriaOrganicaRegla.add(newMateriaOrganicaRegla);
+            PreparedStatement consulta;
+            Connection conexion = Conexion.obtener();
+            consulta = conexion.prepareStatement("INSERT INTO " + this.tabla + "(nombre_regla, limite_inferior, limite_superior, conclusion) VALUES(?, ?, ?, ?)");
+            consulta.setString(1, newMateriaOrganicaRegla.getNombreRegla());
+            consulta.setInt(2, newMateriaOrganicaRegla.getLimiteInferior());
+            consulta.setInt(3, newMateriaOrganicaRegla.getLimiteSuperior());
+            consulta.setString(4, newMateriaOrganicaRegla.getConclusion());
+
+            consulta.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(NitrogenoReglaService.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public MateriaOrganicaRegla readMateriaOrganicaRegla(int idMateriaOrganicaRegla) {
@@ -66,7 +85,7 @@ public class MateriaOrganicaReglaService {
 
     }
 
-    public void mostrarReglasDroolsFormat() {
+    public void actualizarReglasMODrl() {
 
         File file = new File("./src/main/resources/rules/MateriaOrganica2.drl");
         try {

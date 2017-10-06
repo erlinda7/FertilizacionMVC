@@ -16,20 +16,24 @@ import service.PotasioReglaService;
  * @author Erlinda
  */
 public class PotasioEdicionReglasPanelController {
+
     PotasioEdicionReglasPanel potasioEdicionReglasPanel;
     PotasioReglaService potasioReglaService;
     ArrayList<PotasioRegla> listaReglaPotasio;
+
+    String actionAceptar;
 
     public PotasioEdicionReglasPanelController(PotasioEdicionReglasPanel potasioEdicionReglasPanel) {
         this.potasioEdicionReglasPanel = potasioEdicionReglasPanel;
         potasioReglaService = new PotasioReglaService();
         llenarReglasService();
         listaReglaPotasio = potasioReglaService.readAllPotasio();
-        llenarTabla();
+        llenarJTable();
         confBotonesEdicion();
+        buttonAceptar();
     }
 
-    public void llenarTabla() {
+    public void llenarJTable() {
         DefaultTableModel dtm = (DefaultTableModel) potasioEdicionReglasPanel.jTablePotasio.getModel();
         dtm.setRowCount(0);
         for (int i = 0; i < listaReglaPotasio.size(); i++) {
@@ -67,15 +71,16 @@ public class PotasioEdicionReglasPanelController {
     private void buttonEditarReglaActionPerformed(java.awt.event.ActionEvent evt) {
         int filaSeleccionada = potasioEdicionReglasPanel.jTablePotasio.getSelectedRow();
         if (filaSeleccionada >= 0) {
-            PotasioRegla nutrienteReglaEditar = listaReglaPotasio.get(filaSeleccionada);
-            potasioEdicionReglasPanel.jTextFieldId.setText(nutrienteReglaEditar.getIdPotasioRegla() + "");
-            potasioEdicionReglasPanel.jTextFieldNombreRegla.setText(nutrienteReglaEditar.getNombreRegla() + "");
-            potasioEdicionReglasPanel.jTextFieldPremisa1.setText(nutrienteReglaEditar.getLimiteInferior() + "");
-            potasioEdicionReglasPanel.jTextFieldPremisa2.setText(nutrienteReglaEditar.getLimiteSuperior() + "");
-            potasioEdicionReglasPanel.jTextFieldConclusion.setText(nutrienteReglaEditar.getConclusion() + "");
+            PotasioRegla potasioReglaEditar = listaReglaPotasio.get(filaSeleccionada);
+            potasioEdicionReglasPanel.jTextFieldId.setText(potasioReglaEditar.getIdPotasioRegla() + "");
+            potasioEdicionReglasPanel.jTextFieldNombreRegla.setText(potasioReglaEditar.getNombreRegla() + "");
+            potasioEdicionReglasPanel.jTextFieldPremisa1.setText(potasioReglaEditar.getLimiteInferior() + "");
+            potasioEdicionReglasPanel.jTextFieldPremisa2.setText(potasioReglaEditar.getLimiteSuperior() + "");
+            potasioEdicionReglasPanel.jTextFieldConclusion.setText(potasioReglaEditar.getConclusion() + "");
         } else {
             JOptionPane.showMessageDialog(null, "Seleccione un Regla para la edicion", "Falta seleccionar", JOptionPane.ERROR_MESSAGE);
         }
+        actionAceptar = "EDIT";
     }
 
     private void buttonAnadirReglaActionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,41 +89,99 @@ public class PotasioEdicionReglasPanelController {
         potasioEdicionReglasPanel.jTextFieldPremisa1.setText("");
         potasioEdicionReglasPanel.jTextFieldPremisa2.setText("");
         potasioEdicionReglasPanel.jTextFieldConclusion.setText("");
+
+        actionAceptar = "ADD";
     }
 
     private void buttonEliminarReglaActionPerformed(java.awt.event.ActionEvent evt) {
-         int filaSeleccionada = potasioEdicionReglasPanel.jTablePotasio.getSelectedRow();
+        int filaSeleccionada = potasioEdicionReglasPanel.jTablePotasio.getSelectedRow();
         if (filaSeleccionada >= 0) {
-            PotasioRegla nutrienteReglaEditar = listaReglaPotasio.get(filaSeleccionada);
-            potasioEdicionReglasPanel.jTextFieldId.setText(nutrienteReglaEditar.getIdPotasioRegla() + "");
-            potasioEdicionReglasPanel.jTextFieldNombreRegla.setText(nutrienteReglaEditar.getNombreRegla() + "");
-            potasioEdicionReglasPanel.jTextFieldPremisa1.setText(nutrienteReglaEditar.getLimiteInferior() + "");
-            potasioEdicionReglasPanel.jTextFieldPremisa2.setText(nutrienteReglaEditar.getLimiteSuperior() + "");
-            potasioEdicionReglasPanel.jTextFieldConclusion.setText(nutrienteReglaEditar.getConclusion() + "");
+            PotasioRegla potasioReglaEditar = listaReglaPotasio.get(filaSeleccionada);
+            potasioEdicionReglasPanel.jTextFieldId.setText(potasioReglaEditar.getIdPotasioRegla() + "");
+            potasioEdicionReglasPanel.jTextFieldNombreRegla.setText(potasioReglaEditar.getNombreRegla() + "");
+            potasioEdicionReglasPanel.jTextFieldPremisa1.setText(potasioReglaEditar.getLimiteInferior() + "");
+            potasioEdicionReglasPanel.jTextFieldPremisa2.setText(potasioReglaEditar.getLimiteSuperior() + "");
+            potasioEdicionReglasPanel.jTextFieldConclusion.setText(potasioReglaEditar.getConclusion() + "");
         } else {
             JOptionPane.showMessageDialog(null, "Seleccione un Regla para la edicion", "Falta seleccionar", JOptionPane.ERROR_MESSAGE);
         }
+
+        actionAceptar = "DELETE";
+    }
+
+    public void buttonAceptar() {
+        potasioEdicionReglasPanel.jButtonAceptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAceptarActionPerformed(evt);
+            }
+        });
+    }
+
+    private void buttonAceptarActionPerformed(java.awt.event.ActionEvent evt) {
+        switch (actionAceptar) {
+            case "EDIT":
+                int idReglaEdit = Integer.parseInt(potasioEdicionReglasPanel.jTextFieldId.getText());
+                PotasioRegla potasioReglaEditar = new PotasioRegla();
+                potasioReglaEditar.setNombreRegla(potasioEdicionReglasPanel.jTextFieldNombreRegla.getText());
+                potasioReglaEditar.setLimiteInferior(Integer.parseInt(potasioEdicionReglasPanel.jTextFieldPremisa1.getText()));
+                potasioReglaEditar.setLimiteSuperior(Integer.parseInt(potasioEdicionReglasPanel.jTextFieldPremisa2.getText()));
+                potasioReglaEditar.setConclusion(potasioEdicionReglasPanel.jTextFieldConclusion.getText());
+
+                potasioReglaService.updatePotasioRegla(idReglaEdit, potasioReglaEditar);
+                llenarJTable();
+
+                //para guardar en archivo drl en formato drools
+                potasioReglaService.actualizarReglasPotasioDrl();
+
+                break;
+            case "ADD":
+                int idReglaAdd = Integer.parseInt(potasioEdicionReglasPanel.jTextFieldId.getText());
+                PotasioRegla potasioReglaAnadir = new PotasioRegla();
+                potasioReglaAnadir.setNombreRegla(potasioEdicionReglasPanel.jTextFieldNombreRegla.getText());
+                potasioReglaAnadir.setLimiteInferior(Integer.parseInt(potasioEdicionReglasPanel.jTextFieldPremisa1.getText()));
+                potasioReglaAnadir.setLimiteSuperior(Integer.parseInt(potasioEdicionReglasPanel.jTextFieldPremisa2.getText()));
+                potasioReglaAnadir.setConclusion(potasioEdicionReglasPanel.jTextFieldConclusion.getText());
+
+                potasioReglaService.createPotasioRegla(potasioReglaAnadir);
+                llenarJTable();
+
+                //para guardar en archivo drl en formato drools descomentar
+                potasioReglaService.actualizarReglasPotasioDrl();
+                break;
+            case "DELETE":
+                int idReglaDelete = Integer.parseInt(potasioEdicionReglasPanel.jTextFieldId.getText());
+
+                potasioReglaService.deletePotasioRegla(idReglaDelete);
+                llenarJTable();
+                //para guardar en archivo drl en formato drools descomentar
+                potasioReglaService.actualizarReglasPotasioDrl();
+                break;
+            default:
+                System.out.println("No hay Valores");
+                break;
+        }
+
     }
 
     public void llenarReglasService() {
 
         PotasioRegla potasioRegla = new PotasioRegla();
         potasioRegla.setIdPotasioRegla(1);
-        potasioRegla.setNombreRegla("Nivel de Fosforo Muy Alto");
+        potasioRegla.setNombreRegla("Nivel de Potasio Muy Alto");
         potasioRegla.setLimiteInferior(110);
         potasioRegla.setLimiteSuperior(120);
         potasioRegla.setConclusion("Muy Alto");
 
         PotasioRegla potasioRegla2 = new PotasioRegla();
         potasioRegla2.setIdPotasioRegla(2);
-        potasioRegla2.setNombreRegla("Nivel de Fosforo Super bajo");
+        potasioRegla2.setNombreRegla("Nivel de potasio Super bajo");
         potasioRegla2.setLimiteInferior(0);
         potasioRegla2.setLimiteSuperior(10);
         potasioRegla2.setConclusion("Super Bajo");
 
         PotasioRegla potasioRegla3 = new PotasioRegla();
         potasioRegla3.setIdPotasioRegla(3);
-        potasioRegla3.setNombreRegla("Nivel de Fosforo Regular");
+        potasioRegla3.setNombreRegla("Nivel de potasio Regular");
         potasioRegla3.setLimiteInferior(30);
         potasioRegla3.setLimiteSuperior(50);
         potasioRegla3.setConclusion("Regular");

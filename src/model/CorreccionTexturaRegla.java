@@ -5,19 +5,19 @@ public class CorreccionTexturaRegla {
     int idCorreccionTextura;
     String nombreRegla;
     String texturaACorregir;
-    int porcentajeACorregir;
+    int ConclusionPorcACorregir;
 
     public CorreccionTexturaRegla() {
 
     }
 
     public CorreccionTexturaRegla(int idCorreccionTextura, String nombreRegla, String texturaACorregir,
-            int porcentajeACorregir) {
+            int ConclusionPorcACorregir) {
         super();
         this.idCorreccionTextura = idCorreccionTextura;
         this.nombreRegla = nombreRegla;
         this.texturaACorregir = texturaACorregir;
-        this.porcentajeACorregir = porcentajeACorregir;
+        this.ConclusionPorcACorregir = ConclusionPorcACorregir;
     }
 
     public int getIdCorreccionTextura() {
@@ -40,16 +40,16 @@ public class CorreccionTexturaRegla {
         return texturaACorregir;
     }
 
-    public void setTexturaACorregir(String texturaACorregir) {
+    public void setConclusionPorcACorregir(String texturaACorregir) {
         this.texturaACorregir = texturaACorregir;
     }
 
-    public int getPorcentajeACorregir() {
-        return porcentajeACorregir;
+    public int getConclusionPorcACorregir() {
+        return ConclusionPorcACorregir;
     }
 
     public void setPorcentajeACorregir(int porcentajeACorregir) {
-        this.porcentajeACorregir = porcentajeACorregir;
+        this.ConclusionPorcACorregir = porcentajeACorregir;
     }
 
 }

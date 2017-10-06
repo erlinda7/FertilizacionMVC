@@ -4,12 +4,18 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import model.PhRegla;
 
 public class PhReglaService {
 
     ArrayList<PhRegla> listPhRegla;
+    private final String tabla = "ph_regla";
 
     public PhReglaService() {
 
@@ -18,7 +24,20 @@ public class PhReglaService {
     }
 
     public void createPhRegla(PhRegla newPhRegla) {
-        listPhRegla.add(newPhRegla);
+        try {
+            listPhRegla.add(newPhRegla);
+            PreparedStatement consulta;
+            Connection conexion = Conexion.obtener();
+            consulta = conexion.prepareStatement("INSERT INTO " + this.tabla + "(nombre_regla, limite_inferior, limite_superior, conclusion) VALUES(?, ?, ?, ?)");
+            consulta.setString(1, newPhRegla.getNombreRegla());
+            consulta.setInt(2, newPhRegla.getLimiteInferior());
+            consulta.setInt(3, newPhRegla.getLimiteSuperior());
+            consulta.setString(4, newPhRegla.getConclusion());
+
+            consulta.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(NitrogenoReglaService.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public PhRegla readPhRegla(int idPhRegla) {
@@ -57,7 +76,7 @@ public class PhReglaService {
 
     }
 
-    public void mostrarReglasDroolsFormat() {
+    public void actualizarReglasPHDrl() {
 
         File file = new File("./src/main/resources/rules/Ph2.drl");
         try {

@@ -1,10 +1,10 @@
 package rules 
 import model.Cultivo;
-rule "Nivel de ph xxxxxxxxx"
+rule "Nivel de ph Muy Alto"
     when
-        $c : Cultivo( nivelpH >= 30 && <=50 )
+        $c : Cultivo( nivelpH >= 110 && <=120 )
     then
-        $c.setTipoSuelo("xxxxxxxxxxx");
+        $c.setTipoSuelo("Muy Alto");
 end
 
 rule "Nivel de ph Super bajo"
@@ -12,5 +12,19 @@ rule "Nivel de ph Super bajo"
         $c : Cultivo( nivelpH >= 0 && <=10 )
     then
         $c.setTipoSuelo("Super Bajo");
+end
+
+rule "Nivel de ph Regular"
+    when
+        $c : Cultivo( nivelpH >= 30 && <=50 )
+    then
+        $c.setTipoSuelo("Regular");
+end
+
+rule "sssssssssssssssssssss"
+    when
+        $c : Cultivo( nivelpH >= 12 && <=34 )
+    then
+        $c.setTipoSuelo("fdhreytr");
 end
 

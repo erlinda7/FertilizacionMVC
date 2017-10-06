@@ -9,7 +9,12 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import model.PotasioRegla;
 
 /**
@@ -19,6 +24,7 @@ import model.PotasioRegla;
 public class PotasioReglaService {
 
     ArrayList<PotasioRegla> listPotasioRegla;
+    private final String tabla = "potasio_regla";
 
     public PotasioReglaService() {
 
@@ -27,7 +33,20 @@ public class PotasioReglaService {
     }
 
     public void createPotasioRegla(PotasioRegla newPotasioRegla) {
-        listPotasioRegla.add(newPotasioRegla);
+        try {
+            listPotasioRegla.add(newPotasioRegla);
+            PreparedStatement consulta;
+            Connection conexion = Conexion.obtener();
+            consulta = conexion.prepareStatement("INSERT INTO " + this.tabla + "(nombre_regla, limite_inferior, limite_superior, conclusion) VALUES(?, ?, ?, ?)");
+            consulta.setString(1, newPotasioRegla.getNombreRegla());
+            consulta.setInt(2, newPotasioRegla.getLimiteInferior());
+            consulta.setInt(3, newPotasioRegla.getLimiteSuperior());
+            consulta.setString(4, newPotasioRegla.getConclusion());
+
+            consulta.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(NitrogenoReglaService.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public PotasioRegla readPotasioRegla(int idPotasioRegla) {
@@ -66,7 +85,7 @@ public class PotasioReglaService {
 
     }
 
-    public void mostrarReglasDroolsFormat() {
+    public void actualizarReglasPotasioDrl() {
 
         File file = new File("./src/main/resources/rules/NutrientePotasio.drl");
         try {

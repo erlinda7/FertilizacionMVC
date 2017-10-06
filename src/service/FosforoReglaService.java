@@ -9,7 +9,12 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import model.FosforoRegla;
 
 /**
@@ -19,6 +24,7 @@ import model.FosforoRegla;
 public class FosforoReglaService {
 
     ArrayList<FosforoRegla> listFosforoRegla;
+    private final String tabla = "fosforo_regla";
 
     public FosforoReglaService() {
 
@@ -27,7 +33,20 @@ public class FosforoReglaService {
     }
 
     public void createFosforoRegla(FosforoRegla newFosforoRegla) {
-        listFosforoRegla.add(newFosforoRegla);
+        try {
+            listFosforoRegla.add(newFosforoRegla);
+            PreparedStatement consulta;
+            Connection conexion = Conexion.obtener();
+            consulta = conexion.prepareStatement("INSERT INTO " + this.tabla + "(nombre_regla, limite_inferior, limite_superior, conclusion) VALUES(?, ?, ?, ?)");
+            consulta.setString(1, newFosforoRegla.getNombreRegla());
+            consulta.setInt(2, newFosforoRegla.getLimiteInferior());
+            consulta.setInt(3, newFosforoRegla.getLimiteSuperior());
+            consulta.setString(4, newFosforoRegla.getConclusion());
+
+            consulta.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(NitrogenoReglaService.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public FosforoRegla readFosforoRegla(int idFosforoRegla) {
@@ -66,7 +85,7 @@ public class FosforoReglaService {
 
     }
 
-    public void mostrarReglasDroolsFormat() {
+    public void actualizarReglasFosforoDrl() {
 
         File file = new File("./src/main/resources/rules/NutrienteFosforo.drl");
         try {

@@ -60,7 +60,7 @@ public class MainPruebaReglas {
         // delete
         phReglaService.deletePhRegla(3);
 
-        phReglaService.mostrarReglasDroolsFormat();
+        phReglaService.actualizarReglasPHDrl();
 
         // fin test para MO
     }

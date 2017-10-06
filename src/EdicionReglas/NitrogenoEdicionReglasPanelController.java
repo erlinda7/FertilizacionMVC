@@ -72,12 +72,12 @@ public class NitrogenoEdicionReglasPanelController {
     private void buttonEditarReglaActionPerformed(java.awt.event.ActionEvent evt) {
         int filaSeleccionada = nitrogenoedicionReglasPanel.jTableNitrogeno.getSelectedRow();
         if (filaSeleccionada >= 0) {
-            NitrogenoRegla nutrienteReglaEditar = listaReglaNitrogeno.get(filaSeleccionada);
-            nitrogenoedicionReglasPanel.jTextFieldId.setText(nutrienteReglaEditar.getIdNitrogenoRegla() + "");
-            nitrogenoedicionReglasPanel.jTextFieldNombreRegla.setText(nutrienteReglaEditar.getNombreRegla() + "");
-            nitrogenoedicionReglasPanel.jTextFieldPremisa1.setText(nutrienteReglaEditar.getLimiteInferior() + "");
-            nitrogenoedicionReglasPanel.jTextFieldPremisa2.setText(nutrienteReglaEditar.getLimiteSuperior() + "");
-            nitrogenoedicionReglasPanel.jTextFieldConclusion.setText(nutrienteReglaEditar.getConclusion() + "");
+            NitrogenoRegla nitrogenoReglaEditar = listaReglaNitrogeno.get(filaSeleccionada);
+            nitrogenoedicionReglasPanel.jTextFieldId.setText(nitrogenoReglaEditar.getIdNitrogenoRegla() + "");
+            nitrogenoedicionReglasPanel.jTextFieldNombreRegla.setText(nitrogenoReglaEditar.getNombreRegla() + "");
+            nitrogenoedicionReglasPanel.jTextFieldPremisa1.setText(nitrogenoReglaEditar.getLimiteInferior() + "");
+            nitrogenoedicionReglasPanel.jTextFieldPremisa2.setText(nitrogenoReglaEditar.getLimiteSuperior() + "");
+            nitrogenoedicionReglasPanel.jTextFieldConclusion.setText(nitrogenoReglaEditar.getConclusion() + "");
         } else {
             JOptionPane.showMessageDialog(null, "Seleccione un Regla para la edicion", "Falta seleccionar", JOptionPane.ERROR_MESSAGE);
         }
@@ -98,12 +98,12 @@ public class NitrogenoEdicionReglasPanelController {
     private void buttonEliminarReglaActionPerformed(java.awt.event.ActionEvent evt) {
         int filaSeleccionada = nitrogenoedicionReglasPanel.jTableNitrogeno.getSelectedRow();
         if (filaSeleccionada >= 0) {
-            NitrogenoRegla nutrienteReglaEditar = listaReglaNitrogeno.get(filaSeleccionada);
-            nitrogenoedicionReglasPanel.jTextFieldId.setText(nutrienteReglaEditar.getIdNitrogenoRegla() + "");
-            nitrogenoedicionReglasPanel.jTextFieldNombreRegla.setText(nutrienteReglaEditar.getNombreRegla() + "");
-            nitrogenoedicionReglasPanel.jTextFieldPremisa1.setText(nutrienteReglaEditar.getLimiteInferior() + "");
-            nitrogenoedicionReglasPanel.jTextFieldPremisa2.setText(nutrienteReglaEditar.getLimiteSuperior() + "");
-            nitrogenoedicionReglasPanel.jTextFieldConclusion.setText(nutrienteReglaEditar.getConclusion() + "");
+            NitrogenoRegla nitrogenoReglaEditar = listaReglaNitrogeno.get(filaSeleccionada);
+            nitrogenoedicionReglasPanel.jTextFieldId.setText(nitrogenoReglaEditar.getIdNitrogenoRegla() + "");
+            nitrogenoedicionReglasPanel.jTextFieldNombreRegla.setText(nitrogenoReglaEditar.getNombreRegla() + "");
+            nitrogenoedicionReglasPanel.jTextFieldPremisa1.setText(nitrogenoReglaEditar.getLimiteInferior() + "");
+            nitrogenoedicionReglasPanel.jTextFieldPremisa2.setText(nitrogenoReglaEditar.getLimiteSuperior() + "");
+            nitrogenoedicionReglasPanel.jTextFieldConclusion.setText(nitrogenoReglaEditar.getConclusion() + "");
         } else {
             JOptionPane.showMessageDialog(null, "Seleccione un Regla para la edicion", "Falta seleccionar", JOptionPane.ERROR_MESSAGE);
         }
