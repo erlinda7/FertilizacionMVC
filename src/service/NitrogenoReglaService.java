@@ -9,7 +9,12 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import model.NitrogenoRegla;
 
 /**
@@ -19,6 +24,7 @@ import model.NitrogenoRegla;
 public class NitrogenoReglaService {
 
     ArrayList<NitrogenoRegla> listNitrogenoRegla;
+    private final String tabla = "nitrogeno_regla";
 
     public NitrogenoReglaService() {
 
@@ -27,7 +33,20 @@ public class NitrogenoReglaService {
     }
 
     public void createNitrogenoRegla(NitrogenoRegla newNitrogenoRegla) {
-        listNitrogenoRegla.add(newNitrogenoRegla);
+        try {
+            listNitrogenoRegla.add(newNitrogenoRegla);
+            PreparedStatement consulta;
+            Connection conexion = Conexion.obtener();
+            consulta = conexion.prepareStatement("INSERT INTO " + this.tabla + "(nombre_regla, limite_inferior, limite_superior, conclusion) VALUES(?, ?, ?, ?)");
+            consulta.setString(1, newNitrogenoRegla.getNombreRegla());
+            consulta.setInt(2, newNitrogenoRegla.getLimiteInferior());
+            consulta.setInt(3, newNitrogenoRegla.getLimiteSuperior());
+            consulta.setString(4, newNitrogenoRegla.getConclusion());
+
+            consulta.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(NitrogenoReglaService.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public NitrogenoRegla readNitrogenoRegla(int idNitrogenoRegla) {
@@ -50,8 +69,17 @@ public class NitrogenoReglaService {
     }
 
     public void deleteNitrogenoRegla(int idNitrogenoRegla) {
-        NitrogenoRegla nitrogenoReglaEliminar = readNitrogenoRegla(idNitrogenoRegla);
-        listNitrogenoRegla.remove(nitrogenoReglaEliminar);
+        //try {
+            NitrogenoRegla nitrogenoReglaEliminar = readNitrogenoRegla(idNitrogenoRegla);
+            listNitrogenoRegla.remove(nitrogenoReglaEliminar);
+//            PreparedStatement consulta;
+//            Connection conexion = Conexion.obtener();
+//            consulta = conexion.prepareStatement(" DELETE FROM" + this.tabla + "WHERE id_nitrogeno_regla= " + idNitrogenoRegla );
+//            consulta.execute();
+//        } catch (SQLException ex) {
+//            Logger.getLogger(NitrogenoReglaService.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+
     }
 
     public void mostrarReglas() {
@@ -66,24 +94,7 @@ public class NitrogenoReglaService {
 
     }
 
-    public void mostrarReglasDroolsFormat() {
-
-//        for (int i = 0; i < listNutrienteRegla.size(); i++) {
-//        	
-//        	String nombreRegla="Rule "+"\""+listNutrienteRegla.get(i).getNombreRegla()+"\"\n";
-//            System.out.print(nombreRegla);
-//            String when="    when\n";
-//            System.out.print(when);
-//            String condicion="        $c : Cultivo( nivelNitrogeno >= "+listNutrienteRegla.get(i).getLimiteInferior()+" && <="+listNutrienteRegla.get(i).getLimiteSuperior()+" )\n";
-//            System.out.print(condicion);
-//            String then="    then\n";
-//            System.out.print(then);
-//            String conclusion="        $c.setRangoNivelNitrogeno(\""+listNutrienteRegla.get(i).getConclusion()+"\");\n";
-//            System.out.print(conclusion);
-//            String end="end\n";
-//            System.out.print(end);
-//            System.out.print("\n");
-//        }
+    public void actualizarReglasNitrogenoDrl() {
         File file = new File("./src/main/resources/rules/NutrienteNitrogeno.drl");
         try {
             FileOutputStream out = new FileOutputStream(file);
@@ -115,5 +126,18 @@ public class NitrogenoReglaService {
             e.printStackTrace();
         }
 
+    }
+
+    public static void main(String[] args) {
+
+        NitrogenoReglaService nitrogenoReglaService = new NitrogenoReglaService();
+        NitrogenoRegla nitrogenoRegla = new NitrogenoRegla();
+
+        nitrogenoRegla.setNombreRegla("regla nitrogeno baaajoo");
+        nitrogenoRegla.setLimiteInferior(12);
+        nitrogenoRegla.setLimiteSuperior(15);
+        nitrogenoRegla.setConclusion("dsgdgdfhfhdhfd");
+
+        nitrogenoReglaService.createNitrogenoRegla(nitrogenoRegla);
     }
 }

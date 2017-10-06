@@ -21,16 +21,20 @@ public class NitrogenoEdicionReglasPanelController {
     NitrogenoReglaService nitrogenoReglaService;
     ArrayList<NitrogenoRegla> listaReglaNitrogeno;
 
+    String actionAceptar;
+
     public NitrogenoEdicionReglasPanelController(NitrogenoEdicionReglasPanel nitrogenoedicionReglasPanel) {
         this.nitrogenoedicionReglasPanel = nitrogenoedicionReglasPanel;
         nitrogenoReglaService = new NitrogenoReglaService();
         llenarReglasService();
         listaReglaNitrogeno = nitrogenoReglaService.readAllNitrogeno();
-        llenarTabla();
+        llenarJTable();
         confBotonesEdicion();
+        buttonAceptar();
+        actionAceptar = "";
     }
 
-    public void llenarTabla() {
+    public void llenarJTable() {
         DefaultTableModel dtm = (DefaultTableModel) nitrogenoedicionReglasPanel.jTableNitrogeno.getModel();
         dtm.setRowCount(0);
         for (int i = 0; i < listaReglaNitrogeno.size(); i++) {
@@ -68,10 +72,7 @@ public class NitrogenoEdicionReglasPanelController {
     private void buttonEditarReglaActionPerformed(java.awt.event.ActionEvent evt) {
         int filaSeleccionada = nitrogenoedicionReglasPanel.jTableNitrogeno.getSelectedRow();
         if (filaSeleccionada >= 0) {
-            //System.out.println("Editando reglas posicion: "+ filaSeleccionada);
             NitrogenoRegla nutrienteReglaEditar = listaReglaNitrogeno.get(filaSeleccionada);
-//            System.out.println(nutrienteReglaEditar.getNombreRegla());
-//            System.out.println(nutrienteReglaEditar.getIdNutrienteRegla());
             nitrogenoedicionReglasPanel.jTextFieldId.setText(nutrienteReglaEditar.getIdNitrogenoRegla() + "");
             nitrogenoedicionReglasPanel.jTextFieldNombreRegla.setText(nutrienteReglaEditar.getNombreRegla() + "");
             nitrogenoedicionReglasPanel.jTextFieldPremisa1.setText(nutrienteReglaEditar.getLimiteInferior() + "");
@@ -80,6 +81,7 @@ public class NitrogenoEdicionReglasPanelController {
         } else {
             JOptionPane.showMessageDialog(null, "Seleccione un Regla para la edicion", "Falta seleccionar", JOptionPane.ERROR_MESSAGE);
         }
+        actionAceptar = "EDIT";
     }
 
     private void buttonAnadirReglaActionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,15 +91,14 @@ public class NitrogenoEdicionReglasPanelController {
         nitrogenoedicionReglasPanel.jTextFieldPremisa2.setText("");
         nitrogenoedicionReglasPanel.jTextFieldConclusion.setText("");
 
+        actionAceptar = "ADD";
+
     }
 
     private void buttonEliminarReglaActionPerformed(java.awt.event.ActionEvent evt) {
         int filaSeleccionada = nitrogenoedicionReglasPanel.jTableNitrogeno.getSelectedRow();
         if (filaSeleccionada >= 0) {
-            //System.out.println("Editando reglas posicion: "+ filaSeleccionada);
             NitrogenoRegla nutrienteReglaEditar = listaReglaNitrogeno.get(filaSeleccionada);
-//            System.out.println(nutrienteReglaEditar.getNombreRegla());
-//            System.out.println(nutrienteReglaEditar.getIdNutrienteRegla());
             nitrogenoedicionReglasPanel.jTextFieldId.setText(nutrienteReglaEditar.getIdNitrogenoRegla() + "");
             nitrogenoedicionReglasPanel.jTextFieldNombreRegla.setText(nutrienteReglaEditar.getNombreRegla() + "");
             nitrogenoedicionReglasPanel.jTextFieldPremisa1.setText(nutrienteReglaEditar.getLimiteInferior() + "");
@@ -106,6 +107,63 @@ public class NitrogenoEdicionReglasPanelController {
         } else {
             JOptionPane.showMessageDialog(null, "Seleccione un Regla para la edicion", "Falta seleccionar", JOptionPane.ERROR_MESSAGE);
         }
+
+        actionAceptar = "DELETE";
+    }
+
+    public void buttonAceptar() {
+        nitrogenoedicionReglasPanel.jButtonAceptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAceptarActionPerformed(evt);
+            }
+        });
+    }
+
+    private void buttonAceptarActionPerformed(java.awt.event.ActionEvent evt) {
+        // System.out.println(actionAceptar);
+        switch (actionAceptar) {
+            case "EDIT":
+                int idReglaEdit = Integer.parseInt(nitrogenoedicionReglasPanel.jTextFieldId.getText());
+                NitrogenoRegla nitrogenoReglaEditar = new NitrogenoRegla();
+                nitrogenoReglaEditar.setNombreRegla(nitrogenoedicionReglasPanel.jTextFieldNombreRegla.getText());
+                nitrogenoReglaEditar.setLimiteInferior(Integer.parseInt(nitrogenoedicionReglasPanel.jTextFieldPremisa1.getText()));
+                nitrogenoReglaEditar.setLimiteSuperior(Integer.parseInt(nitrogenoedicionReglasPanel.jTextFieldPremisa2.getText()));
+                nitrogenoReglaEditar.setConclusion(nitrogenoedicionReglasPanel.jTextFieldConclusion.getText());
+
+                nitrogenoReglaService.updateNitrogenoRegla(idReglaEdit, nitrogenoReglaEditar);
+                llenarJTable();
+
+                //para guardar en archivo drl en formato drools
+                nitrogenoReglaService.actualizarReglasNitrogenoDrl();
+
+                break;
+            case "ADD":
+                int idReglaAdd = Integer.parseInt(nitrogenoedicionReglasPanel.jTextFieldId.getText());
+                NitrogenoRegla nitrogenoReglaAnadir = new NitrogenoRegla();
+                nitrogenoReglaAnadir.setNombreRegla(nitrogenoedicionReglasPanel.jTextFieldNombreRegla.getText());
+                nitrogenoReglaAnadir.setLimiteInferior(Integer.parseInt(nitrogenoedicionReglasPanel.jTextFieldPremisa1.getText()));
+                nitrogenoReglaAnadir.setLimiteSuperior(Integer.parseInt(nitrogenoedicionReglasPanel.jTextFieldPremisa2.getText()));
+                nitrogenoReglaAnadir.setConclusion(nitrogenoedicionReglasPanel.jTextFieldConclusion.getText());
+
+                nitrogenoReglaService.createNitrogenoRegla(nitrogenoReglaAnadir);
+                llenarJTable();
+
+                //para guardar en archivo drl en formato drools descomentar
+                //nitrogenoReglaService.actualizarReglasNitrogenoDrl();
+                break;
+            case "DELETE":
+                int idReglaDelete = Integer.parseInt(nitrogenoedicionReglasPanel.jTextFieldId.getText());
+
+                nitrogenoReglaService.deleteNitrogenoRegla(idReglaDelete);
+                llenarJTable();
+                //para guardar en archivo drl en formato drools descomentar
+                nitrogenoReglaService.actualizarReglasNitrogenoDrl();
+                break;
+            default:
+                System.out.println("No hay Valores");
+                break;
+        }
+
     }
 
     public void llenarReglasService() {
