@@ -11,6 +11,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -28,7 +29,7 @@ public class PotasioReglaService {
 
     public PotasioReglaService() {
 
-        listPotasioRegla = new ArrayList<PotasioRegla>();
+        listPotasioRegla = recuperarListaPotasioRegla();
 
     }
 
@@ -45,7 +46,7 @@ public class PotasioReglaService {
 
             consulta.executeUpdate();
         } catch (SQLException ex) {
-            Logger.getLogger(NitrogenoReglaService.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(PotasioReglaService.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -61,16 +62,41 @@ public class PotasioReglaService {
     }
 
     public void updatePotasioRegla(int idPotasioRegla, PotasioRegla newPotasioRegla) {
-        PotasioRegla potasioReglaParaActualizar = readPotasioRegla(idPotasioRegla);
-        potasioReglaParaActualizar.setNombreRegla(newPotasioRegla.getNombreRegla());
-        potasioReglaParaActualizar.setLimiteInferior(newPotasioRegla.getLimiteInferior());
-        potasioReglaParaActualizar.setLimiteSuperior(newPotasioRegla.getLimiteSuperior());
-        potasioReglaParaActualizar.setConclusion(newPotasioRegla.getConclusion());
+        try {
+            PotasioRegla potasioReglaParaActualizar = readPotasioRegla(idPotasioRegla);
+            potasioReglaParaActualizar.setNombreRegla(newPotasioRegla.getNombreRegla());
+            potasioReglaParaActualizar.setLimiteInferior(newPotasioRegla.getLimiteInferior());
+            potasioReglaParaActualizar.setLimiteSuperior(newPotasioRegla.getLimiteSuperior());
+            potasioReglaParaActualizar.setConclusion(newPotasioRegla.getConclusion());
+
+            PreparedStatement consultaupdate;
+            Connection conexion = Conexion.obtener();
+            consultaupdate = conexion.prepareStatement("UPDATE " + this.tabla + " SET nombre_regla = ?, limite_inferior = ?, limite_superior = ?, conclusion = ? WHERE id_regla_potasio = ?");
+            consultaupdate.setString(1, newPotasioRegla.getNombreRegla());
+            consultaupdate.setInt(2, newPotasioRegla.getLimiteInferior());
+            consultaupdate.setInt(3, newPotasioRegla.getLimiteSuperior());
+            consultaupdate.setString(4, newPotasioRegla.getConclusion());
+            consultaupdate.setInt(5, idPotasioRegla);
+
+            consultaupdate.executeUpdate();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(PotasioReglaService.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public void deletePotasioRegla(int idPotasioRegla) {
-        PotasioRegla potasioReglaEliminar = readPotasioRegla(idPotasioRegla);
-        listPotasioRegla.remove(potasioReglaEliminar);
+        try {
+            PotasioRegla potasioReglaEliminar = readPotasioRegla(idPotasioRegla);
+            listPotasioRegla.remove(potasioReglaEliminar);
+
+            PreparedStatement consulta;
+            Connection conexion = Conexion.obtener();
+            consulta = conexion.prepareStatement("DELETE FROM " + this.tabla + " WHERE id_regla_potasio = " + idPotasioRegla);
+            consulta.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(PotasioReglaService.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public void mostrarReglas() {
@@ -118,5 +144,20 @@ public class PotasioReglaService {
             e.printStackTrace();
         }
 
+    }
+    public ArrayList<PotasioRegla> recuperarListaPotasioRegla() {
+        Connection conexion = Conexion.obtener();
+        ArrayList<PotasioRegla> potasioReglaLista = new ArrayList<PotasioRegla>();
+        try {
+            PreparedStatement consulta = conexion.prepareStatement("SELECT id_regla_potasio, nombre_regla, limite_inferior, limite_superior, conclusion FROM " + this.tabla + " ORDER BY id_regla_potasio");
+            ResultSet resultado = consulta.executeQuery();
+            while (resultado.next()) {
+                potasioReglaLista.add(new PotasioRegla(resultado.getInt("id_regla_potasio"), resultado.getString("nombre_regla"), resultado.getInt("limite_inferior"), resultado.getInt("limite_superior"), resultado.getString("conclusion")));
+            }
+            //System.out.println("cantidad reglas: " + potasioReglaLista.size());
+        } catch (SQLException ex) {
+            Logger.getLogger(PotasioReglaService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return potasioReglaLista;
     }
 }

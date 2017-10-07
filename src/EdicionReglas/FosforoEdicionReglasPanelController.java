@@ -5,6 +5,7 @@
  */
 package EdicionReglas;
 
+import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -26,11 +27,23 @@ public class FosforoEdicionReglasPanelController {
     public FosforoEdicionReglasPanelController(FosforoEdicionReglasPanel fosforoEdicionReglasPanel) {
         this.fosforoEdicionReglasPanel = fosforoEdicionReglasPanel;
         fosforoReglaService = new FosforoReglaService();
-        llenarReglasService();
+        //llenarReglasService();
         listaReglaFosforo = fosforoReglaService.readAllFosforo();
         llenarJTable();
         confBotonesEdicion();
         buttonAceptar();
+        actionAceptar = "";
+
+        fosforoEdicionReglasPanel.jTextFieldId.setEnabled(false);
+        fosforoEdicionReglasPanel.jTextFieldId.setText("");
+        fosforoEdicionReglasPanel.jTextFieldNombreRegla.setEnabled(false);
+        fosforoEdicionReglasPanel.jTextFieldNombreRegla.setText("");
+        fosforoEdicionReglasPanel.jTextFieldPremisa1.setEnabled(false);
+        fosforoEdicionReglasPanel.jTextFieldPremisa1.setText("");
+        fosforoEdicionReglasPanel.jTextFieldPremisa2.setEnabled(false);
+        fosforoEdicionReglasPanel.jTextFieldPremisa2.setText("");
+        fosforoEdicionReglasPanel.jTextFieldConclusion.setEnabled(false);
+        fosforoEdicionReglasPanel.jTextFieldConclusion.setText("");
     }
 
     public void llenarJTable() {
@@ -80,7 +93,18 @@ public class FosforoEdicionReglasPanelController {
         } else {
             JOptionPane.showMessageDialog(null, "Seleccione un Regla para la edicion", "Falta seleccionar", JOptionPane.ERROR_MESSAGE);
         }
-        actionAceptar="EDIT";
+        actionAceptar = "EDIT";
+
+        fosforoEdicionReglasPanel.jTextFieldId.setEnabled(false);
+        fosforoEdicionReglasPanel.jTextFieldId.setDisabledTextColor(Color.gray);
+        fosforoEdicionReglasPanel.jTextFieldNombreRegla.setEnabled(true);
+        fosforoEdicionReglasPanel.jTextFieldNombreRegla.setDisabledTextColor(Color.white);
+        fosforoEdicionReglasPanel.jTextFieldPremisa1.setEnabled(true);
+        fosforoEdicionReglasPanel.jTextFieldPremisa1.setDisabledTextColor(Color.white);
+        fosforoEdicionReglasPanel.jTextFieldPremisa2.setEnabled(true);
+        fosforoEdicionReglasPanel.jTextFieldPremisa2.setDisabledTextColor(Color.white);
+        fosforoEdicionReglasPanel.jTextFieldConclusion.setEnabled(true);
+        fosforoEdicionReglasPanel.jTextFieldConclusion.setDisabledTextColor(Color.white);
     }
 
     private void buttonAnadirReglaActionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,8 +113,19 @@ public class FosforoEdicionReglasPanelController {
         fosforoEdicionReglasPanel.jTextFieldPremisa1.setText("");
         fosforoEdicionReglasPanel.jTextFieldPremisa2.setText("");
         fosforoEdicionReglasPanel.jTextFieldConclusion.setText("");
-        
-        actionAceptar="ADD";
+
+        actionAceptar = "ADD";
+
+        fosforoEdicionReglasPanel.jTextFieldId.setEnabled(false);
+        fosforoEdicionReglasPanel.jTextFieldId.setDisabledTextColor(Color.gray);
+        fosforoEdicionReglasPanel.jTextFieldNombreRegla.setEnabled(true);
+        fosforoEdicionReglasPanel.jTextFieldNombreRegla.setDisabledTextColor(Color.white);
+        fosforoEdicionReglasPanel.jTextFieldPremisa1.setEnabled(true);
+        fosforoEdicionReglasPanel.jTextFieldPremisa1.setDisabledTextColor(Color.white);
+        fosforoEdicionReglasPanel.jTextFieldPremisa2.setEnabled(true);
+        fosforoEdicionReglasPanel.jTextFieldPremisa2.setDisabledTextColor(Color.white);
+        fosforoEdicionReglasPanel.jTextFieldConclusion.setEnabled(true);
+        fosforoEdicionReglasPanel.jTextFieldConclusion.setDisabledTextColor(Color.white);
     }
 
     private void buttonEliminarReglaActionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,7 +140,18 @@ public class FosforoEdicionReglasPanelController {
         } else {
             JOptionPane.showMessageDialog(null, "Seleccione un Regla para la edicion", "Falta seleccionar", JOptionPane.ERROR_MESSAGE);
         }
-        actionAceptar="DELETE";
+        actionAceptar = "DELETE";
+
+        fosforoEdicionReglasPanel.jTextFieldId.setEnabled(false);
+        fosforoEdicionReglasPanel.jTextFieldId.setDisabledTextColor(Color.gray);
+        fosforoEdicionReglasPanel.jTextFieldNombreRegla.setEnabled(false);
+        fosforoEdicionReglasPanel.jTextFieldNombreRegla.setDisabledTextColor(Color.gray);
+        fosforoEdicionReglasPanel.jTextFieldPremisa1.setEnabled(false);
+        fosforoEdicionReglasPanel.jTextFieldPremisa1.setDisabledTextColor(Color.gray);
+        fosforoEdicionReglasPanel.jTextFieldPremisa2.setEnabled(false);
+        fosforoEdicionReglasPanel.jTextFieldPremisa2.setDisabledTextColor(Color.gray);
+        fosforoEdicionReglasPanel.jTextFieldConclusion.setEnabled(false);
+        fosforoEdicionReglasPanel.jTextFieldConclusion.setDisabledTextColor(Color.gray);
     }
 
     public void buttonAceptar() {
@@ -159,34 +205,44 @@ public class FosforoEdicionReglasPanelController {
                 System.out.println("No hay Valores");
                 break;
         }
+        fosforoEdicionReglasPanel.jTextFieldId.setEnabled(false);
+        fosforoEdicionReglasPanel.jTextFieldId.setText("");
+        fosforoEdicionReglasPanel.jTextFieldNombreRegla.setEnabled(false);
+        fosforoEdicionReglasPanel.jTextFieldNombreRegla.setText("");
+        fosforoEdicionReglasPanel.jTextFieldPremisa1.setEnabled(false);
+        fosforoEdicionReglasPanel.jTextFieldPremisa1.setText("");
+        fosforoEdicionReglasPanel.jTextFieldPremisa2.setEnabled(false);
+        fosforoEdicionReglasPanel.jTextFieldPremisa2.setText("");
+        fosforoEdicionReglasPanel.jTextFieldConclusion.setEnabled(false);
+        fosforoEdicionReglasPanel.jTextFieldConclusion.setText("");
 
     }
 
-    public void llenarReglasService() {
-
-        FosforoRegla fosforoRegla = new FosforoRegla();
-        fosforoRegla.setIdFosforoRegla(1);
-        fosforoRegla.setNombreRegla("Nivel de Fosforo Muy Alto");
-        fosforoRegla.setLimiteInferior(110);
-        fosforoRegla.setLimiteSuperior(120);
-        fosforoRegla.setConclusion("Muy Alto");
-
-        FosforoRegla fosforoRegla2 = new FosforoRegla();
-        fosforoRegla2.setIdFosforoRegla(2);
-        fosforoRegla2.setNombreRegla("Nivel de Fosforo Super bajo");
-        fosforoRegla2.setLimiteInferior(0);
-        fosforoRegla2.setLimiteSuperior(10);
-        fosforoRegla2.setConclusion("Super Bajo");
-
-        FosforoRegla fosforoRegla3 = new FosforoRegla();
-        fosforoRegla3.setIdFosforoRegla(3);
-        fosforoRegla3.setNombreRegla("Nivel de Fosforo Regular");
-        fosforoRegla3.setLimiteInferior(30);
-        fosforoRegla3.setLimiteSuperior(50);
-        fosforoRegla3.setConclusion("Regular");
-
-        fosforoReglaService.createFosforoRegla(fosforoRegla);
-        fosforoReglaService.createFosforoRegla(fosforoRegla2);
-        fosforoReglaService.createFosforoRegla(fosforoRegla3);
-    }
+//    public void llenarReglasService() {
+//
+//        FosforoRegla fosforoRegla = new FosforoRegla();
+//        fosforoRegla.setIdFosforoRegla(1);
+//        fosforoRegla.setNombreRegla("Nivel de Fosforo Muy Alto");
+//        fosforoRegla.setLimiteInferior(110);
+//        fosforoRegla.setLimiteSuperior(120);
+//        fosforoRegla.setConclusion("Muy Alto");
+//
+//        FosforoRegla fosforoRegla2 = new FosforoRegla();
+//        fosforoRegla2.setIdFosforoRegla(2);
+//        fosforoRegla2.setNombreRegla("Nivel de Fosforo Super bajo");
+//        fosforoRegla2.setLimiteInferior(0);
+//        fosforoRegla2.setLimiteSuperior(10);
+//        fosforoRegla2.setConclusion("Super Bajo");
+//
+//        FosforoRegla fosforoRegla3 = new FosforoRegla();
+//        fosforoRegla3.setIdFosforoRegla(3);
+//        fosforoRegla3.setNombreRegla("Nivel de Fosforo Regular");
+//        fosforoRegla3.setLimiteInferior(30);
+//        fosforoRegla3.setLimiteSuperior(50);
+//        fosforoRegla3.setConclusion("Regular");
+//
+//        fosforoReglaService.createFosforoRegla(fosforoRegla);
+//        fosforoReglaService.createFosforoRegla(fosforoRegla2);
+//        fosforoReglaService.createFosforoRegla(fosforoRegla3);
+//    }
 }

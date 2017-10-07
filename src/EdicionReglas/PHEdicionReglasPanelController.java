@@ -5,6 +5,7 @@
  */
 package EdicionReglas;
 
+import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -26,11 +27,24 @@ public class PHEdicionReglasPanelController {
     public PHEdicionReglasPanelController(PHEdicionReglasPanel phEdicionReglasPanel) {
         this.phEdicionReglasPanel = phEdicionReglasPanel;
         phReglaService = new PhReglaService();
-        llenarReglasService();
+       // llenarReglasService();
         listaReglaPh = phReglaService.readAllPh();
         llenarJTable();
         confBotonesEdicion();
         buttonAceptar();
+        
+        actionAceptar = "";
+
+        phEdicionReglasPanel.jTextFieldId.setEnabled(false);
+        phEdicionReglasPanel.jTextFieldId.setText("");
+        phEdicionReglasPanel.jTextFieldNombreRegla.setEnabled(false);
+        phEdicionReglasPanel.jTextFieldNombreRegla.setText("");
+        phEdicionReglasPanel.jTextFieldPremisa1.setEnabled(false);
+        phEdicionReglasPanel.jTextFieldPremisa1.setText("");
+        phEdicionReglasPanel.jTextFieldPremisa2.setEnabled(false);
+        phEdicionReglasPanel.jTextFieldPremisa2.setText("");
+        phEdicionReglasPanel.jTextFieldConclusion.setEnabled(false);
+        phEdicionReglasPanel.jTextFieldConclusion.setText("");
     }
 
     public void llenarJTable() {
@@ -81,6 +95,17 @@ public class PHEdicionReglasPanelController {
             JOptionPane.showMessageDialog(null, "Seleccione un Regla para la edicion", "Falta seleccionar", JOptionPane.ERROR_MESSAGE);
         }
         actionAceptar = "EDIT";
+        
+        phEdicionReglasPanel.jTextFieldId.setEnabled(false);
+       phEdicionReglasPanel.jTextFieldId.setDisabledTextColor(Color.gray);
+         phEdicionReglasPanel.jTextFieldNombreRegla.setEnabled(true);
+         phEdicionReglasPanel.jTextFieldNombreRegla.setDisabledTextColor(Color.white);
+        phEdicionReglasPanel.jTextFieldPremisa1.setEnabled(true);
+         phEdicionReglasPanel.jTextFieldPremisa1.setDisabledTextColor(Color.white);
+         phEdicionReglasPanel.jTextFieldPremisa2.setEnabled(true);
+         phEdicionReglasPanel.jTextFieldPremisa2.setDisabledTextColor(Color.white);
+         phEdicionReglasPanel.jTextFieldConclusion.setEnabled(true);
+         phEdicionReglasPanel.jTextFieldConclusion.setDisabledTextColor(Color.white);
     }
 
     private void buttonAnadirReglaActionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,6 +116,17 @@ public class PHEdicionReglasPanelController {
         phEdicionReglasPanel.jTextFieldConclusion.setText("");
 
         actionAceptar = "ADD";
+        
+        phEdicionReglasPanel.jTextFieldId.setEnabled(false);
+        phEdicionReglasPanel.jTextFieldId.setDisabledTextColor(Color.gray);
+        phEdicionReglasPanel.jTextFieldNombreRegla.setEnabled(true);
+        phEdicionReglasPanel.jTextFieldNombreRegla.setDisabledTextColor(Color.white);
+        phEdicionReglasPanel.jTextFieldPremisa1.setEnabled(true);
+        phEdicionReglasPanel.jTextFieldPremisa1.setDisabledTextColor(Color.white);
+        phEdicionReglasPanel.jTextFieldPremisa2.setEnabled(true);
+        phEdicionReglasPanel.jTextFieldPremisa2.setDisabledTextColor(Color.white);
+        phEdicionReglasPanel.jTextFieldConclusion.setEnabled(true);
+        phEdicionReglasPanel.jTextFieldConclusion.setDisabledTextColor(Color.white);
     }
 
     private void buttonEliminarReglaActionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,6 +143,17 @@ public class PHEdicionReglasPanelController {
         }
 
         actionAceptar = "DELETE";
+        
+         phEdicionReglasPanel.jTextFieldId.setEnabled(false);
+        phEdicionReglasPanel.jTextFieldId.setDisabledTextColor(Color.gray);
+        phEdicionReglasPanel.jTextFieldNombreRegla.setEnabled(false);
+        phEdicionReglasPanel.jTextFieldNombreRegla.setDisabledTextColor(Color.gray);
+        phEdicionReglasPanel.jTextFieldPremisa1.setEnabled(false);
+        phEdicionReglasPanel.jTextFieldPremisa1.setDisabledTextColor(Color.gray);
+        phEdicionReglasPanel.jTextFieldPremisa2.setEnabled(false);
+        phEdicionReglasPanel.jTextFieldPremisa2.setDisabledTextColor(Color.gray);
+        phEdicionReglasPanel.jTextFieldConclusion.setEnabled(false);
+        phEdicionReglasPanel.jTextFieldConclusion.setDisabledTextColor(Color.gray);
     }
 
     public void buttonAceptar() {
@@ -160,34 +207,43 @@ public class PHEdicionReglasPanelController {
                 System.out.println("No hay Valores");
                 break;
         }
-
+phEdicionReglasPanel.jTextFieldId.setEnabled(false);
+        phEdicionReglasPanel.jTextFieldId.setText("");
+       phEdicionReglasPanel.jTextFieldNombreRegla.setEnabled(false);
+       phEdicionReglasPanel.jTextFieldNombreRegla.setText("");
+       phEdicionReglasPanel.jTextFieldPremisa1.setEnabled(false);
+      phEdicionReglasPanel.jTextFieldPremisa1.setText("");
+        phEdicionReglasPanel.jTextFieldPremisa2.setEnabled(false);
+        phEdicionReglasPanel.jTextFieldPremisa2.setText("");
+      phEdicionReglasPanel.jTextFieldConclusion.setEnabled(false);
+        phEdicionReglasPanel.jTextFieldConclusion.setText("");
     }
 
-    public void llenarReglasService() {
-
-        PhRegla phRegla = new PhRegla();
-        phRegla.setIdPhRegla(1);
-        phRegla.setNombreRegla("Nivel de ph Muy Alto");
-        phRegla.setLimiteInferior(110);
-        phRegla.setLimiteSuperior(120);
-        phRegla.setConclusion("Muy Alto");
-
-        PhRegla phRegla2 = new PhRegla();
-        phRegla2.setIdPhRegla(2);
-        phRegla2.setNombreRegla("Nivel de ph Super bajo");
-        phRegla2.setLimiteInferior(0);
-        phRegla2.setLimiteSuperior(10);
-        phRegla2.setConclusion("Super Bajo");
-
-        PhRegla phRegla3 = new PhRegla();
-        phRegla3.setIdPhRegla(3);
-        phRegla3.setNombreRegla("Nivel de ph Regular");
-        phRegla3.setLimiteInferior(30);
-        phRegla3.setLimiteSuperior(50);
-        phRegla3.setConclusion("Regular");
-
-        phReglaService.createPhRegla(phRegla);
-        phReglaService.createPhRegla(phRegla2);
-        phReglaService.createPhRegla(phRegla3);
-    }
+//    public void llenarReglasService() {
+//
+//        PhRegla phRegla = new PhRegla();
+//        phRegla.setIdPhRegla(1);
+//        phRegla.setNombreRegla("Nivel de ph Muy Alto");
+//        phRegla.setLimiteInferior(110);
+//        phRegla.setLimiteSuperior(120);
+//        phRegla.setConclusion("Muy Alto");
+//
+//        PhRegla phRegla2 = new PhRegla();
+//        phRegla2.setIdPhRegla(2);
+//        phRegla2.setNombreRegla("Nivel de ph Super bajo");
+//        phRegla2.setLimiteInferior(0);
+//        phRegla2.setLimiteSuperior(10);
+//        phRegla2.setConclusion("Super Bajo");
+//
+//        PhRegla phRegla3 = new PhRegla();
+//        phRegla3.setIdPhRegla(3);
+//        phRegla3.setNombreRegla("Nivel de ph Regular");
+//        phRegla3.setLimiteInferior(30);
+//        phRegla3.setLimiteSuperior(50);
+//        phRegla3.setConclusion("Regular");
+//
+//        phReglaService.createPhRegla(phRegla);
+//        phReglaService.createPhRegla(phRegla2);
+//        phReglaService.createPhRegla(phRegla3);
+//    }
 }

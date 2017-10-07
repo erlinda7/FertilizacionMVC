@@ -58,11 +58,7 @@ public class NitrogenoEdicionReglasPanel extends javax.swing.JPanel {
 
         jLabel5.setText("Premisa 1");
 
-        jTextFieldPremisa1.setText("jTextField1");
-
         jLabel6.setText("Premisa 2");
-
-        jTextFieldPremisa2.setText("jTextField2");
 
         jLabel7.setText("then");
 
@@ -70,11 +66,11 @@ public class NitrogenoEdicionReglasPanel extends javax.swing.JPanel {
 
         jButtonAceptar.setText("Aceptar");
 
-        jTextFieldConclusion.setText("jTextField3");
-
-        jTextFieldId.setText("jTextField4");
-
-        jTextFieldNombreRegla.setText("jTextField4");
+        jTextFieldId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldIdActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelEdicionLayout = new javax.swing.GroupLayout(jPanelEdicion);
         jPanelEdicion.setLayout(jPanelEdicionLayout);
@@ -90,7 +86,7 @@ public class NitrogenoEdicionReglasPanel extends javax.swing.JPanel {
                         .addGroup(jPanelEdicionLayout.createSequentialGroup()
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jTextFieldId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextFieldId, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanelEdicionLayout.createSequentialGroup()
                             .addGap(22, 22, 22)
                             .addGroup(jPanelEdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -105,11 +101,11 @@ public class NitrogenoEdicionReglasPanel extends javax.swing.JPanel {
                             .addGap(41, 41, 41)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jTextFieldPremisa1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(62, 62, 62)
+                            .addComponent(jTextFieldPremisa1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(56, 56, 56)
                             .addComponent(jLabel6)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jTextFieldPremisa2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jTextFieldPremisa2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(0, 144, Short.MAX_VALUE))
         );
         jPanelEdicionLayout.setVerticalGroup(
@@ -213,6 +209,10 @@ public class NitrogenoEdicionReglasPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jTextFieldIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldIdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldIdActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton jButtonAceptar;
@@ -226,7 +226,7 @@ public class NitrogenoEdicionReglasPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanelEdicion;
+    public javax.swing.JPanel jPanelEdicion;
     public javax.swing.JScrollPane jScrollTable;
     public javax.swing.JTable jTableNitrogeno;
     public javax.swing.JTextField jTextFieldConclusion;

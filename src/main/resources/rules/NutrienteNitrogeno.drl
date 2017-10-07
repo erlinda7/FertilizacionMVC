@@ -1,23 +1,9 @@
 package rules 
 import model.Cultivo;
-rule "Nivel de Nitrogeno Muy Alto"
+rule "dddd"
     when
-        $c : Cultivo( nivelNitrogeno >= 110 && <=120 )
+        $c : Cultivo( nivelNitrogeno >= 44 && <=33 )
     then
-        $c.setRangoNivelNitrogeno("Muy Alto");
-end
-
-rule "Nivel de Nitrogeno Super bajo"
-    when
-        $c : Cultivo( nivelNitrogeno >= 0 && <=10 )
-    then
-        $c.setRangoNivelNitrogeno("Super Bajo");
-end
-
-rule "Nivel de Nitrogeno Regular"
-    when
-        $c : Cultivo( nivelNitrogeno >= 30 && <=50 )
-    then
-        $c.setRangoNivelNitrogeno("Regular");
+        $c.setRangoNivelNitrogeno("fdfdf");
 end
 

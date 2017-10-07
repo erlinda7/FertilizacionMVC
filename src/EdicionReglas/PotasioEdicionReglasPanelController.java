@@ -5,6 +5,7 @@
  */
 package EdicionReglas;
 
+import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -26,11 +27,23 @@ public class PotasioEdicionReglasPanelController {
     public PotasioEdicionReglasPanelController(PotasioEdicionReglasPanel potasioEdicionReglasPanel) {
         this.potasioEdicionReglasPanel = potasioEdicionReglasPanel;
         potasioReglaService = new PotasioReglaService();
-        llenarReglasService();
+        //llenarReglasService();
         listaReglaPotasio = potasioReglaService.readAllPotasio();
         llenarJTable();
         confBotonesEdicion();
         buttonAceptar();
+        actionAceptar = "";
+
+        potasioEdicionReglasPanel.jTextFieldId.setEnabled(false);
+        potasioEdicionReglasPanel.jTextFieldId.setText("");
+        potasioEdicionReglasPanel.jTextFieldNombreRegla.setEnabled(false);
+        potasioEdicionReglasPanel.jTextFieldNombreRegla.setText("");
+        potasioEdicionReglasPanel.jTextFieldPremisa1.setEnabled(false);
+        potasioEdicionReglasPanel.jTextFieldPremisa1.setText("");
+        potasioEdicionReglasPanel.jTextFieldPremisa2.setEnabled(false);
+        potasioEdicionReglasPanel.jTextFieldPremisa2.setText("");
+        potasioEdicionReglasPanel.jTextFieldConclusion.setEnabled(false);
+        potasioEdicionReglasPanel.jTextFieldConclusion.setText("");
     }
 
     public void llenarJTable() {
@@ -81,6 +94,17 @@ public class PotasioEdicionReglasPanelController {
             JOptionPane.showMessageDialog(null, "Seleccione un Regla para la edicion", "Falta seleccionar", JOptionPane.ERROR_MESSAGE);
         }
         actionAceptar = "EDIT";
+
+        potasioEdicionReglasPanel.jTextFieldId.setEnabled(false);
+        potasioEdicionReglasPanel.jTextFieldId.setDisabledTextColor(Color.gray);
+        potasioEdicionReglasPanel.jTextFieldNombreRegla.setEnabled(true);
+        potasioEdicionReglasPanel.jTextFieldNombreRegla.setDisabledTextColor(Color.white);
+        potasioEdicionReglasPanel.jTextFieldPremisa1.setEnabled(true);
+        potasioEdicionReglasPanel.jTextFieldPremisa1.setDisabledTextColor(Color.white);
+        potasioEdicionReglasPanel.jTextFieldPremisa2.setEnabled(true);
+        potasioEdicionReglasPanel.jTextFieldPremisa2.setDisabledTextColor(Color.white);
+        potasioEdicionReglasPanel.jTextFieldConclusion.setEnabled(true);
+        potasioEdicionReglasPanel.jTextFieldConclusion.setDisabledTextColor(Color.white);
     }
 
     private void buttonAnadirReglaActionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,6 +115,17 @@ public class PotasioEdicionReglasPanelController {
         potasioEdicionReglasPanel.jTextFieldConclusion.setText("");
 
         actionAceptar = "ADD";
+
+        potasioEdicionReglasPanel.jTextFieldId.setEnabled(false);
+        potasioEdicionReglasPanel.jTextFieldId.setDisabledTextColor(Color.gray);
+        potasioEdicionReglasPanel.jTextFieldNombreRegla.setEnabled(true);
+        potasioEdicionReglasPanel.jTextFieldNombreRegla.setDisabledTextColor(Color.white);
+        potasioEdicionReglasPanel.jTextFieldPremisa1.setEnabled(true);
+        potasioEdicionReglasPanel.jTextFieldPremisa1.setDisabledTextColor(Color.white);
+        potasioEdicionReglasPanel.jTextFieldPremisa2.setEnabled(true);
+        potasioEdicionReglasPanel.jTextFieldPremisa2.setDisabledTextColor(Color.white);
+        potasioEdicionReglasPanel.jTextFieldConclusion.setEnabled(true);
+        potasioEdicionReglasPanel.jTextFieldConclusion.setDisabledTextColor(Color.white);
     }
 
     private void buttonEliminarReglaActionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,6 +142,17 @@ public class PotasioEdicionReglasPanelController {
         }
 
         actionAceptar = "DELETE";
+
+        potasioEdicionReglasPanel.jTextFieldId.setEnabled(false);
+        potasioEdicionReglasPanel.jTextFieldId.setDisabledTextColor(Color.gray);
+        potasioEdicionReglasPanel.jTextFieldNombreRegla.setEnabled(false);
+        potasioEdicionReglasPanel.jTextFieldNombreRegla.setDisabledTextColor(Color.gray);
+        potasioEdicionReglasPanel.jTextFieldPremisa1.setEnabled(false);
+        potasioEdicionReglasPanel.jTextFieldPremisa1.setDisabledTextColor(Color.gray);
+        potasioEdicionReglasPanel.jTextFieldPremisa2.setEnabled(false);
+        potasioEdicionReglasPanel.jTextFieldPremisa2.setDisabledTextColor(Color.gray);
+        potasioEdicionReglasPanel.jTextFieldConclusion.setEnabled(false);
+        potasioEdicionReglasPanel.jTextFieldConclusion.setDisabledTextColor(Color.gray);
     }
 
     public void buttonAceptar() {
@@ -160,34 +206,43 @@ public class PotasioEdicionReglasPanelController {
                 System.out.println("No hay Valores");
                 break;
         }
-
+        potasioEdicionReglasPanel.jTextFieldId.setEnabled(false);
+        potasioEdicionReglasPanel.jTextFieldId.setText("");
+        potasioEdicionReglasPanel.jTextFieldNombreRegla.setEnabled(false);
+        potasioEdicionReglasPanel.jTextFieldNombreRegla.setText("");
+        potasioEdicionReglasPanel.jTextFieldPremisa1.setEnabled(false);
+        potasioEdicionReglasPanel.jTextFieldPremisa1.setText("");
+        potasioEdicionReglasPanel.jTextFieldPremisa2.setEnabled(false);
+        potasioEdicionReglasPanel.jTextFieldPremisa2.setText("");
+        potasioEdicionReglasPanel.jTextFieldConclusion.setEnabled(false);
+        potasioEdicionReglasPanel.jTextFieldConclusion.setText("");
     }
 
-    public void llenarReglasService() {
-
-        PotasioRegla potasioRegla = new PotasioRegla();
-        potasioRegla.setIdPotasioRegla(1);
-        potasioRegla.setNombreRegla("Nivel de Potasio Muy Alto");
-        potasioRegla.setLimiteInferior(110);
-        potasioRegla.setLimiteSuperior(120);
-        potasioRegla.setConclusion("Muy Alto");
-
-        PotasioRegla potasioRegla2 = new PotasioRegla();
-        potasioRegla2.setIdPotasioRegla(2);
-        potasioRegla2.setNombreRegla("Nivel de potasio Super bajo");
-        potasioRegla2.setLimiteInferior(0);
-        potasioRegla2.setLimiteSuperior(10);
-        potasioRegla2.setConclusion("Super Bajo");
-
-        PotasioRegla potasioRegla3 = new PotasioRegla();
-        potasioRegla3.setIdPotasioRegla(3);
-        potasioRegla3.setNombreRegla("Nivel de potasio Regular");
-        potasioRegla3.setLimiteInferior(30);
-        potasioRegla3.setLimiteSuperior(50);
-        potasioRegla3.setConclusion("Regular");
-
-        potasioReglaService.createPotasioRegla(potasioRegla);
-        potasioReglaService.createPotasioRegla(potasioRegla2);
-        potasioReglaService.createPotasioRegla(potasioRegla3);
-    }
+//    public void llenarReglasService() {
+//
+//        PotasioRegla potasioRegla = new PotasioRegla();
+//        potasioRegla.setIdPotasioRegla(1);
+//        potasioRegla.setNombreRegla("Nivel de Potasio Muy Alto");
+//        potasioRegla.setLimiteInferior(110);
+//        potasioRegla.setLimiteSuperior(120);
+//        potasioRegla.setConclusion("Muy Alto");
+//
+//        PotasioRegla potasioRegla2 = new PotasioRegla();
+//        potasioRegla2.setIdPotasioRegla(2);
+//        potasioRegla2.setNombreRegla("Nivel de potasio Super bajo");
+//        potasioRegla2.setLimiteInferior(0);
+//        potasioRegla2.setLimiteSuperior(10);
+//        potasioRegla2.setConclusion("Super Bajo");
+//
+//        PotasioRegla potasioRegla3 = new PotasioRegla();
+//        potasioRegla3.setIdPotasioRegla(3);
+//        potasioRegla3.setNombreRegla("Nivel de potasio Regular");
+//        potasioRegla3.setLimiteInferior(30);
+//        potasioRegla3.setLimiteSuperior(50);
+//        potasioRegla3.setConclusion("Regular");
+//
+//        potasioReglaService.createPotasioRegla(potasioRegla);
+//        potasioReglaService.createPotasioRegla(potasioRegla2);
+//        potasioReglaService.createPotasioRegla(potasioRegla3);
+//    }
 }

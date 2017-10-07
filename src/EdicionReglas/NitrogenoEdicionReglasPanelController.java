@@ -5,6 +5,7 @@
  */
 package EdicionReglas;
 
+import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -26,12 +27,25 @@ public class NitrogenoEdicionReglasPanelController {
     public NitrogenoEdicionReglasPanelController(NitrogenoEdicionReglasPanel nitrogenoedicionReglasPanel) {
         this.nitrogenoedicionReglasPanel = nitrogenoedicionReglasPanel;
         nitrogenoReglaService = new NitrogenoReglaService();
-        llenarReglasService();
+        //llenarReglasService();
         listaReglaNitrogeno = nitrogenoReglaService.readAllNitrogeno();
         llenarJTable();
         confBotonesEdicion();
         buttonAceptar();
         actionAceptar = "";
+
+        nitrogenoedicionReglasPanel.jTextFieldId.setEnabled(false);
+        nitrogenoedicionReglasPanel.jTextFieldId.setText("");
+        nitrogenoedicionReglasPanel.jTextFieldNombreRegla.setEnabled(false);
+        nitrogenoedicionReglasPanel.jTextFieldNombreRegla.setText("");
+        nitrogenoedicionReglasPanel.jTextFieldPremisa1.setEnabled(false);
+        nitrogenoedicionReglasPanel.jTextFieldPremisa1.setText("");
+        nitrogenoedicionReglasPanel.jTextFieldPremisa2.setEnabled(false);
+        nitrogenoedicionReglasPanel.jTextFieldPremisa2.setText("");
+        nitrogenoedicionReglasPanel.jTextFieldConclusion.setEnabled(false);
+        nitrogenoedicionReglasPanel.jTextFieldConclusion.setText("");
+
+        //nitrogenoedicionReglasPanel.jPanelEdicion.setVisible(false);
     }
 
     public void llenarJTable() {
@@ -82,6 +96,19 @@ public class NitrogenoEdicionReglasPanelController {
             JOptionPane.showMessageDialog(null, "Seleccione un Regla para la edicion", "Falta seleccionar", JOptionPane.ERROR_MESSAGE);
         }
         actionAceptar = "EDIT";
+
+        nitrogenoedicionReglasPanel.jTextFieldId.setEnabled(false);
+        nitrogenoedicionReglasPanel.jTextFieldId.setDisabledTextColor(Color.gray);
+        nitrogenoedicionReglasPanel.jTextFieldNombreRegla.setEnabled(true);
+        nitrogenoedicionReglasPanel.jTextFieldNombreRegla.setDisabledTextColor(Color.white);
+        nitrogenoedicionReglasPanel.jTextFieldPremisa1.setEnabled(true);
+        nitrogenoedicionReglasPanel.jTextFieldPremisa1.setDisabledTextColor(Color.white);
+        nitrogenoedicionReglasPanel.jTextFieldPremisa2.setEnabled(true);
+        nitrogenoedicionReglasPanel.jTextFieldPremisa2.setDisabledTextColor(Color.white);
+        nitrogenoedicionReglasPanel.jTextFieldConclusion.setEnabled(true);
+        nitrogenoedicionReglasPanel.jTextFieldConclusion.setDisabledTextColor(Color.white);
+
+        //nitrogenoedicionReglasPanel.jPanelEdicion.setVisible(true);
     }
 
     private void buttonAnadirReglaActionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,6 +120,18 @@ public class NitrogenoEdicionReglasPanelController {
 
         actionAceptar = "ADD";
 
+        nitrogenoedicionReglasPanel.jTextFieldId.setEnabled(false);
+        nitrogenoedicionReglasPanel.jTextFieldId.setDisabledTextColor(Color.gray);
+        nitrogenoedicionReglasPanel.jTextFieldNombreRegla.setEnabled(true);
+        nitrogenoedicionReglasPanel.jTextFieldNombreRegla.setDisabledTextColor(Color.white);
+        nitrogenoedicionReglasPanel.jTextFieldPremisa1.setEnabled(true);
+        nitrogenoedicionReglasPanel.jTextFieldPremisa1.setDisabledTextColor(Color.white);
+        nitrogenoedicionReglasPanel.jTextFieldPremisa2.setEnabled(true);
+        nitrogenoedicionReglasPanel.jTextFieldPremisa2.setDisabledTextColor(Color.white);
+        nitrogenoedicionReglasPanel.jTextFieldConclusion.setEnabled(true);
+        nitrogenoedicionReglasPanel.jTextFieldConclusion.setDisabledTextColor(Color.white);
+
+        //nitrogenoedicionReglasPanel.jPanelEdicion.setVisible(true);
     }
 
     private void buttonEliminarReglaActionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,6 +148,19 @@ public class NitrogenoEdicionReglasPanelController {
         }
 
         actionAceptar = "DELETE";
+
+        nitrogenoedicionReglasPanel.jTextFieldId.setEnabled(false);
+        nitrogenoedicionReglasPanel.jTextFieldId.setDisabledTextColor(Color.gray);
+        nitrogenoedicionReglasPanel.jTextFieldNombreRegla.setEnabled(false);
+        nitrogenoedicionReglasPanel.jTextFieldNombreRegla.setDisabledTextColor(Color.gray);
+        nitrogenoedicionReglasPanel.jTextFieldPremisa1.setEnabled(false);
+        nitrogenoedicionReglasPanel.jTextFieldPremisa1.setDisabledTextColor(Color.gray);
+        nitrogenoedicionReglasPanel.jTextFieldPremisa2.setEnabled(false);
+        nitrogenoedicionReglasPanel.jTextFieldPremisa2.setDisabledTextColor(Color.gray);
+        nitrogenoedicionReglasPanel.jTextFieldConclusion.setEnabled(false);
+        nitrogenoedicionReglasPanel.jTextFieldConclusion.setDisabledTextColor(Color.gray);
+
+        //nitrogenoedicionReglasPanel.jPanelEdicion.setVisible(true);
     }
 
     public void buttonAceptar() {
@@ -135,7 +187,7 @@ public class NitrogenoEdicionReglasPanelController {
 
                 //para guardar en archivo drl en formato drools
                 nitrogenoReglaService.actualizarReglasNitrogenoDrl();
-
+                //nitrogenoedicionReglasPanel.jPanelEdicion.setVisible(false);
                 break;
             case "ADD":
                 int idReglaAdd = Integer.parseInt(nitrogenoedicionReglasPanel.jTextFieldId.getText());
@@ -149,48 +201,59 @@ public class NitrogenoEdicionReglasPanelController {
                 llenarJTable();
 
                 //para guardar en archivo drl en formato drools descomentar
-                //nitrogenoReglaService.actualizarReglasNitrogenoDrl();
+                nitrogenoReglaService.actualizarReglasNitrogenoDrl();
+                //nitrogenoedicionReglasPanel.jPanelEdicion.setVisible(false);
                 break;
             case "DELETE":
                 int idReglaDelete = Integer.parseInt(nitrogenoedicionReglasPanel.jTextFieldId.getText());
-
+                //NitrogenoRegla nitrogenoRegla = listaReglaNitrogeno.get(idReglaAdd);
                 nitrogenoReglaService.deleteNitrogenoRegla(idReglaDelete);
                 llenarJTable();
                 //para guardar en archivo drl en formato drools descomentar
                 nitrogenoReglaService.actualizarReglasNitrogenoDrl();
+                //nitrogenoedicionReglasPanel.jPanelEdicion.setVisible(false);
                 break;
             default:
                 System.out.println("No hay Valores");
                 break;
         }
-
+        nitrogenoedicionReglasPanel.jTextFieldId.setEnabled(false);
+        nitrogenoedicionReglasPanel.jTextFieldId.setText("");
+        nitrogenoedicionReglasPanel.jTextFieldNombreRegla.setEnabled(false);
+        nitrogenoedicionReglasPanel.jTextFieldNombreRegla.setText("");
+        nitrogenoedicionReglasPanel.jTextFieldPremisa1.setEnabled(false);
+        nitrogenoedicionReglasPanel.jTextFieldPremisa1.setText("");
+        nitrogenoedicionReglasPanel.jTextFieldPremisa2.setEnabled(false);
+        nitrogenoedicionReglasPanel.jTextFieldPremisa2.setText("");
+        nitrogenoedicionReglasPanel.jTextFieldConclusion.setEnabled(false);
+        nitrogenoedicionReglasPanel.jTextFieldConclusion.setText("");
     }
 
-    public void llenarReglasService() {
-
-        NitrogenoRegla nitrogenoRegla = new NitrogenoRegla();
-        nitrogenoRegla.setIdNitrogenoRegla(1);
-        nitrogenoRegla.setNombreRegla("Nivel de Nitrogeno Muy Alto");
-        nitrogenoRegla.setLimiteInferior(110);
-        nitrogenoRegla.setLimiteSuperior(120);
-        nitrogenoRegla.setConclusion("Muy Alto");
-
-        NitrogenoRegla nitrogenoRegla2 = new NitrogenoRegla();
-        nitrogenoRegla2.setIdNitrogenoRegla(2);
-        nitrogenoRegla2.setNombreRegla("Nivel de Nitrogeno Super bajo");
-        nitrogenoRegla2.setLimiteInferior(0);
-        nitrogenoRegla2.setLimiteSuperior(10);
-        nitrogenoRegla2.setConclusion("Super Bajo");
-
-        NitrogenoRegla nitrogenoRegla3 = new NitrogenoRegla();
-        nitrogenoRegla3.setIdNitrogenoRegla(3);
-        nitrogenoRegla3.setNombreRegla("Nivel de Nitrogeno Regular");
-        nitrogenoRegla3.setLimiteInferior(30);
-        nitrogenoRegla3.setLimiteSuperior(50);
-        nitrogenoRegla3.setConclusion("Regular");
-
-        nitrogenoReglaService.createNitrogenoRegla(nitrogenoRegla);
-        nitrogenoReglaService.createNitrogenoRegla(nitrogenoRegla2);
-        nitrogenoReglaService.createNitrogenoRegla(nitrogenoRegla3);
-    }
+//    public void llenarReglasService() {
+//
+//        NitrogenoRegla nitrogenoRegla = new NitrogenoRegla();
+//        nitrogenoRegla.setIdNitrogenoRegla(40);
+//        nitrogenoRegla.setNombreRegla("Nivel de Nitrogeno Muy Alto");
+//        nitrogenoRegla.setLimiteInferior(110);
+//        nitrogenoRegla.setLimiteSuperior(120);
+//        nitrogenoRegla.setConclusion("Muy Alto");
+//
+//        NitrogenoRegla nitrogenoRegla2 = new NitrogenoRegla();
+//        nitrogenoRegla2.setIdNitrogenoRegla(41);
+//        nitrogenoRegla2.setNombreRegla("Nivel de Nitrogeno Super bajo");
+//        nitrogenoRegla2.setLimiteInferior(0);
+//        nitrogenoRegla2.setLimiteSuperior(10);
+//        nitrogenoRegla2.setConclusion("Super Bajo");
+//
+//        NitrogenoRegla nitrogenoRegla3 = new NitrogenoRegla();
+//        nitrogenoRegla3.setIdNitrogenoRegla(42);
+//        nitrogenoRegla3.setNombreRegla("Nivel de Nitrogeno Regular");
+//        nitrogenoRegla3.setLimiteInferior(30);
+//        nitrogenoRegla3.setLimiteSuperior(50);
+//        nitrogenoRegla3.setConclusion("Regular");
+//
+//        nitrogenoReglaService.createNitrogenoRegla(nitrogenoRegla);
+//        nitrogenoReglaService.createNitrogenoRegla(nitrogenoRegla2);
+//        nitrogenoReglaService.createNitrogenoRegla(nitrogenoRegla3);
+//    }
 }

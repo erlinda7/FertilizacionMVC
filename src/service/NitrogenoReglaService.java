@@ -11,6 +11,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -28,8 +29,7 @@ public class NitrogenoReglaService {
 
     public NitrogenoReglaService() {
 
-        listNitrogenoRegla = new ArrayList<NitrogenoRegla>();
-
+        listNitrogenoRegla = recuperarListaNitrogenoRegla();
     }
 
     public void createNitrogenoRegla(NitrogenoRegla newNitrogenoRegla) {
@@ -61,24 +61,41 @@ public class NitrogenoReglaService {
     }
 
     public void updateNitrogenoRegla(int idNitrogenoRegla, NitrogenoRegla newNitrogenoRegla) {
-        NitrogenoRegla nitrogenoReglaParaActualizar = readNitrogenoRegla(idNitrogenoRegla);
-        nitrogenoReglaParaActualizar.setNombreRegla(newNitrogenoRegla.getNombreRegla());
-        nitrogenoReglaParaActualizar.setLimiteInferior(newNitrogenoRegla.getLimiteInferior());
-        nitrogenoReglaParaActualizar.setLimiteSuperior(newNitrogenoRegla.getLimiteSuperior());
-        nitrogenoReglaParaActualizar.setConclusion(newNitrogenoRegla.getConclusion());
+        try {
+            NitrogenoRegla nitrogenoReglaParaActualizar = readNitrogenoRegla(idNitrogenoRegla);
+            nitrogenoReglaParaActualizar.setNombreRegla(newNitrogenoRegla.getNombreRegla());
+            nitrogenoReglaParaActualizar.setLimiteInferior(newNitrogenoRegla.getLimiteInferior());
+            nitrogenoReglaParaActualizar.setLimiteSuperior(newNitrogenoRegla.getLimiteSuperior());
+            nitrogenoReglaParaActualizar.setConclusion(newNitrogenoRegla.getConclusion());
+
+            PreparedStatement consultaupdate;
+            Connection conexion = Conexion.obtener();
+            consultaupdate = conexion.prepareStatement("UPDATE " + this.tabla + " SET nombre_regla = ?, limite_inferior = ?, limite_superior = ?, conclusion = ? WHERE id_nitrogeno_regla = ?");
+            consultaupdate.setString(1, newNitrogenoRegla.getNombreRegla());
+            consultaupdate.setInt(2, newNitrogenoRegla.getLimiteInferior());
+            consultaupdate.setInt(3, newNitrogenoRegla.getLimiteSuperior());
+            consultaupdate.setString(4, newNitrogenoRegla.getConclusion());
+            consultaupdate.setInt(5, idNitrogenoRegla);
+            
+            consultaupdate.executeUpdate();
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(NitrogenoReglaService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }
 
     public void deleteNitrogenoRegla(int idNitrogenoRegla) {
-        //try {
+        try {
             NitrogenoRegla nitrogenoReglaEliminar = readNitrogenoRegla(idNitrogenoRegla);
             listNitrogenoRegla.remove(nitrogenoReglaEliminar);
-//            PreparedStatement consulta;
-//            Connection conexion = Conexion.obtener();
-//            consulta = conexion.prepareStatement(" DELETE FROM" + this.tabla + "WHERE id_nitrogeno_regla= " + idNitrogenoRegla );
-//            consulta.execute();
-//        } catch (SQLException ex) {
-//            Logger.getLogger(NitrogenoReglaService.class.getName()).log(Level.SEVERE, null, ex);
-//        }
+            PreparedStatement consulta;
+            Connection conexion = Conexion.obtener();
+            consulta = conexion.prepareStatement("DELETE FROM " + this.tabla + " WHERE id_nitrogeno_regla = " + idNitrogenoRegla);
+            consulta.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(NitrogenoReglaService.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
     }
 
@@ -128,9 +145,25 @@ public class NitrogenoReglaService {
 
     }
 
-//    public static void main(String[] args) {
-//
-//        NitrogenoReglaService nitrogenoReglaService = new NitrogenoReglaService();
+    public ArrayList<NitrogenoRegla> recuperarListaNitrogenoRegla(){
+        Connection conexion = Conexion.obtener();
+        ArrayList<NitrogenoRegla> nitrogenoReglaLista= new ArrayList<NitrogenoRegla>();
+        try {
+            PreparedStatement consulta = conexion.prepareStatement("SELECT id_nitrogeno_regla, nombre_regla, limite_inferior, limite_superior, conclusion FROM "+this.tabla+" ORDER BY id_nitrogeno_regla");                                                   
+            ResultSet resultado = consulta.executeQuery();
+            while (resultado.next()) {                
+                nitrogenoReglaLista.add(new NitrogenoRegla(resultado.getInt("id_nitrogeno_regla"), resultado.getString("nombre_regla"), resultado.getInt("limite_inferior"), resultado.getInt("limite_superior"), resultado.getString("conclusion")));
+            }
+            System.out.println("cantidad reglas: "+nitrogenoReglaLista.size());
+        } catch (SQLException ex) {
+            Logger.getLogger(NitrogenoReglaService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return nitrogenoReglaLista;
+    }
+    
+    public static void main(String[] args) {
+
+        NitrogenoReglaService nitrogenoReglaService = new NitrogenoReglaService();
 //        NitrogenoRegla nitrogenoRegla = new NitrogenoRegla();
 //
 //        nitrogenoRegla.setNombreRegla("regla nitrogeno baaajoo");
@@ -139,5 +172,17 @@ public class NitrogenoReglaService {
 //        nitrogenoRegla.setConclusion("dsgdgdfhfhdhfd");
 //
 //        nitrogenoReglaService.createNitrogenoRegla(nitrogenoRegla);
-//    }
+        //nitrogenoReglaService.deleteNitrogenoRegla(35);
+        
+        ArrayList<NitrogenoRegla> listaNitrogenoReglaRec = nitrogenoReglaService.recuperarListaNitrogenoRegla();
+        for (int i = 0; i < listaNitrogenoReglaRec.size(); i++) {
+            System.out.println(listaNitrogenoReglaRec.get(i).getIdNitrogenoRegla());
+            System.out.println(listaNitrogenoReglaRec.get(i).getNombreRegla());
+            System.out.println(listaNitrogenoReglaRec.get(i).getLimiteInferior());
+            System.out.println(listaNitrogenoReglaRec.get(i).getLimiteSuperior());
+            System.out.println(listaNitrogenoReglaRec.get(i).getConclusion());
+           System.out.println("");
+        }
+        
+    }
 }

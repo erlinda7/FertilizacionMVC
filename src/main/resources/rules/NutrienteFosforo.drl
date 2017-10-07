@@ -2,29 +2,22 @@ package rules
 import model.Cultivo;
 rule "Nivel de Fosforo Muy Alto"
     when
-        $c : Cultivo( nivelFosforo >= 110 && <=120 )
+        $c : Cultivo( nivelFosforo >= 120 && <=110 )
     then
         $c.setRangoNivelFosforo("Muy Alto");
 end
 
 rule "Nivel de Fosforo Super bajo"
     when
-        $c : Cultivo( nivelFosforo >= 0 && <=10 )
+        $c : Cultivo( nivelFosforo >= 10 && <=0 )
     then
         $c.setRangoNivelFosforo("Super Bajo");
 end
 
 rule "Nivel de Fosforo Regular"
     when
-        $c : Cultivo( nivelFosforo >= 30 && <=50 )
+        $c : Cultivo( nivelFosforo >= 50 && <=30 )
     then
         $c.setRangoNivelFosforo("Regular");
-end
-
-rule "ddddddddddddddd"
-    when
-        $c : Cultivo( nivelFosforo >= 23 && <=43 )
-    then
-        $c.setRangoNivelFosforo("ddddddddddddddddddddaaa");
 end
 

@@ -11,6 +11,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -28,7 +29,7 @@ public class FosforoReglaService {
 
     public FosforoReglaService() {
 
-        listFosforoRegla = new ArrayList<FosforoRegla>();
+        listFosforoRegla = recuperarListaFosforoRegla();
 
     }
 
@@ -45,8 +46,9 @@ public class FosforoReglaService {
 
             consulta.executeUpdate();
         } catch (SQLException ex) {
-            Logger.getLogger(NitrogenoReglaService.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FosforoReglaService.class.getName()).log(Level.SEVERE, null, ex);
         }
+
     }
 
     public FosforoRegla readFosforoRegla(int idFosforoRegla) {
@@ -61,16 +63,41 @@ public class FosforoReglaService {
     }
 
     public void updateFosforoRegla(int idFosforoRegla, FosforoRegla newFosforoRegla) {
-        FosforoRegla fosforoReglaParaActualizar = readFosforoRegla(idFosforoRegla);
-        fosforoReglaParaActualizar.setNombreRegla(newFosforoRegla.getNombreRegla());
-        fosforoReglaParaActualizar.setLimiteInferior(newFosforoRegla.getLimiteInferior());
-        fosforoReglaParaActualizar.setLimiteSuperior(newFosforoRegla.getLimiteSuperior());
-        fosforoReglaParaActualizar.setConclusion(newFosforoRegla.getConclusion());
+        try {
+            FosforoRegla fosforoReglaParaActualizar = readFosforoRegla(idFosforoRegla);
+            fosforoReglaParaActualizar.setNombreRegla(newFosforoRegla.getNombreRegla());
+            fosforoReglaParaActualizar.setLimiteInferior(newFosforoRegla.getLimiteInferior());
+            fosforoReglaParaActualizar.setLimiteSuperior(newFosforoRegla.getLimiteSuperior());
+            fosforoReglaParaActualizar.setConclusion(newFosforoRegla.getConclusion());
+
+            PreparedStatement consultaupdate;
+            Connection conexion = Conexion.obtener();
+            consultaupdate = conexion.prepareStatement("UPDATE " + this.tabla + " SET nombre_regla = ?, limite_inferior = ?, limite_superior = ?, conclusion = ? WHERE id_regla_fosforo = ?");
+            consultaupdate.setString(1, newFosforoRegla.getNombreRegla());
+            consultaupdate.setInt(2, newFosforoRegla.getLimiteInferior());
+            consultaupdate.setInt(3, newFosforoRegla.getLimiteSuperior());
+            consultaupdate.setString(4, newFosforoRegla.getConclusion());
+            consultaupdate.setInt(5, idFosforoRegla);
+
+            consultaupdate.executeUpdate();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(FosforoReglaService.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public void deleteFosforoRegla(int idfosforoRegla) {
-        FosforoRegla fosforoReglaEliminar = readFosforoRegla(idfosforoRegla);
-        listFosforoRegla.remove(fosforoReglaEliminar);
+        try {
+            FosforoRegla fosforoReglaEliminar = readFosforoRegla(idfosforoRegla);
+            listFosforoRegla.remove(fosforoReglaEliminar);
+
+            PreparedStatement consulta;
+            Connection conexion = Conexion.obtener();
+            consulta = conexion.prepareStatement("DELETE FROM " + this.tabla + " WHERE id_regla_fosforo = " + idfosforoRegla);
+            consulta.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(FosforoReglaService.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public void mostrarReglas() {
@@ -118,5 +145,21 @@ public class FosforoReglaService {
             e.printStackTrace();
         }
 
+    }
+
+    public ArrayList<FosforoRegla> recuperarListaFosforoRegla() {
+        Connection conexion = Conexion.obtener();
+        ArrayList<FosforoRegla> fosforoReglaLista = new ArrayList<FosforoRegla>();
+        try {
+            PreparedStatement consulta = conexion.prepareStatement("SELECT id_regla_fosforo, nombre_regla, limite_inferior, limite_superior, conclusion FROM " + this.tabla + " ORDER BY id_regla_fosforo");
+            ResultSet resultado = consulta.executeQuery();
+            while (resultado.next()) {
+                fosforoReglaLista.add(new FosforoRegla(resultado.getInt("id_regla_fosforo"), resultado.getString("nombre_regla"), resultado.getInt("limite_inferior"), resultado.getInt("limite_superior"), resultado.getString("conclusion")));
+            }
+            System.out.println("cantidad reglas: " + fosforoReglaLista.size());
+        } catch (SQLException ex) {
+            Logger.getLogger(FosforoReglaService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return fosforoReglaLista;
     }
 }

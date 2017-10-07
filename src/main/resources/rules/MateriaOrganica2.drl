@@ -2,29 +2,22 @@ package rules
 import model.Cultivo;
 rule "Nivel de MO Muy Alto"
     when
-        $c : Cultivo( nivelMO >= 110 && <=120 )
+        $c : Cultivo( nivelMO >= 120 && <=110 )
     then
         $c.setRangoNivelMO("Muy Alto");
 end
 
 rule "Nivel de MO Super bajo"
     when
-        $c : Cultivo( nivelMO >= 0 && <=10 )
+        $c : Cultivo( nivelMO >= 10 && <=0 )
     then
         $c.setRangoNivelMO("Super Bajo");
 end
 
 rule "Nivel de MO Regular"
     when
-        $c : Cultivo( nivelMO >= 30 && <=50 )
+        $c : Cultivo( nivelMO >= 50 && <=30 )
     then
         $c.setRangoNivelMO("Regular");
-end
-
-rule "pppppppppppppppppp"
-    when
-        $c : Cultivo( nivelMO >= 12 && <=12 )
-    then
-        $c.setRangoNivelMO("fddghjklññlkjhgfdsdfghjk");
 end
 

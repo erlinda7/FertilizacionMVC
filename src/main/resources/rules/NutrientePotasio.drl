@@ -2,29 +2,22 @@ package rules
 import model.Cultivo;
 rule "Nivel de Potasio Muy Alto"
     when
-        $c : Cultivo( nivelPotasio >= 110 && <=120 )
+        $c : Cultivo( nivelPotasio >= 120 && <=110 )
     then
         $c.setRangoNivelPotasio("Muy Alto");
 end
 
 rule "Nivel de potasio Super bajo"
     when
-        $c : Cultivo( nivelPotasio >= 0 && <=10 )
+        $c : Cultivo( nivelPotasio >= 10 && <=0 )
     then
         $c.setRangoNivelPotasio("Super Bajo");
 end
 
 rule "Nivel de potasio Regular"
     when
-        $c : Cultivo( nivelPotasio >= 30 && <=50 )
+        $c : Cultivo( nivelPotasio >= 50 && <=30 )
     then
         $c.setRangoNivelPotasio("Regular");
-end
-
-rule "kkkkkkkk"
-    when
-        $c : Cultivo( nivelPotasio >= 23 && <=34 )
-    then
-        $c.setRangoNivelPotasio("rerererereere");
 end
 

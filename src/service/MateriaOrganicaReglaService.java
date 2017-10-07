@@ -11,6 +11,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -28,7 +29,7 @@ public class MateriaOrganicaReglaService {
 
     public MateriaOrganicaReglaService() {
 
-        listMateriaOrganicaRegla = new ArrayList<MateriaOrganicaRegla>();
+        listMateriaOrganicaRegla = recuperarListaMORegla();
 
     }
 
@@ -45,7 +46,7 @@ public class MateriaOrganicaReglaService {
 
             consulta.executeUpdate();
         } catch (SQLException ex) {
-            Logger.getLogger(NitrogenoReglaService.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MateriaOrganicaReglaService.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -61,16 +62,40 @@ public class MateriaOrganicaReglaService {
     }
 
     public void updateMateriaOrganicaRegla(int idMateriaOrganicaRegla, MateriaOrganicaRegla newMateriaOrganicaRegla) {
-        MateriaOrganicaRegla materiaOrganicaReglaParaActualizar = readMateriaOrganicaRegla(idMateriaOrganicaRegla);
-        materiaOrganicaReglaParaActualizar.setNombreRegla(newMateriaOrganicaRegla.getNombreRegla());
-        materiaOrganicaReglaParaActualizar.setLimiteInferior(newMateriaOrganicaRegla.getLimiteInferior());
-        materiaOrganicaReglaParaActualizar.setLimiteSuperior(newMateriaOrganicaRegla.getLimiteSuperior());
-        materiaOrganicaReglaParaActualizar.setConclusion(newMateriaOrganicaRegla.getConclusion());
+        try {
+            MateriaOrganicaRegla materiaOrganicaReglaParaActualizar = readMateriaOrganicaRegla(idMateriaOrganicaRegla);
+            materiaOrganicaReglaParaActualizar.setNombreRegla(newMateriaOrganicaRegla.getNombreRegla());
+            materiaOrganicaReglaParaActualizar.setLimiteInferior(newMateriaOrganicaRegla.getLimiteInferior());
+            materiaOrganicaReglaParaActualizar.setLimiteSuperior(newMateriaOrganicaRegla.getLimiteSuperior());
+            materiaOrganicaReglaParaActualizar.setConclusion(newMateriaOrganicaRegla.getConclusion());
+            PreparedStatement consultaupdate;
+            Connection conexion = Conexion.obtener();
+            consultaupdate = conexion.prepareStatement("UPDATE " + this.tabla + " SET nombre_regla = ?, limite_inferior = ?, limite_superior = ?, conclusion = ? WHERE id_materia_organica_regla = ?");
+            consultaupdate.setString(1, newMateriaOrganicaRegla.getNombreRegla());
+            consultaupdate.setInt(2, newMateriaOrganicaRegla.getLimiteInferior());
+            consultaupdate.setInt(3, newMateriaOrganicaRegla.getLimiteSuperior());
+            consultaupdate.setString(4, newMateriaOrganicaRegla.getConclusion());
+            consultaupdate.setInt(5, idMateriaOrganicaRegla);
+
+            consultaupdate.executeUpdate();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(MateriaOrganicaReglaService.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public void deleteMateriaOrganicaRegla(int idMateriaOrganicaRegla) {
-        MateriaOrganicaRegla materiaOrganicaReglaEliminar = readMateriaOrganicaRegla(idMateriaOrganicaRegla);
-        listMateriaOrganicaRegla.remove(materiaOrganicaReglaEliminar);
+        try {
+            MateriaOrganicaRegla materiaOrganicaReglaEliminar = readMateriaOrganicaRegla(idMateriaOrganicaRegla);
+            listMateriaOrganicaRegla.remove(materiaOrganicaReglaEliminar);
+
+            PreparedStatement consulta;
+            Connection conexion = Conexion.obtener();
+            consulta = conexion.prepareStatement("DELETE FROM " + this.tabla + " WHERE id_materia_organica_regla = " + idMateriaOrganicaRegla);
+            consulta.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(MateriaOrganicaReglaService.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public void mostrarReglas() {
@@ -118,5 +143,20 @@ public class MateriaOrganicaReglaService {
             e.printStackTrace();
         }
 
+    }
+     public ArrayList<MateriaOrganicaRegla> recuperarListaMORegla() {
+        Connection conexion = Conexion.obtener();
+        ArrayList<MateriaOrganicaRegla> moReglaLista = new ArrayList<MateriaOrganicaRegla>();
+        try {
+            PreparedStatement consulta = conexion.prepareStatement("SELECT id_materia_organica_regla, nombre_regla, limite_inferior, limite_superior, conclusion FROM " + this.tabla + " ORDER BY id_materia_organica_regla");
+            ResultSet resultado = consulta.executeQuery();
+            while (resultado.next()) {
+                moReglaLista.add(new MateriaOrganicaRegla(resultado.getInt("id_materia_organica_regla"), resultado.getString("nombre_regla"), resultado.getInt("limite_inferior"), resultado.getInt("limite_superior"), resultado.getString("conclusion")));
+            }
+            //System.out.println("cantidad reglas: " + potasioReglaLista.size());
+        } catch (SQLException ex) {
+            Logger.getLogger(MateriaOrganicaReglaService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return moReglaLista;
     }
 }

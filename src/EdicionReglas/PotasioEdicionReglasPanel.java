@@ -58,23 +58,13 @@ public class PotasioEdicionReglasPanel extends javax.swing.JPanel {
 
         jLabel5.setText("Premisa 1");
 
-        jTextFieldPremisa1.setText("jTextField1");
-
         jLabel6.setText("Premisa 2");
-
-        jTextFieldPremisa2.setText("jTextField2");
 
         jLabel7.setText("then");
 
         jLabel9.setText("end");
 
         jButtonAceptar.setText("Aceptar");
-
-        jTextFieldConclusion.setText("jTextField3");
-
-        jTextFieldId.setText("jTextField4");
-
-        jTextFieldNombreRegla.setText("jTextField4");
 
         javax.swing.GroupLayout jPanelEdicionLayout = new javax.swing.GroupLayout(jPanelEdicion);
         jPanelEdicion.setLayout(jPanelEdicionLayout);
@@ -90,7 +80,7 @@ public class PotasioEdicionReglasPanel extends javax.swing.JPanel {
                         .addGroup(jPanelEdicionLayout.createSequentialGroup()
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jTextFieldId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextFieldId, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanelEdicionLayout.createSequentialGroup()
                             .addGap(22, 22, 22)
                             .addGroup(jPanelEdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -105,11 +95,11 @@ public class PotasioEdicionReglasPanel extends javax.swing.JPanel {
                             .addGap(41, 41, 41)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jTextFieldPremisa1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(62, 62, 62)
+                            .addComponent(jTextFieldPremisa1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
                             .addComponent(jLabel6)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jTextFieldPremisa2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jTextFieldPremisa2, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(0, 144, Short.MAX_VALUE))
         );
         jPanelEdicionLayout.setVerticalGroup(
