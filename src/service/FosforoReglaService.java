@@ -45,6 +45,9 @@ public class FosforoReglaService {
             consulta.setString(4, newFosforoRegla.getConclusion());
 
             consulta.executeUpdate();
+            
+            listFosforoRegla = recuperarListaFosforoRegla();
+            
         } catch (SQLException ex) {
             Logger.getLogger(FosforoReglaService.class.getName()).log(Level.SEVERE, null, ex);
         }

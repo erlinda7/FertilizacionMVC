@@ -2,8 +2,29 @@ package rules
 import model.Cultivo;
 rule "dddd"
     when
-        $c : Cultivo( nivelNitrogeno >= 44 && <=33 )
+        $c : Cultivo( nivelNitrogeno >= 33 && <=44 )
     then
         $c.setRangoNivelNitrogeno("fdfdf");
+end
+
+rule "qqqqqqqqqqq"
+    when
+        $c : Cultivo( nivelNitrogeno >= 14 && <=12 )
+    then
+        $c.setRangoNivelNitrogeno("qqqqqqqqqqqqqqqqq12");
+end
+
+rule "nnnnnnnnnnnnnnnn"
+    when
+        $c : Cultivo( nivelNitrogeno >= 1111 && <=111 )
+    then
+        $c.setRangoNivelNitrogeno("bnnnnnnnnnnnnnn1111");
+end
+
+rule "aaaaaaaaaaaaaaaaa3"
+    when
+        $c : Cultivo( nivelNitrogeno >= 3333 && <=333333 )
+    then
+        $c.setRangoNivelNitrogeno("ssssssssssssssss");
 end
 

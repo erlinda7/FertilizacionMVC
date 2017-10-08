@@ -190,7 +190,7 @@ public class NitrogenoEdicionReglasPanelController {
                 //nitrogenoedicionReglasPanel.jPanelEdicion.setVisible(false);
                 break;
             case "ADD":
-                int idReglaAdd = Integer.parseInt(nitrogenoedicionReglasPanel.jTextFieldId.getText());
+                //int idReglaAdd = Integer.parseInt(nitrogenoedicionReglasPanel.jTextFieldId.getText());
                 NitrogenoRegla nitrogenoReglaAnadir = new NitrogenoRegla();
                 nitrogenoReglaAnadir.setNombreRegla(nitrogenoedicionReglasPanel.jTextFieldNombreRegla.getText());
                 nitrogenoReglaAnadir.setLimiteInferior(Integer.parseInt(nitrogenoedicionReglasPanel.jTextFieldPremisa1.getText()));
@@ -198,6 +198,9 @@ public class NitrogenoEdicionReglasPanelController {
                 nitrogenoReglaAnadir.setConclusion(nitrogenoedicionReglasPanel.jTextFieldConclusion.getText());
 
                 nitrogenoReglaService.createNitrogenoRegla(nitrogenoReglaAnadir);
+                
+                listaReglaNitrogeno = nitrogenoReglaService.readAllNitrogeno();
+                
                 llenarJTable();
 
                 //para guardar en archivo drl en formato drools descomentar

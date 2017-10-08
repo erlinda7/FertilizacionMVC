@@ -35,6 +35,8 @@ public class PhReglaService {
             consulta.setString(4, newPhRegla.getConclusion());
 
             consulta.executeUpdate();
+            listPhRegla = recuperarListaPHRegla();
+            
         } catch (SQLException ex) {
             Logger.getLogger(PhReglaService.class.getName()).log(Level.SEVERE, null, ex);
         }

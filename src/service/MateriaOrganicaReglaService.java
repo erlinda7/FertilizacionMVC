@@ -45,6 +45,9 @@ public class MateriaOrganicaReglaService {
             consulta.setString(4, newMateriaOrganicaRegla.getConclusion());
 
             consulta.executeUpdate();
+            
+            listMateriaOrganicaRegla = recuperarListaMORegla();
+            
         } catch (SQLException ex) {
             Logger.getLogger(MateriaOrganicaReglaService.class.getName()).log(Level.SEVERE, null, ex);
         }

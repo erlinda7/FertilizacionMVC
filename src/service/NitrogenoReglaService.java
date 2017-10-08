@@ -44,9 +44,13 @@ public class NitrogenoReglaService {
             consulta.setString(4, newNitrogenoRegla.getConclusion());
 
             consulta.executeUpdate();
+            
+            listNitrogenoRegla = recuperarListaNitrogenoRegla();
+            
         } catch (SQLException ex) {
             Logger.getLogger(NitrogenoReglaService.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
     }
 
     public NitrogenoRegla readNitrogenoRegla(int idNitrogenoRegla) {

@@ -46,6 +46,8 @@ public class BienvenidaFrameController {
         confPanelFertiConLab();
         confPanelFertiSinLab();
         confButtonFertilizacionConLab();
+        
+        confButtonOpcionesAvanzadas();
 
         vistaBienvenida.bienvenidaPanel1.jButtonFertilizacionConLaboratorio.setVisible(false);
         vistaBienvenida.setResizable(false);
@@ -198,7 +200,7 @@ public class BienvenidaFrameController {
     public void confPanelFertiSinLab() {
         vistaBienvenida.bienvenidaPanel1.getjLabelfertiSinLabImg().setIcon(new ImageIcon(getClass().getResource("/img/kitsanalisis.jpg")));
         vistaBienvenida.bienvenidaPanel1.getjLabelfertiSinLabDescripcion().setText("<html><body><b>Fertilizacion de Hortalizas</b><br> <br>Si<b> NO cuenta </b>con los resultados de laboratorio de suelos del analisis de suelo de su terreno <b> Inicie con la fertilizacion en el Boton Izquierdo.</b> </body></html>");
-        
+
         vistaBienvenida.bienvenidaPanel1.getjLabelfertiSinLabImg().setToolTipText("<html><body><p align='justify'>Para realizar la fertilizacion sin datos <br>de laboratorio debe contar con la <b>muestra de suelo</b> <br>y los <b> Kits para analisis de suelos</b><br><br>Sino sabe sacar una muestra de suelo <br> vaya al boton <b>Conceptos Basicos y luego a la<br> pestaña Muestreo de Suelo</b></html></body>");
         vistaBienvenida.bienvenidaPanel1.getjLabelfertiSinLabImg().addMouseListener(new MouseAdapter() {
             public void mouseEntered(MouseEvent evt) {
@@ -213,5 +215,19 @@ public class BienvenidaFrameController {
 
     public void jLabelfertiSinLabImgMouseEntered(MouseEvent evt) {
         vistaBienvenida.bienvenidaPanel1.getjLabelfertiSinLabImg().getToolTipText();
+    }
+
+    public void confButtonOpcionesAvanzadas() {
+        vistaBienvenida.bienvenidaPanel1.jButtonOpcionesAvanzadas.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent evt) {
+                ButtonOpcionesAvanzadasActionPerformed(evt);
+            }
+        });
+    }
+
+    private void ButtonOpcionesAvanzadasActionPerformed(java.awt.event.ActionEvent evt) {
+       LoginJFrame loginJFrame= new LoginJFrame();
+       LoginJFrameController loginJFrameController = new LoginJFrameController(loginJFrame);
     }
 }

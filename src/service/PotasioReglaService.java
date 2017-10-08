@@ -45,6 +45,8 @@ public class PotasioReglaService {
             consulta.setString(4, newPotasioRegla.getConclusion());
 
             consulta.executeUpdate();
+            listPotasioRegla = recuperarListaPotasioRegla();
+            
         } catch (SQLException ex) {
             Logger.getLogger(PotasioReglaService.class.getName()).log(Level.SEVERE, null, ex);
         }
