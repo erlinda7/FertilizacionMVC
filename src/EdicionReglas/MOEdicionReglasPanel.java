@@ -44,7 +44,7 @@ public class MOEdicionReglasPanel extends javax.swing.JPanel {
         jButtonEditarRegla = new javax.swing.JButton();
         jButtonAnadirRegla = new javax.swing.JButton();
         jButtonEliminarRegla = new javax.swing.JButton();
-        jScrollTable = new javax.swing.JScrollPane();
+        jScrollTableMO = new javax.swing.JScrollPane();
         jTableMateriaOrganica = new javax.swing.JTable();
 
         jPanelEdicion.setBackground(new java.awt.Color(255, 255, 255));
@@ -80,7 +80,7 @@ public class MOEdicionReglasPanel extends javax.swing.JPanel {
                         .addGroup(jPanelEdicionLayout.createSequentialGroup()
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jTextFieldId, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextFieldId, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanelEdicionLayout.createSequentialGroup()
                             .addGap(22, 22, 22)
                             .addGroup(jPanelEdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -95,11 +95,11 @@ public class MOEdicionReglasPanel extends javax.swing.JPanel {
                             .addGap(41, 41, 41)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jTextFieldPremisa1, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(37, 37, 37)
+                            .addComponent(jTextFieldPremisa1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
                             .addComponent(jLabel6)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jTextFieldPremisa2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jTextFieldPremisa2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(0, 144, Short.MAX_VALUE))
         );
         jPanelEdicionLayout.setVerticalGroup(
@@ -142,8 +142,8 @@ public class MOEdicionReglasPanel extends javax.swing.JPanel {
 
         jButtonEliminarRegla.setText("Eliminar");
 
-        jScrollTable.setBackground(new java.awt.Color(255, 255, 255));
-        jScrollTable.setBorder(javax.swing.BorderFactory.createTitledBorder("Lista de Reglas"));
+        jScrollTableMO.setBackground(new java.awt.Color(255, 255, 255));
+        jScrollTableMO.setBorder(javax.swing.BorderFactory.createTitledBorder("Lista de Reglas"));
 
         jTableMateriaOrganica.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -164,7 +164,7 @@ public class MOEdicionReglasPanel extends javax.swing.JPanel {
                 "Id ", "Nombre Regla", "Premisa 1", "Premisa 2", "Conclusion"
             }
         ));
-        jScrollTable.setViewportView(jTableMateriaOrganica);
+        jScrollTableMO.setViewportView(jTableMateriaOrganica);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -174,7 +174,7 @@ public class MOEdicionReglasPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanelEdicion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollTable))
+                    .addComponent(jScrollTableMO))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButtonEliminarRegla, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -196,7 +196,7 @@ public class MOEdicionReglasPanel extends javax.swing.JPanel {
                         .addGap(78, 78, 78))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jScrollTable, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jScrollTableMO, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(15, 15, 15)))
                 .addComponent(jPanelEdicion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -217,7 +217,7 @@ public class MOEdicionReglasPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanelEdicion;
-    public javax.swing.JScrollPane jScrollTable;
+    public javax.swing.JScrollPane jScrollTableMO;
     public javax.swing.JTable jTableMateriaOrganica;
     public javax.swing.JTextField jTextFieldConclusion;
     public javax.swing.JTextField jTextFieldId;

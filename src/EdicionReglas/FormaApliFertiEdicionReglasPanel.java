@@ -35,15 +35,16 @@ public class FormaApliFertiEdicionReglasPanel extends javax.swing.JPanel {
         jLabel7 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jButtonAceptar = new javax.swing.JButton();
-        jTextFieldConclusion = new javax.swing.JTextField();
         jTextFieldId = new javax.swing.JTextField();
         jTextFieldNombreRegla = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jComboBoxPremisa = new javax.swing.JComboBox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextAreaConclusion = new javax.swing.JTextArea();
         jButtonEditarRegla = new javax.swing.JButton();
         jButtonAnadirRegla = new javax.swing.JButton();
         jButtonEliminarRegla = new javax.swing.JButton();
         jScrollTable = new javax.swing.JScrollPane();
-        jTableCorrTextura = new javax.swing.JTable();
+        jTableFormaAplicarFertilizante = new javax.swing.JTable();
 
         jPanelEdicion.setBackground(new java.awt.Color(255, 255, 255));
         jPanelEdicion.setBorder(javax.swing.BorderFactory.createTitledBorder("Editar"));
@@ -62,7 +63,11 @@ public class FormaApliFertiEdicionReglasPanel extends javax.swing.JPanel {
 
         jButtonAceptar.setText("Aceptar");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxPremisa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jTextAreaConclusion.setColumns(20);
+        jTextAreaConclusion.setRows(5);
+        jScrollPane1.setViewportView(jTextAreaConclusion);
 
         javax.swing.GroupLayout jPanelEdicionLayout = new javax.swing.GroupLayout(jPanelEdicion);
         jPanelEdicion.setLayout(jPanelEdicionLayout);
@@ -80,9 +85,12 @@ public class FormaApliFertiEdicionReglasPanel extends javax.swing.JPanel {
                     .addGroup(jPanelEdicionLayout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addGroup(jPanelEdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel3)))
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel7)))
+                    .addGroup(jPanelEdicionLayout.createSequentialGroup()
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(29, 29, 29)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 424, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanelEdicionLayout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -91,10 +99,8 @@ public class FormaApliFertiEdicionReglasPanel extends javax.swing.JPanel {
                         .addGap(41, 41, 41)
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanelEdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextFieldConclusion, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 144, Short.MAX_VALUE))
+                        .addComponent(jComboBoxPremisa, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(115, Short.MAX_VALUE))
         );
         jPanelEdicionLayout.setVerticalGroup(
             jPanelEdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -115,17 +121,19 @@ public class FormaApliFertiEdicionReglasPanel extends javax.swing.JPanel {
                 .addGap(8, 8, 8)
                 .addGroup(jPanelEdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBoxPremisa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel7)
-                .addGap(3, 3, 3)
-                .addComponent(jTextFieldConclusion, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 15, Short.MAX_VALUE)
-                .addGap(23, 23, 23))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelEdicionLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButtonAceptar))
+                .addGroup(jPanelEdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelEdicionLayout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(23, 23, 23))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelEdicionLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButtonAceptar))))
         );
 
         jButtonEditarRegla.setText("Editar");
@@ -137,7 +145,7 @@ public class FormaApliFertiEdicionReglasPanel extends javax.swing.JPanel {
         jScrollTable.setBackground(new java.awt.Color(255, 255, 255));
         jScrollTable.setBorder(javax.swing.BorderFactory.createTitledBorder("Lista de Reglas"));
 
-        jTableCorrTextura.setModel(new javax.swing.table.DefaultTableModel(
+        jTableFormaAplicarFertilizante.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -156,7 +164,7 @@ public class FormaApliFertiEdicionReglasPanel extends javax.swing.JPanel {
                 "Id ", "Nombre Regla", "Textura ", "forma aplicar"
             }
         ));
-        jScrollTable.setViewportView(jTableCorrTextura);
+        jScrollTable.setViewportView(jTableFormaAplicarFertilizante);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -201,7 +209,7 @@ public class FormaApliFertiEdicionReglasPanel extends javax.swing.JPanel {
     public javax.swing.JButton jButtonAnadirRegla;
     public javax.swing.JButton jButtonEditarRegla;
     public javax.swing.JButton jButtonEliminarRegla;
-    private javax.swing.JComboBox<String> jComboBox1;
+    public javax.swing.JComboBox<String> jComboBoxPremisa;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -209,9 +217,10 @@ public class FormaApliFertiEdicionReglasPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanelEdicion;
+    private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JScrollPane jScrollTable;
-    public javax.swing.JTable jTableCorrTextura;
-    public javax.swing.JTextField jTextFieldConclusion;
+    public javax.swing.JTable jTableFormaAplicarFertilizante;
+    public javax.swing.JTextArea jTextAreaConclusion;
     public javax.swing.JTextField jTextFieldId;
     public javax.swing.JTextField jTextFieldNombreRegla;
     // End of variables declaration//GEN-END:variables

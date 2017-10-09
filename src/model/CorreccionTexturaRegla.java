@@ -24,32 +24,33 @@ public class CorreccionTexturaRegla {
         return idCorreccionTextura;
     }
 
-    public void setIdCorreccionTextura(int idCorreccionTextura) {
-        this.idCorreccionTextura = idCorreccionTextura;
-    }
-
     public String getNombreRegla() {
         return nombreRegla;
-    }
-
-    public void setNombreRegla(String nombreRegla) {
-        this.nombreRegla = nombreRegla;
     }
 
     public String getTexturaACorregir() {
         return texturaACorregir;
     }
 
-    public void setConclusionPorcACorregir(String texturaACorregir) {
-        this.texturaACorregir = texturaACorregir;
-    }
-
     public int getConclusionPorcACorregir() {
         return ConclusionPorcACorregir;
     }
 
-    public void setPorcentajeACorregir(int porcentajeACorregir) {
-        this.ConclusionPorcACorregir = porcentajeACorregir;
+    public void setIdCorreccionTextura(int idCorreccionTextura) {
+        this.idCorreccionTextura = idCorreccionTextura;
     }
+
+    public void setNombreRegla(String nombreRegla) {
+        this.nombreRegla = nombreRegla;
+    }
+
+    public void setTexturaACorregir(String texturaACorregir) {
+        this.texturaACorregir = texturaACorregir;
+    }
+
+    public void setConclusionPorcACorregir(int ConclusionPorcACorregir) {
+        this.ConclusionPorcACorregir = ConclusionPorcACorregir;
+    }
+
 
 }

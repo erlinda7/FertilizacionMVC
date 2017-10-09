@@ -180,7 +180,7 @@ public class FosforoEdicionReglasPanelController {
 
                 break;
             case "ADD":
-                int idReglaAdd = Integer.parseInt(fosforoEdicionReglasPanel.jTextFieldId.getText());
+                //int idReglaAdd = Integer.parseInt(fosforoEdicionReglasPanel.jTextFieldId.getText());
                 FosforoRegla fosforoReglaAnadir = new FosforoRegla();
                 fosforoReglaAnadir.setNombreRegla(fosforoEdicionReglasPanel.jTextFieldNombreRegla.getText());
                 fosforoReglaAnadir.setLimiteInferior(Integer.parseInt(fosforoEdicionReglasPanel.jTextFieldPremisa1.getText()));
@@ -188,6 +188,7 @@ public class FosforoEdicionReglasPanelController {
                 fosforoReglaAnadir.setConclusion(fosforoEdicionReglasPanel.jTextFieldConclusion.getText());
 
                 fosforoReglaService.createFosforoRegla(fosforoReglaAnadir);
+                listaReglaFosforo = fosforoReglaService.readAllFosforo();
                 llenarJTable();
 
                 //para guardar en archivo drl en formato drools descomentar

@@ -9,12 +9,12 @@ package EdicionReglas;
  *
  * @author Erlinda
  */
-public class NewJFrameCorreccionTexturaPrueba extends javax.swing.JFrame {
+public class NewJFrameFormaAplicarFertilizantePrueba extends javax.swing.JFrame {
 
     /**
-     * Creates new form NewJFrameCorreccionTexturaPrueba
+     * Creates new form NewJFrameFormaAplicarFertilizantePrueba
      */
-    public NewJFrameCorreccionTexturaPrueba() {
+    public NewJFrameFormaAplicarFertilizantePrueba() {
         initComponents();
     }
 
@@ -27,7 +27,7 @@ public class NewJFrameCorreccionTexturaPrueba extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        corrTexturaEdicionReglasPanel1 = new EdicionReglas.CorrTexturaEdicionReglasPanel();
+        formaApliFertiEdicionReglasPanel1 = new EdicionReglas.FormaApliFertiEdicionReglasPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -35,14 +35,12 @@ public class NewJFrameCorreccionTexturaPrueba extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(corrTexturaEdicionReglasPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(formaApliFertiEdicionReglasPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(corrTexturaEdicionReglasPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(formaApliFertiEdicionReglasPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -66,29 +64,29 @@ public class NewJFrameCorreccionTexturaPrueba extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NewJFrameCorreccionTexturaPrueba.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NewJFrameFormaAplicarFertilizantePrueba.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NewJFrameCorreccionTexturaPrueba.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NewJFrameFormaAplicarFertilizantePrueba.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NewJFrameCorreccionTexturaPrueba.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NewJFrameFormaAplicarFertilizantePrueba.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NewJFrameCorreccionTexturaPrueba.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NewJFrameFormaAplicarFertilizantePrueba.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                NewJFrameCorreccionTexturaPrueba newJFrameCorreccionTexturaPrueba=new NewJFrameCorreccionTexturaPrueba();
-                newJFrameCorreccionTexturaPrueba.setVisible(true);
+                NewJFrameFormaAplicarFertilizantePrueba newJFrameFormaAplicarFertilizantePrueba= new NewJFrameFormaAplicarFertilizantePrueba();
+                newJFrameFormaAplicarFertilizantePrueba.setVisible(true);
                 
-                CorrTexturaEdicionReglasPanel corrTexturaEdicionReglasPanel=newJFrameCorreccionTexturaPrueba.corrTexturaEdicionReglasPanel1;
-                CorrTexturaEdicionReglasPanelController corrTexturaEdicionReglasPanelController=new CorrTexturaEdicionReglasPanelController(corrTexturaEdicionReglasPanel);
+                FormaApliFertiEdicionReglasPanel formaApliFertiEdicionReglasPanel= newJFrameFormaAplicarFertilizantePrueba.formaApliFertiEdicionReglasPanel1;
+                FormaApliFertiEdicionReglasPanelController formaApliFertiEdicionReglasPanelController= new FormaApliFertiEdicionReglasPanelController(formaApliFertiEdicionReglasPanel);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public EdicionReglas.CorrTexturaEdicionReglasPanel corrTexturaEdicionReglasPanel1;
+    public EdicionReglas.FormaApliFertiEdicionReglasPanel formaApliFertiEdicionReglasPanel1;
     // End of variables declaration//GEN-END:variables
 }

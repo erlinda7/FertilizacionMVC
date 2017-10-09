@@ -1,0 +1,82 @@
+package rules 
+import model.Cultivo;
+package rules 
+import model.Textura;
+rule "arenosa corregir"
+    when
+        $t : Textura(tipoTextura== "Arenosa" )
+        $c : Cultivo()
+    then
+        double cantKgN=Math.rint(($c.getCantKgN()*1.6)*10)/10;
+        double cantKgP=Math.rint(($c.getCantKgP()*1.6)*10)/10;
+        double cantKgK=Math.rint(($c.getCantKgK()*1.6)*10)/10;
+        $c.setCantKgN(cantKgN);
+        $c.setCantKgP(cantKgP);
+        $c.setCantKgK(cantKgK);
+end
+
+rule "arenosa2 corregir"
+    when
+        $t : Textura(tipoTextura== "Arenosa2" )
+        $c : Cultivo()
+    then
+        double cantKgN=Math.rint(($c.getCantKgN()*1.1)*10)/10;
+        double cantKgP=Math.rint(($c.getCantKgP()*1.1)*10)/10;
+        double cantKgK=Math.rint(($c.getCantKgK()*1.1)*10)/10;
+        $c.setCantKgN(cantKgN);
+        $c.setCantKgP(cantKgP);
+        $c.setCantKgK(cantKgK);
+end
+
+rule "arenosa3 corregir"
+    when
+        $t : Textura(tipoTextura== "Arenosa3" )
+        $c : Cultivo()
+    then
+        double cantKgN=Math.rint(($c.getCantKgN()*1.1)*10)/10;
+        double cantKgP=Math.rint(($c.getCantKgP()*1.1)*10)/10;
+        double cantKgK=Math.rint(($c.getCantKgK()*1.1)*10)/10;
+        $c.setCantKgN(cantKgN);
+        $c.setCantKgP(cantKgP);
+        $c.setCantKgK(cantKgK);
+end
+
+rule "arenosa corregir"
+    when
+        $t : Textura(tipoTextura== "Arenosa" )
+        $c : Cultivo()
+    then
+        double cantKgN=Math.rint(($c.getCantKgN()*1.1)*10)/10;
+        double cantKgP=Math.rint(($c.getCantKgP()*1.1)*10)/10;
+        double cantKgK=Math.rint(($c.getCantKgK()*1.1)*10)/10;
+        $c.setCantKgN(cantKgN);
+        $c.setCantKgP(cantKgP);
+        $c.setCantKgK(cantKgK);
+end
+
+rule "arenosa2 corregir"
+    when
+        $t : Textura(tipoTextura== "Arenosa2" )
+        $c : Cultivo()
+    then
+        double cantKgN=Math.rint(($c.getCantKgN()*1.2)*10)/10;
+        double cantKgP=Math.rint(($c.getCantKgP()*1.2)*10)/10;
+        double cantKgK=Math.rint(($c.getCantKgK()*1.2)*10)/10;
+        $c.setCantKgN(cantKgN);
+        $c.setCantKgP(cantKgP);
+        $c.setCantKgK(cantKgK);
+end
+
+rule "arenosa3 corregir"
+    when
+        $t : Textura(tipoTextura== "Arenosa3" )
+        $c : Cultivo()
+    then
+        double cantKgN=Math.rint(($c.getCantKgN()*1.2)*10)/10;
+        double cantKgP=Math.rint(($c.getCantKgP()*1.2)*10)/10;
+        double cantKgK=Math.rint(($c.getCantKgK()*1.2)*10)/10;
+        $c.setCantKgN(cantKgN);
+        $c.setCantKgP(cantKgP);
+        $c.setCantKgK(cantKgK);
+end
+

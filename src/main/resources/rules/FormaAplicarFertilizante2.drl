@@ -1,0 +1,65 @@
+package rules 
+import model.Cultivo;
+rule "fertilizar a acelga"
+    when
+        $c : Cultivo( hortaliza== "Acelga" )
+    then
+        $c.setFormaAplicar("poner a sus raiscessvvvvvvvvvvvvvvvvvvvvvvv de la acelga");
+end
+
+rule "xxxxxxxxxxxxxxxxxxxxxxxx"
+    when
+        $c : Cultivo( hortaliza== "Espinaca" )
+    then
+        $c.setFormaAplicar("xxxxxxxxxxxxxxxxxxxxxxxxxxx");
+end
+
+rule "fertilizar a acelga"
+    when
+        $c : Cultivo( hortaliza== "Acelga" )
+    then
+        $c.setFormaAplicar("poner a sus raiscessvvvvvvvvvvvvvvvvvvvvvvv de la acelga");
+end
+
+rule "fertilizar a papa"
+    when
+        $c : Cultivo( hortaliza== "Papa" )
+    then
+        $c.setFormaAplicar("poner a sus raiscessvvvvvvvvvvvvvvvvvvvvvvv de la papa");
+end
+
+rule "fertilizar a Cebolla"
+    when
+        $c : Cultivo( hortaliza== "Cebolla" )
+    then
+        $c.setFormaAplicar("poner a sus raiscessvvvvvvvvvvvvvvvvvvvvvvv de la cebolla");
+end
+
+rule "fertilizar a acelga"
+    when
+        $c : Cultivo( hortaliza== "Acelga" )
+    then
+        $c.setFormaAplicar("poner a sus raiscessvvvvvvvvvvvvvvvvvvvvvvv de la acelga");
+end
+
+rule "fertilizar a Cebolla"
+    when
+        $c : Cultivo( hortaliza== "Cebolla" )
+    then
+        $c.setFormaAplicar("poner a sus raiscessvvvvvvvvvvvvvvvvvvvvvvv de la cebolla");
+end
+
+rule "repolinnnn"
+    when
+        $c : Cultivo( hortaliza== "Repollo" )
+    then
+        $c.setFormaAplicar("aplicar al repolinndddddddddd");
+end
+
+rule "pimenton"
+    when
+        $c : Cultivo( hortaliza== "Pimenton" )
+    then
+        $c.setFormaAplicar("zdsdsddddddddddddddddd");
+end
+

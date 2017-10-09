@@ -160,7 +160,7 @@ public class NitrogenoEdicionReglasPanelController {
         nitrogenoedicionReglasPanel.jTextFieldConclusion.setEnabled(false);
         nitrogenoedicionReglasPanel.jTextFieldConclusion.setDisabledTextColor(Color.gray);
 
-        //nitrogenoedicionReglasPanel.jPanelEdicion.setVisible(true);
+        
     }
 
     public void buttonAceptar() {

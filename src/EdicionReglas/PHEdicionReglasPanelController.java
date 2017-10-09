@@ -182,7 +182,7 @@ public class PHEdicionReglasPanelController {
 
                 break;
             case "ADD":
-                int idReglaAdd = Integer.parseInt(phEdicionReglasPanel.jTextFieldId.getText());
+                //int idReglaAdd = Integer.parseInt(phEdicionReglasPanel.jTextFieldId.getText());
                 PhRegla phReglaAnadir = new PhRegla();
                 phReglaAnadir.setNombreRegla(phEdicionReglasPanel.jTextFieldNombreRegla.getText());
                 phReglaAnadir.setLimiteInferior(Integer.parseInt(phEdicionReglasPanel.jTextFieldPremisa1.getText()));
@@ -190,6 +190,7 @@ public class PHEdicionReglasPanelController {
                 phReglaAnadir.setConclusion(phEdicionReglasPanel.jTextFieldConclusion.getText());
 
                 phReglaService.createPhRegla(phReglaAnadir);
+                listaReglaPh = phReglaService.readAllPh();
                 llenarJTable();
 
                 //para guardar en archivo drl en formato drools descomentar

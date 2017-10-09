@@ -38,10 +38,8 @@ public class CorrTexturaEdicionReglasPanel extends javax.swing.JPanel {
         jTextFieldConclusion = new javax.swing.JTextField();
         jTextFieldId = new javax.swing.JTextField();
         jTextFieldNombreRegla = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jButtonEditarRegla = new javax.swing.JButton();
-        jButtonAnadirRegla = new javax.swing.JButton();
-        jButtonEliminarRegla = new javax.swing.JButton();
+        jTextFieldPremisa = new javax.swing.JTextField();
+        jButtonCorregirTextura = new javax.swing.JButton();
         jScrollTable = new javax.swing.JScrollPane();
         jTableCorrTextura = new javax.swing.JTable();
 
@@ -61,8 +59,6 @@ public class CorrTexturaEdicionReglasPanel extends javax.swing.JPanel {
         jLabel9.setText("end");
 
         jButtonAceptar.setText("Aceptar");
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout jPanelEdicionLayout = new javax.swing.GroupLayout(jPanelEdicion);
         jPanelEdicion.setLayout(jPanelEdicionLayout);
@@ -93,7 +89,7 @@ public class CorrTexturaEdicionReglasPanel extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanelEdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextFieldConclusion, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jTextFieldPremisa, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(0, 144, Short.MAX_VALUE))
         );
         jPanelEdicionLayout.setVerticalGroup(
@@ -115,7 +111,7 @@ public class CorrTexturaEdicionReglasPanel extends javax.swing.JPanel {
                 .addGap(8, 8, 8)
                 .addGroup(jPanelEdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldPremisa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel7)
                 .addGap(3, 3, 3)
@@ -128,11 +124,12 @@ public class CorrTexturaEdicionReglasPanel extends javax.swing.JPanel {
                 .addComponent(jButtonAceptar))
         );
 
-        jButtonEditarRegla.setText("Editar");
-
-        jButtonAnadirRegla.setText("Añadir");
-
-        jButtonEliminarRegla.setText("Eliminar");
+        jButtonCorregirTextura.setText("<html><body><p align='center'>Corregir <br>Porcentaje</body></html> ");
+        jButtonCorregirTextura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCorregirTexturaActionPerformed(evt);
+            }
+        });
 
         jScrollTable.setBackground(new java.awt.Color(255, 255, 255));
         jScrollTable.setBorder(javax.swing.BorderFactory.createTitledBorder("Lista de Reglas"));
@@ -167,41 +164,34 @@ public class CorrTexturaEdicionReglasPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanelEdicion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollTable))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButtonEliminarRegla, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonAnadirRegla, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonEditarRegla, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(25, 25, 25))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButtonCorregirTextura, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(26, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(jScrollTable, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(61, 61, 61)
-                        .addComponent(jButtonEditarRegla)
-                        .addGap(33, 33, 33)
-                        .addComponent(jButtonAnadirRegla)
-                        .addGap(34, 34, 34)
-                        .addComponent(jButtonEliminarRegla)
-                        .addGap(78, 78, 78))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollTable, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(15, 15, 15)))
+                        .addComponent(jButtonCorregirTextura, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(15, 15, 15)
                 .addComponent(jPanelEdicion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButtonCorregirTexturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCorregirTexturaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonCorregirTexturaActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton jButtonAceptar;
-    public javax.swing.JButton jButtonAnadirRegla;
-    public javax.swing.JButton jButtonEditarRegla;
-    public javax.swing.JButton jButtonEliminarRegla;
-    private javax.swing.JComboBox<String> jComboBox1;
+    public javax.swing.JButton jButtonCorregirTextura;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -214,5 +204,6 @@ public class CorrTexturaEdicionReglasPanel extends javax.swing.JPanel {
     public javax.swing.JTextField jTextFieldConclusion;
     public javax.swing.JTextField jTextFieldId;
     public javax.swing.JTextField jTextFieldNombreRegla;
+    public javax.swing.JTextField jTextFieldPremisa;
     // End of variables declaration//GEN-END:variables
 }

@@ -182,7 +182,7 @@ public class MOEdicionReglasPanelController {
 
                 break;
             case "ADD":
-                int idReglaAdd = Integer.parseInt(MOEdicionReglasPanel.jTextFieldId.getText());
+               // int idReglaAdd = Integer.parseInt(MOEdicionReglasPanel.jTextFieldId.getText());
                 MateriaOrganicaRegla MOReglaAnadir = new MateriaOrganicaRegla();
                 MOReglaAnadir.setNombreRegla(MOEdicionReglasPanel.jTextFieldNombreRegla.getText());
                 MOReglaAnadir.setLimiteInferior(Integer.parseInt(MOEdicionReglasPanel.jTextFieldPremisa1.getText()));
@@ -190,6 +190,7 @@ public class MOEdicionReglasPanelController {
                 MOReglaAnadir.setConclusion(MOEdicionReglasPanel.jTextFieldConclusion.getText());
 
                 MateriaOrganicaReglaService.createMateriaOrganicaRegla(MOReglaAnadir);
+                listaReglaMateriaOrganica = MateriaOrganicaReglaService.readAllMateriaOrganica();
                 llenarJTable();
 
                 //para guardar en archivo drl en formato drools descomentar

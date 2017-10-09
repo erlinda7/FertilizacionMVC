@@ -181,7 +181,7 @@ public class PotasioEdicionReglasPanelController {
 
                 break;
             case "ADD":
-                int idReglaAdd = Integer.parseInt(potasioEdicionReglasPanel.jTextFieldId.getText());
+                //int idReglaAdd = Integer.parseInt(potasioEdicionReglasPanel.jTextFieldId.getText());
                 PotasioRegla potasioReglaAnadir = new PotasioRegla();
                 potasioReglaAnadir.setNombreRegla(potasioEdicionReglasPanel.jTextFieldNombreRegla.getText());
                 potasioReglaAnadir.setLimiteInferior(Integer.parseInt(potasioEdicionReglasPanel.jTextFieldPremisa1.getText()));
@@ -189,6 +189,7 @@ public class PotasioEdicionReglasPanelController {
                 potasioReglaAnadir.setConclusion(potasioEdicionReglasPanel.jTextFieldConclusion.getText());
 
                 potasioReglaService.createPotasioRegla(potasioReglaAnadir);
+                listaReglaPotasio = potasioReglaService.readAllPotasio();
                 llenarJTable();
 
                 //para guardar en archivo drl en formato drools descomentar
