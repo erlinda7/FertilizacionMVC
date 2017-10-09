@@ -16,22 +16,23 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import model.RecomendacionRegla;
+import model.RecomendacionNuevoFertilizanteRegla;
 
 /**
  *
  * @author Erlinda
  */
-public class RecomendacionReglaService {
+public class RecomendacionNuevoFertilizanteReglaService {
 
-    ArrayList<RecomendacionRegla> listRecomendacionRegla;
+    ArrayList<RecomendacionNuevoFertilizanteRegla> listRecomendacionRegla;
     private final String tabla = "recomendacion_regla";
 
-    public RecomendacionReglaService() {
+    public RecomendacionNuevoFertilizanteReglaService() {
 
         listRecomendacionRegla = recuperarListaRecomendacionRegla();
     }
-        public void createRecomendacionRegla(RecomendacionRegla newRecomendacionRegla) {
+
+    public void createRecomendacionRegla(RecomendacionNuevoFertilizanteRegla newRecomendacionRegla) {
         try {
             listRecomendacionRegla.add(newRecomendacionRegla);
             PreparedStatement consulta;
@@ -41,21 +42,21 @@ public class RecomendacionReglaService {
             consulta.setString(2, newRecomendacionRegla.getNombreFertilizanteFosfatado());
             consulta.setString(3, newRecomendacionRegla.getNombreFertilizantePotasico());
             consulta.setInt(4, newRecomendacionRegla.getFormulaFertilizanteNitrogenado());
-            consulta.setInt(4, newRecomendacionRegla.getFormulaFertilizanteFosfatado());
-            consulta.setInt(4, newRecomendacionRegla.getFormulaFertilizantePotasico());
+            consulta.setInt(5, newRecomendacionRegla.getFormulaFertilizanteFosfatado());
+            consulta.setInt(6, newRecomendacionRegla.getFormulaFertilizantePotasico());
 
             consulta.executeUpdate();
-            
+
             listRecomendacionRegla = recuperarListaRecomendacionRegla();
-            
+
         } catch (SQLException ex) {
-            Logger.getLogger(RecomendacionReglaService.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(RecomendacionNuevoFertilizanteReglaService.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
     }
 
-    public RecomendacionRegla readRecomendacionRegla(int idRecomendacionRegla) {
-        RecomendacionRegla recomendacionReglaRecuperado = null;
+    public RecomendacionNuevoFertilizanteRegla readRecomendacionRegla(int idRecomendacionRegla) {
+        RecomendacionNuevoFertilizanteRegla recomendacionReglaRecuperado = null;
         for (int i = 0; i < listRecomendacionRegla.size(); i++) {
             if (idRecomendacionRegla == listRecomendacionRegla.get(i).getId_recomendacion_regla()) {
                 recomendacionReglaRecuperado = listRecomendacionRegla.get(i);
@@ -65,9 +66,9 @@ public class RecomendacionReglaService {
 
     }
 
-    public void updateRecomendacionRegla(int idRecomendacionRegla, RecomendacionRegla newRecomendacionRegla) {
+    public void updateRecomendacionRegla(int idRecomendacionRegla, RecomendacionNuevoFertilizanteRegla newRecomendacionRegla) {
         try {
-            RecomendacionRegla recomendacionReglaParaActualizar = readRecomendacionRegla(idRecomendacionRegla);
+            RecomendacionNuevoFertilizanteRegla recomendacionReglaParaActualizar = readRecomendacionRegla(idRecomendacionRegla);
             recomendacionReglaParaActualizar.setNombreFertilizanteNitrogenado(newRecomendacionRegla.getNombreFertilizanteNitrogenado());
             recomendacionReglaParaActualizar.setNombreFertilizanteFosfatado(newRecomendacionRegla.getNombreFertilizanteFosfatado());
             recomendacionReglaParaActualizar.setNombreFertilizantePotasico(newRecomendacionRegla.getNombreFertilizantePotasico());
@@ -82,28 +83,28 @@ public class RecomendacionReglaService {
             consultaupdate.setString(2, newRecomendacionRegla.getNombreFertilizanteFosfatado());
             consultaupdate.setString(3, newRecomendacionRegla.getNombreFertilizantePotasico());
             consultaupdate.setInt(4, newRecomendacionRegla.getFormulaFertilizanteNitrogenado());
-            consultaupdate.setInt(4, newRecomendacionRegla.getFormulaFertilizanteFosfatado());
-            consultaupdate.setInt(4, newRecomendacionRegla.getFormulaFertilizantePotasico());
-            consultaupdate.setInt(5, idRecomendacionRegla);
-            
+            consultaupdate.setInt(5, newRecomendacionRegla.getFormulaFertilizanteFosfatado());
+            consultaupdate.setInt(6, newRecomendacionRegla.getFormulaFertilizantePotasico());
+            consultaupdate.setInt(7, idRecomendacionRegla);
+
             consultaupdate.executeUpdate();
-            
+
         } catch (SQLException ex) {
-            Logger.getLogger(RecomendacionReglaService.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(RecomendacionNuevoFertilizanteReglaService.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
 
     public void deleteRecomendacionRegla(int idRecomendacionRegla) {
         try {
-            RecomendacionRegla recomendacionReglaEliminar = readRecomendacionRegla(idRecomendacionRegla);
+            RecomendacionNuevoFertilizanteRegla recomendacionReglaEliminar = readRecomendacionRegla(idRecomendacionRegla);
             listRecomendacionRegla.remove(recomendacionReglaEliminar);
             PreparedStatement consulta;
             Connection conexion = Conexion.obtener();
             consulta = conexion.prepareStatement("DELETE FROM " + this.tabla + " WHERE id_recomendacion_regla = " + idRecomendacionRegla);
             consulta.executeUpdate();
         } catch (SQLException ex) {
-            Logger.getLogger(RecomendacionReglaService.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(RecomendacionNuevoFertilizanteReglaService.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
@@ -115,12 +116,12 @@ public class RecomendacionReglaService {
         }
     }
 
-    public ArrayList<RecomendacionRegla> readAllRecomendacion() {
+    public ArrayList<RecomendacionNuevoFertilizanteRegla> readAllRecomendacion() {
         return listRecomendacionRegla;
 
     }
 
-    public void actualizarReglasNitrogenoDrl() {
+    public void actualizarReglasRecomendacionDrl() {
         File file = new File("./src/main/resources/rules/RecomendacionNueva.drl");
         try {
             FileOutputStream out = new FileOutputStream(file);
@@ -135,10 +136,32 @@ public class RecomendacionReglaService {
                 out.write(condicion.getBytes());
                 String then = "    then\n";
                 out.write(then.getBytes());
-                String conclusionN1 = "        double cantFertilizanteN = (cantKgN*100)/" + listRecomendacionRegla.get(i).getFormulaFertilizanteNitrogenado();
+                String conclusionN = "        Recomendacion rec = new Recomendacion();\n";
+                out.write(conclusionN.getBytes());
+                //nitrogeno
+                String conclusionN1 = "        double cantFertilizanteN = (cantKgN*100)/" + listRecomendacionRegla.get(i).getFormulaFertilizanteNitrogenado() + ";\n";
                 out.write(conclusionN1.getBytes());
-                String conclusionN11 = "        double cantFertilizanteN = (cantKgN*100)/" + listRecomendacionRegla.get(i).getFormulaFertilizanteNitrogenado();
+                String conclusionN11 = "        cantFertilizanteN = Math.rint(cantFertilizanteN*10)/10;\n";
                 out.write(conclusionN11.getBytes());
+                String conclusionN12 = "        rec.addFertilizanteN(cantFertilizanteN + " + listRecomendacionRegla.get(i).getNombreFertilizanteNitrogenado() + ");\n";
+                out.write(conclusionN12.getBytes());
+                //fosforo
+                String conclusionP1 = "        double cantFertilizanteP = (cantKgP*100)/" + listRecomendacionRegla.get(i).getFormulaFertilizanteFosfatado() + ";\n";
+                out.write(conclusionP1.getBytes());
+                String conclusionP11 = "        cantFertilizanteP = Math.rint(cantFertilizanteP*10)/10;\n";
+                out.write(conclusionP11.getBytes());
+                String conclusionP12 = "        rec.addFertilizanteP(cantFertilizanteP + " + listRecomendacionRegla.get(i).getNombreFertilizanteFosfatado() + ");\n";
+                out.write(conclusionP12.getBytes());
+                //potasio
+                String conclusionK1 = "        double cantFertilizanteK = (cantKgK*100)/" + listRecomendacionRegla.get(i).getFormulaFertilizantePotasico() + ";\n";
+                out.write(conclusionK1.getBytes());
+                String conclusionK11 = "        cantFertilizanteK = Math.rint(cantFertilizanteK*10)/10;\n";
+                out.write(conclusionK11.getBytes());
+                String conclusionK12 = "        rec.addFertilizanteK(cantFertilizanteK + " + listRecomendacionRegla.get(i).getNombreFertilizantePotasico() + ");\n";
+                out.write(conclusionK12.getBytes());
+                //
+                String conclusion = "        $c.addRecomendacion(rec);\n";
+                out.write(conclusion.getBytes());
                 String end = "end\n\n";
                 out.write(end.getBytes());
             }
@@ -154,19 +177,79 @@ public class RecomendacionReglaService {
         }
 
     }
-    public ArrayList<RecomendacionRegla> recuperarListaRecomendacionRegla(){
+
+    public ArrayList<RecomendacionNuevoFertilizanteRegla> recuperarListaRecomendacionRegla() {
         Connection conexion = Conexion.obtener();
-        ArrayList<RecomendacionRegla> recomendacionReglaLista= new ArrayList<RecomendacionRegla>();
+        ArrayList<RecomendacionNuevoFertilizanteRegla> recomendacionReglaLista = new ArrayList<RecomendacionNuevoFertilizanteRegla>();
         try {
-            PreparedStatement consulta = conexion.prepareStatement("SELECT id_recomendacion_regla, nombre_fertilizante_nitrogenado, nombre_fertilizante_fosfatado, nombre_fertilizante_potasico, formula_fertilizante_nitrogenado, formula_fertilizante_fosfatado, formula_fertilizante_potasico FROM "+this.tabla+" ORDER BY id_recomendacion_regla");                                                   
+            PreparedStatement consulta = conexion.prepareStatement("SELECT id_recomendacion_regla, nombre_fertilizante_nitrogenado, nombre_fertilizante_fosfatado, nombre_fertilizante_potasico, formula_fertilizante_nitrogenado, formula_fertilizante_fosfatado, formula_fertilizante_potasico FROM " + this.tabla + " ORDER BY id_recomendacion_regla");
             ResultSet resultado = consulta.executeQuery();
-            while (resultado.next()) {                
-                recomendacionReglaLista.add(new RecomendacionRegla(resultado.getInt("id_recomendacion_regla"), resultado.getString("nombre_fertilizante_nitrogenado"), resultado.getString("nombre_fertilizante_fosfatado"), resultado.getString("nombre_fertilizante_potasico"), resultado.getInt("formula_fertilizante_nitrogenado"), resultado.getInt("formula_fertilizante_fosfatado"), resultado.getInt("formula_fertilizante_potasico")));
+            while (resultado.next()) {
+                recomendacionReglaLista.add(new RecomendacionNuevoFertilizanteRegla(resultado.getInt("id_recomendacion_regla"), resultado.getString("nombre_fertilizante_nitrogenado"), resultado.getString("nombre_fertilizante_fosfatado"), resultado.getString("nombre_fertilizante_potasico"), resultado.getInt("formula_fertilizante_nitrogenado"), resultado.getInt("formula_fertilizante_fosfatado"), resultado.getInt("formula_fertilizante_potasico")));
             }
-            System.out.println("cantidad reglas: "+recomendacionReglaLista.size());
+            System.out.println("cantidad reglas: " + recomendacionReglaLista.size());
         } catch (SQLException ex) {
-            Logger.getLogger(RecomendacionReglaService.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(RecomendacionNuevoFertilizanteReglaService.class.getName()).log(Level.SEVERE, null, ex);
         }
         return recomendacionReglaLista;
+    }
+
+    public static void main(String[] args) {
+
+        //inicio test para forma aplicar fertilizante
+        RecomendacionNuevoFertilizanteReglaService recomendacionReglaService = new RecomendacionNuevoFertilizanteReglaService();
+
+        RecomendacionNuevoFertilizanteRegla recomendacionRegla = new RecomendacionNuevoFertilizanteRegla();
+        recomendacionRegla.setId_recomendacion_regla(1);
+        recomendacionRegla.setNombreFertilizanteNitrogenado("ureados");
+        recomendacionRegla.setNombreFertilizanteFosfatado("fosforado");
+        recomendacionRegla.setNombreFertilizantePotasico("potasa");
+        recomendacionRegla.setFormulaFertilizanteNitrogenado(24);
+        recomendacionRegla.setFormulaFertilizanteFosfatado(35);
+        recomendacionRegla.setFormulaFertilizantePotasico(12);
+
+        RecomendacionNuevoFertilizanteRegla recomendacionRegla1 = new RecomendacionNuevoFertilizanteRegla();
+        recomendacionRegla1.setId_recomendacion_regla(1);
+        recomendacionRegla1.setNombreFertilizanteNitrogenado("ureados1");
+        recomendacionRegla1.setNombreFertilizanteFosfatado("fosforado1");
+        recomendacionRegla1.setNombreFertilizantePotasico("potasa1");
+        recomendacionRegla1.setFormulaFertilizanteNitrogenado(4);
+        recomendacionRegla1.setFormulaFertilizanteFosfatado(5);
+        recomendacionRegla1.setFormulaFertilizantePotasico(2);
+
+        RecomendacionNuevoFertilizanteRegla recomendacionRegla2 = new RecomendacionNuevoFertilizanteRegla();
+        recomendacionRegla2.setId_recomendacion_regla(1);
+        recomendacionRegla2.setNombreFertilizanteNitrogenado("ureados1");
+        recomendacionRegla2.setNombreFertilizanteFosfatado("fosforado1");
+        recomendacionRegla2.setNombreFertilizantePotasico("potasa1");
+        recomendacionRegla2.setFormulaFertilizanteNitrogenado(14);
+        recomendacionRegla2.setFormulaFertilizanteFosfatado(15);
+        recomendacionRegla2.setFormulaFertilizantePotasico(22);
+
+        //crear
+//        recomendacionReglaService.createRecomendacionRegla(recomendacionRegla);
+//        recomendacionReglaService.createRecomendacionRegla(recomendacionRegla1);
+//        recomendacionReglaService.createRecomendacionRegla(recomendacionRegla2);
+
+//        //update
+//        RecomendacionRegla correccionTexturaReglaactualizar = new RecomendacionRegla();
+//        correccionTexturaReglaactualizar.setId_recomendacion_regla(1);
+//        correccionTexturaReglaactualizar.setNombreFertilizanteNitrogenado("xxxxxx");
+//        correccionTexturaReglaactualizar.setNombreFertilizanteFosfatado("yyyyyyyyyy");
+//        correccionTexturaReglaactualizar.setNombreFertilizantePotasico("zzzzzzzzzz");
+//        correccionTexturaReglaactualizar.setFormulaFertilizanteNitrogenado(14);
+//        correccionTexturaReglaactualizar.setFormulaFertilizanteFosfatado(15);
+//        correccionTexturaReglaactualizar.setFormulaFertilizantePotasico(22);
+//        
+//        recomendacionReglaService.updateRecomendacionRegla(3, correccionTexturaReglaactualizar);
+//
+        //delete
+//       recomendacionReglaService.deleteRecomendacionRegla(4);
+//       recomendacionReglaService.deleteRecomendacionRegla(5);
+//       recomendacionReglaService.deleteRecomendacionRegla(6);
+
+        recomendacionReglaService.actualizarReglasRecomendacionDrl();
+
+        //fin test para forma aplicar fertilizante
     }
 }

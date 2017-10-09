@@ -9,7 +9,7 @@ package model;
  *
  * @author Erlinda
  */
-public class RecomendacionRegla {
+public class RecomendacionNuevoFertilizanteRegla {
 
     int id_recomendacion_regla;
     String nombreFertilizanteNitrogenado;
@@ -19,11 +19,11 @@ public class RecomendacionRegla {
     int formulaFertilizanteFosfatado;
     int formulaFertilizantePotasico;
 
-    public RecomendacionRegla() {
+    public RecomendacionNuevoFertilizanteRegla() {
 
     }
 
-    public RecomendacionRegla(int id_recomendacion_regla, String nombreFertilizanteNitrogenado, String nombreFertilizanteFosfatado, String nombreFertilizantePotasico, int formulaFertilizanteNitrogenado, int formulaFertilizanteFosfatado, int formulaFertilizantePotasico) {
+    public RecomendacionNuevoFertilizanteRegla(int id_recomendacion_regla, String nombreFertilizanteNitrogenado, String nombreFertilizanteFosfatado, String nombreFertilizantePotasico, int formulaFertilizanteNitrogenado, int formulaFertilizanteFosfatado, int formulaFertilizantePotasico) {
         this.id_recomendacion_regla = id_recomendacion_regla;
         this.nombreFertilizanteNitrogenado = nombreFertilizanteNitrogenado;
         this.nombreFertilizanteFosfatado = nombreFertilizanteFosfatado;

@@ -9,12 +9,12 @@ package EdicionReglas;
  *
  * @author Erlinda
  */
-public class CorrTexturaEdicionReglasPanel extends javax.swing.JPanel {
+public class RecomendacionNuevoFertilizantePanel extends javax.swing.JPanel {
 
     /**
      * Creates new form EdicionReglasNutrientesPanel
      */
-    public CorrTexturaEdicionReglasPanel() {
+    public RecomendacionNuevoFertilizantePanel() {
         initComponents();
     }
 
@@ -30,35 +30,43 @@ public class CorrTexturaEdicionReglasPanel extends javax.swing.JPanel {
         jPanelEdicion = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         jButtonAceptar = new javax.swing.JButton();
-        jTextFieldConclusion = new javax.swing.JTextField();
         jTextFieldId = new javax.swing.JTextField();
-        jTextFieldNombreRegla = new javax.swing.JTextField();
-        jTextFieldPremisa = new javax.swing.JTextField();
-        jButtonCorregirTextura = new javax.swing.JButton();
+        jTextFieldNombreFertilizanteN = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jTextFieldNombreFertilizanteP = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jTextFieldNombreFertilizanteK = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jTextFieldFormulaFertilizanteN = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jTextFieldFormulaFertilizanteP = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        jTextFieldFormulaFertilizanteK = new javax.swing.JTextField();
+        jButtonAnadirNuevoFertilizante = new javax.swing.JButton();
         jScrollTable = new javax.swing.JScrollPane();
-        jTableCorrTextura = new javax.swing.JTable();
+        jTableRecNuevoFertilizante = new javax.swing.JTable();
+        jButtonEditarNuevoFertilizante = new javax.swing.JButton();
+        jButtonEliminarNuevoFertilizante = new javax.swing.JButton();
 
         jPanelEdicion.setBackground(new java.awt.Color(255, 255, 255));
         jPanelEdicion.setBorder(javax.swing.BorderFactory.createTitledBorder("Editar"));
 
         jLabel1.setText("Id");
 
-        jLabel2.setText("Nombre Regla");
-
-        jLabel3.setText("when");
-
-        jLabel5.setText("Premisa ");
-
-        jLabel7.setText("then");
-
-        jLabel9.setText("end");
+        jLabel2.setText("Nombre Fertilizante Nitrogenado");
 
         jButtonAceptar.setText("Aceptar");
+
+        jLabel4.setText("Nombre Fertilizante Nitrogenado");
+
+        jLabel6.setText("Nombre Fertilizante Nitrogenado");
+
+        jLabel8.setText("Contenido Nitrogeno");
+
+        jLabel10.setText("Contenido Fosforo");
+
+        jLabel11.setText("Contenido Potasio");
 
         javax.swing.GroupLayout jPanelEdicionLayout = new javax.swing.GroupLayout(jPanelEdicion);
         jPanelEdicion.setLayout(jPanelEdicionLayout);
@@ -68,92 +76,125 @@ public class CorrTexturaEdicionReglasPanel extends javax.swing.JPanel {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jButtonAceptar))
             .addGroup(jPanelEdicionLayout.createSequentialGroup()
+                .addGroup(jPanelEdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanelEdicionLayout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTextFieldNombreFertilizanteK, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelEdicionLayout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTextFieldNombreFertilizanteP, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelEdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanelEdicionLayout.createSequentialGroup()
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jTextFieldId, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanelEdicionLayout.createSequentialGroup()
+                            .addComponent(jLabel2)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jTextFieldNombreFertilizanteN, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(61, 61, 61)
                 .addGroup(jPanelEdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelEdicionLayout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextFieldId, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelEdicionLayout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addGroup(jPanelEdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel3)))
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanelEdicionLayout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextFieldNombreRegla, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelEdicionLayout.createSequentialGroup()
-                        .addGap(41, 41, 41)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanelEdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextFieldConclusion, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldPremisa, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 144, Short.MAX_VALUE))
+                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanelEdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelEdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jTextFieldFormulaFertilizanteK, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldFormulaFertilizanteP, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldFormulaFertilizanteN, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26))
         );
         jPanelEdicionLayout.setVerticalGroup(
             jPanelEdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelEdicionLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanelEdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanelEdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelEdicionLayout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(jLabel2))
+                        .addGroup(jPanelEdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelEdicionLayout.createSequentialGroup()
+                                .addGroup(jPanelEdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextFieldId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(21, 21, 21)
+                                .addGroup(jPanelEdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jTextFieldNombreFertilizanteN, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jTextFieldFormulaFertilizanteN, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanelEdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelEdicionLayout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanelEdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jTextFieldNombreFertilizanteP, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanelEdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jTextFieldNombreFertilizanteK, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(72, Short.MAX_VALUE))
+                            .addGroup(jPanelEdicionLayout.createSequentialGroup()
+                                .addGap(11, 11, 11)
+                                .addComponent(jTextFieldFormulaFertilizanteP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextFieldFormulaFertilizanteK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButtonAceptar))))
                     .addGroup(jPanelEdicionLayout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextFieldNombreRegla, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addGap(8, 8, 8)
-                .addGroup(jPanelEdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldPremisa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel7)
-                .addGap(3, 3, 3)
-                .addComponent(jTextFieldConclusion, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 15, Short.MAX_VALUE)
-                .addGap(23, 23, 23))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelEdicionLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButtonAceptar))
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
 
-        jButtonCorregirTextura.setText("<html><body><p align='center'>Corregir <br>Porcentaje</body></html> ");
-        jButtonCorregirTextura.addActionListener(new java.awt.event.ActionListener() {
+        jButtonAnadirNuevoFertilizante.setText("<html><body><p align='center'>Añadir<br>Nuevo <br>Fertilizante</body></html> ");
+        jButtonAnadirNuevoFertilizante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonCorregirTexturaActionPerformed(evt);
+                jButtonAnadirNuevoFertilizanteActionPerformed(evt);
             }
         });
 
         jScrollTable.setBackground(new java.awt.Color(255, 255, 255));
         jScrollTable.setBorder(javax.swing.BorderFactory.createTitledBorder("Lista de Reglas"));
 
-        jTableCorrTextura.setModel(new javax.swing.table.DefaultTableModel(
+        jTableRecNuevoFertilizante.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Id ", "Nombre Regla", "Textura a corregir", "porcentaje a corregir"
+                "Id ", "Nombre Fertilizante Nitrogenado", "Contenido  N", "Nombre Fertilizante Nitrogenado", "Contenido P", "Nombre Fertilizante Potasico", "contenido K"
             }
         ));
-        jScrollTable.setViewportView(jTableCorrTextura);
+        jScrollTable.setViewportView(jTableRecNuevoFertilizante);
+
+        jButtonEditarNuevoFertilizante.setText("<html><body><p align='center'>Editar<br>Nuevo <br>Fertilizante</body></html> ");
+        jButtonEditarNuevoFertilizante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEditarNuevoFertilizanteActionPerformed(evt);
+            }
+        });
+
+        jButtonEliminarNuevoFertilizante.setText("<html><body><p align='center'>Eliminar<br>Nuevo <br>Fertilizante</body></html> ");
+        jButtonEliminarNuevoFertilizante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEliminarNuevoFertilizanteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -161,12 +202,17 @@ public class CorrTexturaEdicionReglasPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanelEdicion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollTable))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButtonCorregirTextura, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollTable, javax.swing.GroupLayout.PREFERRED_SIZE, 697, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButtonAnadirNuevoFertilizante, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonEditarNuevoFertilizante, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonEliminarNuevoFertilizante, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jPanelEdicion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -177,33 +223,51 @@ public class CorrTexturaEdicionReglasPanel extends javax.swing.JPanel {
                         .addComponent(jScrollTable, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(61, 61, 61)
-                        .addComponent(jButtonCorregirTextura, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButtonAnadirNuevoFertilizante, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButtonEditarNuevoFertilizante, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButtonEliminarNuevoFertilizante, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(15, 15, 15)
                 .addComponent(jPanelEdicion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonCorregirTexturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCorregirTexturaActionPerformed
+    private void jButtonAnadirNuevoFertilizanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnadirNuevoFertilizanteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonCorregirTexturaActionPerformed
+    }//GEN-LAST:event_jButtonAnadirNuevoFertilizanteActionPerformed
+
+    private void jButtonEditarNuevoFertilizanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditarNuevoFertilizanteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonEditarNuevoFertilizanteActionPerformed
+
+    private void jButtonEliminarNuevoFertilizanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminarNuevoFertilizanteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonEliminarNuevoFertilizanteActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton jButtonAceptar;
-    public javax.swing.JButton jButtonCorregirTextura;
+    public javax.swing.JButton jButtonAnadirNuevoFertilizante;
+    public javax.swing.JButton jButtonEditarNuevoFertilizante;
+    public javax.swing.JButton jButtonEliminarNuevoFertilizante;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanelEdicion;
     public javax.swing.JScrollPane jScrollTable;
-    public javax.swing.JTable jTableCorrTextura;
-    public javax.swing.JTextField jTextFieldConclusion;
+    public javax.swing.JTable jTableRecNuevoFertilizante;
+    public javax.swing.JTextField jTextFieldFormulaFertilizanteK;
+    public javax.swing.JTextField jTextFieldFormulaFertilizanteN;
+    public javax.swing.JTextField jTextFieldFormulaFertilizanteP;
     public javax.swing.JTextField jTextFieldId;
-    public javax.swing.JTextField jTextFieldNombreRegla;
-    public javax.swing.JTextField jTextFieldPremisa;
+    public javax.swing.JTextField jTextFieldNombreFertilizanteK;
+    public javax.swing.JTextField jTextFieldNombreFertilizanteN;
+    public javax.swing.JTextField jTextFieldNombreFertilizanteP;
     // End of variables declaration//GEN-END:variables
 }

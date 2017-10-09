@@ -1,0 +1,70 @@
+package rules 
+import model.Cultivo;
+rule " Recomendacion de fertilizacion N P K 1"
+    when
+        $c : Cultivo( cantKgN >0, cantKgP >0, cantKgK >0 )
+    then
+        Recomendacion rec = new Recomendacion();
+        double cantFertilizanteN = (cantKgN*100)/24;
+        cantFertilizanteN = Math.rint(cantFertilizanteN*10)/10;
+        rec.addFertilizanteN(cantFertilizanteN + ureados);
+        double cantFertilizanteP = (cantKgP*100)/35;
+        cantFertilizanteP = Math.rint(cantFertilizanteP*10)/10;
+        rec.addFertilizanteP(cantFertilizanteP + fosforado);
+        double cantFertilizanteK = (cantKgK*100)/12;
+        cantFertilizanteK = Math.rint(cantFertilizanteK*10)/10;
+        rec.addFertilizanteK(cantFertilizanteK + potasa);
+        $c.addRecomendacion(rec);
+end
+
+rule " Recomendacion de fertilizacion N P K 2"
+    when
+        $c : Cultivo( cantKgN >0, cantKgP >0, cantKgK >0 )
+    then
+        Recomendacion rec = new Recomendacion();
+        double cantFertilizanteN = (cantKgN*100)/4;
+        cantFertilizanteN = Math.rint(cantFertilizanteN*10)/10;
+        rec.addFertilizanteN(cantFertilizanteN + ureados1);
+        double cantFertilizanteP = (cantKgP*100)/5;
+        cantFertilizanteP = Math.rint(cantFertilizanteP*10)/10;
+        rec.addFertilizanteP(cantFertilizanteP + fosforado1);
+        double cantFertilizanteK = (cantKgK*100)/2;
+        cantFertilizanteK = Math.rint(cantFertilizanteK*10)/10;
+        rec.addFertilizanteK(cantFertilizanteK + potasa1);
+        $c.addRecomendacion(rec);
+end
+
+rule " Recomendacion de fertilizacion N P K 3"
+    when
+        $c : Cultivo( cantKgN >0, cantKgP >0, cantKgK >0 )
+    then
+        Recomendacion rec = new Recomendacion();
+        double cantFertilizanteN = (cantKgN*100)/14;
+        cantFertilizanteN = Math.rint(cantFertilizanteN*10)/10;
+        rec.addFertilizanteN(cantFertilizanteN + xxxxxx);
+        double cantFertilizanteP = (cantKgP*100)/15;
+        cantFertilizanteP = Math.rint(cantFertilizanteP*10)/10;
+        rec.addFertilizanteP(cantFertilizanteP + yyyyyyyyyy);
+        double cantFertilizanteK = (cantKgK*100)/22;
+        cantFertilizanteK = Math.rint(cantFertilizanteK*10)/10;
+        rec.addFertilizanteK(cantFertilizanteK + zzzzzzzzzz);
+        $c.addRecomendacion(rec);
+end
+
+rule " Recomendacion de fertilizacion N P K 7"
+    when
+        $c : Cultivo( cantKgN >0, cantKgP >0, cantKgK >0 )
+    then
+        Recomendacion rec = new Recomendacion();
+        double cantFertilizanteN = (cantKgN*100)/33;
+        cantFertilizanteN = Math.rint(cantFertilizanteN*10)/10;
+        rec.addFertilizanteN(cantFertilizanteN + qqqqqqqqqqqqqqqqqq);
+        double cantFertilizanteP = (cantKgP*100)/55;
+        cantFertilizanteP = Math.rint(cantFertilizanteP*10)/10;
+        rec.addFertilizanteP(cantFertilizanteP + bbbbbbbbbbbbbbbbb);
+        double cantFertilizanteK = (cantKgK*100)/45;
+        cantFertilizanteK = Math.rint(cantFertilizanteK*10)/10;
+        rec.addFertilizanteK(cantFertilizanteK + pppppppppppppp);
+        $c.addRecomendacion(rec);
+end
+
